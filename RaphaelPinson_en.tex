@@ -1,0 +1,197 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% Version: 20110122-4
+
+
+\documentclass[11pt,a4paper]{moderncv}
+\usepackage[pdftex]{hyperref}
+\usepackage{bibentry}
+\usepackage[english]{babel}
+
+% moderncv themes
+\moderncvtheme[orange]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{casual}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% for some reason, lines take up a lot of space in itemize in English...
+\linespread{0.9}
+
+% personal data
+\firstname{Rapha\"el}
+\familyname{Pinson}
+\title{Open-Source Technologist}
+\address{147, av Auguste Renoir}{06520~Magagnosc}
+\mobile{+33 (0) 673 524 413}
+\phone{+33 (0) 951 020 006}
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{rpinson@gmail.com}
+\homepage{www.raphink.info}
+\extrainfo{ITIL\textsuperscript{\textregistered} v3 Certified\\Driving License} % optional, remove the line if not wanted
+\photo[64pt]{identite_bonaire_long_resized_cropped}
+\quote{Freely you have received, freely give \tiny(Matthew 10:8)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\renewcommand{\labelitemi}{-- }
+
+\section{Skills}
+
+\subsection{Expert Skills}
+\cvline{Debian and Ubuntu Systems}{Debian/Ubuntu Packages, Creation and Administration of Package Repositories, Build Farms (Debian buildd/sbuild/pbuilder), Automated Installations (Debian FAI)}
+\cvline{Configuration Management}{CFengine, Puppet, Augeas}
+
+\subsection{Development}
+\cvcomputer{Languages}{C/C++, Perl, Python, Shell/Bash, Ruby, GNU Make, Ada}{Web}{HTML/XHTML, CSS, JavaScript, Ajax, Jquery, PHP, Semantic Web}
+\cvcomputer{Frameworks}{Django, Google AppEngine, Google Wave, Netvibes}{Databases}{MySQL, PostgreSQL, NoSQL (GQL), SPARQL}
+\cvcomputer{Formats}{XML/XPath, SGML, YAML/JSON, RDF/RSS/FOAF}{Methods}{Object Oriented Programming, MVC, Unit Tests, UML}
+\cvcomputer{Source Management}{RCS/CVS, SVN, Bazaar, Git, Mercurial}{Tools}{Autotools, Cmake, Doxygen, NaturalDocs, Trac, Gforge, Launchpad}
+
+\subsection{Systems and Networks Administration}
+\cvcomputer{Web}{Apache, Lighttpd, Nginx, Bind, Squid, Dansguardian, VsFTPd}{Monitoring}{BB4/Hobbit, Nagios, Munin, Cacti, Simple Event Correlator (Sec)}
+\cvcomputer{Mail}{Postfix, Exim, SSMTP}{Backup}{Amanda, BackupManager}
+\cvcomputer{Installation and Deployment}{FAI, Kickstart, Reprepro, Cfengine, Puppet, Augeas}{Networks}{DHCPd, VLANs, OpenVPN, Keepalived}
+\cvcomputer{Operating Systems}{GNU/Linux (Debian, Ubuntu, RedHat), MacOS X, Windows, *BSD}{Databases}{MySQL, PostgreSQL, SQLite, BerkeleyDB}
+\cvcomputer{Virtualization}{Xen, VMWare, OpenVZ, LXC, NX}{Security}{SSL, PGP/GnuPG, OpenSSH}
+
+\subsection{Office and tools}
+\cvcomputer{Office}{OpenOffice/LibreOffice, \LaTeX{}, Microsoft Office, Gimp, Inkscape}{Project Management}{TaskJuggler, GanttProject}
+\cvcomputer{Mind Maps}{Freemind, Kdissert}{Wikis}{MediaWiki, Trac, MoinMoin}
+\cvcomputer{Touch Typing}{QWERTY \& AZERTY}{}{}
+
+\newpage
+
+\section{Experience}
+\subsection{IT Experience}
+\cventry{Since June 2006}{Systems Engineer}{\href{http://www.orness.com}{ORNESS} then \href{http://www.alten.fr}{Alten}}{Sophia Antipolis}{}{Consultant at France T\'el\'ecom
+\begin{itemize}
+ \item Administration of Cfengine, FAI and the software package repository ;
+ \item Renewal and industrialization of the software deployment system for Debian/Ubuntu ;
+ \item Management of the Gforge (collaborative development web interface) platform ;
+ \item Monitoring of the fleet of servers ;
+ \item Writing of technical documentation.
+\end{itemize}}
+
+\cventry{Since 2008}{Developer}{\href{http://www.augeas.net}{Augeas}}{Internet}{}{Development, bugfix and documentation
+\begin{itemize}%
+ \item Writing of Augeas lenses ;
+ \item Coding in C ;
+ \item Improvement of autotools configuration ;
+ \item NaturalDocs Integration (documentation generator) ;
+ \item International Conference Speaker (Belgium (\href{http://archive.fosdem.org/2009/schedule/events/fedora_augeas}{FOSDEM})).
+\end{itemize}}
+
+\cventry{Since 2005}{\href{https://launchpad.net/~raphink}{Developer/Maintainer}}{\href{http://www.ubuntu.com}{Ubuntu}}{Internet}{}{Development, bugfix and documentation
+\begin{itemize}%
+ \item Creation, maintainance and review of software packages ; 
+ \item Writing of technical documentation for developers ;
+ \item Maintainance of the QA system for software package ;
+ \item Bug management ;
+ \item International Conference Speaker (Hungary, Germany (\href{http://www.linuxtag.org/}{LinuxTag})).
+\end{itemize}}
+
+
+\cventry{Since 2005}{Open-Source Contributor}{Various projects}{Internet}{}{
+\begin{itemize}%
+ \item \href{https://launchpad.net/wavebiblebot}{Flammard Bible Bot}: Google Wave Bot, a personal project written in Python/AppEngine ;
+ \item \href{http://www.ichthux.com}{Ichthux}: Creation and maintainance of a specialized Linux distribution based on Ubuntu ;
+ \item \href{http://sourceforge.net/projects/array-info/}{Array-info}: patches in C and releases ;
+ \item \href{https://launchpad.net/byobu}{Byobu}: contribution of scripts and patches in Python and Bash.
+ \item \href{http://en.wikipedia.org}{Wikipedia}: contribution of Encyclopedia articles ;
+ \item \href{http://openstreetmap.org}{OpenStreetMap}: Cartography, data imports.
+\end{itemize}}
+
+
+\subsection{Other Experience}
+\cventry{July 2004}{Blue Collar Internship}{\href{http://www.snecma.com}{SNECMA}}{Moissy-Cramayel}{}{Assembled and equilibrated turbo reactors for planes}
+
+\cventry{Summer 2002}{Fire Safety Officer}{\href{http://www.euroguard.fr/}{Euroguard}}{Marcoussis}{}{Supervised an Alcatel research site}
+
+\cventry{Summer 2001}{Surveillance Agent}{Penauille Polys\'ecurit\'e}{Paris}{}{Supervised the headquarters of the French Red Cross}
+
+\cventry{1999 -- 2000}{Paramedic}{\href{http://www.croix-rouge.fr/}{French Red Cross}}{Paris Suburbs}{}{Served in several volunteer missions as a paramedic}
+
+
+\newpage
+
+
+\section{Education}
+\cventry{2009}{ITIL v3 Certification}{\href{http://www.itil-officialsite.com/home/home.asp}{ITIL\textsuperscript{\textregistered} v3 Foundation}}{Sophia Antipolis}{}{Organization and efficiency of the Information System}
+
+\cventry{2005}{Student in Business Creation and Management}{\href{http://www.creation-transmission.com/}{Cr\'eafort}}{Poitiers}{}{Accounting, Management, Marketing, Law}
+
+\cventry{2005}{Student in Pedagogy (`Gestion Mentale')}{\href{http://www.ifgm.org/}{IFGM}}{Bordeaux}{}{Pedagogy, Didacticism, Cognitive Psychology}
+
+\cventry{2003 -- 2005}{Student in Mechanical Engineering}{\href{http://www.ensma.fr}{\'Ecole Nationale Sup\'erieure de M\'ecanique et d'A\'erotechnique (ENSMA)}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
+
+\cventry{2004}{Licence, equivalent of a British Bsc, in Mechanics}{\href{http://www.univ-poitiers.fr/}{Universit\'e de Poitiers}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
+
+\cventry{2002 -- 2003}{Student in Chemistry}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Chemistry, Physics, Mathematics}
+
+\cventry{2000 -- 2002}{Student in Medicine (PCEM1)}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Biology, Chemistry, Biochemistry, Physics, Anatomy, Histology, Physiology, Law}
+
+\cventry{2000}{Baccalaur\'eat, equivalent of British A Level}{\href{http://www.ac-versailles.fr/etabliss/orsay/}{Lyc\'ee Blaise Pascal}}{Orsay}{with distinction `mention bien'}{}
+
+
+\section{Langues}
+\cvlanguage{French}{Native}{Monther Tongue}
+\cvlanguage{English}{Fluent}{Daily practice, conferences given in English}
+\cvlanguage{Spanish}{Good Level}{Occasional practice}
+\cvlanguage{German}{Good Level}{}
+\cvlanguage{Russian}{Intermediary Level}{}
+\cvlanguage{Dutch}{Beginner}{}
+
+\section{Personal interests}
+\cvline{Music}{\small Clarinet, piano, organ, saxophone}
+\cvline{Sports}{\small Hiking, sailing, golf, climbing}
+\cvline{Contributions}{\small Wikipedia, OpenStreetMap}
+\cvline{Responsibilities}{\small President of the cultural association `la Colombe Calvary` in Nice}
+\cvline{Others}{\small Travels, reading}
+
+%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}   % 'publications' is the name of a BibTeX file
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
