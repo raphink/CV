@@ -13,3 +13,8 @@ In order to achieve this, you need:
    * A LaTeX distribution (install texlive-latex-extra on Debian/Ubuntu);
    * pdflatex (texlive-latex-base package on Debian/Ubuntu).
 
+Type one of the following:
+
+   * For my English CV, type `pdflatex RaphaelPinson_en.tex`;
+   * For my French CV, type `pdflatex RaphaelPinson_fr.tex`.
+
