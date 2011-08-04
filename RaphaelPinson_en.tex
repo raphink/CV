@@ -10,12 +10,13 @@
 
 \documentclass[11pt,a4paper]{moderncv}
 \usepackage[pdftex]{hyperref}
-\usepackage{bibentry}
+%\usepackage{bibentry}
 \usepackage[english]{babel}
+\usepackage{metalogo}
 
 % moderncv themes
-\moderncvtheme[orange]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-%\moderncvtheme[green]{casual}                % idem
+\moderncvtheme[orange]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{casual}   % idem
 
 % character encoding
 \usepackage[utf8]{inputenc}
@@ -64,26 +65,46 @@
 \section{Skills}
 
 \subsection{Expert Skills}
-\cvline{Debian and Ubuntu Systems}{Debian/Ubuntu Packages, Creation and Administration of Package Repositories, Build Farms (Debian buildd/sbuild/pbuilder), Automated Installations (Debian FAI)}
+\cvline{Debian and Ubuntu Systems}{Debian/Ubuntu Packages,
+  Creation and Administration of Package Repositories,
+  Build Farms (Debian buildd/sbuild/pbuilder),
+  Automated Installations (Debian FAI)}
 \cvline{Configuration Management}{CFengine, Puppet, Augeas}
 
 \subsection{Development}
-\cvcomputer{Languages}{C/C++, Perl, Python, Shell/Bash, Ruby, GNU Make, Ada}{Web}{HTML/XHTML, CSS, JavaScript, Ajax, Jquery, PHP, Semantic Web}
-\cvcomputer{Frameworks}{Django, Google AppEngine, Google Wave, Netvibes}{Databases}{MySQL, PostgreSQL, NoSQL (GQL), SPARQL}
-\cvcomputer{Formats}{XML/XPath, SGML, YAML/JSON, RDF/RSS/FOAF}{Methods}{Object Oriented Programming, MVC, Unit Tests, UML}
-\cvcomputer{Source Management}{RCS/CVS, SVN, Bazaar, Git, Mercurial}{Tools}{Autotools, Cmake, Doxygen, NaturalDocs, Trac, Gforge, Launchpad}
+\cvcomputer{Languages}{C/C++, Perl, Python, Shell/Bash, Ruby, GNU Make, Ada}
+           {Web}{HTML/XHTML, CSS, JavaScript, Ajax, Jquery, PHP, Semantic Web}
+\cvcomputer{Frameworks}{Django, Google AppEngine, Google Wave, Netvibes}
+           {Databases}{MySQL, PostgreSQL, NoSQL (GQL), SPARQL}
+\cvcomputer{Formats}{XML/XPath, SGML, YAML/JSON, RDF/RSS/FOAF}
+           {Methods}{Object Oriented Programming, MVC, Unit Tests, UML}
+\cvcomputer{Source Management}{RCS/CVS, SVN, Bazaar, Git, Mercurial}
+           {Tools}{Autotools, Cmake, Doxygen, NaturalDocs, Trac,
+                   Gforge, Launchpad}
 
 \subsection{Systems and Networks Administration}
-\cvcomputer{Web}{Apache, Lighttpd, Nginx, Bind, Squid, Dansguardian, VsFTPd}{Monitoring}{BB4/Hobbit, Nagios, Munin, Cacti, Simple Event Correlator (Sec)}
-\cvcomputer{Mail}{Postfix, Exim, SSMTP}{Backup}{Amanda, BackupManager}
-\cvcomputer{Installation and Deployment}{FAI, Kickstart, Reprepro, Cfengine, Puppet, Augeas}{Networks}{DHCPd, VLANs, OpenVPN, Keepalived}
-\cvcomputer{Operating Systems}{GNU/Linux (Debian, Ubuntu, RedHat), MacOS X, Windows, *BSD}{Databases}{MySQL, PostgreSQL, SQLite, BerkeleyDB}
-\cvcomputer{Virtualization}{Xen, VMWare, OpenVZ, LXC, NX}{Security}{SSL, PGP/GnuPG, OpenSSH}
+\cvcomputer{Web}{Apache, Lighttpd, Nginx, Bind, Squid, Dansguardian, VsFTPd}
+           {Monitoring}{BB4/Hobbit, Nagios, Munin, Cacti,
+                        Simple Event Correlator (Sec)}
+\cvcomputer{Mail}{Postfix, Exim, SSMTP}
+           {Backup}{Amanda, BackupManager}
+\cvcomputer{Installation and Deployment}{FAI, Kickstart, Reprepro, Cfengine,
+                                         Puppet, Augeas}
+           {Networks}{DHCPd, VLANs, OpenVPN, Keepalived}
+\cvcomputer{Operating Systems}{GNU/Linux (Debian, Ubuntu, RedHat),
+                               MacOS X, Windows, *BSD}
+           {Databases}{MySQL, PostgreSQL, SQLite, BerkeleyDB}
+\cvcomputer{Virtualization}{Xen, VMWare, OpenVZ, LXC, NX}
+           {Security}{SSL, PGP/GnuPG, OpenSSH}
 
 \subsection{Office and tools}
-\cvcomputer{Office}{OpenOffice/LibreOffice, \LaTeX{}, Microsoft Office, Gimp, Inkscape}{Project Management}{TaskJuggler, GanttProject}
-\cvcomputer{Mind Maps}{Freemind, Kdissert}{Wikis}{MediaWiki, Trac, MoinMoin}
-\cvcomputer{Touch Typing}{QWERTY \& AZERTY}{}{}
+\cvcomputer{Office}{OpenOffice/LibreOffice, \LaTeX{}, Microsoft Office, Gimp,
+                    Inkscape}
+           {Project Management}{TaskJuggler, GanttProject}
+\cvcomputer{Productivity}{Mind Maps, GTD}
+           {Wikis}{MediaWiki, Trac, MoinMoin}
+\cvcomputer{Edition}{\TeX{}, \LaTeX{}, \XeTeX{}}
+           {Touch Typing}{QWERTY \& AZERTY}
 
 \newpage
 
@@ -91,44 +112,51 @@
 \subsection{IT Experience}
 \cventry{Since June 2006}{Systems Engineer}{\href{http://www.orness.com}{ORNESS} then \href{http://www.alten.fr}{Alten}}{Sophia Antipolis}{}{Consultant at France T\'el\'ecom
 \begin{itemize}
- \item Administration of Cfengine, FAI and the software package repository ;
- \item Renewal and industrialization of the software deployment system for Debian/Ubuntu ;
- \item Management of the Gforge (collaborative development web interface) platform ;
- \item Monitoring of the fleet of servers ;
+ \item Administration of Cfengine, FAI and the software package repository;
+ \item Renewal and industrialization of the software deployment system for Debian/Ubuntu;
+ \item Management of the Gforge (collaborative development web interface) platform;
+ \item Monitoring of the fleet of servers;
  \item Writing of technical documentation.
 \end{itemize}}
 
 \cventry{Since 2008}{Developer}{\href{http://www.augeas.net}{Augeas}}{Internet}{}{Development, bugfix and documentation
 \begin{itemize}%
- \item Writing of Augeas lenses ;
- \item Coding in C ;
- \item Improvement of autotools configuration ;
- \item NaturalDocs Integration (documentation generator) ;
+ \item Writing of Augeas lenses;
+ \item Coding in C;
+ \item Improvement of autotools configuration;
+ \item NaturalDocs Integration (documentation generator);
  \item International Conference Speaker (Belgium (\href{http://archive.fosdem.org/2009/schedule/events/fedora_augeas}{FOSDEM})).
 \end{itemize}}
 
 \cventry{Since 2005}{\href{https://launchpad.net/~raphink}{Developer/Maintainer}}{\href{http://www.ubuntu.com}{Ubuntu}}{Internet}{}{Development, bugfix and documentation
 \begin{itemize}%
- \item Creation, maintainance and review of software packages ; 
- \item Writing of technical documentation for developers ;
- \item Maintainance of the QA system for software package ;
- \item Bug management ;
+ \item Creation, maintainance and review of software packages; 
+ \item Writing of technical documentation for developers;
+ \item Maintainance of the QA system for software package;
+ \item Bug management;
  \item International Conference Speaker (Hungary, Germany (\href{http://www.linuxtag.org/}{LinuxTag})).
 \end{itemize}}
 
 
 \cventry{Since 2005}{Open-Source Contributor}{Various projects}{Internet}{}{
 \begin{itemize}%
- \item \href{https://launchpad.net/wavebiblebot}{Flammard Bible Bot}: Google Wave Bot, a personal project written in Python/AppEngine ;
- \item \href{http://www.ichthux.com}{Ichthux}: Creation and maintainance of a specialized Linux distribution based on Ubuntu ;
- \item \href{http://sourceforge.net/projects/array-info/}{Array-info}: patches in C and releases ;
- \item \href{https://launchpad.net/byobu}{Byobu}: contribution of scripts and patches in Python and Bash.
- \item \href{http://en.wikipedia.org}{Wikipedia}: contribution of Encyclopedia articles ;
+ \item \href{https://launchpad.net/wavebiblebot}{Flammard Bible Bot}: Google Wave Bot, a personal project written in Python/AppEngine;
+ \item \href{http://www.ichthux.com}{Ichthux}: Creation and maintainance of a specialized Linux distribution based on Ubuntu;
+ \item \href{http://sourceforge.net/projects/array-info/}{Array-info}: patches in C and releases;
+ \item \href{https://launchpad.net/byobu}{Byobu}: contribution of scripts and patches in Python and Bash;
+ \item \href{http://en.wikipedia.org}{Wikipedia}: contribution of Encyclopedia articles;
  \item \href{http://openstreetmap.org}{OpenStreetMap}: Cartography, data imports.
 \end{itemize}}
 
 
 \subsection{Other Experience}
+\cventry{Since 2011}{Translator and Editor}{La Colombe Calvary}{Nice}{}{
+\begin{itemize}%
+ \item Translation of English theology books into French;
+ \item Edition of books using \LaTeX{} and \XeTeX{};
+ \item Publishing of books using on-demand publishing services (CreateSpace and Lulu).
+\end{itemize}}
+
 \cventry{July 2004}{Blue Collar Internship}{\href{http://www.snecma.com}{SNECMA}}{Moissy-Cramayel}{}{Assembled and equilibrated turbo reactors for planes}
 
 \cventry{Summer 2002}{Fire Safety Officer}{\href{http://www.euroguard.fr/}{Euroguard}}{Marcoussis}{}{Supervised an Alcatel research site}
