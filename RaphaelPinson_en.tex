@@ -9,49 +9,19 @@
 
 
 \documentclass[11pt,a4paper]{moderncv}
-\usepackage[pdftex]{hyperref}
-%\usepackage{bibentry}
+
+\usepackage{RaphaelPinson}
+
 \usepackage[english]{babel}
-\usepackage{metalogo}
-
-% moderncv themes
-\moderncvtheme[orange]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-%\moderncvtheme[green]{casual}   % idem
-
-% character encoding
-\usepackage[utf8]{inputenc}
-
-% adjust the page margins
-\usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
-
 % for some reason, lines take up a lot of space in itemize in English...
 \linespread{0.9}
 
+
 % personal data
-\firstname{Rapha\"el}
-\familyname{Pinson}
 \title{Open-Source Technologist}
-\address{147, av Auguste Renoir}{06520~Magagnosc}
-\mobile{+33 (0) 673 524 413}
-\phone{+33 (0) 951 020 006}
-%\fax{fax (optional)}                          % optional, remove the line if not wanted
-\email{rpinson@gmail.com}
-\homepage{www.raphink.info}
 \extrainfo{ITIL\textsuperscript{\textregistered} v3 Certified\\Driving License} % optional, remove the line if not wanted
-\photo[64pt]{identity}
 \quote{Freely you have received, freely give \tiny(Matthew 10:8)}                 % optional, remove the line if not wanted
 
-% to show numerical labels in the bibliography; only useful if you make citations in your resume
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 %----------------------------------------------------------------------------------
@@ -60,7 +30,7 @@
 \begin{document}
 \maketitle
 
-\renewcommand{\labelitemi}{-- }
+
 
 \section{Skills}
 
@@ -72,7 +42,7 @@
 \cvline{Configuration Management}{CFengine, Puppet, Augeas}
 
 \subsection{Development}
-\cvcomputer{Languages}{C/C++, Perl, Python, Shell/Bash, Ruby, GNU Make, Ada}
+\cvcomputer{Languages}{C/C++, Perl, Python, Shell/Bash, Ruby, GNU Make, Ada, Lua}
            {Web}{HTML/XHTML, CSS, JavaScript, Ajax, Jquery, PHP, Semantic Web}
 \cvcomputer{Frameworks}{Django, Google AppEngine, Google Wave, Netvibes}
            {Databases}{MySQL, PostgreSQL, NoSQL (GQL), SPARQL}
@@ -103,14 +73,15 @@
            {Project Management}{TaskJuggler, GanttProject}
 \cvcomputer{Productivity}{Mind Maps, GTD}
            {Wikis}{MediaWiki, Trac, MoinMoin}
-\cvcomputer{Edition}{\TeX{}, \LaTeX{}, \XeTeX{}}
+\cvcomputer{Edition}{\TeX{}, \LaTeX{}, \XeTeX{}, \LuaTeX{}}
            {Touch Typing}{QWERTY \& AZERTY}
 
-\newpage
+\pagebreak
+
 
 \section{Experience}
 \subsection{IT Experience}
-\cventry{Since June 2006}{Systems Engineer}{\href{http://www.orness.com}{ORNESS} then \href{http://www.alten.fr}{Alten}}{Sophia Antipolis}{}{Consultant at France T\'el\'ecom
+\tlcventry[blue]{2006}{0}{Systems Engineer}{\href{http://www.orness.com}{ORNESS} then \href{http://www.alten.fr}{Alten}}{Sophia Antipolis}{}{Consultant at France T\'el\'ecom
 \begin{itemize}
  \item Administration of Cfengine, FAI and the software package repository;
  \item Renewal and industrialization of the software deployment system for Debian/Ubuntu;
@@ -119,7 +90,7 @@
  \item Writing of technical documentation.
 \end{itemize}}
 
-\cventry{Since 2008}{Developer}{\href{http://www.augeas.net}{Augeas}}{Internet}{}{Development, bugfix and documentation
+\tlcventry[red]{2008}{0}{Developer}{\href{http://www.augeas.net}{Augeas}}{Internet}{}{Development, bugfix and documentation
 \begin{itemize}%
  \item Writing of Augeas lenses;
  \item Coding in C;
@@ -128,7 +99,7 @@
  \item International Conference Speaker (Belgium (\href{http://archive.fosdem.org/2009/schedule/events/fedora_augeas}{FOSDEM})).
 \end{itemize}}
 
-\cventry{Since 2005}{\href{https://launchpad.net/~raphink}{Developer/Maintainer}}{\href{http://www.ubuntu.com}{Ubuntu}}{Internet}{}{Development, bugfix and documentation
+\tlcventry[green]{2005}{0}{\href{https://launchpad.net/~raphink}{Developer/Maintainer}}{\href{http://www.ubuntu.com}{Ubuntu}}{Internet}{}{Development, bugfix and documentation
 \begin{itemize}%
  \item Creation, maintainance and review of software packages; 
  \item Writing of technical documentation for developers;
@@ -138,7 +109,7 @@
 \end{itemize}}
 
 
-\cventry{Since 2005}{Open-Source Contributor}{Various projects}{Internet}{}{
+\tlcventry[magenta]{2005}{0}{Open-Source Contributor}{Various projects}{Internet}{}{
 \begin{itemize}%
  \item \href{https://launchpad.net/wavebiblebot}{Flammard Bible Bot}: Google Wave Bot, a personal project written in Python/AppEngine;
  \item \href{http://www.ichthux.com}{Ichthux}: Creation and maintainance of a specialized Linux distribution based on Ubuntu;
@@ -146,54 +117,59 @@
  \item \href{https://launchpad.net/byobu}{Byobu}: contribution of scripts and patches in Python and Bash;
  \item \href{http://en.wikipedia.org}{Wikipedia}: contribution of Encyclopedia articles;
  \item \href{http://openstreetmap.org}{OpenStreetMap}: Cartography, data imports.
+ \item \href{http://search.cpan.org/~raphink}{CPAN Author}: maintainer of several Perl modules on CPAN;
+ \item \href{http://www.ctan.org/author/id/pinson}{CTAN Author}: maintainer of several \LaTeX packages on CTAN;
 \end{itemize}}
 
 
 \subsection{Other Experience}
-\cventry{Since 2011}{Translator and Editor}{La Colombe Calvary}{Nice}{}{
+\tlcventry[blue]{2009}{0}{Translator and Editor}{La Colombe Calvary}{Nice}{}{
 \begin{itemize}%
  \item Translation of English theology books into French;
- \item Edition of books using \LaTeX{} and \XeTeX{};
+ \item Edition of books using \LaTeX{}, \XeTeX{} and \LuaTeX{};
  \item Publishing of books using on-demand publishing services (CreateSpace and Lulu).
 \end{itemize}}
 
-\cventry{July 2004}{Blue Collar Internship}{\href{http://www.snecma.com}{SNECMA}}{Moissy-Cramayel}{}{Assembled and equilibrated turbo reactors for planes}
+\tldatelabelcventry[red]{2004}{July 2004}{Blue Collar Internship}{\href{http://www.snecma.com}{SNECMA}}{Moissy-Cramayel}{}{Assembled and equilibrated turbo reactors for planes}
 
-\cventry{Summer 2002}{Fire Safety Officer}{\href{http://www.euroguard.fr/}{Euroguard}}{Marcoussis}{}{Supervised an Alcatel research site}
+\tldatelabelcventry[green]{2002}{Summer 2002}{Fire Safety Officer}{\href{http://www.euroguard.fr/}{Euroguard}}{Marcoussis}{}{Supervised an Alcatel research site}
 
-\cventry{Summer 2001}{Surveillance Agent}{Penauille Polys\'ecurit\'e}{Paris}{}{Supervised the headquarters of the French Red Cross}
+\tldatelabelcventry[magenta]{2001}{Summer 2001}{Surveillance Agent}{Penauille Polys\'ecurit\'e}{Paris}{}{Supervised the headquarters of the French Red Cross}
 
-\cventry{1999 -- 2000}{Paramedic}{\href{http://www.croix-rouge.fr/}{French Red Cross}}{Paris Suburbs}{}{Served in several volunteer missions as a paramedic}
+\tllabelcventry[purple]{1999}{2000}{1999--2000}{Paramedic}{\href{http://www.croix-rouge.fr/}{French Red Cross}}{Paris Suburbs}{}{Served in several volunteer missions as a paramedic}
 
 
-\newpage
+\enlargethispage{\footskip}
 
 
 \section{Education}
-\cventry{2009}{ITIL v3 Certification}{\href{http://www.itil-officialsite.com/home/home.asp}{ITIL\textsuperscript{\textregistered} v3 Foundation}}{Sophia Antipolis}{}{Organization and efficiency of the Information System}
 
-\cventry{2005}{Student in Business Creation and Management}{\href{http://www.creation-transmission.com/}{Cr\'eafort}}{Poitiers}{}{Accounting, Management, Marketing, Law}
 
-\cventry{2005}{Student in Pedagogy (`Gestion Mentale')}{\href{http://www.ifgm.org/}{IFGM}}{Bordeaux}{}{Pedagogy, Didacticism, Cognitive Psychology}
+\tldatecventry[blue]{2009}{ITIL v3 Certification}{\href{http://www.itil-officialsite.com/home/home.asp}{ITIL\textsuperscript{\textregistered} v3 Foundation}}{Sophia Antipolis}{}{Organization and efficiency of the Information System}
 
-\cventry{2003 -- 2005}{Student in Mechanical Engineering}{\href{http://www.ensma.fr}{\'Ecole Nationale Sup\'erieure de M\'ecanique et d'A\'erotechnique (ENSMA)}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
+\tldatecventry[red]{2005}{Student in Business Creation and Management}{\href{http://www.creation-transmission.com/}{Cr\'eafort}}{Poitiers}{}{Accounting, Management, Marketing, Law}
 
-\cventry{2004}{Licence, equivalent of a British Bsc, in Mechanics}{\href{http://www.univ-poitiers.fr/}{Universit\'e de Poitiers}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
+\tldatecventry[green]{2005}{Student in Pedagogy (`Gestion Mentale')}{\href{http://www.ifgm.org/}{IFGM}}{Bordeaux}{}{Pedagogy, Didacticism, Cognitive Psychology}
 
-\cventry{2002 -- 2003}{Student in Chemistry}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Chemistry, Physics, Mathematics}
+\tllabelcventry[magenta]{2003}{2005}{2003--2005}{Student in Mechanical Engineering}{\href{http://www.ensma.fr}{\'Ecole Nationale Sup\'erieure de M\'ecanique et d'A\'erotechnique (ENSMA)}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
 
-\cventry{2000 -- 2002}{Student in Medicine (PCEM1)}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Biology, Chemistry, Biochemistry, Physics, Anatomy, Histology, Physiology, Law}
+\tldatecventry[purple]{2004}{Licence, equivalent of a British Bsc, in Mechanics}{\href{http://www.univ-poitiers.fr/}{Universit\'e de Poitiers}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
 
-\cventry{2000}{Baccalaur\'eat, equivalent of British A Level}{\href{http://www.ac-versailles.fr/etabliss/orsay/}{Lyc\'ee Blaise Pascal}}{Orsay}{with distinction `mention bien'}{}
+\tllabelcventry[cyan]{2002}{2003}{2002--2003}{Student in Chemistry}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Chemistry, Physics, Mathematics}
+
+\tllabelcventry[brown]{2000}{2002}{2000-2002}{Student in Medicine (PCEM1)}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Biology, Chemistry, Biochemistry, Physics, Anatomy, Histology, Physiology, Law}
+
+\tldatecventry{2000}{Baccalaur\'eat, equivalent of British A Level}{\href{http://www.ac-versailles.fr/etabliss/orsay/}{Lyc\'ee Blaise Pascal}}{Orsay}{with distinction `mention bien'}{}
 
 
 \section{Langues}
 \cvlanguage{French}{Native}{Monther Tongue}
 \cvlanguage{English}{Fluent}{Daily practice, conferences given in English}
 \cvlanguage{Spanish}{Good Level}{Occasional practice}
-\cvlanguage{German}{Good Level}{}
-\cvlanguage{Russian}{Intermediary Level}{}
-\cvlanguage{Dutch}{Beginner}{}
+\cvlanguage{German}{Good Level}{Studied 9 years in school}
+\cvlanguage{Russian}{Intermediary Level}{Studied 3 years in school}
+\cvlanguage{Dutch}{Beginner}{Studied alone}
+\cvlanguage{Swedish}{Beginner}{Studied alone}
 
 \section{Personal interests}
 \cvline{Music}{\small Clarinet, piano, organ, saxophone}

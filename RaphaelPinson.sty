@@ -1,0 +1,36 @@
+\ProvidesPackage{RaphaelPinson}
+\RequirePackage[pdftex]{hyperref}
+\RequirePackage{metalogo}
+
+% moderncv themes
+\moderncvtheme[orange]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{casual}   % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+
+% personal data
+\firstname{Rapha\"el}
+\familyname{Pinson}
+\address{147, av Auguste Renoir}{06520~Magagnosc}
+\mobile{+33 (0) 673 524 413}
+\phone{+33 (0) 951 020 006}
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{rpinson@gmail.com}
+\homepage{www.raphink.info}
+\photo[64pt]{identity}
+
+
+\AtBeginDocument{\renewcommand{\labelitemi}{-- }}
+
+\usepackage{moderntimeline}
+
+\tltext{\scriptsize}
+\tlmaxdates{1999}{2013}
+\tlwidth{0.8ex}
+\tltext{\tiny}
+
+
