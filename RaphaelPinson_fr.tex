@@ -9,48 +9,17 @@
 
 
 \documentclass[11pt,a4paper]{moderncv}
-\usepackage[pdftex]{hyperref}
-\usepackage{bibentry}
+
+\usepackage{RaphaelPinson}
+
 \usepackage[french]{babel}
-\usepackage{metalogo}
-
-% moderncv themes
-\moderncvtheme[orange]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-%\moderncvtheme[green]{casual}                % idem
-
-% character encoding
-\usepackage[utf8]{inputenc}
-
-% adjust the page margins
-\usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
 
 \linespread{0.9}
 
-% personal data
-\firstname{Rapha\"el}
-\familyname{Pinson}
 \title{Technologiste Open-Source}
-\address{147, av Auguste Renoir}{06520~Magagnosc}
-\mobile{+33 (0) 673 524 413}
-\phone{+33 (0) 951 020 006}
-%\fax{fax (optional)}
-\email{rpinson@gmail.com}
-\homepage{www.raphink.info}
 \extrainfo{Certifi\'e ITIL\up{\textregistered} v3\\Permis B}
-\photo[64pt]{identity}
 \quote{Vous avez re\c{c}u gratuitement, donnez gratuitement \tiny(Matthieu 10:8)}
 
-% to show numerical labels in the bibliography; only useful if you make citations in your resume
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 %----------------------------------------------------------------------------------
@@ -91,9 +60,9 @@
 \newpage
 
 
-\section{Exp\'erience Professionnelle et b\'en\'evolat}
+\section{Exp\'erience professionnelle et b\'en\'evolat}
 \subsection{Exp\'erience en informatique}
-\cventry{Depuis Juin 2006}{Ing\'enieur Syst\`emes}{\href{http://www.orness.com}{ORNESS} puis \href{http://www.alten.fr}{Alten}}{Sophia Antipolis}{}{Consultant chez \href{http://orange.com/fr_FR/index.jsp}{France T\'el\'ecom}\newline{}%
+\tlcventry{2006}{0}{Ing\'enieur Syst\`emes}{\href{http://www.orness.com}{ORNESS} puis \href{http://www.alten.fr}{Alten}}{Sophia Antipolis}{}{Consultant chez \href{http://orange.com/fr_FR/index.jsp}{France T\'el\'ecom}\newline{}%
 Responsabilit\'es:
 \begin{itemize}
  \item Administration de Cfengine, FAI et du d\'ep\^ot de paquets logiciels ;
@@ -105,7 +74,7 @@ Responsabilit\'es:
  \item \'Ecriture de documentation technique.
 \end{itemize}}
 
-\cventry{Depuis 2008}{D\'eveloppeur}{\href{http://www.augeas.net}{Augeas}}{Internet}{}{D\'eveloppement, bugfix et documentation:
+\tlcventry{2008}{0}{D\'eveloppeur}{\href{http://www.augeas.net}{Augeas}}{Internet}{}{D\'eveloppement, bugfix et documentation:
 \begin{itemize}%
  \item \'Ecriture de lentilles Augeas ;
  \item \'Ecriture de code en C ;
@@ -114,7 +83,7 @@ Responsabilit\'es:
  \item Conf\'erences internationales (Belgique (\href{http://archive.fosdem.org/2009/schedule/events/fedora_augeas}{FOSDEM})).
 \end{itemize}}
 
-\cventry{Depuis 2005}{\href{https://launchpad.net/~raphink}{D\'eveloppeur/Mainteneur}}{\href{http://www.ubuntu.com}{Ubuntu}}{Internet}{}{D\'eveloppement, bugfix et documentation:
+\tlcventry{2005}{0}{\href{https://launchpad.net/~raphink}{D\'eveloppeur/Mainteneur}}{\href{http://www.ubuntu.com}{Ubuntu}}{Internet}{}{D\'eveloppement, bugfix et documentation:
 \begin{itemize}%
  \item Cr\'eation, maintenance et revue de paquets logiciels ;
  \item \'Ecriture de documentation technique pour les d\'eveloppeurs ;
@@ -125,21 +94,18 @@ Responsabilit\'es:
 \end{itemize}}
 
 
-\cventry{Depuis 2005}{Contributeur Open-Source}{\href{http://www.ohloh.net/accounts/raphink}{Divers projets}}{Internet}{}{Contribution \`a diff\'erents projets:
+\tlcventry{2005}{0}{Contributeur Open-Source}{\href{http://www.ohloh.net/accounts/raphink}{Divers projets}}{Internet}{}{Contribution \`a diff\'erents projets:
 \begin{itemize}%
  \item \href{https://launchpad.net/wavebiblebot}{Flammard Bible Bot}: Bot Google Wave, projet personnel en Python/AppEngine ;
  \item \href{http://www.ichthux.com}{Ichthux}: Cr\'eation et maintenance d'une distribution Linux sp\'ecialis\'ee bas\'ee sur Ubuntu ;
- \item \href{http://sourceforge.net/projects/array-info/}{Array-info}: patches en C et releases ;
  \item \href{https://launchpad.net/byobu}{Byobu}: contribution de scripts et patches en Python et Bash ;
  \item \href{http://search.cpan.org/~raphink}{Auteur CPAN}: maintenance de plusieurs modules Perl sur le CPAN;
  \item \href{http://www.ctan.org/author/id/pinson}{Auteur CTAN}: maintenance de plusieurs paquets \LaTeX sur le CTAN;
- \item \href{http://fr.wikipedia.org}{Wikip\'edia}: contribution d'articles encyclop\'ediques ;
- \item \href{http://openstreetmap.org}{OpenStreetMap}: Cartographie, imports de donn\'ees.
 \end{itemize}}
 
 
 \subsection{Autres Exp\'eriences}
-\cventry{Depuis 2011}{Traducteur et \'Editeur}{La Colombe Calvary}{Nice}{}{
+\tlcventry{2009}{0}{Traducteur et \'Editeur}{La Colombe Calvary}{Nice}{}{
 \begin{itemize}%
  \item Traduction de livres de théologie anglais en fran\c{c}ais ;
  \item \'Edition de livres avec \LaTeX{}, \XeTeX{} et \LuaTeX{} ;
@@ -147,33 +113,34 @@ Responsabilit\'es:
 \end{itemize}
 }
 
-\cventry{Juillet 2004}{Stage ouvrier}{\href{http://www.snecma.com}{SNECMA}}{Moissy-Cramayel}{}{Assemblage et \'equilibrage de turbor\'eacteurs}
+\tldatelabelcventry{2004}{Juillet 2004}{Stage ouvrier}{\href{http://www.snecma.com}{SNECMA}}{Moissy-Cramayel}{}{Assemblage et \'equilibrage de turbor\'eacteurs}
 
-\cventry{\'Et\'e 2002}{Agent de s\'ecurit\'e incendie}{\href{http://www.euroguard.fr/}{Euroguard}}{Marcoussis}{}{Supervision d'un site de recherches Alcatel}
+\tldatelabelcventry{2002}{\'Et\'e 2002}{Agent de s\'ecurit\'e incendie}{\href{http://www.euroguard.fr/}{Euroguard}}{Marcoussis}{}{Supervision d'un site de recherches Alcatel}
 
-\cventry{\'Et\'e 2001}{Agent de surveillance}{Penauille Polys\'ecurit\'e}{Paris}{}{Supervision du quartier g\'en\'eral de la Croix-Rouge Fran\c{c}aise}
+\tldatelabelcventry{2001}{\'Et\'e 2001}{Agent de surveillance}{Penauille Polys\'ecurit\'e}{Paris}{}{Supervision du quartier g\'en\'eral de la Croix-Rouge Fran\c{c}aise}
 
-\cventry{1999 -- 2000}{Secouriste}{\href{http://www.croix-rouge.fr/}{Croix-Rouge Fran\c{c}aise}}{R\'egion Parisienne}{}{\'Equipier secouriste en \'equipe}
+\tllabelcventry{1999}{2000}{1999 -- 2000}{Secouriste}{\href{http://www.croix-rouge.fr/}{Croix-Rouge Fran\c{c}aise}}{R\'egion Parisienne}{}{\'Equipier secouriste en \'equipe}
 
 
+\pagebreak
 
 
 \section{\'Education}
-\cventry{2009}{Certification ITIL v3}{\href{http://www.itil-officialsite.com/home/home.asp}{ITIL\up{\textregistered} v3 Foundation}}{Sophia Antipolis}{}{Organisation et efficacit\'e du syst\`eme d'information} 
+\tldatecventry{2009}{Certification ITIL v3}{\href{http://www.itil-officialsite.com/home/home.asp}{ITIL\up{\textregistered} v3 Foundation}}{Sophia Antipolis}{}{Organisation et efficacit\'e du syst\`eme d'information} 
 
-\cventry{2005}{\'Etudiant en cr\'eation, reprise et gestion d'entreprise}{\href{http://www.creation-transmission.com/}{Cr\'eafort}}{Poitiers}{}{Gestion, Management, Marketing, Droit}
+\tldatecventry{2005}{\'Etudiant en cr\'eation, reprise et gestion d'entreprise}{\href{http://www.creation-transmission.com/}{Cr\'eafort}}{Poitiers}{}{Gestion, Management, Marketing, Droit}
 
-\cventry{2005}{\'Etudiant en p\'edagogie (`Gestion Mentale')}{\href{http://www.ifgm.org/}{IFGM}}{Bordeaux}{}{P\'edagogie, Didactique, Psychologie cognitive}
+\tldatecventry{2005}{\'Etudiant en p\'edagogie (`Gestion Mentale')}{\href{http://www.ifgm.org/}{IFGM}}{Bordeaux}{}{P\'edagogie, Didactique, Psychologie cognitive}
 
-\cventry{2003 -- 2005}{\'Etudiant en ing\'enierie m\'ecanique}{\href{http://www.ensma.fr}{\'Ecole Nationale Sup\'erieure de M\'ecanique et d'A\'erotechnique (ENSMA)}}{Poitiers}{}{M\'ecanique des solides \& des fluides, Math\'ematiques, Combustion \& Propulsion, Mat\'eriaux, Automatique, Traitement du signal, Informatique, Management}
+\tllabelcventry{2003}{2005}{2003 -- 2005}{\'Etudiant en ing\'enierie m\'ecanique}{\href{http://www.ensma.fr}{\'Ecole Nationale Sup\'erieure de M\'ecanique et d'A\'erotechnique (ENSMA)}}{Poitiers}{}{M\'ecanique des solides \& des fluides, Math\'ematiques, Combustion \& Propulsion, Mat\'eriaux, Automatique, Traitement du signal, Informatique, Management}
 
-\cventry{2004}{Licence de m\'ecanique}{\href{http://www.univ-poitiers.fr/}{Universit\'e de Poitiers}}{Poitiers}{}{M\'ecanique des solides \& des fluides, Math\'ematiques, Combustion \& Propulsion, Mat\'eriaux, Automatique, Traitement du signal, Informatique, Management}
+\tldatecventry{2004}{Licence de m\'ecanique}{\href{http://www.univ-poitiers.fr/}{Universit\'e de Poitiers}}{Poitiers}{}{M\'ecanique des solides \& des fluides, Math\'ematiques, Combustion \& Propulsion, Mat\'eriaux, Automatique, Traitement du signal, Informatique, Management}
 
-\cventry{2002 -- 2003}{DEUG de chimie}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Chimie, Physique, Math\'ematiques}
+\tllabelcventry{2002}{2003}{2002 -- 2003}{DEUG de chimie}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Chimie, Physique, Math\'ematiques}
 
-\cventry{2000 -- 2002}{\'Etudiant en m\'edecine (PCEM1)}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Biologie, Chimie, Biochimie, Physique, Anatomie, Histologie, Physiologie, Droit}
+\tllabelcventry{2000}{2002}{2000 -- 2002}{\'Etudiant en m\'edecine (PCEM1)}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Biologie, Chimie, Biochimie, Physique, Anatomie, Histologie, Physiologie, Droit}
 
-\cventry{2000}{Baccalaur\'eat S}{\href{http://www.ac-versailles.fr/etabliss/orsay/}{Lyc\'ee Blaise Pascal}}{Orsay}{`mention bien'}{}
+\tldatecventry{2000}{Baccalaur\'eat S}{\href{http://www.ac-versailles.fr/etabliss/orsay/}{Lyc\'ee Blaise Pascal}}{Orsay}{`mention bien'}{}
 
 
 \section{Langues}
