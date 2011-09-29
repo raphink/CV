@@ -8,7 +8,7 @@
 % Version: 20110122-4
 
 
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[11pt,a4paper,nolmodern]{moderncv}
 
 \usepackage{RaphaelPinson}
 
@@ -20,7 +20,7 @@
 % personal data
 \title{Open-Source Technologist}
 \extrainfo{ITIL\textsuperscript{\textregistered} v3 Certified\\Driving License} % optional, remove the line if not wanted
-\quote{Freely you have received, freely give \tiny(Matthew 10:8)}                 % optional, remove the line if not wanted
+\myquote{Freely you have received, freely give}{Matthew 10:8}
 
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
@@ -28,9 +28,11 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
+\setmainfont{Minion Pro}
+\setsansfont{Myriad Pro}
+
+\hyphenpenalty=10000
 \maketitle
-
-
 
 \section{Skills}
 
@@ -76,7 +78,6 @@
 \cvcomputer{Edition}{\TeX{}, \LaTeX{}, \XeTeX{}, \LuaTeX{}}
            {Touch Typing}{QWERTY \& AZERTY}
 
-\pagebreak
 
 
 \section{Experience}

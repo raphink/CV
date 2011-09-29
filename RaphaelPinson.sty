@@ -7,7 +7,7 @@
 %\moderncvtheme[green]{casual}   % idem
 
 % character encoding
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
@@ -30,4 +30,34 @@
 
 \tlmaxdates{1999}{2012}
 \tlwidth{0.8ex}
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+
+\usepackage{microtype}
+
+
+
+% Proper alignment
+\usepackage[originalcommands]{ragged2e}
+\renewcommand*{\cvcomputer}[4]{%
+  \cvdoubleitem{#1}{\small\raggedright#2}{#3}{\small\raggedright#4}}
+
+% Not all fonts have an sl shape
+\renewcommand*{\cventry}[6]{%
+  \cvline{#1}{%
+    {\bfseries#2}%
+    \ifx#3\else{, {\itshape#3}}\fi%
+    \ifx#4\else{, #4}\fi%
+    \ifx#5\else{, #5}\fi%
+    .%
+    \ifx#6\else{\newline{}\begin{minipage}[t]{\linewidth}\small#6\end{minipage}}\fi
+    }}%
+
+
+% Refine quote 
+\newcommand*{\myquote}[2]{%
+   \quote{\itshape #1 \\ \scshape \footnotesize #2}}
+
 
