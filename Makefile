@@ -11,6 +11,7 @@ englishcv: RaphaelPinson_en.pdf
 
 upload:
 	-ncftpput -f ~/.ncftp/cc.cfg $(FTP_DIR)/ *.pdf
+	-ncftpput -f ~/.ncftp/cc.cfg $(FTP_DIR)/ *.tex *.sty
 
 clean:
 	rm -f *.aux *.log *.out
