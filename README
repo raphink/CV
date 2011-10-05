@@ -10,8 +10,9 @@ The CV is optimized to be built into a PDF using pdflatex.
 
 In order to achieve this, you need:
 
-   * A LaTeX distribution (install texlive-latex-extra on Debian/Ubuntu);
-   * pdflatex (texlive-latex-base package on Debian/Ubuntu).
+   * A LaTeX distribution (TeXLive 2011 recommended);
+   * LuaTeX;
+   * MinionPro and MyriadPro fonts (you can find them with Acrobat Reader).
 
 To build the PDF CVs, type `make`.
 
