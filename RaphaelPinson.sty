@@ -78,3 +78,14 @@
 \newcommand*{\cvhobby}[2]{\cvline{#1}{\small #2}}
 
 
+% Developer/Contributor footnotes
+\usepackage[bottom,norule,symbol*]{footmisc}
+\newcommand*{\devnotes}[2]{%
+\vfill
+\footnotetext[1]{#1}
+\footnotetext[2]{#2}
+}
+
+\newcommand*{\developer}{\footnotemark[1]}
+\newcommand*{\contributor}{\footnotemark[2]}
+
