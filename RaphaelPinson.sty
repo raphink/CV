@@ -12,6 +12,27 @@
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
 
+\ifluatex
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\newfontfamily{\githubfont}{Octicons}
+\newfontfamily{\linkedinfont}{Myriad Pro}
+\else
+\newcommand\githubfont{}
+\newcommand\linkedinfont{}
+\fi
+
+\usepackage{microtype}
+
+\newcommand\octocat{{\githubfont\char"F209}}
+\newcommand\linkedin{%
+\scalebox{0.7}{%
+\begin{tikzpicture}[baseline]%
+\node[fill=color2,rounded corners=2pt,anchor=base] {%
+\linkedinfont\bfseries\upshape\color{white}{in}%
+};%
+\end{tikzpicture}}}
+
 % personal data
 \firstname{Rapha\"el}
 \familyname{Pinson}
@@ -20,7 +41,8 @@
 \phone{+33 (0) 456 753 683}
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{rpinson@gmail.com}
-\homepage{www.raphink.info}
+%\homepage{www.raphink.info}
+%\extrainfo{\octocat~\url{http://github.com/raphink}}
 \photo[64pt]{identity}
 
 
@@ -29,13 +51,6 @@
 \usepackage[firstyear=1999,lastyear=2013]{moderntimeline}
 %\tlmaxdates{1999}{2012}
 \tlwidth{0.8ex}
-
-
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-
-\usepackage{microtype}
-
 
 
 % Proper alignment
