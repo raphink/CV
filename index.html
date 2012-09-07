@@ -3,181 +3,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Rapha&euml;l Pinson - Open-Source Technologist</title>
-<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 <style type = "text/css">
 
 body {
-  font-family: 'EB Garamond', serif;
+  background-color: grey;
 }
 
 a img {
   border: 0;
 }
 
-a {
-  text-decoration: none;
-  color: gray;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-#cv {
-  margin: auto;
-  margin-top: 100px;
-  width: 750px;
-}
-
-#cvheader {
-  margin: 0;
-  font-family: Arial, Helvetica;
-  margin-bottom: 50px;
-}
-
-#cvheader table {
-  width: 100%;
-}
-
-#cvname {
-  font-size: 3em;
-}
-
-#cvtitle {
-  font-style: italic;
-  font-size: 1.5em;
-  color: gray;
-}
-
-
-#cvphoto {
-  width: 100px;
-  border: 1px;
-  border-style: ridge;
-  border-color: black;
-  padding: 3px;
-  
-}
-
-#cvphoto img {
-  width: 100px;
-}
-
-#cvquote {
-  margin: 20px;
-  text-align: center;
-  font-style: italic;
-  color: gray;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.3em;
-}
-
-#cvquoteref {
-  font-size: 1em;
-  font-variant: small-caps;
-}
-
-#cvfooter {
-  color: gray;
-  font-size: 0.8em;
-}
-
-hr {
-  height: 6px;
-  width: 10em;
-  background-color: orange;
-  border: 0; 
-}
-
 #rule {
-  color: orange;
-  font-size: 1.3em;
-  font-family: Arial, Helvetica;
+  padding: 0 20px;
+  height: 35px;
 }
 
 #rule img {
-  height: 0.5em;
-  width: 5em;
+  height: 30px;
   margin-right: 0.5em;
 }
 
-#cvlangs {
-  margin: 50px 0;
-  width: 100%;
-}
-
-#cvlangs table {
-  width: 100%;
-}
-
-#cvlangs table tr td {
-  width: 50%;
-  padding: 20px 20px;
-  vertical-align: middle;
-  text-align: center;
-}
-
-table.cvfiles {
-  margin: 50px 0;
-  color: gray;
-  font-style: italic;
-}
-
-
-img.file {
-  width: 50px;
-  margin-right: 50px;
+#pdfbutton {
+  float:right;
 }
 
 
 </style>
+<script type="text/javascript">
+function loadCV(lang) {
+document.getElementById('cvframe').src = 'RaphaelPinson_'+lang+'.html';
+document.getElementById('pdfbutton').href = 'https://github.com/raphink/CV/blob/master/RaphaelPinson_'+lang+'.pdf?raw=true';
+autoResize('cvframe');
+}
+function autoResize(id){
+    document.getElementById(id).height= window.innerHeight-60 + "px";
+}
+</script>
 </head>
-<body>
-<a href="http://github.com/raphink/CV"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-<div id="cv">
- <div id="cvheader">
-  <table>
-   <tr>
-    <td>
-     <div id="cvname">Rapha&euml;l Pinson</div>
-     <div id="cvtitle">Open-Source Technologist</div>
-    </td>
-    <td id="cvphoto">
-     <img src="identity.jpg" alt="Identity Picture" />
-    </td>
-   </tr>
-  </table>
-  <div id="cvquote">Freely you have received, freely give<br /><span id="cvquoteref">Matthew 10:8</span></div>
- </div>
- <div id="rule">
-    <img src="orange_pix.gif" /> CV
- </div>
- <div id="cvlangs">
-  <table>
-   <tr>
-    <td>
-            <a href="RaphaelPinson_en.html"><img class="file" src="html_en.png" alt="View English CV in HTML" /><br />View the English CV in HTML</a>
-    </td>
-    <td>
-            <a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true"><img class="file" src="pdf_en.png" alt="Download English CV in PDF" /><br />Download the English CV in PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-            <a href="RaphaelPinson_fr.html"><img class="file" src="html_fr.png" alt="Voir le CV en fran&ccedil;ais en HTML" /><br />Voir le CV en fran&ccedil;ais en HTML</a>
-    </td>
-    <td>
-            <a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_fr.pdf?raw=true"><img class="file" src="pdf_fr.png" alt="T&eacute;l&eacute;charger le CV en fran&ccedil;ais en PDF" /><br />T&eacute;l&eacute;charger le CV fran&ccedil;ais en PDF</a>
-    </td>
-   </tr>
-  </table>
- </div>
- <div id="cvfooter">
- </div>
+<body onLoad="loadCV('en')">
+<div id="rule">
+<a href="javascript:void(0)" onClick="loadCV('en')"><img src="united_kingdom_great_britain.png" alt="CV in English" /></a>
+<a href="javascript:void(0)" onClick="loadCV('fr')"><img src="france.png" alt="CV en fran&ccedil;ais" /></a>
+<a href="#" id="pdfbutton"><img src="application-pdf.png" alt="Download as PDF" /></a>
 </div>
+<iframe id="cvframe" src="#" width='100%' scrolling="no" frameborder=0></iframe>
 </body>
 </html>
-
-
 
 
