@@ -12,18 +12,26 @@
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
 
-\newif\ifhtml
-\htmlfalse
-\htmltrue
-
-\ifhtml
-\newcommand\githubfont{}
-\newcommand\linkedinfont{}
+\usepackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
 \else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\ifxetexorluatex
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
 \newfontfamily{\githubfont}{Octicons}
 \newfontfamily{\linkedinfont}{Myriad Pro}
+\else
+\newcommand\githubfont{}
+\newcommand\linkedinfont{}
 \fi
 
 \usepackage{microtype}
