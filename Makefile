@@ -6,8 +6,13 @@ frenchcv: RaphaelPinson_fr.pdf
 englishcv: RaphaelPinson_en.pdf
 
 %.pdf: %.tex
-	lualatex -interaction=batchmode $<
-	lualatex -interaction=batchmode $<
+	#lualatex -interaction=batchmode $<
+	#lualatex -interaction=batchmode $<
+	xelatex -interaction=batchmode $<
+	xelatex -interaction=batchmode $<
+
+%.html: %.pdf
+	pdf2htmlEX --zoom=2 $<
 
 upload:
 	-ncftpput -f ~/.ncftp/cc.cfg $(FTP_DIR)/ *.pdf
