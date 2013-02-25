@@ -1,6 +1,10 @@
 FTP_DIR=cv
 
-all: frenchcv englishcv
+all: pdf html
+
+pdf: RaphaelPinson_fr.pdf RaphaelPinson_en.pdf
+
+html: RaphaelPinson_fr.html RaphaelPinson_en.html
 
 frenchcv: RaphaelPinson_fr.pdf
 englishcv: RaphaelPinson_en.pdf
