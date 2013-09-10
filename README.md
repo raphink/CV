@@ -17,9 +17,9 @@ In order to build the PDF versions of this CV, you will need:
 
    * A LaTeX distribution (TeXLive 2012 recommended);
    * LuaTeX;
-   * MinionPro and MyriadPro fonts (you can find them with Acrobat Reader).
+   * MinionPro, MyriadPro and Octicons fonts (you can find them under the fonts folder.  Just copy them to /usr/local/share/fonts).
 
-TO build the PDF CVs, type `make pdf`.
+To build the PDF CVs, type `make pdf`.
 
 
 ## HTML version
