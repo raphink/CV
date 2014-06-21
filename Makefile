@@ -1,10 +1,18 @@
-FTP_DIR=cv
+LANGS=fr en
+TARGETS=$(addprefix RaphaelPinson_,$(LANGS))
+PDF_TARGETS=$(addsuffix .pdf,$(TARGETS))
+HTML_TARGETS=$(addsuffix .html,$(TARGETS))
 
 all: pdf html
 
-pdf: RaphaelPinson_fr.pdf RaphaelPinson_en.pdf
+pdf: $(PDF_TARGETS)
 
-html: RaphaelPinson_fr.html RaphaelPinson_en.html
+html: $(HTML_TARGETS)
+
+gh-pages:
+	mv $(HTML_TARGETS) /tmp
+	git checkout gh-pages
+	cd /tmp && mv $(HTML_TARGETS) $(CURDIR)
 
 frenchcv: RaphaelPinson_fr.pdf
 englishcv: RaphaelPinson_en.pdf
@@ -17,10 +25,6 @@ englishcv: RaphaelPinson_en.pdf
 
 %.html: %.pdf
 	pdf2htmlEX --zoom=2 $<
-
-upload:
-	-ncftpput -f ~/.ncftp/cc.cfg $(FTP_DIR)/ *.pdf
-	-ncftpput -f ~/.ncftp/cc.cfg $(FTP_DIR)/ *.tex *.sty
 
 clean:
 	rm -f *.aux *.log *.out
