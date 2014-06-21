@@ -9,7 +9,7 @@ pdf: $(PDF_TARGETS)
 
 html: $(HTML_TARGETS)
 
-gh-pages:
+gh-pages: html
 	mv $(HTML_TARGETS) /tmp
 	git checkout gh-pages
 	cd /tmp && mv $(HTML_TARGETS) $(CURDIR)
