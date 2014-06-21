@@ -13,6 +13,9 @@ gh-pages:
 	mv $(HTML_TARGETS) /tmp
 	git checkout gh-pages
 	cd /tmp && mv $(HTML_TARGETS) $(CURDIR)
+	git commit -a -m "Regenerate gh-pages"
+	git push
+	git checkout master
 
 frenchcv: RaphaelPinson_fr.pdf
 englishcv: RaphaelPinson_en.pdf
