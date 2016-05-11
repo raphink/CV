@@ -9,6 +9,10 @@
       font-size: 8pt;
     }
 
+    .vis-item {
+      border-width: 0 !important;
+    }
+
     .vis-item.vis-background.orange {
       background: lightyellow;
     }
@@ -133,7 +137,8 @@
     },
     order: function(a, b) {
       return b.id - a.id;
-    }
+    },
+    orientation: 'both'
   };
 
   var timeline = new vis.Timeline(container);
