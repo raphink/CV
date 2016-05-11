@@ -30,17 +30,25 @@
       height: 40px !important;
     }
 
-    .vis-item.used {
+    .vis-item.used, li.used {
       background-color: #D3E5F9;
       color: #5383B8 !important;
     }
 
-    .vis-item.implemented {
+    .vis-item.implemented, li.implemented {
       background-color: #7AA5D6;
+      color: white !important;
     }
 
-    .vis-item.contributed {
+    .vis-item.contributed, li.contributed {
       background-color: #5383B8;
+      color: white !important;
+    }
+
+    ul.legend li {
+      list-style-type: none;
+      line-height: 20px;
+      padding: 5px;
     }
   </style>
 
@@ -48,6 +56,22 @@
   <link href="http://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+
+  <h1>Raphaël Pinson's technical skills timeline</h1>
+
+  <p>
+  This timeline describes the technical stacks I have used in my job as a systems engineer over the years.
+  </p>
+
+  <p>
+  <b>Legend:</b>
+
+  <ul class="legend">
+    <li class="used">Used / Coded with</li>
+    <li class="implemented">Implemented / Set up / Maintained code packages (*)</li>
+    <li class="contributed">Developed (**) / Contributed (*)</li>
+  </ul>
+  </p>
 
 <div id="visualization"></div>
 
