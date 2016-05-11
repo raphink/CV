@@ -10,11 +10,15 @@
     }
 
     .vis-item.vis-background.orange {
-      background-color: lightyellow;
+      background: lightyellow;
     }
 
     .vis-item.vis-background.camptocamp {
       background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .group-header {
+      height: 40px !important;
     }
 
     .vis-item.used {
@@ -53,12 +57,12 @@
     {id: 11, content: 'Web frontend'},
 
     // Empty group to display period names
-    {id: 99, content: '&nbsp;'},
+    {id: 99, content: '&nbsp;', className: 'group-header'},
   ]);
 
   var items = new vis.DataSet([
-    {id: 'Orange', content: 'Orange Portails', start: '2006-06-01', end: '2012-02-20', type: 'background', className: 'orange'},
-    {id: 'Camptocamp', content: 'Camptocamp', start: '2012-03-01', end: '2016-06-01', type: 'background', className: 'camptocamp'},
+    {id: 'Orange', content: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/2000px-Orange_logo.svg.png" width="40px" valign="middle" /> Orange Portails', start: '2006-06-01', end: '2012-02-20', type: 'background', className: 'orange'},
+    {id: 'Camptocamp', content: '<img src="http://docs.camptocamp.net/cgxp/master/_static/camptocamp.png" width="40px" valign="middle" /> Camptocamp', start: '2012-03-01', end: '2016-06-01', type: 'background', className: 'camptocamp'},
 
     // 0: Provisioning
     {id: 01, group: 0, content: 'Debian FAI', start: '2006-06-01', end: '2012-02-01', className: 'contributed'},
