@@ -33,3 +33,8 @@
   background-color: #5383B8;
   color: white !important;
 }
+
+img.logo {
+  width: 40px;
+  vertical-align: middle;
+}
