@@ -153,8 +153,6 @@ function loadDetails(items) {
         url: './details/'+ii.details+'.html',
         id: i,
         success: function(details) {
-          console.log(details);
-          console.log(this.id);
           $('#details-'+this.id).html(details);
         }
     });
