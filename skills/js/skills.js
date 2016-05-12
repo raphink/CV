@@ -86,11 +86,21 @@ function skills() {
   ]);
 
   var container = document.getElementById('visualization');
+
+  var start_date = new Date('2006-01-01');
+  var min_date = new Date();
+  min_date.setFullYear(start_date.getFullYear() - 5);
+
   var end_date = new Date();
-  end_date.setMonth( end_date.getMonth() + 4 )
+  end_date.setMonth(end_date.getMonth() + 4);
+  var max_date = new Date();
+  max_date.setFullYear(end_date.getFullYear() + 5);
+
   var options = {
-    start: '2006-01-01',
+    start: start_date,
     end: end_date,
+    min: min_date,
+    max: max_date,
     editable: false,
     groupOrder: function(a, b) {
       return b.id - a.id;
