@@ -49,23 +49,25 @@ function skills() {
     // 5: OS coding
     {id: 51, group: 5, content: 'Bash / Dash', start: '2005', end: new Date(), className: 'used'},
     {id: 52, group: 5, content: 'Perl', start: '2006', end: c2c_start, className: 'implemented'},
-    {id: 53, group: 5, content: 'Ruby', start: c2c_start, end: new Date(), className: 'implemented'},
-    {id: 54, group: 5, content: 'Go', start: '2016', end: new Date(), className: 'used'},
+    {id: 53, group: 5, content: 'C', start: '2008', end: new Date(), className: 'used'},
+    {id: 54, group: 5, content: 'Ruby', logo: 'ruby', start: c2c_start, end: new Date(), className: 'implemented'},
+    {id: 55, group: 5, content: 'Go', logo: 'go', start: '2016', end: new Date(), className: 'used'},
 
     // 6: Configuration Management
-    {id: 61, group: 6, content: 'Cfengine', start: '2006', end: c2c_start, className: 'implemented'},
-    {id: 62, group: 6, content: 'Puppet<sup>*</sup>', start: '2007', end: new Date(), className: 'contributed'},
-    {id: 63, group: 6, content: 'Augeas<sup>**</sup>', start: '2008', end: new Date(), className: 'contributed'},
+    {id: 61, group: 6, content: 'Cfengine', logo: 'cfengine', start: '2006', end: c2c_start, className: 'implemented'},
+    {id: 62, group: 6, content: 'Puppet<sup>*</sup>', logo: 'puppet', start: '2007', end: new Date(), className: 'contributed'},
+    {id: 63, group: 6, content: 'Augeas<sup>**</sup>', logo: 'augeas', start: '2008', end: new Date(), className: 'contributed'},
 
     // 7: Containers
     {id: 71, group: 7, content: 'Chroot', start: '2006', end: '2010', className: 'used'},
-    {id: 72, group: 7, content: 'LXC', start: '2008', end: c2c_start, className: 'implemented'},
-    {id: 73, group: 7, content: 'OpenVZ', start: c2c_start, end: '2014', className: 'used'},
-    {id: 74, group: 7, content: 'Docker / Rancher', start: '2014', end: new Date(), className: 'implemented'},
+    {id: 72, group: 7, content: 'LXC', logo: 'lxc', start: '2008', end: c2c_start, className: 'implemented'},
+    {id: 73, group: 7, content: 'OpenVZ', logo: 'openvz', start: c2c_start, end: '2014', className: 'used'},
+    {id: 74, group: 7, content: 'Docker / Rancher', logo: 'docker', start: '2014', end: new Date(), className: 'implemented'},
 
     // 8: Databases
-    {id: 81, group: 8, content: 'MySQL', start: '2002', end: new Date(), className: 'implemented'},
-    {id: 82, group: 8, content: 'PostgreSQL', start: '2007', end: new Date(), className: 'implemented'},
+    {id: 81, group: 8, content: 'MySQL', logo: 'mysql', start: '2002', end: new Date(), className: 'implemented'},
+    {id: 82, group: 8, content: 'PostgreSQL', logo: 'postgresql', start: '2007', end: new Date(), className: 'implemented'},
+
 
     // 9: Cloud / PAAS
     {id: 91, group: 9, content: 'Google AppEngine', logo: 'google_appengine', start: '2008', end: '2010', className: 'used'},
