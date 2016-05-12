@@ -57,7 +57,7 @@ function skills() {
     // 6: Configuration Management
     {id: 61, group: 6, content: 'Cfengine', logo: 'cfengine', start: '2006', end: c2c_start, className: 'implemented'},
     {id: 62, group: 6, content: 'Puppet', logo: 'puppet', start: '2007', end: new Date(), className: 'contributed'},
-    {id: 63, group: 6, content: 'Augeas', logo: 'augeas', details: '<h5>Lenses</h5><p>When the Augeas project was first presented to me in 2007, I was very enthusiastic and started contributing new lenses very early. I quickly became the main contributor of Augeas lenses.</p><h5>API contributions</h5><p>Later on, I contributed C code for the API, as well bindings code for Python/Ruby and Perl (which I maintain on the CPAN).</p><h5>Augeasproviders</h5><p>I joined Dominic Cleal when he started the Augeasproviders project and am now the main developer.</p><h5>Talks and trainings</h5><p>I have talked about Augeas at various conferences and have written and taught a one-day course on using Augeas.</p>', start: '2008', end: new Date(), className: 'developed'},
+    {id: 63, group: 6, content: 'Augeas', logo: 'augeas', details: 'augeas', start: '2008', end: new Date(), className: 'developed'},
 
     // 7: Containers
     {id: 71, group: 7, content: 'Chroot', start: '2006', end: '2010', className: 'used'},
@@ -75,12 +75,12 @@ function skills() {
 
     // 10: Web backend
     {id: 101, group: 10, content: 'PHP', logo: 'php', start: '2002', end: new Date(), className: 'used'},
-    {id: 102, group: 10, content: 'Python', logo: 'python', details: '<h5>Google Wave</h5><p>When Google Wave came out, I was really interested in the concept and started coding extensions and bots for it. The best platform to easily achieve that was Google App Engine with Python.</p><h5>Projects</h5><ul class="list-group"><li><a href="https://launchpad.net/wavebiblebot">Flammard</a>, a Bible bot for Google Wave</li><li><a href="https://launchpad.net/annoty">Annoty</a>, a generic, programmable, annotations bot for Google Wave</li></ul>', start: '2008', end: new Date(), className: 'implemented'},
-    {id: 103, group: 10, content: 'Ruby', logo: 'ruby', details: '<p>My first contributions to Puppet in 2007 introduced me to Ruby. Since I started using Puppet extensively in 2012, Ruby has become my main programming language.</p><p>In spite of its speed downfalls, I appreciates the language\'s extreme flexibility.</p>', start: '2013', end: new Date(), className: 'implemented'},
-    {id: 104, group: 10, content: 'Go', logo: 'go', details: '<p>I have been interested in Go every since it came out publicly.</p><p>When I started using Consul and Docker/Rancher, I finally had the occasion to read code and start contributing in Go.</p><p>I strongly appreciated the thorough approach of this language, combining the speed and robustness of compiled and strongly typed languages with the agility of its structures and interfaces.</p>', start: '2016', end: new Date(), className: 'used'},
+    {id: 102, group: 10, content: 'Python', logo: 'python', details: 'python', start: '2008', end: new Date(), className: 'implemented'},
+    {id: 103, group: 10, content: 'Ruby', logo: 'ruby', details: 'ruby', start: '2013', end: new Date(), className: 'implemented'},
+    {id: 104, group: 10, content: 'Go', logo: 'go', details: 'go', start: '2016', end: new Date(), className: 'used'},
 
     // 11: Web frontend
-    {id: 111, group: 11, content: 'HTML / Javascript / CSS', logo: 'html_css_js', details: "<h5>Projects</h5><ul><li><a href='https://github.com/camptocamp/puppet-catalog-diff-viewer'>Puppet Catalog Diff Viewer</a>, a client web interface using JQuery and D3js</li><li><a href='https://github.com/camptocamp/r10k-dashboard'>R10k dashboard</a>, a dashboard using the GitHub JavaScript library</li></ul>", start: '2002', end: new Date(), className: 'implemented'},
+    {id: 111, group: 11, content: 'HTML / Javascript / CSS', logo: 'html_css_js', details: "html_css_js", start: '2002', end: new Date(), className: 'implemented'},
     {id: 112, group: 11, content: 'JQuery', logo: 'jquery', start: c2c_start, end: new Date(), className: 'used'},
     {id: 113, group: 11, content: 'Bootstrap', logo: 'bootstrap', start: '2015', end: new Date(), className: 'used'},
   ]);
@@ -120,8 +120,8 @@ function skills() {
       }
 
       if (item.details) {
-        var html = '<a class="details-toggle" data-toggle="collapse" href="#data-'+item.id+'">'+title+'</a>';
-        html += '<div class="details collapse" id="data-'+item.id+'">'+item.details+'</div>';
+        var html = '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</a>';
+        html += '<div class="details collapse" id="details-'+item.id+'"></div>';
         return html;
         } else {
         return title;
@@ -134,6 +134,8 @@ function skills() {
   timeline.setGroups(groups);
   timeline.setItems(items);
 
+  loadDetails(items);
+
   $('div.details').on('shown.bs.collapse hidden.bs.collapse', function(e) {
     timeline.redraw();
   });
@@ -142,4 +144,19 @@ function skills() {
 
 function toggleDetails() {
   $('.details').collapse('toggle');
+}
+
+function loadDetails(items) {
+  for (var i in items._data) {
+    var ii = items._data[i];
+    $.ajax({
+        url: './details/'+ii.details+'.html',
+        id: i,
+        success: function(details) {
+          console.log(details);
+          console.log(this.id);
+          $('#details-'+this.id).html(details);
+        }
+    });
+  }
 }
