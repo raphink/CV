@@ -127,3 +127,8 @@ function skills() {
     timeline.redraw();
   });
 }
+
+
+function toggleDetails() {
+  $('.details').collapse('toggle');
+}
