@@ -43,6 +43,10 @@ img.logo {
   vertical-align: middle;
 }
 
+img.logo.small {
+  width: 25px;
+}
+
 
 .details {
   font-size: 70%;
