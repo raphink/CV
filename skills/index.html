@@ -3,57 +3,9 @@
 <head>
   <title>Raphaël Pinson —  Visual CV</title>
 
-  <style>
-    body, html {
-      font-family: arial, sans-serif;
-      font-size: 8pt;
-    }
-
-    .vis-item {
-      border-width: 0 !important;
-      color: white !important;
-    }
-
-    .vis-item.vis-background.orange {
-      background: #FFDE94;
-      color: #6B42CA !important;
-      font-weight: bold !important;
-    }
-
-    .vis-item.vis-background.camptocamp {
-      background-color: #FFF094;
-      color: #6B42CA !important;
-      font-weight: bold !important;
-    }
-
-    .group-header {
-      height: 40px !important;
-    }
-
-    .vis-item.used, li.used {
-      background-color: #D3E5F9;
-      color: #5383B8 !important;
-    }
-
-    .vis-item.implemented, li.implemented {
-      background-color: #7AA5D6;
-      color: white !important;
-    }
-
-    .vis-item.contributed, li.contributed {
-      background-color: #5383B8;
-      color: white !important;
-    }
-
-    ul.legend li {
-      list-style-type: none;
-      line-height: 20px;
-      padding: 5px;
-    }
-  </style>
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.js"></script>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.css" rel="stylesheet" type="text/css" />
+  <script src="js/vis.min.js"></script>
+  <link href="css/vis.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/overrides.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -181,6 +133,10 @@
   timeline.setOptions(options);
   timeline.setGroups(groups);
   timeline.setItems(items);
+
+  timeline.on('select', function(properties) {
+    console.log(properties);
+  });
 
 </script>
 </body>
