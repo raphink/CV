@@ -20,22 +20,22 @@
 }
 
 .vis-item.used, .vis-item.used a, li.used {
-  background-color: #E5EAF0;
+  background-color: #D9EDF7;
   color: #2C4B6C !important;
 }
 
 .vis-item.implemented, .vis-item.implemented a, li.implemented {
-  background-color: #ADBAC8;
+  background-color: #A7CAE3;
   color: #2C4B6C !important;
 }
 
 .vis-item.contributed, .vis-item.contributed a, li.contributed {
-  background-color: #637A93;
+  background-color: #649CCA;
   color: white !important;
 }
 
 .vis-item.developed, .vis-item.developed a, li.developed {
-  background-color: #2C4B6C;
+  background-color: #337AB7;
   color: white !important;
 }
 
