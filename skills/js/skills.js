@@ -101,6 +101,7 @@ function skills() {
     end: end_date,
     min: min_date,
     max: max_date,
+    zoomMin: 18144000000,  // 1000*3600*24*7*30 = 1 month
     editable: false,
     groupOrder: function(a, b) {
       return b.id - a.id;
