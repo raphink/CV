@@ -77,7 +77,7 @@ function skills() {
     {id: 104, group: 10, content: 'Go', start: '2016', end: new Date(), className: 'used'},
 
     // 11: Web frontend
-    {id: 111, group: 11, content: 'HTML / Javascript / CSS', start: '2002', end: new Date(), className: 'implemented'},
+    {id: 111, group: 11, content: 'HTML / Javascript / CSS', details: "Yeah", start: '2002', end: new Date(), className: 'implemented'},
     {id: 112, group: 11, content: 'JQuery', start: c2c_start, end: new Date(), className: 'used'},
     {id: 113, group: 11, content: 'Bootstrap', start: '2015', end: new Date(), className: 'used'},
   ]);
@@ -95,15 +95,20 @@ function skills() {
     order: function(a, b) {
       return b.id - a.id;
     },
-    orientation: 'both'
+    orientation: 'both',
+    template: function(item) {
+      if (item.details) {
+        var html = '<a data-toggle="collapse" href="#data-"'+item.id+'">'+item.content+'</a>';
+        html += '<div class="details collapse" id="data-"'+item.id+'>'+item.details+'</div>';
+        return html;
+        } else {
+        return item.content;
+      }
+    }
   };
 
   var timeline = new vis.Timeline(container);
   timeline.setOptions(options);
   timeline.setGroups(groups);
   timeline.setItems(items);
-
-  timeline.on('select', function(properties) {
-    console.log(properties);
-  });
 }
