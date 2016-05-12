@@ -20,6 +20,8 @@
 .vis-item.vis-background img.logo {
   float: left;
   margin-right: 5px;
+  padding: 1px;
+  border: 1px solid lightgray;
 }
 
 .group-header {
