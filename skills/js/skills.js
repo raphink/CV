@@ -26,29 +26,30 @@ function skills() {
     // 0: Provisioning
     {id: 01, group: 0, content: 'Debian FAI', start: '2006-06-01', end: c2c_start, className: 'contributed'},
     {id: 02, group: 0, content: 'Kickstart', start: '2006-06-01', end: new Date(), className: 'implemented'},
-    {id: 03, group: 0, content: 'Terraform', start: '2016-05-01', end: new Date(), className: 'implemented'},
+    {id: 03, group: 0, content: 'Terraform', logo: 'terraform', start: '2016-05-01', end: new Date(), className: 'implemented'},
 
     // 1: Cloud / IAAS
-    {id: 11, group: 1, content: 'Amazon Web Services', start: '2010', end: new Date(), className: 'implemented'},
-    {id: 12, group: 1, content: 'Openstack', start: '2013', end: new Date(), className: 'used'},
+    {id: 11, group: 1, content: 'Amazon Web Services', logo: 'aws', start: '2010', end: new Date(), className: 'implemented'},
+    {id: 12, group: 1, content: 'Openstack', logo: 'openstack', start: '2013', end: new Date(), className: 'used'},
 
     // 2: Virtualization
-    {id: 21, group: 2, content: 'Qemu', start: '2005', end: '2007', className: 'used'},
-    {id: 22, group: 2, content: 'Xen', start: '2008', end: c2c_start, className: 'used'},
-    {id: 23, group: 2, content: 'Virtualbox / Vagrant', start: c2c_start, end: new Date(), className: 'used'},
+    {id: 21, group: 2, content: 'Qemu', logo: 'qemu', start: '2005', end: '2007', className: 'used'},
+    {id: 22, group: 2, content: 'Xen', logo: 'xen', start: '2008', end: c2c_start, className: 'used'},
+    {id: 23, group: 2, content: 'Virtualbox / Vagrant', logo: 'virtualbox', start: c2c_start, end: new Date(), className: 'used'},
 
     // 3: Operating Systems
-    {id: 31, group: 3, content: 'Debian<sup>*</sup> / Ubuntu<sup>**</sup>', start: '2002', end: new Date(), className: 'contributed'},
-    {id: 32, group: 3, content: 'RedHat / CentOS', start: '2006', end: new Date(), className: 'implemented'},
+    {id: 31, group: 3, content: 'Debian<sup>*</sup>', logo: 'debian', start: '2002', end: new Date(), className: 'contributed'},
+    {id: 32, group: 3, content: 'Ubuntu<sup>**</sup>', logo: 'ubuntu', start: '2004', end: new Date(), className: 'contributed'},
+    {id: 33, group: 3, content: 'RedHat / CentOS', logo: 'redhat', start: '2006', end: new Date(), className: 'implemented'},
 
     // 4: VCS
     {id: 41, group: 4, content: 'CVS', start: '2008', end: c2c_start, className: 'implemented'},
-    {id: 42, group: 4, content: 'Bazaar NG', start: '2005', end: '2008', className: 'used'},
-    {id: 43, group: 4, content: 'Git', start: '2008', end: new Date(), className: 'implemented'},
+    {id: 42, group: 4, content: 'Bazaar NG', logo: 'bzr', start: '2005', end: '2008', className: 'used'},
+    {id: 43, group: 4, content: 'Git', logo: 'git', start: '2008', end: new Date(), className: 'implemented'},
 
     // 5: OS coding
     {id: 51, group: 5, content: 'Bash / Dash', start: '2005', end: new Date(), className: 'used'},
-    {id: 52, group: 5, content: 'Perl', start: '2006', end: c2c_start, className: 'implemented'},
+    {id: 52, group: 5, content: 'Perl', logo: 'perl', start: '2006', end: c2c_start, className: 'implemented'},
     {id: 53, group: 5, content: 'C', start: '2008', end: new Date(), className: 'used'},
     {id: 54, group: 5, content: 'Ruby', logo: 'ruby', start: c2c_start, end: new Date(), className: 'implemented'},
     {id: 55, group: 5, content: 'Go', logo: 'go', start: '2016', end: new Date(), className: 'used'},
