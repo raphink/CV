@@ -1,3 +1,7 @@
+.vis-label {
+  font-weight: bold;
+}
+
 .vis-item {
   border-width: 0 !important;
   color: white !important;
