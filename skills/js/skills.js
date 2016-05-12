@@ -47,10 +47,10 @@ function skills() {
     {id: 43, group: 4, content: 'Git', start: '2008', end: new Date(), className: 'implemented'},
 
     // 5: OS coding
-    {id: 51, group: 5, content: 'Bash / Dash', start: '2005', end: new Date(), className: 'implemented'},
-    {id: 52, group: 5, content: 'Perl<sup>*</sup>', start: '2006', end: c2c_start, className: 'implemented'},
-    {id: 53, group: 5, content: 'Ruby<sup>*</sup>', start: c2c_start, end: new Date(), className: 'implemented'},
-    {id: 54, group: 5, content: 'Go', start: '2016', end: new Date(), className: 'implemented'},
+    {id: 51, group: 5, content: 'Bash / Dash', start: '2005', end: new Date(), className: 'used'},
+    {id: 52, group: 5, content: 'Perl', start: '2006', end: c2c_start, className: 'implemented'},
+    {id: 53, group: 5, content: 'Ruby', start: c2c_start, end: new Date(), className: 'implemented'},
+    {id: 54, group: 5, content: 'Go', start: '2016', end: new Date(), className: 'used'},
 
     // 6: Configuration Management
     {id: 61, group: 6, content: 'Cfengine', start: '2006', end: c2c_start, className: 'implemented'},
@@ -68,18 +68,18 @@ function skills() {
     {id: 82, group: 8, content: 'PostgreSQL', start: '2007', end: new Date(), className: 'implemented'},
 
     // 9: Cloud / PAAS
-    {id: 91, group: 9, content: 'Google AppEngine', start: '2008', end: '2010', className: 'implemented'},
+    {id: 91, group: 9, content: 'Google AppEngine', start: '2008', end: '2010', className: 'used'},
 
     // 10: Web backend
-    {id: 101, group: 10, content: 'PHP', start: '2002', end: new Date(), className: 'implemented'},
+    {id: 101, group: 10, content: 'PHP', start: '2002', end: new Date(), className: 'used'},
     {id: 102, group: 10, content: 'Python', start: '2008', end: new Date(), className: 'implemented'},
     {id: 103, group: 10, content: 'Ruby', start: '2013', end: new Date(), className: 'implemented'},
-    {id: 104, group: 10, content: 'Go', start: '2016', end: new Date(), className: 'implemented'},
+    {id: 104, group: 10, content: 'Go', start: '2016', end: new Date(), className: 'used'},
 
     // 11: Web frontend
     {id: 111, group: 11, content: 'HTML / Javascript / CSS', start: '2002', end: new Date(), className: 'implemented'},
-    {id: 112, group: 11, content: 'JQuery', start: c2c_start, end: new Date(), className: 'implemented'},
-    {id: 113, group: 11, content: 'Bootstrap', start: '2015', end: new Date(), className: 'implemented'},
+    {id: 112, group: 11, content: 'JQuery', start: c2c_start, end: new Date(), className: 'used'},
+    {id: 113, group: 11, content: 'Bootstrap', start: '2015', end: new Date(), className: 'used'},
   ]);
 
   var container = document.getElementById('visualization');
