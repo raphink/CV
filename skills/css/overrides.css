@@ -42,3 +42,9 @@ img.logo {
 .details {
   font-size: 70%;
 }
+
+img.identity {
+  width: 100px;
+  padding: 1px;
+  border: 1px solid gray;
+}
