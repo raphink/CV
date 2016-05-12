@@ -96,8 +96,8 @@ function skills() {
       return b.id - a.id;
     },
     orientation: 'both',
+    autoResize: true,
     template: function(item) {
-      console.log(item);
       if (item.details) {
         var html = '<a data-toggle="collapse" href="#data-'+item.id+'">'+item.content+'</a>';
         html += '<div class="details collapse" id="data-'+item.id+'">'+item.details+'</div>';
@@ -112,4 +112,8 @@ function skills() {
   timeline.setOptions(options);
   timeline.setGroups(groups);
   timeline.setItems(items);
+
+  $('div.details').on('shown.bs.collapse hidden.bs.collapse', function(e) {
+    timeline.redraw();
+  });
 }
