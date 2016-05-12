@@ -94,7 +94,7 @@ function skills() {
   var end_date = new Date();
   end_date.setMonth(end_date.getMonth() + 4);
   var max_date = new Date();
-  max_date.setFullYear(end_date.getFullYear() + 5);
+  max_date.setFullYear(end_date.getFullYear() + 2);
 
   var options = {
     start: start_date,
