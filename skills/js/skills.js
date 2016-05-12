@@ -73,8 +73,8 @@ function skills() {
     // 10: Web backend
     {id: 101, group: 10, content: 'PHP', start: '2002', end: new Date(), className: 'used'},
     {id: 102, group: 10, content: 'Python', start: '2008', end: new Date(), className: 'implemented'},
-    {id: 103, group: 10, content: 'Ruby', start: '2013', end: new Date(), className: 'implemented'},
-    {id: 104, group: 10, content: 'Go', start: '2016', end: new Date(), className: 'used'},
+    {id: 103, group: 10, content: 'Ruby', details: '<p>My first contributions to Puppet in 2007 introduced me to Ruby. Since I started using Puppet extensively in 2012, Ruby has become my main programming language.</p><p>In spite of its speed downfalls, I appreciates the language\'s extreme flexibility.</p>', start: '2013', end: new Date(), className: 'implemented'},
+    {id: 104, group: 10, content: 'Go', details: '<p>I have been interested in Go every since it came out publicly.</p><p>When I started using Consul and Docker/Rancher, I finally had the occasion to read code and start contributing in Go.</p><p>I strongly appreciated the thorough approach of this language, combining the speed and robustness of compiled and strongly typed languages with the agility of its structures and interfaces.</p>', start: '2016', end: new Date(), className: 'used'},
 
     // 11: Web frontend
     {id: 111, group: 11, content: 'HTML / Javascript / CSS', details: "Yeah", start: '2002', end: new Date(), className: 'implemented'},
@@ -97,9 +97,10 @@ function skills() {
     },
     orientation: 'both',
     template: function(item) {
+      console.log(item);
       if (item.details) {
-        var html = '<a data-toggle="collapse" href="#data-"'+item.id+'">'+item.content+'</a>';
-        html += '<div class="details collapse" id="data-"'+item.id+'>'+item.details+'</div>';
+        var html = '<a data-toggle="collapse" href="#data-'+item.id+'">'+item.content+'</a>';
+        html += '<div class="details collapse" id="data-'+item.id+'">'+item.details+'</div>';
         return html;
         } else {
         return item.content;
