@@ -38,8 +38,8 @@ function skills() {
     {id: 23, group: 2, content: 'Virtualbox / Vagrant', logo: 'virtualbox', start: c2c_start, end: new Date(), className: 'used'},
 
     // 3: Operating Systems
-    {id: 31, group: 3, content: 'Debian<sup>*</sup>', logo: 'debian', start: '2002', end: new Date(), className: 'contributed'},
-    {id: 32, group: 3, content: 'Ubuntu<sup>**</sup>', logo: 'ubuntu', start: '2004', end: new Date(), className: 'contributed'},
+    {id: 31, group: 3, content: 'Debian', logo: 'debian', start: '2002', end: new Date(), className: 'contributed'},
+    {id: 32, group: 3, content: 'Ubuntu', logo: 'ubuntu', start: '2004', end: new Date(), className: 'developed'},
     {id: 33, group: 3, content: 'RedHat / CentOS', logo: 'redhat', start: '2006', end: new Date(), className: 'implemented'},
 
     // 4: VCS
@@ -56,8 +56,8 @@ function skills() {
 
     // 6: Configuration Management
     {id: 61, group: 6, content: 'Cfengine', logo: 'cfengine', start: '2006', end: c2c_start, className: 'implemented'},
-    {id: 62, group: 6, content: 'Puppet<sup>*</sup>', logo: 'puppet', start: '2007', end: new Date(), className: 'contributed'},
-    {id: 63, group: 6, content: 'Augeas<sup>**</sup>', logo: 'augeas', start: '2008', end: new Date(), className: 'contributed'},
+    {id: 62, group: 6, content: 'Puppet', logo: 'puppet', start: '2007', end: new Date(), className: 'contributed'},
+    {id: 63, group: 6, content: 'Augeas', logo: 'augeas', start: '2008', end: new Date(), className: 'developed'},
 
     // 7: Containers
     {id: 71, group: 7, content: 'Chroot', start: '2006', end: '2010', className: 'used'},
