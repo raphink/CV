@@ -34,6 +34,10 @@
   color: white !important;
 }
 
+.vis-item .vis-item-content .details {
+  white-space: normal;
+}
+
 img.logo {
   width: 40px;
   vertical-align: middle;
