@@ -75,7 +75,7 @@ function skills() {
 
     // 10: Web backend
     {id: 101, group: 10, content: 'PHP', logo: 'php', start: '2002', end: new Date(), className: 'used'},
-    {id: 102, group: 10, content: 'Python', logo: 'python', details: '<h5>Google Wave</h5><p>When Google Wave came out, I was really interested in the concept and started coding extensions and bots for it. The best platform to easily achieve that was Google App Engine with Python.</p><h5>Projects</h5><ul><li><a href="https://launchpad.net/wavebiblebot">Flammard</a>, a Bible bot for Google Wave</li><li><a href="https://launchpad.net/annoty">Annoty</a>, a generic, programmable, annotations bot for Google Wave</li></ul>', start: '2008', end: new Date(), className: 'implemented'},
+    {id: 102, group: 10, content: 'Python', logo: 'python', details: '<h5>Google Wave</h5><p>When Google Wave came out, I was really interested in the concept and started coding extensions and bots for it. The best platform to easily achieve that was Google App Engine with Python.</p><h5>Projects</h5><ul class="list-group"><li><a href="https://launchpad.net/wavebiblebot">Flammard</a>, a Bible bot for Google Wave</li><li><a href="https://launchpad.net/annoty">Annoty</a>, a generic, programmable, annotations bot for Google Wave</li></ul>', start: '2008', end: new Date(), className: 'implemented'},
     {id: 103, group: 10, content: 'Ruby', logo: 'ruby', details: '<p>My first contributions to Puppet in 2007 introduced me to Ruby. Since I started using Puppet extensively in 2012, Ruby has become my main programming language.</p><p>In spite of its speed downfalls, I appreciates the language\'s extreme flexibility.</p>', start: '2013', end: new Date(), className: 'implemented'},
     {id: 104, group: 10, content: 'Go', logo: 'go', details: '<p>I have been interested in Go every since it came out publicly.</p><p>When I started using Consul and Docker/Rancher, I finally had the occasion to read code and start contributing in Go.</p><p>I strongly appreciated the thorough approach of this language, combining the speed and robustness of compiled and strongly typed languages with the agility of its structures and interfaces.</p>', start: '2016', end: new Date(), className: 'used'},
 
@@ -120,7 +120,7 @@ function skills() {
       }
 
       if (item.details) {
-        var html = '<a data-toggle="collapse" href="#data-'+item.id+'">'+title+'</a>';
+        var html = '<a class="details-toggle" data-toggle="collapse" href="#data-'+item.id+'">'+title+'</a>';
         html += '<div class="details collapse" id="data-'+item.id+'">'+item.details+'</div>';
         return html;
         } else {

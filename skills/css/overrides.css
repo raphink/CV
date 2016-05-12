@@ -28,23 +28,19 @@
   color: #2C4B6C !important;
 }
 
-.vis-item.implemented, .vis-item.implemented a, li.implemented {
+.vis-item.implemented, .vis-item.implemented a.details-toggle, li.implemented {
   background-color: #A7CAE3;
   color: #2C4B6C !important;
 }
 
-.vis-item.contributed, .vis-item.contributed a, li.contributed {
+.vis-item.contributed, .vis-item.contributed a.details-toggle, li.contributed {
   background-color: #649CCA;
   color: white !important;
 }
 
-.vis-item.developed, .vis-item.developed a, li.developed {
+.vis-item.developed, .vis-item.developed a.details-toggle, li.developed {
   background-color: #337AB7;
   color: white !important;
-}
-
-.vis-item .vis-item-content .details {
-  white-space: normal;
 }
 
 img.logo {
@@ -54,10 +50,6 @@ img.logo {
 
 img.logo.small {
   width: 25px;
-}
-
-.details {
-  font-size: 80%;
 }
 
 img.identity {
@@ -81,4 +73,24 @@ div#legend-col {
   .affix {
     margin: 100px 20px 0 400px;
   }
+}
+
+
+/* Details styling */
+.vis-item-content {
+  width: 100%;
+}
+
+.vis-item-content .details {
+  white-space: normal;
+  font-size: 80%;
+  margin: 5px 0 0 0;
+  padding: 5px;
+  background: white;
+  width: auto;
+  color: #2C4B6C;
+}
+
+.vis-item-content .details .details-toggle {
+  padding: 5px;
 }
