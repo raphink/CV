@@ -20,8 +20,8 @@ function skills() {
   var c2c_start = '2012-03-01';
 
   var items = new vis.DataSet([
-    {id: 'Orange', content: '<img src="img/orange.png" class="logo" /> Orange Portails', start: '2006-06-01', end: c2c_start, type: 'background', className: 'orange'},
-    {id: 'Camptocamp', content: '<img src="img/camptocamp.png" class="logo" /> Camptocamp', start: c2c_start, end: new Date(), type: 'background', className: 'camptocamp'},
+    {id: 'Orange', content: '<img src="img/orange.png" class="logo" /> Orange Portails — Systems Engineer', start: '2006-06-01', end: c2c_start, type: 'background', className: 'orange'},
+    {id: 'Camptocamp', content: '<img src="img/camptocamp.png" class="logo" /> Camptocamp — Infrastructure Developer', start: c2c_start, end: new Date(), type: 'background', className: 'camptocamp'},
 
     // 0: Provisioning
     {id: 01, group: 0, content: 'Debian FAI', start: '2006-06-01', end: c2c_start, className: 'contributed'},
