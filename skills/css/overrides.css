@@ -10,13 +10,16 @@
 .vis-item.vis-background.orange {
   background: #FFDE94;
   color: #5383B8 !important;
-  font-weight: bold !important;
 }
 
 .vis-item.vis-background.camptocamp {
   background-color: #FFF094;
   color: #5383B8 !important;
-  font-weight: bold !important;
+}
+
+.vis-item.vis-background img.logo {
+  float: left;
+  margin-right: 5px;
 }
 
 .group-header {
