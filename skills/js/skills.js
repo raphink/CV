@@ -57,7 +57,7 @@ function skills() {
     // 6: Configuration Management
     {id: 61, group: 6, content: 'Cfengine', logo: 'cfengine', start: '2006', end: c2c_start, className: 'implemented'},
     {id: 62, group: 6, content: 'Puppet', logo: 'puppet', start: '2007', end: new Date(), className: 'contributed'},
-    {id: 63, group: 6, content: 'Augeas', logo: 'augeas', start: '2008', end: new Date(), className: 'developed'},
+    {id: 63, group: 6, content: 'Augeas', logo: 'augeas', details: '<p>When the Augeas project was first presented to me in 2007, I was very enthusiastic and started contributing new lenses very early. I quickly became the main contributor of Augeas lenses.</p><p>Later on, I contributed C code for the API, as well binding codes for Python/Ruby and Perl (which I maintain on the CPAN).</p><p>I joined Dominic Cleal when he started the Augeasproviders project and am now the main developer.</p><p>I have talked about Augeas at various conferences and have written and taught a one-day course on using Augeas.</p>', start: '2008', end: new Date(), className: 'developed'},
 
     // 7: Containers
     {id: 71, group: 7, content: 'Chroot', start: '2006', end: '2010', className: 'used'},
