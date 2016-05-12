@@ -77,9 +77,9 @@ function skills() {
     {id: 104, group: 10, content: 'Go', logo: 'go', details: '<p>I have been interested in Go every since it came out publicly.</p><p>When I started using Consul and Docker/Rancher, I finally had the occasion to read code and start contributing in Go.</p><p>I strongly appreciated the thorough approach of this language, combining the speed and robustness of compiled and strongly typed languages with the agility of its structures and interfaces.</p>', start: '2016', end: new Date(), className: 'used'},
 
     // 11: Web frontend
-    {id: 111, group: 11, content: 'HTML / Javascript / CSS', details: "Yeah", start: '2002', end: new Date(), className: 'implemented'},
-    {id: 112, group: 11, content: 'JQuery', start: c2c_start, end: new Date(), className: 'used'},
-    {id: 113, group: 11, content: 'Bootstrap', start: '2015', end: new Date(), className: 'used'},
+    {id: 111, group: 11, content: 'HTML / Javascript / CSS', logo: 'html_css_js', details: "Yeah", start: '2002', end: new Date(), className: 'implemented'},
+    {id: 112, group: 11, content: 'JQuery', logo: 'jquery', start: c2c_start, end: new Date(), className: 'used'},
+    {id: 113, group: 11, content: 'Bootstrap', logo: 'bootstrap', start: '2015', end: new Date(), className: 'used'},
   ]);
 
   var container = document.getElementById('visualization');
