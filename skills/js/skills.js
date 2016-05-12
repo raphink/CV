@@ -68,7 +68,7 @@ function skills() {
     {id: 82, group: 8, content: 'PostgreSQL', start: '2007', end: new Date(), className: 'implemented'},
 
     // 9: Cloud / PAAS
-    {id: 91, group: 9, content: 'Google AppEngine', start: '2008', end: '2010', className: 'used'},
+    {id: 91, group: 9, content: 'Google AppEngine', logo: 'google_appengine', start: '2008', end: '2010', className: 'used'},
 
     // 10: Web backend
     {id: 101, group: 10, content: 'PHP', logo: 'php', start: '2002', end: new Date(), className: 'used'},
