@@ -56,3 +56,7 @@ img.identity {
   padding: 1px;
   border: 1px solid gray;
 }
+
+div#legend-col {
+  padding: 10px;
+}
