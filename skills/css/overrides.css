@@ -65,3 +65,16 @@ img.identity {
 div#legend-col {
   padding: 10px;
 }
+
+
+@media (max-width: 1600px) {
+  .affix {
+    position: static;
+  }
+}
+
+@media (min-width: 1601px) {
+  .affix {
+    margin: 100px 20px 0 400px;
+  }
+}
