@@ -119,7 +119,7 @@ function skills() {
       if (item.type === 'background') {
         return title;
       } else {
-        var html = '<div class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</div>';
+        var html = '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</a>';
         html += '<div class="details collapse" id="details-'+item.id+'"></div>';
         return html;
       }
