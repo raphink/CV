@@ -73,7 +73,8 @@ div#legend-col {
 }
 
 div#legend-col .buttons {
-  padding: 10px;
+  margin: 0px auto 10px;
+  text-align: center;
 }
 
 @media (max-width: 1600px) {
