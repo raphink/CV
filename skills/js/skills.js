@@ -112,6 +112,7 @@ function skills() {
     },
     orientation: 'both',
     autoResize: true,
+    zoomKey: 'altKey',
     template: function(item) {
       var title = '<img src="skills/'+item.name+'/logo.png" class="logo small" onerror="this.parentNode.removeChild(this)" /> '+item.content;
 
