@@ -46,34 +46,36 @@
     <div class="col-md-4" id="legend-col">
       <div class="panel panel-primary" data-spy="affix">
         <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse" href="#legend">Legend</a></h4></div>
+          <h4 class="panel-title"><a data-toggle="collapse" href="#legend">Legend</a></h4>
+        </div>
         <div class="panel-body panel-collapse" id="legend">
           <ul class="legend list-group">
-            <li class="used list-group-item" onclick="javascript:toggleItems()">
+            <li class="used list-group-item" title="Click to filter">
               <h4>Used</h4>
               Technology I have used or language I have coded with
             </li>
-            <li class="implemented list-group-item">
+            <li class="implemented list-group-item" title="Click to filter">
               <h4>Implemented</h4>
               Technology I have implemented / set up, or language for which I maintain code packages</li>
-            <li class="contributed list-group-item">
+            <li class="contributed list-group-item" title="Click to filter">
               <h4>Contributed</h4>
               Technology I have contributed to
             </li>
-            <li class="developed list-group-item">
+            <li class="developed list-group-item" title="Click to filter">
               <h4>Developed</h4>
               Technology I maintain/develop
             </li>
           </ul>
+        </div>
+        <div class="buttons">
+          <a href="javascript:toggleDetails();" class="btn btn-info" role="button">Toggle all details</a>
+          <a href="#" class="btn btn-info" id="showAllItems" role="button">Show all items</a>
         </div>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <p>
-    <a href="javascript:toggleDetails();" class="btn btn-info" role="button">Toggle all details</a>
-    </p>
     <div id="visualization"></div>
   </div>
 </div>

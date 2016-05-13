@@ -134,24 +134,31 @@ function skills() {
 
   // Toggle items when legend is clicked
   $('.legend .used').on('click', function(e) {
-    $('.vis-item.used').toggle();
-    timeline.redraw();
+    filterItems(timeline, 'used');
   });
 
   $('.legend .implemented').on('click', function(e) {
-    $('.vis-item.implemented').toggle();
-    timeline.redraw();
+    filterItems(timeline, 'implemented');
   });
 
   $('.legend .contributed').on('click', function(e) {
-    $('.vis-item.contributed').toggle();
-    timeline.redraw();
+    filterItems(timeline, 'contributed');
   });
 
   $('.legend .developed').on('click', function(e) {
-    $('.vis-item.developed').toggle();
-    timeline.redraw();
+    filterItems(timeline, 'developed');
   });
+
+  $('#showAllItems').on('click', function(e) {
+    // All items
+    filterItems(timeline, 'vis-item');
+  });
+}
+
+function filterItems(timeline, type) {
+  $('.vis-item').not('.'+type).not('.vis-background').hide();
+  $('.vis-item.'+type).show();
+  timeline.redraw();
 }
 
 function toggleDetails() {

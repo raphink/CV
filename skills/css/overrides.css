@@ -72,6 +72,9 @@ div#legend-col {
   cursor: context-menu;
 }
 
+div#legend-col .buttons {
+  padding: 10px;
+}
 
 @media (max-width: 1600px) {
   .affix {
