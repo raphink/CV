@@ -77,19 +77,6 @@ div#legend-col .buttons {
   text-align: center;
 }
 
-@media (max-width: 1600px) {
-  .affix {
-    position: static;
-  }
-}
-
-@media (min-width: 1601px) {
-  .affix {
-    margin: 100px 20px 0 400px;
-  }
-}
-
-
 /* Details styling */
 .vis-item-content {
   width: 100%;
@@ -108,3 +95,25 @@ div#legend-col .buttons {
 .vis-item-content .details .details-toggle {
   padding: 5px;
 }
+
+/* Mobile */
+@media (max-width: 1600px) {
+  .affix {
+    position: static;
+  }
+}
+
+@media (min-width: 1601px) {
+  .affix {
+    margin: 100px 20px 0 400px;
+  }
+}
+
+
+/* Remove group labels on phones (portrait) */
+@media (max-width: 500px) {
+  .vis-panel.vis-left {
+    display: none;
+  }
+}
+
