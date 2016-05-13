@@ -36,6 +36,7 @@ function skills() {
     {id: 21, group: 2, content: 'Qemu', name: 'qemu', start: '2005', end: '2007', className: 'used'},
     {id: 22, group: 2, content: 'Xen', name: 'xen', start: '2008', end: c2c_start, className: 'used'},
     {id: 23, group: 2, content: 'Virtualbox / Vagrant', name: 'virtualbox', start: c2c_start, end: new Date(), className: 'used'},
+    {id: 24, group: 2, content: 'KVM', name: 'kvm', start: '2014', end: new Date(), className: 'used'},
 
     // 3: Operating Systems
     {id: 31, group: 3, content: 'Debian', name: 'debian', start: '2002', end: new Date(), className: 'contributed'},
