@@ -131,8 +131,28 @@ function skills() {
   $('div.details').on('shown.bs.collapse hidden.bs.collapse', function(e) {
     timeline.redraw();
   });
-}
 
+  // Toggle items when legend is clicked
+  $('.legend .used').on('click', function(e) {
+    $('.vis-item.used').toggle();
+    timeline.redraw();
+  });
+
+  $('.legend .implemented').on('click', function(e) {
+    $('.vis-item.implemented').toggle();
+    timeline.redraw();
+  });
+
+  $('.legend .contributed').on('click', function(e) {
+    $('.vis-item.contributed').toggle();
+    timeline.redraw();
+  });
+
+  $('.legend .developed').on('click', function(e) {
+    $('.vis-item.developed').toggle();
+    timeline.redraw();
+  });
+}
 
 function toggleDetails() {
   $('.details').collapse('toggle');

@@ -63,8 +63,13 @@ img.identity {
   border: 1px solid gray;
 }
 
+/* legend */
 div#legend-col {
   padding: 10px;
+}
+
+.legend li {
+  cursor: context-menu;
 }
 
 
