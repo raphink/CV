@@ -115,7 +115,7 @@ function skills() {
     template: function(item) {
       var title = '<img src="skills/'+item.name+'/logo.png" class="logo small" onerror="this.parentNode.removeChild(this)" /> '+item.content;
 
-      var html = '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</a>';
+      var html = '<div class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</div>';
         html += '<div class="details collapse" id="details-'+item.id+'"></div>';
       return html;
     }

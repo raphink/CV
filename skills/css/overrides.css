@@ -68,7 +68,7 @@ div#legend-col {
   padding: 10px;
 }
 
-.legend li {
+.legend li, .details-toggle {
   cursor: context-menu;
 }
 
