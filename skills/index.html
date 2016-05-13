@@ -22,6 +22,12 @@
 
 <body onload="skills();">
 
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <h4 class="panel-title"><a data-toggle="collapse" href="#legend">Legend</a></h4>
+      </div>
+  </nav>
+
 <div class="container">
   <div class="row">
 
@@ -44,11 +50,11 @@
     </div>
 
     <div class="col-md-4" id="legend-col">
-      <div class="panel panel-primary" data-spy="affix">
+      <div class="panel panel-primary collapse" id="legend" data-spy="affix">
         <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse" href="#legend">Legend</a></h4>
+          <h4 class="panel-title"><a data-toggle="collapse" href="#legend-data">Legend</a></h4>
         </div>
-        <div class="panel-body panel-collapse" id="legend">
+        <div class="panel-body panel-collapse" id="legend-data">
           <ul class="legend list-group">
             <li class="used list-group-item" title="Click to filter">
               <h4>Used</h4>

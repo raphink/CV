@@ -96,19 +96,35 @@ div#legend-col .buttons {
   padding: 5px;
 }
 
-/* Mobile */
-@media (max-width: 1600px) {
-  .affix {
-    position: static;
-  }
-}
 
+/* Large desktop */
 @media (min-width: 1601px) {
   .affix {
     margin: 100px 20px 0 400px;
   }
 }
 
+
+/* Mobile and small desktop */
+@media (max-width: 1600px) {
+  .affix {
+    position: static;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .navbar {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .affix {
+    margin-top: -500px;
+  }
+}
 
 /* Remove group labels on phones (portrait) */
 @media (max-width: 500px) {
