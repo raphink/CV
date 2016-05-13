@@ -1,3 +1,3 @@
-<p>My first contributions to Puppet in 2007 introduced me to Ruby. Since I started using Puppet extensively in 2012, Ruby has become my main programming language.</p>
+My first contributions to Puppet in 2007 introduced me to Ruby. Since I started using Puppet extensively in 2012, Ruby has become my main programming language.
 
-<p>In spite of its speed downfalls, I appreciates the language's extreme flexibility.</p>
+In spite of its speed downfalls, I appreciates the language's extreme flexibility.
