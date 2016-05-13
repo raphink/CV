@@ -48,6 +48,10 @@
   color: white !important;
 }
 
+#legend {
+  width: 400px;
+}
+
 img.logo {
   width: 40px;
   vertical-align: middle;
@@ -61,20 +65,6 @@ img.identity {
   width: 100px;
   padding: 1px;
   border: 1px solid gray;
-}
-
-/* legend */
-div#legend-col {
-  padding: 10px;
-}
-
-.legend li, .details-toggle {
-  cursor: context-menu;
-}
-
-div#legend-col .buttons {
-  margin: 0px auto 10px;
-  text-align: center;
 }
 
 /* Details styling */
@@ -109,13 +99,6 @@ div#legend-col .buttons {
 @media (max-width: 1600px) {
   .affix {
     position: static;
-  }
-}
-
-/* Desktop */
-@media (min-width: 769px) {
-  .navbar {
-    display: none;
   }
 }
 
