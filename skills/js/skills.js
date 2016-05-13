@@ -141,7 +141,7 @@ function loadDetails(items) {
   for (var i in items._data) {
     var ii = items._data[i];
     $.ajax({
-        url: './skills/'+ii.name+'/details.html',
+        url: './skills/'+ii.name+'/details.md',
         id: i,
         success: function(details) {
           var reader = new commonmark.Parser();
