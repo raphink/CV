@@ -144,7 +144,11 @@ function loadDetails(items) {
         url: './skills/'+ii.name+'/details.html',
         id: i,
         success: function(details) {
-          $('#details-'+this.id).html(details);
+          var reader = new commonmark.Parser();
+          var writer = new commonmark.HtmlRenderer();
+          var parsed = reader.parse(details);
+          var html = writer.render(parsed);
+          $('#details-'+this.id).html(html);
         }
     });
   }
