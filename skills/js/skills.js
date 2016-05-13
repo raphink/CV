@@ -149,6 +149,9 @@ function loadDetails(items) {
           var parsed = reader.parse(details);
           var html = writer.render(parsed);
           $('#details-'+this.id).html(html);
+        },
+        error: function() {
+          $('#details-'+this.id).html('No details');
         }
     });
   }
