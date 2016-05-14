@@ -10686,6 +10686,7 @@ return /******/ (function(modules) { // webpackBootstrap
       // position the slider button
       var left = this.indexToLeft(this.index);
       this.frame.slide.style.left = left + 'px';
+      this.frame.slide.style.width = calc(100% - left + 'px');
     }
   };
 
@@ -22416,10 +22417,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
     this.dom.box.style.width = boxWidth + 'px';
 
-    console.log("here");
-
-    console.log(this.options.align);
-
     switch (this.options.align) {
       case 'left':
         if (this.options.rtl) {
@@ -22433,9 +22430,7 @@ return /******/ (function(modules) { // webpackBootstrap
         if (this.options.rtl) {
           this.dom.content.style.right = Math.max(boxWidth - contentWidth, 0) + 'px';
         } else {
-          var left = Math.max(boxWidth - contentWidth, 0) + 'px';
-          this.dom.content.style.left = left;
-          this.dom.content.style.width = 'calc(100% - '+left+'px)';
+          this.dom.content.style.left = Math.max(boxWidth - contentWidth, 0) + 'px';
         }
         break;
 
@@ -22468,7 +22463,6 @@ return /******/ (function(modules) { // webpackBootstrap
           this.dom.content.style.right = contentStartPosition + 'px';
         } else {
           this.dom.content.style.left = contentStartPosition + 'px';
-          this.dom.content.style.width = 'calc(100% - '+contentStartPosition+'px)';
         }
     }
   };
