@@ -62,8 +62,9 @@ function loadGroups(timeline) {
     timeline: timeline,
     success: function(data) {
       var items = new vis.DataSet(data);
-      this.timeline.setGroups(items);
-      loadItems(this.timeline);
+      var timeline = this.timeline;
+      timeline.setGroups(items);
+      loadItems(timeline);
     }
   });
 }
@@ -88,30 +89,32 @@ function loadItems(timeline) {
 
       loadDetails(items);
 
+      var timeline = this.timeline;
+
       $('div.details').on('shown.bs.collapse hidden.bs.collapse', function(e) {
-        this.timeline.redraw();
+        timeline.redraw();
       });
 
       // Toggle items when legend is clicked
       $('.legend .used').on('click', function(e) {
-        filterItems(this.timeline, 'used');
+        filterItems(timeline, 'used');
       });
 
       $('.legend .implemented').on('click', function(e) {
-        filterItems(this.timeline, 'implemented');
+        filterItems(timeline, 'implemented');
       });
 
       $('.legend .contributed').on('click', function(e) {
-        filterItems(this.timeline, 'contributed');
+        filterItems(timeline, 'contributed');
       });
 
       $('.legend .developed').on('click', function(e) {
-        filterItems(this.timeline, 'developed');
+        filterItems(timeline, 'developed');
       });
 
       $('#showAllItems').on('click', function(e) {
         // All items
-        filterItems(this.timeline, 'vis-item');
+        filterItems(timeline, 'vis-item');
       });
     }
   });
