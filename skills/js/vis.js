@@ -10686,7 +10686,6 @@ return /******/ (function(modules) { // webpackBootstrap
       // position the slider button
       var left = this.indexToLeft(this.index);
       this.frame.slide.style.left = left + 'px';
-      this.frame.slide.style.width = calc(100% - left + 'px');
     }
   };
 
@@ -22463,6 +22462,7 @@ return /******/ (function(modules) { // webpackBootstrap
           this.dom.content.style.right = contentStartPosition + 'px';
         } else {
           this.dom.content.style.left = contentStartPosition + 'px';
+          this.dom.content.style.width = 'calc(100% - ' + contentStartPosition + 'px)';
         }
     }
   };
