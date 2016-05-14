@@ -49,7 +49,11 @@
 }
 
 #legend {
-  width: 400px;
+  width: 300px;
+}
+
+#legend li {
+  padding: 10px;
 }
 
 img.logo {
