@@ -1,3 +1,25 @@
+/* Compensate fixed-top navbar */
+body {
+  padding-top: 50px;
+}
+
+/***************
+ * Page header *
+ ***************/
+
+.page-header {
+  padding-bottom: 20px;
+}
+
+img.identity {
+  float: left;
+  width: 100px;
+  padding: 1px;
+  border: 1px solid gray;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
 /* Group label */
 .vis-label {
   font-weight: bold;
@@ -86,13 +108,6 @@ img.logo {
 img.logo.small {
   width: 25px;
 }
-
-img.identity {
-  width: 100px;
-  padding: 1px;
-  border: 1px solid gray;
-}
-
 
 
 /***********
