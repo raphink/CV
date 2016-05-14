@@ -139,6 +139,13 @@ img.logo.small {
  * Responsive *
  **************/
 
+/* No github ribbon on mobile */
+@media (max-width: 768px) {
+  #github-ribbon {
+    display: none;
+  }
+}
+
 /* Remove group labels on phones (portrait) */
 @media (max-width: 500px) {
   .vis-panel.vis-left {
