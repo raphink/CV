@@ -19,73 +19,6 @@ function skills() {
 
   var c2c_start = '2012-03-01';
 
-  var items = new vis.DataSet([
-    {id: 'Orange', content: '<img src="img/orange.png" class="logo" /><b>Orange Portails</b><br />Systems Engineer', start: '2006-06-01', end: c2c_start, type: 'background', className: 'orange'},
-    {id: 'Camptocamp', content: '<img src="img/camptocamp.png" class="logo" /><b>Camptocamp</b><br />Infrastructure Developer', start: c2c_start, type: 'background', className: 'camptocamp'},
-
-    // 0: Provisioning
-    {id: 01, group: 0, content: 'Debian FAI', start: '2006-06-01', end: c2c_start, className: 'contributed'},
-    {id: 02, group: 0, content: 'Kickstart', start: '2006-06-01', className: 'implemented'},
-    {id: 03, group: 0, content: 'Terraform', name: 'terraform', start: '2016-05-01', className: 'implemented'},
-
-    // 1: Cloud / IAAS
-    {id: 11, group: 1, content: 'Amazon Web Services', name: 'aws', start: '2010', className: 'implemented'},
-    {id: 12, group: 1, content: 'Openstack', name: 'openstack', start: '2013', className: 'used'},
-
-    // 2: Virtualization
-    {id: 21, group: 2, content: 'Qemu', name: 'qemu', start: '2005', end: '2007', className: 'used'},
-    {id: 22, group: 2, content: 'Xen', name: 'xen', start: '2008', end: c2c_start, className: 'used'},
-    {id: 23, group: 2, content: 'Virtualbox / Vagrant', name: 'virtualbox', start: c2c_start, className: 'used'},
-    {id: 24, group: 2, content: 'KVM', name: 'kvm', start: '2014', className: 'used'},
-
-    // 3: Operating Systems
-    {id: 31, group: 3, content: 'Debian', name: 'debian', start: '2002', className: 'contributed'},
-    {id: 32, group: 3, content: 'Ubuntu', name: 'ubuntu', start: '2004', className: 'developed'},
-    {id: 33, group: 3, content: 'RedHat / CentOS', name: 'redhat', start: '2006', className: 'implemented'},
-
-    // 4: VCS
-    {id: 41, group: 4, content: 'CVS', start: '2008', end: c2c_start, className: 'implemented'},
-    {id: 42, group: 4, content: 'Bazaar NG', name: 'bzr', start: '2005', end: '2008', className: 'used'},
-    {id: 43, group: 4, content: 'Git', name: 'git', start: '2008', className: 'implemented'},
-
-    // 5: OS coding
-    {id: 51, group: 5, content: 'Bash / Dash', start: '2005', className: 'used'},
-    {id: 52, group: 5, content: 'Perl', name: 'perl', start: '2006', end: c2c_start, className: 'implemented'},
-    {id: 53, group: 5, content: 'C', start: '2008', className: 'used'},
-    {id: 54, group: 5, content: 'Ruby', name: 'ruby', start: c2c_start, className: 'implemented'},
-    {id: 55, group: 5, content: 'Go', name: 'go', start: '2016', className: 'used'},
-
-    // 6: Configuration Management
-    {id: 61, group: 6, content: 'Cfengine', name: 'cfengine', start: '2006', end: c2c_start, className: 'implemented'},
-    {id: 62, group: 6, content: 'Puppet', name: 'puppet', start: '2007', className: 'contributed'},
-    {id: 63, group: 6, content: 'Augeas', name: 'augeas', start: '2008', className: 'developed'},
-
-    // 7: Containers
-    {id: 71, group: 7, content: 'Chroot', start: '2006', end: '2010', className: 'used'},
-    {id: 72, group: 7, content: 'LXC', name: 'lxc', start: '2008', end: c2c_start, className: 'implemented'},
-    {id: 73, group: 7, content: 'OpenVZ', name: 'openvz', start: c2c_start, end: '2014', className: 'used'},
-    {id: 74, group: 7, content: 'Docker / Rancher', name: 'docker', start: '2014', className: 'implemented'},
-
-    // 8: Databases
-    {id: 81, group: 8, content: 'MySQL', name: 'mysql', start: '2002', className: 'implemented'},
-    {id: 82, group: 8, content: 'PostgreSQL', name: 'postgresql', start: '2007', className: 'implemented'},
-
-
-    // 9: Cloud / PAAS
-    {id: 91, group: 9, content: 'Google AppEngine', name: 'google_appengine', start: '2008', end: '2010', className: 'used'},
-
-    // 10: Web backend
-    {id: 101, group: 10, content: 'PHP', name: 'php', start: '2002', className: 'used'},
-    {id: 102, group: 10, content: 'Python', name: 'python', details: 'python', start: '2008', className: 'implemented'},
-    {id: 103, group: 10, content: 'Ruby', name: 'ruby', details: 'ruby', start: '2013', className: 'implemented'},
-    {id: 104, group: 10, content: 'Go', name: 'go', details: 'go', start: '2016', className: 'used'},
-
-    // 11: Web frontend
-    {id: 111, group: 11, content: 'HTML / Javascript / CSS', name: 'html_css_js', details: "html_css_js", start: '2002', className: 'implemented'},
-    {id: 112, group: 11, content: 'JQuery', name: 'jquery', start: c2c_start, className: 'used'},
-    {id: 113, group: 11, content: 'Bootstrap', name: 'bootstrap', start: '2015', className: 'used'},
-  ]);
-
   var container = document.getElementById('visualization');
 
   var start_date = new Date('2006-01-01');
@@ -130,45 +63,8 @@ function skills() {
   timeline.setOptions(options);
   timeline.setGroups(groups);
 
+  loadItems(timeline);
 
-  // Preprocess items
-  // Add end if missing
-  var now = new Date();
-  for (var item in items._data) {
-    if (items._data[item].end === undefined) {
-      items._data[item].end = now;
-    }
-  }
-
-  timeline.setItems(items);
-
-  loadDetails(items);
-
-  $('div.details').on('shown.bs.collapse hidden.bs.collapse', function(e) {
-    timeline.redraw();
-  });
-
-  // Toggle items when legend is clicked
-  $('.legend .used').on('click', function(e) {
-    filterItems(timeline, 'used');
-  });
-
-  $('.legend .implemented').on('click', function(e) {
-    filterItems(timeline, 'implemented');
-  });
-
-  $('.legend .contributed').on('click', function(e) {
-    filterItems(timeline, 'contributed');
-  });
-
-  $('.legend .developed').on('click', function(e) {
-    filterItems(timeline, 'developed');
-  });
-
-  $('#showAllItems').on('click', function(e) {
-    // All items
-    filterItems(timeline, 'vis-item');
-  });
 }
 
 function filterItems(timeline, type) {
@@ -179,6 +75,55 @@ function filterItems(timeline, type) {
 
 function toggleDetails() {
   $('.details').collapse('toggle');
+}
+
+function loadItems(timeline) {
+  $.ajax({
+    url: './items.json',
+    timeline: timeline,
+    success: function(data) {
+      var items = new vis.DataSet(data);
+
+      // Preprocess items
+      // Add end if missing
+      var now = new Date();
+      for (var item in items._data) {
+        if (items._data[item].end === undefined) {
+          items._data[item].end = now;
+        }
+      }
+
+      this.timeline.setItems(items);
+
+      loadDetails(items);
+
+      $('div.details').on('shown.bs.collapse hidden.bs.collapse', function(e) {
+        this.timeline.redraw();
+      });
+
+      // Toggle items when legend is clicked
+      $('.legend .used').on('click', function(e) {
+        filterItems(this.timeline, 'used');
+      });
+
+      $('.legend .implemented').on('click', function(e) {
+        filterItems(this.timeline, 'implemented');
+      });
+
+      $('.legend .contributed').on('click', function(e) {
+        filterItems(this.timeline, 'contributed');
+      });
+
+      $('.legend .developed').on('click', function(e) {
+        filterItems(this.timeline, 'developed');
+      });
+
+      $('#showAllItems').on('click', function(e) {
+        // All items
+        filterItems(this.timeline, 'vis-item');
+      });
+    }
+  });
 }
 
 function loadDetails(items) {

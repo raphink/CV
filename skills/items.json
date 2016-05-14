@@ -1,0 +1,54 @@
+[
+  {"id": "Orange", "content": "<img src='img/orange.png' class='logo' /><b>Orange Portails</b><br />Systems Engineer", "start": "2006-06-01", "end": "2012-03-01", "type": "background", "className": "orange"},
+  {"id": "Camptocamp", "content": "<img src='img/camptocamp.png' class='logo' /><b>Camptocamp</b><br />Infrastructure Developer", "start": "2012-03-01", "type": "background", "className": "camptocamp"},
+
+  {"id": 1, "group": 0, "content": "Debian FAI", "start": "2006-06-01", "end": "2012-03-01", "className": "contributed"},
+  {"id": 2, "group": 0, "content": "Kickstart", "start": "2006-06-01", "className": "implemented"},
+  {"id": 3, "group": 0, "content": "Terraform", "name": "terraform", "start": "2016-05-01", "className": "implemented"},
+
+  {"id": 11, "group": 1, "content": "Amazon Web Services", "name": "aws", "start": "2010", "className": "implemented"},
+  {"id": 12, "group": 1, "content": "Openstack", "name": "openstack", "start": "2013", "className": "used"},
+
+  {"id": 21, "group": 2, "content": "Qemu", "name": "qemu", "start": "2005", "end": "2007", "className": "used"},
+  {"id": 22, "group": 2, "content": "Xen", "name": "xen", "start": "2008", "end": "2012-03-01", "className": "used"},
+  {"id": 23, "group": 2, "content": "Virtualbox / Vagrant", "name": "virtualbox", "start": "2012-03-01", "className": "used"},
+  {"id": 24, "group": 2, "content": "KVM", "name": "kvm", "start": "2014", "className": "used"},
+
+  {"id": 31, "group": 3, "content": "Debian", "name": "debian", "start": "2002", "className": "contributed"},
+  {"id": 32, "group": 3, "content": "Ubuntu", "name": "ubuntu", "start": "2004", "className": "developed"},
+  {"id": 33, "group": 3, "content": "RedHat / CentOS", "name": "redhat", "start": "2006", "className": "implemented"},
+
+  {"id": 41, "group": 4, "content": "CVS", "start": "2008", "end": "2012-03-01", "className": "implemented"},
+  {"id": 42, "group": 4, "content": "Bazaar NG", "name": "bzr", "start": "2005", "end": "2008", "className": "used"},
+  {"id": 43, "group": 4, "content": "Git", "name": "git", "start": "2008", "className": "implemented"},
+
+  {"id": 51, "group": 5, "content": "Bash / Dash", "start": "2005", "className": "used"},
+  {"id": 52, "group": 5, "content": "Perl", "name": "perl", "start": "2006", "end": "2012-03-01", "className": "implemented"},
+  {"id": 53, "group": 5, "content": "C", "start": "2008", "className": "used"},
+  {"id": 54, "group": 5, "content": "Ruby", "name": "ruby", "start": "2012-03-01", "className": "implemented"},
+  {"id": 55, "group": 5, "content": "Go", "name": "go", "start": "2016", "className": "used"},
+
+  {"id": 61, "group": 6, "content": "Cfengine", "name": "cfengine", "start": "2006", "end": "2012-03-01", "className": "implemented"},
+  {"id": 62, "group": 6, "content": "Puppet", "name": "puppet", "start": "2007", "className": "contributed"},
+  {"id": 63, "group": 6, "content": "Augeas", "name": "augeas", "start": "2008", "className": "developed"},
+
+  {"id": 71, "group": 7, "content": "Chroot", "start": "2006", "end": "2010", "className": "used"},
+  {"id": 72, "group": 7, "content": "LXC", "name": "lxc", "start": "2008", "end": "2012-03-01", "className": "implemented"},
+  {"id": 73, "group": 7, "content": "OpenVZ", "name": "openvz", "start": "2012-03-01", "end": "2014", "className": "used"},
+  {"id": 74, "group": 7, "content": "Docker / Rancher", "name": "docker", "start": "2014", "className": "implemented"},
+
+  {"id": 81, "group": 8, "content": "MySQL", "name": "mysql", "start": "2002", "className": "implemented"},
+  {"id": 82, "group": 8, "content": "PostgreSQL", "name": "postgresql", "start": "2007", "className": "implemented"},
+
+
+  {"id": 91, "group": 9, "content": "Google AppEngine", "name": "google_appengine", "start": "2008", "end": "2010", "className": "used"},
+
+  {"id": 101, "group": 10, "content": "PHP", "name": "php", "start": "2002", "className": "used"},
+  {"id": 102, "group": 10, "content": "Python", "name": "python", "details": "python", "start": "2008", "className": "implemented"},
+  {"id": 103, "group": 10, "content": "Ruby", "name": "ruby", "details": "ruby", "start": "2013", "className": "implemented"},
+  {"id": 104, "group": 10, "content": "Go", "name": "go", "details": "go", "start": "2016", "className": "used"},
+
+  {"id": 111, "group": 11, "content": "HTML / Javascript / CSS", "name": "html_css_js", "details": "html_css_js", "start": "2002", "className": "implemented"},
+  {"id": 112, "group": 11, "content": "JQuery", "name": "jquery", "start": "2012-03-01", "className": "used"},
+  {"id": 113, "group": 11, "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"}
+]
