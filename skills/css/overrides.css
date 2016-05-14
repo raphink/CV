@@ -1,20 +1,30 @@
+/* Group label */
 .vis-label {
   font-weight: bold;
 }
 
+/*********
+ * Items *
+ *********/
+
 .vis-item {
-  border-width: 0 !important;
-  color: white !important;
+  border-width: 0;
 }
 
+/* This is important for details styling */
+.vis-item-content {
+  width: 100%;
+}
+
+/* Background items */
 .vis-item.vis-background.orange {
   background: #FFE4DA;
-  color: #5383B8 !important;
+  color: #5383B8;
 }
 
 .vis-item.vis-background.camptocamp {
   background-color: #FFF6DA;
-  color: #5383B8 !important;
+  color: #5383B8;
 }
 
 .vis-item.vis-background img.logo {
@@ -24,39 +34,55 @@
   border: 1px solid lightgray;
 }
 
+/* Group-header "reserves" an empty line for background titles */
 .group-header {
   height: 40px !important;
 }
 
+/* Used skills */
 .vis-item.used, .vis-item.used a, li.used {
   background-color: #D9EDF7;
-  color: #2C4B6C !important;
+  color: #2C4B6C;
 }
 
+/* Implemented skills */
 .vis-item.implemented, .vis-item.implemented a.details-toggle, li.implemented {
   background-color: #A7CAE3;
-  color: #2C4B6C !important;
+  color: #2C4B6C;
 }
 
+/* Contributed skills */
 .vis-item.contributed, .vis-item.contributed a.details-toggle, li.contributed {
   background-color: #649CCA;
   color: white !important;
 }
 
+/* Developed skills */
 .vis-item.developed, .vis-item.developed a.details-toggle, li.developed {
   background-color: #337AB7;
   color: white !important;
 }
 
+
+/**********
+ * Legend *
+ **********/
+
 #legend li {
   padding: 10px;
 }
+
+
+/**********
+ * Images *
+ **********/
 
 img.logo {
   width: 40px;
   vertical-align: middle;
 }
 
+/* Small logo */
 img.logo.small {
   width: 25px;
 }
@@ -67,10 +93,11 @@ img.identity {
   border: 1px solid gray;
 }
 
-/* Details styling */
-.vis-item-content {
-  width: 100%;
-}
+
+
+/***********
+ * Details *
+ ***********/
 
 .vis-item-content .details {
   white-space: normal;
@@ -92,27 +119,10 @@ img.identity {
 }
 
 
-/* Large desktop */
-@media (min-width: 1601px) {
-  .affix {
-    margin: 100px 20px 0 400px;
-  }
-}
 
-
-/* Mobile and small desktop */
-@media (max-width: 1600px) {
-  .affix {
-    position: static;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .affix {
-    margin-top: -500px;
-  }
-}
+/**************
+ * Responsive *
+ **************/
 
 /* Remove group labels on phones (portrait) */
 @media (max-width: 500px) {
