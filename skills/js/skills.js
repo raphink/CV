@@ -1,23 +1,4 @@
 function skills() {
-  var groups = new vis.DataSet([
-    {id: 0, content: 'Provisioning'},
-    {id: 1, content: 'Cloud / IAAS'},
-    {id: 2, content: 'Virtualization'},
-    {id: 3, content: 'Operating<br />Systems'},
-    {id: 4, content: 'VCS'},
-    {id: 5, content: 'OS coding'},
-    {id: 6, content: 'Configuration<br />Management'},
-    {id: 7, content: 'Containers'},
-    {id: 8, content: 'Databases'},
-    {id: 9, content: 'Cloud / PAAS'},
-    {id: 10, content: 'Web backend'},
-    {id: 11, content: 'Web frontend'},
-
-    // Empty group to display period names
-    {id: 99, content: '&nbsp;', className: 'group-header'},
-  ]);
-
-  var c2c_start = '2012-03-01';
 
   var container = document.getElementById('visualization');
 
