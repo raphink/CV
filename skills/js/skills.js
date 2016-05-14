@@ -61,10 +61,8 @@ function skills() {
 
   var timeline = new vis.Timeline(container);
   timeline.setOptions(options);
-  timeline.setGroups(groups);
 
-  loadItems(timeline);
-
+  loadGroups(timeline);
 }
 
 function filterItems(timeline, type) {
@@ -75,6 +73,18 @@ function filterItems(timeline, type) {
 
 function toggleDetails() {
   $('.details').collapse('toggle');
+}
+
+function loadGroups(timeline) {
+  $.ajax({
+    url: './groups.json',
+    timeline: timeline,
+    success: function(data) {
+      var items = new vis.DataSet(data);
+      this.timeline.setGroups(items);
+      loadItems(this.timeline);
+    }
+  });
 }
 
 function loadItems(timeline) {
