@@ -34,24 +34,24 @@
       </div>
 
       <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="navbar-collapse">
-        <li><a href="javascript:toggleDetails();">Toggle all details</a></li>
-        <li><a href="#" id="showAllItems">Show all items</a></li>
+        <li><a href="javascript:toggleDetails();" data-toggle="collapse" data-target=".navbar-collapse.in">Toggle all details</a></li>
+        <li><a href="#" id="showAllItems" data-toggle="collapse" data-target=".navbar-collapse.in">Show all items</a></li>
         <li class="dropdown"> 
           <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Legend</a>
 
           <ul class="dropdown-menu legend" id="legend">
-                <li class="used list-group-item" title="Click to filter">
+                <li class="used list-group-item" data-toggle="collapse" data-target=".navbar-collapse.in" title="Click to filter">
                   <h4>Used</h4>
                   Technology I have used or language I have coded with
                 </li>
-                <li class="implemented list-group-item" title="Click to filter">
+                <li class="implemented list-group-item" data-toggle="collapse" data-target=".navbar-collapse.in" title="Click to filter">
                   <h4>Implemented</h4>
                   Technology I have implemented / set up, or language for which I maintain code packages</li>
-                <li class="contributed list-group-item" title="Click to filter">
+                <li class="contributed list-group-item" data-toggle="collapse" data-target=".navbar-collapse.in" title="Click to filter">
                   <h4>Contributed</h4>
                   Technology I have contributed to
                 </li>
-                <li class="developed list-group-item" title="Click to filter">
+                <li class="developed list-group-item" data-toggle="collapse" data-target=".navbar-collapse.in" title="Click to filter">
                   <h4>Developed</h4>
                   Technology I maintain/develop
                 </li>
