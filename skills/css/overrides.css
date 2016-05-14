@@ -82,7 +82,7 @@ img.identity {
   color: #2C4B6C;
 }
 
-.details-toggle {
+#legend li, .details-toggle {
   cursor: context-menu;
   display: block;
 }
