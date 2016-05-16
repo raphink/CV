@@ -99,6 +99,10 @@ img.identity {
   width: 30px;
 }
 
+.caret {
+  border-top: 4px solid;
+}
+
 /**********
  * Images *
  **********/
