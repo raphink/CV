@@ -4,13 +4,14 @@
   {"id": 2, "content": "Virtualization"},
   {"id": 3, "content": "Operating<br />Systems"},
   {"id": 4, "content": "VCS"},
-  {"id": 5, "content": "OS coding"},
-  {"id": 6, "content": "Configuration<br />Management"},
-  {"id": 7, "content": "Containers"},
-  {"id": 8, "content": "Databases"},
-  {"id": 9, "content": "Cloud / PAAS"},
-  {"id": 10, "content": "Web backend"},
-  {"id": 11, "content": "Web frontend"},
+  {"id": 5, "content": "Methods"},
+  {"id": 6, "content": "OS coding"},
+  {"id": 7, "content": "Configuration<br />Management"},
+  {"id": 8, "content": "Containers"},
+  {"id": 9, "content": "Databases"},
+  {"id": 10, "content": "Cloud / PAAS"},
+  {"id": 11, "content": "Web backend"},
+  {"id": 12, "content": "Web frontend"},
 
   {"id": 99, "content": "&nbsp;", "className": "group-header"}
 ]
