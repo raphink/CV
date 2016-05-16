@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style type = "text/css">
 
 body {
@@ -36,7 +37,6 @@ body {
   .header-text {
     display: none;
   }
-
 }
 
 
@@ -58,13 +58,13 @@ function autoResize(id){
     <div class="container">
       <ul class="nav navbar-nav navbar-left">
         <li class="btn-group pull-left" role="group">
-          <button type=button" class="navbar-btn btn btn-default active"><a href="#">Résumé</a></button>
           <button type="button" class="navbar-btn btn btn-default"><a href="skills/">Skills</a></button>
+          <button type=button" class="navbar-btn btn btn-default active"><a href="#">Résumé</a></button>
         </li>
 
-        <li><a href="javascript:void(0)" onClick="loadCV('en')"><img src="united_kingdom_great_britain.png" alt="CV in English" /></a></li>
-        <li><a href="javascript:void(0)" onClick="loadCV('fr')"><img src="france.png" alt="CV en fran&ccedil;ais" /></a></li>
-        <li><a href="#" id="pdfbutton"><img src="application-pdf.png" alt="Download as PDF" /></a></li>
+        <li class="pull-right"><a href="#" id="pdfbutton"><img src="application-pdf.png" alt="Download as PDF" /></a></li>
+        <li class="pull-right"><a href="javascript:void(0)" onClick="loadCV('fr')"><img src="france.png" alt="CV en fran&ccedil;ais" /></a></li>
+        <li class="pull-right"><a href="javascript:void(0)" onClick="loadCV('en')"><img src="united_kingdom_great_britain.png" alt="CV in English" /></a></li>
       </ul>
     </div>
   </div>
