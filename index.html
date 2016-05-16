@@ -13,18 +13,14 @@ body {
   padding-top: 50px;
 }
 
-.navbar .container-fluid {
-  background-color: #2f3236;
-  background-image: url('background_pix.svg');
-}
-
-.navbar .container-fluid li a, .navbar .container-fluid li a:hover {
-  color: white;
-}
-
-.navbar .container-fluid img {
+.navbar .container img {
   height: 20px;
   vertical-align: middle;
+}
+
+.navbar-btn a, .navbar-btn a:hover {
+  color: black;
+  text-decoration: none;
 }
 
 #pdfbutton {
@@ -47,11 +43,15 @@ function autoResize(id){
 <body onLoad="loadCV('en')">
 
   <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="btn-group pull-left" role="group">
+          <button type=button" class="navbar-btn btn btn-default active"><a href="#">Résumé</a></button>
+          <button type="button" class="navbar-btn btn btn-default"><a href="skills/">Skills</a></button>
+        </li>
+
         <li><a href="javascript:void(0)" onClick="loadCV('en')"><img src="united_kingdom_great_britain.png" alt="CV in English" /></a></li>
         <li><a href="javascript:void(0)" onClick="loadCV('fr')"><img src="france.png" alt="CV en fran&ccedil;ais" /></a></li>
-        <li><a href="skills/">Technical Skills Timeline</a></li>
         <li><a href="#" id="pdfbutton"><img src="application-pdf.png" alt="Download as PDF" /></a></li>
       </ul>
     </div>
