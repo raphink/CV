@@ -43,6 +43,8 @@ function skills() {
   var timeline = new vis.Timeline(container);
   timeline.setOptions(options);
 
+  downloadButton('en');
+
   loadGroups(timeline);
 }
 
@@ -138,4 +140,8 @@ function loadDetails(items) {
         }
     });
   }
+}
+
+function downloadButton(lang) {
+  $('#pdfbutton').attr('href', 'https://github.com/raphink/CV/blob/master/RaphaelPinson_'+lang+'.pdf?raw=true');
 }
