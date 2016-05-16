@@ -3,30 +3,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Rapha&euml;l Pinson - Open-Source Technologist</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
 <style type = "text/css">
 
 body {
+  padding-top: 50px;
+}
+
+.navbar .container-fluid {
   background-color: #2f3236;
   background-image: url('background_pix.svg');
 }
 
-a img {
-  border: 0;
-}
-
-#rule {
-  padding: 0 300px;
-  height: 35px;
-  background-color: rgba(255, 255, 255, 0.1);
+.navbar .container-fluid li a {
   color: white;
 }
 
-#rule img {
+.navbar .container-fluid img {
   height: 30px;
-}
-
-#rule a {
-  color: white;
 }
 
 #pdfbutton {
@@ -47,14 +44,25 @@ function autoResize(id){
 </script>
 </head>
 <body onLoad="loadCV('en')">
-<a href="http://github.com/raphink/CV"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-<div id="rule">
-<a href="javascript:void(0)" onClick="loadCV('en')"><img src="united_kingdom_great_britain.png" alt="CV in English" /></a>
-<a href="javascript:void(0)" onClick="loadCV('fr')"><img src="france.png" alt="CV en fran&ccedil;ais" /></a>
-<a href="skills/">Technical Skills Timeline</a>
-<a href="#" id="pdfbutton"><img src="application-pdf.png" alt="Download as PDF" /></a>
-</div>
-<iframe id="cvframe" src="about:blank" width='100%' scrolling="no" frameborder=0></iframe>
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="javascript:void(0)" onClick="loadCV('en')"><img src="united_kingdom_great_britain.png" alt="CV in English" /></a></li>
+        <li><a href="javascript:void(0)" onClick="loadCV('fr')"><img src="france.png" alt="CV en fran&ccedil;ais" /></a></li>
+        <li><a href="skills/">Technical Skills Timeline</a></li>
+        <li><a href="#" id="pdfbutton"><img src="application-pdf.png" alt="Download as PDF" /></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+
+    <a href="http://github.com/raphink/CV"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <iframe id="cvframe" src="about:blank" width='100%' scrolling="no" frameborder=0></iframe>
+
+    </div>
+  </div>
 </body>
 </html>
 
