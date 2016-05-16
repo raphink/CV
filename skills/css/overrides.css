@@ -144,7 +144,7 @@ img.logo.small {
 
 /* No github ribbon on mobile */
 @media (max-width: 768px) {
-  #github-ribbon {
+  .github-ribbon {
     display: none;
   }
 
