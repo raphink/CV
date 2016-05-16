@@ -30,7 +30,7 @@
         <li class="dropdown pull-right"> 
           <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-filter"></i><span class="header-text"> Filter </span><span class="caret"></a>
 
-          <ul class="dropdown-menu legend" id="legend">
+          <ul class="dropdown-menu" id="legend">
             <li id="showAllItems"><h4>Show all items</h4></li>
             <li class="used">
               <h4>Used</h4>
@@ -51,6 +51,14 @@
         </li>
         <li class="pull-right"> 
           <a href="javascript:toggleDetails();"><i class="glyphicon glyphicon-list-alt"></i><span class="header-text"> Toggle details</span></a></li>
+        <li class="dropdown pull-right"> 
+          <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-flag"></i><span class="header-text"> Language </span><span class="caret"></a>
+
+          <ul class="dropdown-menu" id="language">
+            <li><a href="#" onClick="downloadButton('fr')"><img src="united_kingdom_great_britain.png" /> English</a></li>
+            <li><a href="#" onClick="downloadButton('en')"><img src="france.png" /> Français</a></li>
+          </ul>
+        </li>
         <li class="pull-right"><a href="#" id="pdfbutton"><i class="glyphicon glyphicon-file" aria-hidden="true"></i><span class="header-text"> Download PDF</span></a></li>
       </ul>
     </div>
