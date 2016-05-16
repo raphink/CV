@@ -1,0 +1,1 @@
+Cfengine was my first experience with Configuration Management. This tool has allowed me to understand the principles of promises and convergent infrastructure. It has led me to appreciate Puppet when it was launched.
