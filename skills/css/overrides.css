@@ -144,6 +144,11 @@ img.logo.small {
   #github-ribbon {
     display: none;
   }
+
+  .header-text {
+    display: none;
+  }
+
 }
 
 /* Remove group labels on phones (portrait) */
