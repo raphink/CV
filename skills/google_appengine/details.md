@@ -1,0 +1,1 @@
+I started programming for Google Wave in 2008. Programming bots for Google Wave meant using Google AppEngine, either with Java or Python.
