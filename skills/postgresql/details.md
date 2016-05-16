@@ -1,0 +1,3 @@
+While working for Orange Portails, I became responsible for the maintenance of our [Gforge](https://gforge.inria.fr/) (and later its fork, [FusionForge](https://fusionforge.org/). Gforge used PostgreSQL, and so I started implementing and tending for it as a sysadmin. When the needs came to extend that platform (for CVS replication), I coded a tool in Perl, using PostgreSQL as the database.
+
+Since I joined Camptocamp in 2012, PostgreSQL has been even more prominent in my job, since the major products Camptocamp develops (Odoo and GIS products) all use PostgreSQL, and PuppetDB also uses PostreSQL.
