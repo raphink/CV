@@ -1,0 +1,1 @@
+While JQuery helped a lot to keep a clean code and improve cross-browser compatibility, Bootstrap came as a great help to provide a clean interface, and responsive interfaces for mobile and desktop devices alike. User Experience is a priority to me, and Bootstrap is a helpful toolkit to achieve it.
