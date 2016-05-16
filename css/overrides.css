@@ -157,7 +157,7 @@ img.logo.small {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
   .header-text {
     display: none;
   }
