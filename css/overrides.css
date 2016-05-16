@@ -155,7 +155,9 @@ img.logo.small {
   .github-ribbon {
     display: none;
   }
+}
 
+@media (max-width: 400px) {
   .header-text {
     display: none;
   }
