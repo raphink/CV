@@ -39,7 +39,8 @@
   {"id": 81, "group": 8, "content": "Chroot", "start": "2006", "end": "2010", "className": "used"},
   {"id": 82, "group": 8, "content": "LXC", "name": "lxc", "start": "2008", "end": "2012-03-01", "className": "implemented"},
   {"id": 83, "group": 8, "content": "OpenVZ", "name": "openvz", "start": "2012-03-01", "end": "2014", "className": "used"},
-  {"id": 84, "group": 8, "content": "Docker / Rancher", "name": "docker", "start": "2014", "className": "implemented"},
+  {"id": 84, "group": 8, "content": "Docker", "name": "docker", "start": "2014", "className": "implemented"},
+  {"id": 85, "group": 8, "content": "Rancher", "name": "rancher", "start": "2015", "className": "implemented"},
 
   {"id": 91, "group": 9, "content": "MySQL", "name": "mysql", "start": "2002", "className": "implemented"},
   {"id": 92, "group": 9, "content": "PostgreSQL", "name": "postgresql", "start": "2007", "className": "implemented"},
