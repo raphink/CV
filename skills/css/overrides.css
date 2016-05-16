@@ -133,7 +133,10 @@ img.logo.small {
   padding: 5px;
 }
 
-
+.navbar-btn a, .navbar-btn a:hover {
+  color: black;
+  text-decoration: none;
+}
 
 /**************
  * Responsive *
