@@ -96,19 +96,19 @@ function loadItems(timeline) {
       });
 
       // Toggle items when legend is clicked
-      $('.legend .used').on('click', function(e) {
+      $('#legend .used').on('click', function(e) {
         filterItems(timeline, 'used');
       });
 
-      $('.legend .implemented').on('click', function(e) {
+      $('#legend .implemented').on('click', function(e) {
         filterItems(timeline, 'implemented');
       });
 
-      $('.legend .contributed').on('click', function(e) {
+      $('#legend .contributed').on('click', function(e) {
         filterItems(timeline, 'contributed');
       });
 
-      $('.legend .developed').on('click', function(e) {
+      $('#legend .developed').on('click', function(e) {
         filterItems(timeline, 'developed');
       });
 
