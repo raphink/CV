@@ -90,10 +90,6 @@ img.identity {
  * Legend *
  **********/
 
-#legend {
-  min-width: 400px;
-}
-
 #legend li {
   padding: 10px;
 }
@@ -168,6 +164,12 @@ img.logo.small {
     margin: 0;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
     width: 100vw;
+  }
+}
+
+@media (min-width: 769px) {
+  #legend {
+    min-width: 400px;
   }
 }
 
