@@ -160,6 +160,7 @@ img.logo.small {
     position: absolute;
     left: 0;
     background: white;
+    box-shadow: 5px 5px 10px gray;
   }
 }
 
