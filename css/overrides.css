@@ -7,12 +7,22 @@ body {
  * Page header *
  ***************/
 
-.page-header {
-  padding-bottom: 20px;
+.fake-page-header {
+  padding-top: 50px;
 }
 
-.page-header h1 small {
+.fake-page-header h1 small {
   font-style: italic;
+}
+
+.fake-page-header .info {
+  text-align: right;
+  color: grey;
+  font-style: italic;
+}
+
+.page-header {
+  padding-bottom: 20px;
 }
 
 .row.motto {
@@ -25,12 +35,6 @@ body {
 .row.motto h4 small {
   color: orange;
   font-variant: small-caps;
-}
-
-.page-header .info {
-  text-align: right;
-  color: grey;
-  font-style: italic;
 }
 
 img.identity {
