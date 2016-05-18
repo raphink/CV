@@ -157,10 +157,13 @@ img.logo.small {
   }
 
   .navbar-nav .open .dropdown-menu {
-    position: absolute;
-    left: 0;
-    background: white;
+    position: fixed;
+    top: 48px;
+    background: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+    margin: 0;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    width: 100vw;
   }
 }
 
