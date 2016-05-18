@@ -155,6 +155,12 @@ img.logo.small {
   .github-ribbon {
     display: none;
   }
+
+  .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    left: 0;
+    background: white;
+  }
 }
 
 @media (max-width: 550px) {
