@@ -21,6 +21,10 @@ body {
   font-style: italic;
 }
 
+.fake-page-header .info a {
+  color: grey;
+}
+
 .page-header {
   padding-bottom: 20px;
 }
