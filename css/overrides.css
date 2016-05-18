@@ -35,7 +35,7 @@ body {
 
 img.identity {
   float: right;
-  width: 100px;
+  width: 80px;
   padding: 2px;
   margin-left: 10px;
   border: 1px solid orange;
@@ -191,6 +191,10 @@ img.logo.small {
 
 @media (min-width: 769px) {
   #legend {
+    min-width: 400px;
+  }
+
+  #info {
     min-width: 400px;
   }
 }
