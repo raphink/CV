@@ -90,6 +90,10 @@ img.identity {
  * Legend *
  **********/
 
+#legend {
+  min-width: 400px;
+}
+
 #legend li {
   padding: 10px;
 }
