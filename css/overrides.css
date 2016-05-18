@@ -11,13 +11,35 @@ body {
   padding-bottom: 20px;
 }
 
+.page-header h1 small {
+  font-style: italic;
+}
+
+.row.motto {
+  text-align: center;
+  width: 100%;
+  color: orange;
+  font-style: italic;
+}
+
+.row.motto h4 small {
+  color: orange;
+  font-variant: small-caps;
+}
+
+.page-header .info {
+  text-align: right;
+  color: grey;
+  font-style: italic;
+}
+
 img.identity {
-  float: left;
-  width: 80px;
-  padding: 1px;
-  border: 1px solid gray;
-  margin-right: 10px;
-  vertical-align: top;
+  float: right;
+  width: 100px;
+  padding: 2px;
+  margin-left: 10px;
+  border: 1px solid orange;
+  vertical-align: text-bottom;
 }
 
 /* Group label */
