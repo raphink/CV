@@ -1,4 +1,3 @@
-var timeline;
 function skills() {
 
   var container = document.getElementById('visualization');
@@ -34,7 +33,7 @@ function skills() {
       if (item.type === 'background') {
         return title;
       } else {
-        var html = '<span class="zoom" onclick="javascript:zoomItem('+item.id+');" title="zoom on item"><i class="glyphicon glyphicon-zoom-in"></i></span> ';
+        var html = '<span class="zoom" vis-item-id="'+item.id+'" title="zoom on item"><i class="glyphicon glyphicon-zoom-in"></i></span> ';
         html += '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</a>';
         html += '<div class="details collapse" id="details-'+item.id+'"></div>';
         return html;
@@ -42,14 +41,15 @@ function skills() {
     }
   };
 
-  timeline = new vis.Timeline(container);
+  var timeline = new vis.Timeline(container);
   timeline.setOptions(options);
 
   loadGroups(timeline);
 }
 
-function zoomItem(id) {
-  timeline.setWindow(timeline.components[3].items[id].data.start, timeline.components[3].items[id].data.end);
+function zoomItem(timeline, id) {
+  var data = timeline.components[3].items[id].data;
+  timeline.setWindow(data.start, data.end);
   $('#details-'+id).collapse('show');
 }
 
@@ -122,6 +122,10 @@ function loadItems(timeline) {
       $('#showAllItems').on('click', function(e) {
         // All items
         filterItems(timeline, 'vis-item');
+      });
+
+      $('.zoom').on('click', function(e) {
+        zoomItem(timeline, e.currentTarget.getAttribute('vis-item-id'));
       });
     }
   });
