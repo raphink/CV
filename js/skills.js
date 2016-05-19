@@ -33,8 +33,8 @@ function skills() {
       if (item.type === 'background') {
         return title;
       } else {
-        var html = '<span class="zoom" vis-item-id="'+item.id+'" title="zoom on item"><i class="glyphicon glyphicon-zoom-in"></i></span> ';
-        html += '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</a>';
+        var html = '<span class="zoom" vis-item-id="'+item.id+'" title="Zoom on item and display details"><i class="glyphicon glyphicon-zoom-in"></i></span> ';
+        html += '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'" title="Toggle details">'+title+'</a>';
         html += '<div class="details collapse" id="details-'+item.id+'"></div>';
         return html;
       }
