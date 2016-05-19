@@ -224,7 +224,7 @@ img.logo.small {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
   .header-text {
     display: none;
   }
