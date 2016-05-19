@@ -1,3 +1,4 @@
+var timeline;
 function skills() {
 
   var container = document.getElementById('visualization');
@@ -33,17 +34,22 @@ function skills() {
       if (item.type === 'background') {
         return title;
       } else {
-        var html = '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</a>';
+        var html = '<a class="zoom" href="javascript:zoomItem('+item.id+');"><small><i class="glyphicon glyphicon-zoom-in"></i></small></a> ';
+        html += '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</a>';
         html += '<div class="details collapse" id="details-'+item.id+'"></div>';
         return html;
       }
     }
   };
 
-  var timeline = new vis.Timeline(container);
+  timeline = new vis.Timeline(container);
   timeline.setOptions(options);
 
   loadGroups(timeline);
+}
+
+function zoomItem(id) {
+  timeline.setWindow(timeline.components[3].items[id].data.start, timeline.components[3].items[id].data.end);
 }
 
 function filterItems(timeline, type) {

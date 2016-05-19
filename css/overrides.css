@@ -162,6 +162,22 @@ img.logo.small {
   color: #2C4B6C;
 }
 
+/* block won't tolerate the zoom button on the same line */
+.vis-item-content .details-toggle {
+  display: inline-block;
+}
+
+/* Hide zoom button by default */
+.vis-item-content .zoom {
+  visibility: hidden;
+}
+
+/* Show zoom button when hovering on title */
+.vis-item-content:hover .zoom {
+  visibility: visible;
+  color: black;
+}
+
 #legend li, .details-toggle {
   cursor: context-menu;
   display: block;
