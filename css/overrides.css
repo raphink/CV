@@ -38,13 +38,6 @@ body {
   font-variant: small-caps;
 }
 
-#reset-zoom {
-  position: absolute;
-  padding: 15px;
-  z-index: 999;
-  color: #4d4d4d;
-}
-
 img.identity {
   float: right;
   width: 80px;
