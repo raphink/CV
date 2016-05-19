@@ -4,7 +4,7 @@ When the [Augeas](http://augeas.net) project was first presented to me in 2007, 
 
 #### API contributions
 
-Later on, I contributed C code for the API, and contributed to bindings code for [Python](https://github.com/hercules-team/python-augeas), [Ruby](https://github.com/hercules-team/ruby-augeas) and [Perl](http://search.cpan.org/dist/Config-Augeas/).
+Later on, I contributed C code for the API, and maintained bindings code for [Python](https://github.com/hercules-team/python-augeas), [Ruby](https://github.com/hercules-team/ruby-augeas) and [Perl](http://search.cpan.org/dist/Config-Augeas/).
 
 #### Augeasproviders
 
