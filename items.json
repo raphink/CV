@@ -26,9 +26,9 @@
   {"id": 52, "group": 5, "content": "TDD", "start": "2008", "className": "used"},
   {"id": 53, "group": 5, "content": "BDD", "start": "2013", "className": "used"},
 
-  {"id": 61, "group": 6, "content": "Bash / Dash", "start": "2005", "className": "used"},
+  {"id": 61, "group": 6, "content": "Bash / Dash", "name": "bash", "start": "2005", "className": "used"},
   {"id": 62, "group": 6, "content": "Perl", "name": "perl", "start": "2006", "end": "2012-03-01", "className": "implemented"},
-  {"id": 63, "group": 6, "content": "C", "start": "2008", "className": "used"},
+  {"id": 63, "group": 6, "content": "C", "name": "c", "start": "2008", "className": "used"},
   {"id": 64, "group": 6, "content": "Ruby", "name": "ruby", "start": "2012-03-01", "className": "implemented"},
   {"id": 65, "group": 6, "content": "Go", "name": "go", "start": "2016", "className": "used"},
 
