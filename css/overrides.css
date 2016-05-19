@@ -175,7 +175,6 @@ img.logo.small {
 /* Show zoom button when hovering on title */
 .vis-item-content:hover .zoom {
   visibility: visible;
-  color: black;
 }
 
 #legend li, .details-toggle {
@@ -210,6 +209,11 @@ img.logo.small {
     margin: 0;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
     width: 100vw;
+  }
+
+  /* Always show zoom */
+  .vis-item-content .zoom {
+    visibility: visible;
   }
 }
 

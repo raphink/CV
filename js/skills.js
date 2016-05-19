@@ -34,7 +34,7 @@ function skills() {
       if (item.type === 'background') {
         return title;
       } else {
-        var html = '<a class="zoom" href="javascript:zoomItem('+item.id+');"><small><i class="glyphicon glyphicon-zoom-in"></i></small></a> ';
+        var html = '<span class="zoom" onclick="javascript:zoomItem('+item.id+');" title="zoom on item"><i class="glyphicon glyphicon-zoom-in"></i></span> ';
         html += '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'">'+title+'</a>';
         html += '<div class="details collapse" id="details-'+item.id+'"></div>';
         return html;
@@ -50,6 +50,7 @@ function skills() {
 
 function zoomItem(id) {
   timeline.setWindow(timeline.components[3].items[id].data.start, timeline.components[3].items[id].data.end);
+  $('#details-'+id).collapse('show');
 }
 
 function filterItems(timeline, type) {
