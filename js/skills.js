@@ -127,6 +127,10 @@ function loadItems(timeline) {
       $('.zoom').on('click', function(e) {
         zoomItem(timeline, e.currentTarget.getAttribute('vis-item-id'));
       });
+
+      $('#reset-zoom').on('click', function(e) {
+        timeline.setWindow(timeline.options.start, timeline.options.end);
+      });
     }
   });
 }
