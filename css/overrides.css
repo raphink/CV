@@ -25,15 +25,12 @@ body {
   color: grey;
 }
 
-.page-header {
-  padding-bottom: 20px;
-}
-
 .row.motto {
   text-align: center;
   width: 100%;
   color: orange;
   font-style: italic;
+  padding-bottom: 20px;
 }
 
 .row.motto h4 small {
