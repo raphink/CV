@@ -22,9 +22,9 @@
   {"id": 42, "group": 4, "content": "Bazaar NG", "name": "bzr", "start": "2005", "end": "2008", "className": "used"},
   {"id": 43, "group": 4, "content": "Git", "name": "git", "start": "2008", "className": "implemented"},
 
-  {"id": 51, "group": 5, "content": "Pair programming", "start": "2008", "className": "used"},
-  {"id": 52, "group": 5, "content": "TDD", "start": "2008", "className": "used"},
-  {"id": 53, "group": 5, "content": "BDD", "start": "2013", "className": "used"},
+  {"id": 51, "group": 5, "content": "Pair programming", "name": "pair_programming", "start": "2008", "className": "used"},
+  {"id": 52, "group": 5, "content": "Test Driven Development", "name": "tdd", "start": "2008", "className": "used"},
+  {"id": 53, "group": 5, "content": "Behavior Driven Development", "name": "bdd", "start": "2013", "className": "used"},
 
   {"id": 61, "group": 6, "content": "Bash / Dash", "name": "bash", "start": "2005", "className": "used"},
   {"id": 62, "group": 6, "content": "Perl", "name": "perl", "start": "2006", "end": "2012-03-01", "className": "implemented"},
