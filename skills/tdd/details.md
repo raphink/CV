@@ -1,0 +1,1 @@
+I was introduced to Test Driven Development mainly through my contributions to the [Augeas](http://augeas.net) project, as all Augeas lenses have associated tests. I came to appreciate how TDD helps to focus on features and avoid bugs and regressions, and adopted it widely for most of my projects.
