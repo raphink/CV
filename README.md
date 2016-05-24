@@ -4,11 +4,8 @@ This is a repository that contains my up-to-date CV in LaTeX.
 
 ## Live CV
 
-You can find the live versions of the CV on http://cv.raphink.info
+You can find the live versions of the CV on http://raphink.info
 
-## Skills Timeline
-
-A timeline of technological tools I have used can be found on http://cv.raphink.info/skills
 
 
 # How to build
