@@ -2,7 +2,7 @@
 
 This is an interface to view technical skills over time dynamically.
 
-See it live at http://cv.raphink.info/
+See it live at http://raphink.info/
 
 ## Setup
 
