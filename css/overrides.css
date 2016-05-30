@@ -60,6 +60,10 @@ img.identity {
   border-width: 0;
 }
 
+.vis-item.vis-range {
+  border-radius: 4px;
+}
+
 /* This is important for details styling */
 .vis-item-content {
   width: 100%;
