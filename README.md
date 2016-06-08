@@ -1,6 +1,7 @@
-# What is this
-
 [![Join the chat at https://gitter.im/raphink/CV](https://badges.gitter.im/raphink/CV.svg)](https://gitter.im/raphink/CV?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+# What is this
 
 This is a repository that contains my up-to-date CV in LaTeX (`master` branch) and Web (`gh-pages` branch) versions.
 
