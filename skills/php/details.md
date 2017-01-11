@@ -2,4 +2,4 @@ After learning HTML and JavaScript, I soon came to the conclusion I needed a ser
 
 I still use PHP occasionally when I need a little bit of server-side code with a very simple Apache configuration.
 
-I have also had the occasion to work on Symphony Enterprise applications in the past.
+I have also had the occasion to work on Symfony Enterprise applications in the past.
