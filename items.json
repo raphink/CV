@@ -52,14 +52,18 @@
 
   { "group": 11, "content": "Google AppEngine", "name": "google_appengine", "start": "2008", "end": "2010", "className": "used"},
 
-  { "group": 12, "content": "PHP", "name": "php", "start": "2002", "className": "used"},
-  { "group": 12, "content": "Python", "name": "python", "details": "python", "start": "2008", "className": "implemented"},
-  { "group": 12, "content": "Ruby", "name": "ruby", "details": "ruby", "start": "2013", "className": "implemented"},
-  { "group": 12, "content": "Go", "name": "go", "details": "go", "start": "2016", "className": "implemented"},
+  { "group": 12, "content": "Apache", "name": "apache", "start": "2005", "className": "implemented"},
+  { "group": 12, "content": "Lighttpd", "name": "lighttpd", "start": "2006", "className": "implemented"},
+  { "group": 12, "content": "Nginx", "name": "nginx", "start": "2012", "className": "implemented"},
 
-  { "group": 13, "content": "HTML / Javascript / CSS", "name": "html_css_js", "details": "html_css_js", "start": "2002", "className": "implemented"},
-  { "group": 13, "content": "JQuery", "name": "jquery", "start": "2012-03-01", "className": "used"},
-  { "group": 13, "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"},
+  { "group": 13, "content": "PHP", "name": "php", "start": "2002", "className": "used"},
+  { "group": 13, "content": "Python", "name": "python", "details": "python", "start": "2008", "className": "implemented"},
+  { "group": 13, "content": "Ruby", "name": "ruby", "details": "ruby", "start": "2013", "className": "implemented"},
+  { "group": 13, "content": "Go", "name": "go", "details": "go", "start": "2016", "className": "implemented"},
 
-  { "group": 14, "content": "LaTeX", "name": "latex", "start": "2001", "className": "contributed"}
+  { "group": 14, "content": "HTML / Javascript / CSS", "name": "html_css_js", "details": "html_css_js", "start": "2002", "className": "implemented"},
+  { "group": 14, "content": "JQuery", "name": "jquery", "start": "2012-03-01", "className": "used"},
+  { "group": 14, "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"},
+
+  { "group": 15, "content": "LaTeX", "name": "latex", "start": "2001", "className": "contributed"}
 ]
