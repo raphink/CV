@@ -7,12 +7,13 @@
   {"id": 5, "content": "Methods"},
   {"id": 6, "content": "OS coding"},
   {"id": 7, "content": "Configuration<br />Management"},
-  {"id": 8, "content": "Containers"},
-  {"id": 9, "content": "Databases"},
-  {"id": 10, "content": "Cloud / PAAS"},
-  {"id": 11, "content": "Web backend"},
-  {"id": 12, "content": "Web frontend"},
-  {"id": 13, "content": "Typesetting"},
+  {"id": 8, "content": "Security"},
+  {"id": 9, "content": "Containers"},
+  {"id": 10, "content": "Databases"},
+  {"id": 11, "content": "Cloud / PAAS"},
+  {"id": 12, "content": "Web backend"},
+  {"id": 13, "content": "Web frontend"},
+  {"id": 14, "content": "Typesetting"},
 
   {"id": 99, "content": "&nbsp;", "className": "group-header"}
 ]
