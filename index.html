@@ -1,39 +1,41 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
-<head profile="http://www.w3.org/2005/10/profile">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Raphaël Pinson —  Open-Source Technologist</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.css" integrity="sha384-u716h6lCH9r+vMunuNOBPDPKgZnK4k+PvzzRvtzbspOEjfdY4uUvDU3wDi6BWe3S" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.css" rel="stylesheet" type="text/css" />
-  <script src="js/vis.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <link href="css/overrides.css" rel="stylesheet" type="text/css" />
+
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.js" integrity="sha384-M+SxeH/xY48fto4LZCrQuZ4v9X1OLttWV+kDLN2g0otGp5P3JCUeIFL6M9m8/jOT" crossorigin="anonymous"></script>
+
   <script src="js/skills.js"></script>
   <script src="js/commonmark.js"></script>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body onload="skills();">
-<a href="http://github.com/raphink/CV/tree/gh-pages" class="github-ribbon"><img style="position: absolute; top: 0; left: 0; border: 0; z-index: 9999;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
+<body>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown btn-group pull-right"> 
+        <li class="dropdown btn-group pull-right">
 
-          <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-filter"></i><span class="header-text"> Filter </span><span class="caret"></a>
+          <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="glyphicon glyphicon-filter"></i>
+            <span class="header-text"> Filter </span><span class="caret"></span>
+          </a>
 
           <ul class="dropdown-menu" id="legend">
             <li id="showAllItems"><h4>Show all items</h4></li>
@@ -54,13 +56,13 @@
             </li>
           </ul>
         </li>
-        <li class="pull-right"> 
+        <li class="pull-right">
           <a href="#" id="reset-zoom"><i class="glyphicon glyphicon-zoom-out"></i><span class="header-text"> Reset Zoom</span></a>
         </li>
-        <li class="pull-right"> 
-          <a href="javascript:toggleDetails();"><i class="glyphicon glyphicon-list-alt"></i><span class="header-text"> Toggle details</span></a></li>
+        <li class="pull-right">
+          <a href="#" id="toggle-details"><i class="glyphicon glyphicon-list-alt"></i><span class="header-text"> Toggle details</span></a></li>
         <li class="dropdown btn-group pull-right"> 
-          <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-file"></i><span class="header-text"> Download PDF </span><span class="caret"></a>
+          <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-file"></i><span class="header-text"> Download PDF </span><span class="caret"></span></a>
 
           <ul class="dropdown-menu" id="pdf">
             <li><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true"><img src="img/united_kingdom_great_britain.png" /> English</a></li>
@@ -68,7 +70,7 @@
           </ul>
         </li>
         <li class="dropdown btn-group pull-right"> 
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-info-sign"></i><span class="header-text"> What is this? </span><span class="caret"></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-info-sign"></i><span class="header-text"> What is this? </span><span class="caret"></span></a>
           <div class="dropdown-menu jumbotron" id="info">
             <p>
             This timeline describes the technical stacks I have used in my job as a systems engineer over the years.
@@ -77,8 +79,8 @@
             <p>
             Elements in the graph are clickable and will display details.
             </p>
-            
-            <p> The legend can also be used to filter them. To zoom on the timeline, use the <tt>Alt</tt> key or pinching on mobile devices.
+
+            <p> The legend can also be used to filter them. To zoom on the timeline, use the <code>Alt</code> key or pinching on mobile devices.
             </p>
 
           </div>

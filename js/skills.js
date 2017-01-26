@@ -28,7 +28,15 @@ function skills() {
     autoResize: true,
     zoomKey: 'altKey',
     template: function(item) {
-      var title = '<img src="skills/'+item.name+'/logo.png" class="logo small" onerror="this.parentNode.removeChild(this)" /> '+item.content;
+      var title = '';
+      if (typeof item.name === 'string' && !(typeof item.logo === 'boolean' && item.logo === false)) {
+        var logo_file_type = 'png';
+        if (typeof item.logo_type === 'string') {
+          logo_file_type = item.logo_type;
+        }
+        title += '<img src="skills/'+item.name+'/logo.'+logo_file_type+'" class="logo small" onerror="this.parentNode.removeChild(this)" /> ';
+      }
+      title += item.content;
 
       if (item.type === 'background') {
         return title;
@@ -46,6 +54,9 @@ function skills() {
 
   loadGroups(timeline);
 }
+$(document).ready(function () {
+  skills()
+});
 
 function zoomItem(timeline, id) {
   var data = timeline.components[3].items[id].data;
@@ -81,6 +92,11 @@ function loadItems(timeline) {
     url: './items.json',
     timeline: timeline,
     success: function(data) {
+      for (var id = 0; id < data.length; id++) {
+        if (typeof data[id] !== 'undefined') {
+          data[id].id = id;
+        }
+      }
       var items = new vis.DataSet(data);
 
       // Preprocess items
@@ -128,6 +144,10 @@ function loadItems(timeline) {
         zoomItem(timeline, e.currentTarget.getAttribute('vis-item-id'));
       });
 
+      $('#toggle-details').on('click', function(e) {
+        toggleDetails();
+      });
+
       $('#reset-zoom').on('click', function(e) {
         timeline.setWindow(timeline.options.start, timeline.options.end);
       });
@@ -138,19 +158,23 @@ function loadItems(timeline) {
 function loadDetails(items) {
   for (var i in items._data) {
     var ii = items._data[i];
-    $.ajax({
-        url: './skills/'+ii.name+'/details.md',
-        id: i,
-        success: function(details) {
-          var reader = new commonmark.Parser();
-          var writer = new commonmark.HtmlRenderer();
-          var parsed = reader.parse(details);
-          var html = writer.render(parsed);
-          $('#details-'+this.id).html(html);
-        },
-        error: function() {
-          $('#details-'+this.id).html('No details');
-        }
-    });
+    if ((typeof ii.details === 'boolean' && ii.details === false) || typeof ii.name === 'undefined') {
+      $('#details-'+ii.id).html('No details');
+    } else {
+      $.ajax({
+          url: './skills/'+ii.name+'/details.md',
+          id: i,
+          success: function(details) {
+            var reader = new commonmark.Parser();
+            var writer = new commonmark.HtmlRenderer();
+            var parsed = reader.parse(details);
+            var html = writer.render(parsed);
+            $('#details-'+this.id).html(html);
+          },
+          error: function() {
+            $('#details-'+this.id).html('No details');
+          }
+      });
+    }
   }
 }
