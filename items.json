@@ -30,7 +30,7 @@
   {"group": 6, "content": "Perl", "name": "perl", "start": "2006", "end": "2012-03-01", "className": "implemented"},
   {"group": 6, "content": "C", "name": "c", "start": "2008", "className": "used", "logo": false},
   {"group": 6, "content": "Ruby", "name": "ruby", "start": "2012-03-01", "className": "implemented"},
-  {"group": 6, "content": "Go", "name": "go", "start": "2016", "className": "used"},
+  {"group": 6, "content": "Go", "name": "go", "start": "2016", "className": "implemented"},
 
   {"group": 7, "content": "Cfengine", "name": "cfengine", "start": "2006", "end": "2012-03-01", "className": "implemented"},
   {"group": 7, "content": "Puppet", "name": "puppet", "start": "2007", "className": "contributed"},
