@@ -12,6 +12,7 @@
   {"id": 10, "content": "Cloud / PAAS"},
   {"id": 11, "content": "Web backend"},
   {"id": 12, "content": "Web frontend"},
+  {"id": 13, "content": "Typesetting"},
 
   {"id": 99, "content": "&nbsp;", "className": "group-header"}
 ]

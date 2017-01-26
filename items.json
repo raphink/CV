@@ -55,5 +55,7 @@
 
   { "group": 12, "content": "HTML / Javascript / CSS", "name": "html_css_js", "details": "html_css_js", "start": "2002", "className": "implemented"},
   { "group": 12, "content": "JQuery", "name": "jquery", "start": "2012-03-01", "className": "used"},
-  { "group": 12, "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"}
+  { "group": 12, "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"},
+
+  { "group": 13, "content": "LaTeX", "name": "latex", "start": "2001", "classname": "contributed"}
 ]
