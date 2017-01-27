@@ -79,15 +79,28 @@ function loadGroups(timeline) {
     url: './groups.json',
     timeline: timeline,
     success: function(data) {
+      var group_name_to_id_map = {};
+      for (var id = 0; id < data.length; id++) {
+        if (typeof data[id].id === 'undefined') {
+          data[id].id = id;
+        }
+        var name;
+        if (typeof data[id].name === 'string') {
+          name = data[id].name;
+        } else {
+          name = data[id].content.toLowerCase();
+        }
+        group_name_to_id_map[name] = data[id].id;
+      }
       var items = new vis.DataSet(data);
       var timeline = this.timeline;
       timeline.setGroups(items);
-      loadItems(timeline);
+      loadItems(timeline, group_name_to_id_map);
     }
   });
 }
 
-function loadItems(timeline) {
+function loadItems(timeline, group_name_to_id_map) {
   $.ajax({
     url: './items.json',
     timeline: timeline,
@@ -95,6 +108,13 @@ function loadItems(timeline) {
       for (var id = 0; id < data.length; id++) {
         if (typeof data[id].id === 'undefined') {
           data[id].id = id;
+        }
+        if (typeof data[id].group === 'string') {
+          var group_name = data[id].group;
+          data[id].group = group_name_to_id_map[group_name];
+          if (typeof data[id].group === 'undefined') {
+            console.warn("Group name '" + group_name + "' is not defined!");
+          }
         }
       }
       var items = new vis.DataSet(data);
