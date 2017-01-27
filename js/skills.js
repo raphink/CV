@@ -93,7 +93,7 @@ function loadItems(timeline) {
     timeline: timeline,
     success: function(data) {
       for (var id = 0; id < data.length; id++) {
-        if (typeof data[id] !== 'undefined') {
+        if (typeof data[id].id === 'undefined') {
           data[id].id = id;
         }
       }
