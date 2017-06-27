@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/raphink
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://raphink.info
+  * I am raphink (https://keybase.io/raphink) on keybase.
+  * I have a public key with fingerprint E7B7 4E88 338A 5B3C 886E  2F07 A1AA C49E 10CB 2A8D
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01014a6c1200394757dc262adac6e6806e16dc5f45700d79a9070ab85b219252da6c0a",
+            "fingerprint": "e7b74e88338a5b3c886e2f07a1aac49e10cb2a8d",
+            "host": "keybase.io",
+            "key_id": "a1aac49e10cb2a8d",
+            "kid": "01014a6c1200394757dc262adac6e6806e16dc5f45700d79a9070ab85b219252da6c0a",
+            "uid": "96cb7b1b0675e120d2452d697c7fc619",
+            "username": "raphink"
+        },
+        "service": {
+            "hostname": "raphink.info",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1498547589,
+    "expire_in": 157680000,
+    "prev": "0f378fefc31fe60712a961e17737b698b7d6c175bef6ac6294e3a362233a3737",
+    "seqno": 47,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtkntQVFUcx3fX1uEhyWOATGeiS4kSMvex9557l14Q0tY01UgGpLjcx9nlynp3
+3b1ghEiWj/XBIx+JpjAhU6nMgEhCGGqChgOTozPiWCQx7bIwzohauooIncvUH830
+Z+efM+fcz/d7f9/vnJqIWTqD/sujPXWRfcmV+r4xQZe3zOgtwwSnVIqZy7AiOLNB
+hwQ9qrVIljAzhhM4YeIZkSBxnOJMgAaSSDIkL/EiAxkWZyDBSCJtM9EAxyXA8RwO
+cF5gaYEkOJImJaTFeSwFs8mKHbpdbllRkS0EAjBBlqUolqcFSmRZBpI2HPAEz4sm
+DhK4KJA8KyFhodOjKdBwAu+BqbIT3aGDdWa8/+D/57mLZ+w4RhSAQAg4A2iIPCXS
+hBiGAyKwiQzBaaAHuhV+DUS0m3cVykoRVp6CocsSWYRar1qQfwOpsmLT4rjcTtUp
+Oh3oS6GqusyaUC11aeQ6KFj/9rAKsiKhFpGgBLo9slPBzAQiRVXWTAkTx9IoKMul
+YPBDl+yGVlkjaIDioqX9BpZo1dgowNqgTcyhCBtkcECQPMcQkACAAgLDsQKQUHGA
+FqCNQXWRnAlSPMWQJIU2xGBarLWKEzObABqUtyNTj2xXeLXYDbHysG2GBU/o9Abd
+bKNBe2C6sNDIf17d/JK5U/iSLVRq43Jjd5U16rnXmF1bxYaTVa/UbE/rry3fMvuU
+t9Gb6fReCIYtqz8+GahU8lf0xfWNL3xzd4zxzwEzYRj/ePO54eZNgR7jvbRPbhj2
+Bd+7qsQkZWzYmTBZmlnfnjy6b/10c0RLSNvFJkfGB5cTM+ivcuz90/cHakN8d4cf
+jCWqQ+GxbY/ASO/zR6fI7tyK7sVVb+wvHX/3sEvfvHKFZf+RdVeigpOWyJf6L97F
+cW/lnLZfzPXwUPLb8YE5rZasW+9MtPgem6Xo2NvXW046uK7s05uqK5KY3NEifb4v
+qrCl6bPvfnh93tqzN/2v4mnmQHiUM5CwOutscOrqlcwyecOloQNz6Qz/tfNbQxMe
+twVf9AcXPGXJPn1sMrdYnDA3WzZ3dIReyi6I/t0e7Aqmw7SawfdP3H66wv9kiLnJ
+8UzXYrtv296bAep8fOOSC8Mvz9qjzxtZmsqOHsj7Ju/RW7UJp7w5rs5BJv3rjZ2W
+Id29461FEz3T5WcW+mLbf/vW5T7Y2ybEhYxeTuh56Iiu//zaT5sXBYzRvTu+mJ+X
+uzF/+eHdgT9emNegPuwcvn6oIXpglTv+x2cT09YcGyLiiEU5fWpB1pkIEuqbfw0P
++WhX9rn2EysL1tfdv3XDDw+qd3ytn0bsrE7/vuDOqp912WN7/IM7OpKWyg+OgL3t
+1XWrO6YyWkfKY/4C
+=K3mn
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/raphink
+
+==================================================================
+
