@@ -2,7 +2,7 @@
   {"content": "Provisioning"},
   {"content": "Cloud / IAAS", "name": "cloud"},
   {"content": "Virtualization"},
-  {"content": "Operating<br />Systems", "name": "OS"},
+  {"content": "Operating<br />Systems", "name": "os"},
   {"content": "VCS"},
   {"content": "Methods"},
   {"content": "OS coding"},
