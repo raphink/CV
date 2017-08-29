@@ -64,6 +64,7 @@
   { "group": "web frontend", "content": "HTML / Javascript / CSS", "name": "html_css_js", "details": "html_css_js", "start": "2002", "className": "implemented"},
   { "group": "web frontend", "content": "JQuery", "name": "jquery", "start": "2012-03-01", "className": "used"},
   { "group": "web frontend", "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"},
+  { "group": "web frontend", "content": "AngularJS", "name": "angularjs", "start": "2017", "className": "used"},
 
   { "group": "typesetting", "content": "LaTeX", "name": "latex", "start": "2001", "className": "contributed"}
 ]
