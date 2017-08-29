@@ -6,3 +6,4 @@ When Google Wave came out, I was really interested in the concept and started co
 
 * [Flammard](https://launchpad.net/wavebiblebot), a Bible bot for Google Wave
 * [Annoty](https://launchpad.net/annoty), a generic, programmable, annotations bot for Google Wave
+* [Puppetboard](https://github.com/voxpupuli/puppetboard), a web frontend for the PuppetDB
