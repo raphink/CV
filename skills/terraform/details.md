@@ -11,4 +11,4 @@ I became one of the maintainers of [that provider](https://github.com/terraform-
 
 In 2017, I created a web interface to visualize Terraform remote states:
 [Terraboard](https://github.com/camptocamp/terraboard)
- ![GitHub stars](https://img.shields.io/github/stars/camptocamp/terraboard.svg?style=social&label=Stars)]
+ ![GitHub stars](https://img.shields.io/github/stars/camptocamp/terraboard.svg?style=social&label=Stars)
