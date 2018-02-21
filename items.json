@@ -54,7 +54,7 @@
   { "group": "paas", "content": "Google AppEngine", "name": "google_appengine", "start": "2008", "end": "2010", "className": "used"},
 
   { "group": "web server", "content": "Apache", "name": "apache", "start": "2005", "className": "implemented"},
-  { "group": "web server", "content": "Lighttpd", "name": "lighttpd", "start": "2006", "className": "implemented"},
+  { "group": "web server", "content": "Lighttpd", "name": "lighttpd", "start": "2006", "end": "2013", "className": "implemented"},
   { "group": "web server", "content": "Nginx", "name": "nginx", "start": "2012", "className": "implemented"},
 
   { "group": "web backend", "content": "PHP", "name": "php", "start": "2002", "className": "used"},
