@@ -1,0 +1,303 @@
+%%
+%% This is file `moderntimeline.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% moderntimeline.dtx  (with options: `package')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2011-2015 by Raphaël Pinson <raphink@gmail.com>
+%% --------------------------------------------------------------------------
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%% 
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{moderntimeline}
+    [2020/06/11 0.11 Add timelines to moderncv entries]
+\ProvidesPackage{moderntimeline}
+\RequirePackage{tikz}
+\RequirePackage{kvoptions}
+\SetupKeyvalOptions{
+   family=moderntimeline,
+   prefix=tl@,
+}
+\DeclareStringOption{firstyear}
+\DeclareStringOption{lastyear}
+\DeclareStringOption{marksmo}[0.2ex]
+\DeclareStringOption{marksyr}[0.4ex]
+\ProcessKeyvalOptions*
+\newif\ifstartyear
+\newif\ifissince
+\newcommand{\tlwidth}[1]{%
+   \def\tl@width{#1}
+   \pgfmathsetmacro\tl@textstartabove{\tl@width+1pt}
+}
+\newcommand{\tlrunningwidth}[1]{%
+   \def\tl@runningwidth{#1}
+}
+\newcommand{\tlrunningcolor}[1]{%
+   \def\tl@runningcolor{#1}
+}
+\newcommand{\tlmarkheightmo}[1]{%
+    \def\tl@marksmo{#1}
+}
+\newcommand{\tlmarkheightyr}[1]{%
+    \def\tl@marksyr{#1}
+}
+\newcommand{\tlsince}[1]{%
+   \def\tl@since{#1}
+}
+\newcommand{\tltextstart}[2][base west]{%
+   \tikzset{
+       tl@startyear/.style={
+           font=#2,
+           name=tl@startyear,
+           above=\tl@textstartabove,
+           inner xsep=0pt,
+           anchor=#1,
+       }
+   }
+}
+\newcommand{\tltextend}[2][north east]{%
+   \tikzset{
+       tl@endyear/.style={
+           font=#2,
+           name=tl@endyear,
+           below,
+           inner xsep=0pt,
+           anchor=#1,
+       }
+   }
+}
+\newcommand{\tltextsingle}[1]{%
+   \tikzset{
+       tl@singleyear/.style={
+           font=#1,
+           name=tl@singleyear,
+           above=1pt,
+           inner xsep=0pt,
+       }
+   }
+}
+\newcommand{\tltext}[1]{%
+   \tltextstart{#1}%
+   \tltextend{#1}%
+   \tltextsingle{#1}%
+}
+\newcommand{\tlsetnotshadedfraction}[1]{%
+   \def\tl@nsfrac{#1}
+}
+\newcommand{\tlenablemonths}{%
+   \def\tl@nomonthvalue{6}
+}
+\newcommand{\tldisablemonths}{%
+   \def\tl@nomonthvalue{0}
+}
+\newcommand{\tldisablemarksyr}{%
+    \def\tl@marksyr{}
+}
+\newcommand{\tlenablemarksyr}{%
+    \def\tl@marksyr{0.4ex}
+}
+\newcommand{\tldisablemarksmo}{%
+    \def\tl@marksmo{}
+}
+\newcommand{\tlenablemarksmo}{%
+    \def\tl@marksmo{0.2ex}
+}
+\tltext{\scriptsize}
+\tlwidth{0.8ex}
+\tlrunningwidth{0.05ex}
+\tlrunningcolor{gray}
+\tlsince{}
+\tlsetnotshadedfraction{0}
+\tldisablemonths
+\newcommand{\tlmaxdates}[2]{%
+   \def\tl@firstyear{#1}
+   \def\tl@lastyear{#2}
+   \pgfmathsetmacro\tl@yearrange{\tl@lastyear-\tl@firstyear}
+}
+\newcommand{\tl@yearfraction}[1]{% Month 1 - 12 -> 0 - 11
+  \gdef\tl@tmpyear{-1}% Resetting
+  \gdef\tl@tmpmonth{-1}%
+  \begingroup%
+  \edef\@tempa{#1/}%
+  \expandafter\endgroup\expandafter\tl@yearfraction@auxi\@tempa\@nnil%
+  \ifstartyear
+    \pgfmathsetmacro\tl@startyear{\tl@tmpyear+(\tl@tmpmonth-1)/12}%
+  \else
+    \ifnum\tl@tmpyear=0
+      \pgfmathsetmacro\tl@endyear{\tl@lastyear}%
+      \issincetrue%
+    \else
+      \pgfmathsetmacro\tl@endyear{\tl@tmpyear+\tl@tmpmonth/12}%
+      \issincefalse%
+    \fi
+  \fi
+}
+\newcommand{\tl@yearfraction@auxi}[2]{}
+\def\tl@yearfraction@auxi#1/#2\@nnil{%
+  \ifnum\tl@tmpyear<0 % First call
+    \pgfmathsetmacro\tl@tmpyear{+#1}%
+    \ifx\@nnil#2\@nnil
+      \pgfmathsetmacro\tl@tmpmonth{+\tl@nomonthvalue}%
+    \else
+      \expandafter\tl@yearfraction@auxi#2\@nnil%
+    \fi
+  \else
+    \pgfmathsetmacro\tl@tmpmonth{#1}%
+  \fi
+}
+\newcommand{\tl@tlcvbar}{
+    \pgfmathsetmacro\tl@yearrange{\tl@lastyear-\tl@firstyear}
+    \pgfmathsetmacro\tl@totalmonths{12*\tl@yearrange}%
+    \pgfmathsetmacro\tl@tickdistmo{\hintscolumnwidth/\tl@totalmonths}%
+    \pgfmathsetmacro\tl@tickdistyr{\hintscolumnwidth/\tl@yearrange}%
+    \useasboundingbox (0,-1.5ex) rectangle (\hintscolumnwidth,1ex);
+    \fill [\tl@runningcolor] (0,0)
+    rectangle (\hintscolumnwidth,\tl@runningwidth);
+    \ifx\tl@marksyr\empty\relax\else
+        \foreach \x in {0, ..., \tl@yearrange}
+        \draw [\tl@runningcolor](\x*\tl@tickdistyr pt,0ex) -- (\x*\tl@tickdistyr pt,\tl@marksyr);
+    \fi
+    \ifx\tl@marksmo\empty\relax\else
+        \foreach \x in {0, ..., \tl@totalmonths}
+        \draw [\tl@runningcolor](\x*\tl@tickdistmo pt,0ex) -- (\x*\tl@tickdistmo pt,\tl@marksmo);
+    \fi
+}
+\newcommand{\tl@splitlabels}[1]{
+  \gdef\tl@startlabel{}% Resetting
+  \begingroup%
+  \edef\@tempa{#1///}%
+  \expandafter\endgroup\expandafter\tl@splitlabels@auxi\@tempa\@nnil%
+  \ifx\tl@startlabel\empty\relax%
+    \gdef\tl@startlabel{#1}
+  \fi
+  \ifissince%
+    \xdef\tl@startlabel{\tl@since \tl@startlabel}
+  \fi
+}
+\newcommand{\tl@splitlabels@auxi}[2]{}
+\def\tl@splitlabels@auxi#1///#2\@nnil{%
+  \ifx\tl@startlabel\empty\relax% First call
+    \gdef\tl@startlabel{#1}
+    \ifx\@nnil#2\@nnil
+      \gdef\tl@startlabel{}
+    \else
+      \expandafter\tl@splitlabels@auxi#2\@nnil%
+    \fi
+  \else
+    \gdef\tl@endlabel{#1}
+  \fi
+}
+\newcommand{\tl@formatstartyear}[1]{
+  \startyeartrue
+  \tl@yearfraction{#1}
+  \pgfmathsetmacro\tl@startfraction{(\tl@startyear-\tl@firstyear)/(\tl@lastyear-\tl@firstyear)}%
+  \ifissince
+    \xdef\tl@startlabel{\tl@since \tl@tmpyear}
+  \else
+    \xdef\tl@startlabel{\tl@tmpyear}
+  \fi
+}
+\newcommand{\tl@formatendyear}[1]{
+  \startyearfalse%
+  \tl@yearfraction{#1}
+  \pgfmathsetmacro\tl@endfraction{(\tl@endyear-\tl@firstyear)/(\tl@lastyear-\tl@firstyear)}%
+  \ifissince%
+    \xdef\tl@endlabel{}
+  \else
+    \xdef\tl@endlabel{\tl@tmpyear}
+  \fi
+}
+\newcommand{\tldatelabelcventry}[8][color1]{%
+\issincefalse
+\tl@formatstartyear{#2}
+\cventry{\tikz[baseline=0pt]{
+    \tl@tlcvbar
+     \fill [#1] (0,0)
+        ++(\tl@startfraction*\hintscolumnwidth,0pt)
+        node [tl@startyear] {#3}
+        node {$\bullet$};
+   }
+}
+{#4}{#5}{#6}{#7}{#8}
+}
+\newcommand{\tldatecventry}[7][color1]{%
+\issincefalse
+\tl@formatstartyear{#2}
+\cventry{\tikz[baseline=0pt]{
+    \tl@tlcvbar
+    \fill [#1] (0,0)
+       ++(\tl@startfraction*\hintscolumnwidth,0pt)
+       node [tl@singleyear] {#2}
+       node {$\bullet$};
+  }%
+}%
+{#3}{#4}{#5}{#6}{#7}%
+}
+\newcommand{\tlcventry}[8][color1]{%
+\tl@formatendyear{#3}
+\tl@formatstartyear{#2}
+ \cventry{\tikz[baseline=0pt]{
+    \tl@tlcvbar
+    \fill [#1] (0,0)
+       ++(\tl@startfraction*\hintscolumnwidth,0pt)
+       node [tl@startyear] {\tl@startlabel}
+       rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width-1pt)
+       node [tl@endyear] {\tl@endlabel}
+       (\hintscolumnwidth,0pt) ;
+    \ifissince
+       \newdimen\fullcolorwidth
+       \pgfmathsetlength\fullcolorwidth{\tl@startfraction*(1+(1-\tl@startfraction)*\tl@nsfrac)*\hintscolumnwidth}
+       \shade [left color=#1,right color=#1]
+(\tl@startfraction*\hintscolumnwidth,0)
+           rectangle (\fullcolorwidth,\tl@width);
+       \shade [left color=#1] (\fullcolorwidth,0)
+           rectangle (\tl@endfraction*\hintscolumnwidth + 1,\tl@width);
+    \else
+       \fill [#1] (\tl@startfraction*\hintscolumnwidth,0)
+           rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
+    \fi
+    }%
+}%
+{#4}{#5}{#6}{#7}{#8}%
+}
+\newcommand{\tllabelcventry}[9][color1]{%
+\tl@formatendyear{#3}
+\tl@formatstartyear{#2}
+\tl@splitlabels{#4}
+ \cventry{\tikz[baseline=0pt]{
+     \tl@tlcvbar
+     \fill [#1] (0,0)
+        ++(\tl@startfraction*\hintscolumnwidth,0pt)
+        node [tl@startyear] {\tl@startlabel}
+        rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width-1pt)
+        node [tl@endyear] {\tl@endlabel}
+        (\hintscolumnwidth,0pt) ;
+    \ifissince
+       \newdimen\fullcolorwidth
+       \pgfmathsetlength\fullcolorwidth{\tl@startfraction*(1+(1-\tl@startfraction)*\tl@nsfrac)*\hintscolumnwidth}
+       \shade [left color=#1,right color=#1]
+(\tl@startfraction*\hintscolumnwidth,0)
+           rectangle (\fullcolorwidth,\tl@width);
+       \shade [left color=#1] (\fullcolorwidth,0)
+           rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
+     \else
+        \fill [#1] (\tl@startfraction*\hintscolumnwidth,0)
+            rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
+     \fi
+     }
+}
+{#5}{#6}{#7}{#8}{#9}%
+}
+\endinput
+%%
+%% End of file `moderntimeline.sty'.
