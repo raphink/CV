@@ -39,15 +39,16 @@
   {"group": "security", "content": "OpenSSH", "name": "openssh", "start": "2005", "className": "implemented"},
   {"group": "security", "content": "GnuPG", "name": "gnupg", "start": "2005", "className": "used"},
   {"group": "security", "content": "Let's Encrypt", "name": "letsencrypt", "start": "2016", "className": "implemented"},
+  {"group": "security", "content": "Cert Manager", "name": "cert-manager", "start": "2020", "className": "contributed"},
 
   {"group": "containers", "content": "Chroot", "start": "2006", "end": "2010", "className": "used"},
   {"group": "containers", "content": "LXC", "name": "lxc", "start": "2008", "end": "2012-03-01", "className": "implemented"},
   {"group": "containers", "content": "OpenVZ", "name": "openvz", "start": "2012-03-01", "end": "2014", "className": "used"},
   {"group": "containers", "content": "Docker", "name": "docker", "start": "2014", "className": "implemented"},
   {"group": "containers", "content": "Rancher", "name": "rancher", "start": "2015", "className": "contributed"},
-  {"group": "containers", "content": "Kubernetes", "name": "kubernetes", "start": "2017", "className": "used"},
+  {"group": "containers", "content": "Kubernetes", "name": "kubernetes", "start": "2017", "className": "implemented"},
   {"group": "containers", "content": "OpenShift", "name": "openshift", "start": "2017", "className": "used"},
-  {"group": "containers", "content": "Argo CD", "name": "argocd", "start": "2020", "className": "used"},
+  {"group": "containers", "content": "Argo CD", "name": "argocd", "start": "2020", "className": "implemented"},
 
   {"group": "databases", "content": "MySQL", "name": "mysql", "start": "2002", "className": "implemented"},
   {"group": "databases", "content": "PostgreSQL", "name": "postgresql", "start": "2007", "className": "implemented"},
