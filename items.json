@@ -67,5 +67,8 @@
   { "group": "web frontend", "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"},
   { "group": "web frontend", "content": "AngularJS", "name": "angularjs", "start": "2017", "className": "used"},
 
+  { "group": "web generators", "content": "GoHugo", "name": "gohugo", "start": "2018", "className": "used"},
+  { "group": "web generators", "content": "Jekyll", "name": "jekyll", "start": "2020", "className": "used"},
+
   { "group": "typesetting", "content": "LaTeX", "name": "latex", "start": "2001", "className": "contributed"}
 ]
