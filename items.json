@@ -11,7 +11,7 @@
 
   {"group": "virtualization", "content": "Qemu", "name": "qemu", "start": "2005", "end": "2007", "className": "used", "details": false},
   {"group": "virtualization", "content": "Xen", "name": "xen", "start": "2008", "end": "2012-03-01", "className": "used", "details": false},
-  {"group": "virtualization", "content": "Virtualbox / Vagrant", "name": "virtualbox", "start": "2012-03-01", "className": "used", "details": false},
+  {"group": "virtualization", "content": "Virtualbox / Vagrant", "name": "virtualbox", "start": "2012-03-01", "end": "2019", "className": "used", "details": false},
   {"group": "virtualization", "content": "KVM", "name": "kvm", "start": "2014", "className": "used", "details": false},
 
   {"group": "os", "content": "Debian", "name": "debian", "start": "2002", "className": "contributed"},
