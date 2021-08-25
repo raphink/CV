@@ -1,1 +1,3 @@
-Kubernetes Certified Administrator # CKA-1800-0308-0100
+Certified Kubernetes Application Developer # LF-gikljn6k0e
+Certified Kubernetes Administrator # LF-vqymlq6gyo
+Certified Kubernetes Security Specialist # LF-xpar0qezpj
