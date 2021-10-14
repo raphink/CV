@@ -33,7 +33,7 @@
   {"group": "os coding", "content": "Go", "name": "go", "start": "2016", "className": "implemented"},
 
   {"group": "cfgmgmt", "content": "Cfengine", "name": "cfengine", "start": "2006", "end": "2012-03-01", "className": "implemented"},
-  {"group": "cfgmgmt", "content": "Puppet", "name": "puppet", "start": "2007", "className": "contributed"},
+  {"group": "cfgmgmt", "content": "Puppet", "name": "puppet", "start": "2007", "className": "contributed", "award": true},
   {"group": "cfgmgmt", "content": "Augeas", "name": "augeas", "start": "2008", "className": "developed"},
 
   {"group": "security", "content": "OpenSSH", "name": "openssh", "start": "2005", "className": "implemented"},

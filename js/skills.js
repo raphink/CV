@@ -37,6 +37,9 @@ function skills() {
         title += '<img src="skills/'+item.name+'/logo.'+logo_file_type+'" class="logo small" onerror="this.parentNode.removeChild(this)" /> ';
       }
       title += item.content;
+      if (item.award) {
+        title += ' <i class="fa fa-trophy" style="color: gold;" title="Award received"></i>';
+      }
 
       if (item.type === 'background') {
         return title;
