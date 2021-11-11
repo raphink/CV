@@ -18,7 +18,6 @@
   {"group": "os", "content": "Ubuntu", "name": "ubuntu", "start": "2004", "className": "developed"},
   {"group": "os", "content": "RedHat / CentOS", "name": "redhat", "start": "2006", "className": "implemented"},
 
-  {"group": "vcs", "content": "CVS", "start": "2008", "end": "2012-03-01", "className": "implemented"},
   {"group": "vcs", "content": "Bazaar NG", "name": "bzr", "start": "2005", "end": "2008", "className": "used", "details": false},
   {"group": "vcs", "content": "Git", "name": "git", "start": "2008", "className": "implemented", "details": false},
 
