@@ -8,6 +8,7 @@
 
   {"group": "cloud", "content": "Amazon Web Services", "name": "aws", "start": "2010", "className": "implemented", "details": false},
   {"group": "cloud", "content": "Openstack", "name": "openstack", "start": "2013", "className": "used", "details": false},
+  {"group": "cloud", "content": "Microsoft Azure", "name": "azure", "start": "2021", "className": "used", "details": false},
 
   {"group": "virtualization", "content": "Qemu", "name": "qemu", "start": "2005", "end": "2007", "className": "used", "details": false},
   {"group": "virtualization", "content": "Xen", "name": "xen", "start": "2008", "end": "2012-03-01", "className": "used", "details": false},
