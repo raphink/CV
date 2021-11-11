@@ -60,6 +60,7 @@
   { "group": "web server", "content": "Lighttpd", "name": "lighttpd", "start": "2006", "end": "2013", "className": "implemented"},
   { "group": "web server", "content": "Nginx", "name": "nginx", "start": "2012", "className": "implemented"},
   { "group": "web server", "content": "Varnish Cache", "name": "varnish", "start": "2013", "className": "used"},
+  { "group": "web server", "content": "Traefik", "name": "traefik", "start": "2020", "className": "used"},
 
   { "group": "web backend", "content": "PHP", "name": "php", "start": "2002", "end": "2017", "className": "used"},
   { "group": "web backend", "content": "Python", "name": "python", "details": "python", "start": "2008", "className": "implemented"},
