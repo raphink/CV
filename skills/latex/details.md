@@ -8,3 +8,5 @@ Example work:
 * [Packages on CTAN](https://www.ctan.org/author/pinson)
 * [Books typeset in LaTeX](http://cc-translators.github.io)
 * [1564 French Geneva Bible](https://github.com/raphink/geneve_1564)
+
+I'm also been active in the [TeX StackExchange Community](https://tex.stackexchange.com/users/951/raphink) over the years.
