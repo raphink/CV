@@ -3,6 +3,7 @@
   {"content": "Cloud / IAAS", "name": "cloud"},
   {"content": "Virtualization"},
   {"content": "Operating<br />Systems", "name": "os"},
+  {"content": "Forges"},
   {"content": "VCS"},
   {"content": "Methods"},
   {"content": "OS coding"},
