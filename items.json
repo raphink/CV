@@ -22,7 +22,7 @@
   {"group": "forges", "content": "Launchpad", "name": "launchpad", "start": "2005", "end": "2010", "className": "used", "details": false},
   {"group": "forges", "content": "GForge", "name": "gforge", "start": "2006", "end": "2011", "className": "implemented", "details": false},
   {"group": "forges", "content": "GitHub", "name": "github", "start": "2010", "className": "used", "details": false},
-  {"group": "forges", "content": "GitLab", "name": "gitlab", "start": "2018", "className": "used", "details": false},
+  {"group": "forges", "content": "GitLab", "name": "gitlab", "start": "2019", "className": "used", "details": false},
   {"group": "forges", "content": "Bitbucket", "name": "bitbucket", "start": "2016", "className": "used", "details": false},
 
   {"group": "vcs", "content": "Bazaar NG", "name": "bzr", "start": "2005", "end": "2008", "className": "used", "details": false},
