@@ -25,7 +25,7 @@
 
 
 % personal data
-\title{Cloud Native Technical Evangelist}
+\title{Cloud Native Tech Evangelist}
 \extrainfo{%
 \linkedin~\httplink{www.linkedin.com/in/raphink}\\%
 \octocat~\httplink{www.github.com/raphink}\\%
@@ -45,92 +45,71 @@ Driving License} % optional, remove the line if not wanted
 \hyphenpenalty=10000
 \maketitle
 
-\section{Skills}
-
-\subsection{Expert Skills}
-\cvcomputer{Configuration Management}{Puppet\contributor, Terraform\contributor, Augeas\developer}
-           {Containers}{Docker, Kubernetes}
-
-\subsection{Development}
-\cvcomputer{Languages}{C, Perl, Python, Shell/Bash, Ruby, Go, GNU Make, Ada, Lua}
-           {Web}{HTML/XHTML, CSS, JavaScript, Ajax, Jquery, Bootstrap, PHP, Angular JS}
-\cvcomputer{Frameworks}{Django, Google AppEngine, Google Wave, Netvibes}
-           {Databases}{MySQL, PostgreSQL, NoSQL (GQL), SPARQL}
-\cvcomputer{Formats}{XML/XPath, SGML, YAML/JSON, RDF/RSS/FOAF}
-           {Methods}{Object Oriented Programming, MVC, Unit Tests, UML}
-\cvcomputer{Source Management}{RCS/CVS, SVN, Bazaar, Git, Mercurial}
-           {Tools}{Autotools, Gforge, Launchpad, GitHub, GitLab}
-
-\subsection{Systems and Networks Administration}
-\cvcomputer{Web}{Apache, Lighttpd, Nginx, Varnish, Bind, Squid, Dansguardian, VsFTPd, Traefik}
-           {Monitoring}{Nagios, Munin, Cacti, Graphite, Logstash, Prometheus, Grafana}
-\cvcomputer{Mail}{Postfix, Exim, SSMTP}
-           {Backup}{Amanda, Duplicity, Restic}
-\cvcomputer{Installation / Deployment}{FAI, Kickstart, Reprepro, Cfengine,
-                                         Puppet\contributor, MCollective\contributor, Augeas\developer}
-           {Networks}{DHCPd, VLANs, OpenVPN, Keepalived}
-\cvcomputer{Operating Systems}{GNU/Linux (Debian\contributor, Ubuntu\developer, RedHat),
-                               MacOS X, Windows}
-           {Databases}{MySQL, PostgreSQL, SQLite, BerkeleyDB, CouchDB}
-\cvcomputer{Virtualization}{Xen, VMWare, Virtualbox, Libvirt}
-           {Security}{OpenSSL, GnuPG, OpenSSH, Let's Encrypt}
-\cvcomputer{Cloud}{Openstack, Amazon Web Services, Microsoft Azure}
-           {Containers}{Docker, Kubernetes, OpenShift}
-
-\subsection{Office and tools}
-\cvcomputer{Office}{OpenOffice/LibreOffice, Microsoft Office, Gimp,
-                    Inkscape}
-           {Project Management}{TaskJuggler, GanttProject}
-\cvcomputer{Edition}{\TeX{}, \LaTeX{}, \XeTeX{}, \LuaTeX{}}
-           {Wikis}{MediaWiki, MoinMoin}
-
-\devnotes{Developer}{Contributor}
-
-\newpage
 
 \section{Experience}
-\subsection{IT Experience}
 
-% Center labels and use "Since"
-%\tltextstart[base]{\scriptsize}
-%\tltextend[base]{\scriptsize}
-%\tlsince{Since~}
-
-\tlcventry{2012}{0}{Instrastructure Developer \& Trainer}{\href{http://www.camptocamp.com}{Camptocamp}}{}{Chambéry then Lausanne}%
-  {Infrastructure Developer, Consultant \& Trainer for internal and client infrastructures.
-\begin{itemize}
-  \item Systems Engineer:
-    \begin{itemize}
-      \item Operated a fleet of 500+ Puppet-operated servers (including servers for EPFL and Swisstopo);
-      \item Architectured and deployed a secured MCollective cluster using RabbitMQ and SSL;
-      \item Planned and executed migrations between major Puppet versions (0.25 to 2.7 and 2.7 to 3.5);
-      \item Wrote and contributed to 100+ Puppet modules (mostly public), including plugins (facts, functions, types \& providers, indirectors), with unit tests;
-      \item Managed servers hosted on Amazon Web Services (with Cloud Formation) and OpenStack;
-      \item Packaged software for RedHat and Debian platforms. Operated and improved the package build systems and package repositories.
-    \end{itemize}
-  \item Training Leader:
-    \begin{itemize}
-      \item Initiated strategic partnerships ­with software editors (Puppet Labs, Red Hat);
-      \item Taught official Puppet Labs curriculum (Puppet Fundamentals, Advanced Puppet, Extending Puppet with Ruby);
-      \item Wrote and taught Docker and Kubernetes curriculum;
-      \item Taught teams from major universities/labs (CERN, EPFL), private banks (in France and Switzerland) and governmental IT teams.
-    \end{itemize}
-  \item Consultant:
-    \begin{itemize}
-      \item Performed Puppet/Devops consulting for private banks and governmental IT teams.
-    \end{itemize}
-\end{itemize}}
+\tlcventry{2012}{0}
+          {Cloud Native Tech Evangelist}
+          {\href{http://www.camptocamp.com}{Camptocamp}}
+          {Chambéry then Lausanne}
+          {}
+          {
+  \begin{itemize}
+    \item \emph{Puppet \& Cloud}\newline
+      When I joined Camptocamp, the instructure team's activity focused on
+      managing 500+ servers on behalf of clients, using mainly \textbf{Puppet}, \textbf{OpenVZ}, and \textbf{Amazon Web Services}.
+    \item \emph{Partnerships \& Training}\newline
+      In order to leverage our team's renowned expertise in Puppet,
+      I set up a \textbf{strategic partnership} with Puppet Labs and started teaching the official
+      Puppet curriculum. This required me to be certified by both the \textbf{Puppet Professional} and \textbf{Puppet Developer} certifications.
+      I also wrote our own curriculum based on \textbf{Foreman} for clients using Open Source Puppet, 
+      as well as an \textbf{Augeas} curriculum.\newline
+      Since then, I have been a \textbf{trainer} to many engineers at major banks, universities (EPFL, Unibe), research facilities (CERN, CNRS), and many more.
+    \item \emph{Open Source Work}\newline
+      As our team managed tens of public open-sourced Puppet modules on \textbf{GitHub}, I strived to improve their quality
+      by implementing industry standards, \textbf{unit and acceptance tests}, publishing them on the Puppet forge, and getting them approved by Puppet Labs as standard implementations. I also managed the \textbf{Augeasproviders} project and maintained the Puppet modules associated with it.
+      My Puppet expertise led to many \textbf{consulting} missions, ranging from architecture to migration,
+      as well as specific \textbf{Ruby} development, and earned me a recognition as \textbf{Puppet Champion of the year 2020}, with a title of \textbf{Extraordinary Puppeteer}.
+    \item \emph{Terraform}\newline
+      With our use of public clouds broadening, we switched our provisioning from \textbf{Cloud Formation} to \textbf{Terraform} and contributed multiple providers and modules to the community.
+      I also authored \textbf{Terraboard}, a web UI to visualize Terraform state information, programmed in \textbf{Go} and \textbf{AngularJS}.
+    \item \emph{Containers \& Orchestration}\newline
+      Around 2014, we moved our Puppet acceptance tests from \textbf{Vagrant} to \textbf{Docker}.
+      We quickly realized Docker's potential, and decided to implement our Puppet 4 stack on top of it, in order to simplify its architecture.
+      Starting with Docker-Compose, we switched to \textbf{Rancher} in 2015 to scale the infrastructure horizontally, and became the \textbf{first Rancher partner in Europe}.
+      Around that time, we wrote multiple tools to improve containers management, in particular \textbf{Bivac}, a tool to automate container volumes backup.
+      Finally, we migrated the Puppet stack to \textbf{OpenShift} around 2018. \newline
+      \textbf{Kubernetes} expertise has since become our main activity. I have co-authored a 5-day containers curriculum covering both Docker and Kubernetes and taught it multiple times.
+      In the meanwhile, I have contributed to getting Camptocamp set up as one of the first \textbf{Kubernetes Certified Service Provider} (KCSP) in Switzerland and the first \textbf{Kubernetes Training Partner} (KTP) in Europe.\newline
+      In that context, I have completed the \textbf{OpenShift Administration}, \textbf{CKAD}, \textbf{CKA}, and \textbf{CKS} certification programs.
+    \item \emph{Sales \& Marketing}\newline
+      As an expert in Configuration Management, Cloud, and Containers Orchestration, I have often 
+      supported our \textbf{sales} force and contributed to multiple \textbf{tenders}.
+      My attachment to Camptocamp's image and values has also encouraged me to improve \textbf{marketing} (through market studies, newsletters, blog posts, videos, white papers, designing illustrations, totems \& goodies).
+      I have represented Camptocamp at many \textbf{conferences and meetups} (both physical and online) on various subjects (Puppet and its ecosystem, Cloud, DevOps, etc.).
+  \end{itemize}
+}
 
 \tlcventry{2006}{2012}{Systems Engineer}{\href{http://www.orness.com}{ORNESS} then \href{http://www.alten.fr}{Alten}}{Sophia Antipolis}{}{Consultant at France T\'el\'ecom
-\begin{tightitemize}
- \item Administration of Cfengine, FAI and the software package repository;
- \item Renewal and industrialization of the software deployment system for Debian/Ubuntu;
- \item Management of the Gforge (collaborative development web interface) platform;
- \item Development of QA tools for systems and configurations policy compliance;
- \item Integration of the continuous integration platform (Hudson) with the Debian/Ubuntu software deployment system;
- \item Monitoring of the fleet of servers;
- \item Writing of technical documentation.
-\end{tightitemize}}
+\begin{itemize}
+  \item \emph{Cfengine}\newline
+    I was originally hired to migrate about 3000 machines from \textbf{Cfengine} 1 to Cfengine 2.
+    This was an opportunity for me to learn about \textbf{Configuration Management} principles and to discover \textbf{Puppet} along the way.
+  \item \emph{Package build farm \& repository}\newline
+    Migration to Cfengine 2 was an opportunity to standardize software packages used.
+    I set up a new automated Debian package repository using \textbf{reprepro}
+    and a \textbf{Debian buildd} farm to compile the packages for multiple distributions and architectures. Both i386 and amd64 builders ran on a single machine, using \textbf{LXC} containers as light virtualization to isolate contexts.\newline
+    I encouraged developers to package their applications and helped them set up \textbf{CI/CD} pipelines using \textbf{Hudson} (now \textbf{Jenkins}) to automatically release their packages to the repository, using \textbf{GnuPG} keys as the authentication layer.\newline
+    In order to encourage good practices, I taught multiple sessions of a \textbf{Debian packaging curriculum to colleagues.}
+  \item \emph{Gforge}\newline
+    I administered a Gforge platform for hundreds of developers.
+    As part of this task, I set up a replicated fallback server and wrote a CVS replication software using \textbf{Perl} and \textbf{inotify}.
+  \item \emph{Policy Conformity}\newline
+    In order to improve comformity to standards as we adopted \textbf{ITIL} processes,
+    I designed a \textbf{Treetester}, a Perl software working as a sieve of tests to identify priority actions to take on machines and platforms and report to platform administrators in a Web UI.
+\end{itemize}
+}
+
 
 \tlcventry{2008}{0}{Developer}{\href{http://www.augeas.net}{Augeas}}{Internet}{}{Development, bugfix and documentation
 \begin{tightitemize}%
