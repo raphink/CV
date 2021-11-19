@@ -98,19 +98,20 @@ Driving License} % optional, remove the line if not wanted
 \begin{itemize}
   \item \emph{Cfengine}\newline
     I was originally hired to migrate about 3000 machines from \textbf{Cfengine} 1 to Cfengine 2.
-    This was an opportunity for me to learn about \textbf{Configuration Management} principles and to discover \textbf{Puppet} along the way.
+    This was an opportunity for me to learn about \textbf{Configuration Management} principles and to discover \textbf{Puppet} and \textbf{Augeas} along the way.
   \item \emph{Package build farm \& repository}\newline
     Migration to Cfengine 2 was an opportunity to standardize software packages used.
     I set up a new automated Debian package repository using \textbf{reprepro}
     and a \textbf{Debian buildd} farm to compile the packages for multiple distributions and architectures. Both i386 and amd64 builders ran on a single machine, using \textbf{LXC} containers as light virtualization to isolate contexts.\newline
     I encouraged developers to package their applications and helped them set up \textbf{CI/CD} pipelines using \textbf{Hudson} (now \textbf{Jenkins}) to automatically release their packages to the repository, using \textbf{GnuPG} keys as the authentication layer.\newline
-    In order to encourage good practices, I taught multiple sessions of a \textbf{Debian packaging curriculum to colleagues.}
+    In order to encourage good practices, I taught multiple sessions of a \textbf{Debian packaging curriculum} to several internal teams.
   \item \emph{Gforge}\newline
     I administered a Gforge platform for hundreds of developers.
-    As part of this task, I set up a replicated fallback server and wrote a CVS replication software using \textbf{Perl} and \textbf{inotify}.
+    As part of this task, I set up a replicated fallback server and wrote a CVS replication software using \textbf{Perl}, \textbf{PostgreSQL}, and \textbf{inotify}.
   \item \emph{Policy Conformity}\newline
-    In order to improve comformity to standards as we adopted \textbf{ITIL} processes,
-    I designed a \textbf{Treetester}, a Perl software working as a sieve of tests to identify priority actions to take on machines and platforms and report to platform administrators in a Web UI.
+    In order to improve \textbf{conformity} to standards as we adopted \textbf{ITIL} processes,
+    I designed \textbf{Treetester}, a Perl software working as a sieve of tests to identify priority
+    actions to take on machines and platforms and report to platform administrators in a Web UI.
 \end{itemize}
 }
 
