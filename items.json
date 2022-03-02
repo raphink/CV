@@ -1,6 +1,7 @@
 [
-  {"id": "Orange", "content": "<img src='img/orange.png' class='logo' /><b>Orange Portails</b><br />Systems Engineer", "start": "2006-06-01", "end": "2012-03-01", "type": "background", "className": "orange"},
-  {"id": "Camptocamp", "content": "<img src='img/camptocamp.png' class='logo' /><b>Camptocamp</b><br />Infrastructure Developer", "start": "2012-03-01", "type": "background", "className": "camptocamp"},
+  {"id": "Orange", "content": "<img src='img/orange.png' class='logo' /><b>Orange Portails</b><br />Systems Engineer", "start": "2006-06-01", "end": "2012-02-28", "type": "background", "className": "orange"},
+  {"id": "Camptocamp", "content": "<img src='img/camptocamp.png' class='logo' /><b>Camptocamp</b><br />Infrastructure Developer", "start": "2012-03-01", "end": "2022-02-28", "type": "background", "className": "camptocamp"},
+  {"id": "Isovalent", "content": "<img src='img/isovalent.png' class='logo' /><b>Isovalent</b><br />Solutions Architect", "start": "2022-03-01", "type": "background", "className": "isovalent"},
 
   {"group": "provisioning", "content": "Debian FAI", "start": "2006-06-01", "end": "2012-03-01", "className": "contributed"},
   {"group": "provisioning", "content": "Kickstart", "start": "2006-06-01", "className": "implemented"},

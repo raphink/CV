@@ -80,6 +80,11 @@ img.identity {
   color: #5383B8;
 }
 
+.vis-item.vis-background.isovalent {
+  background-color: #90EE90;
+  color: #5383B8;
+}
+
 .vis-item.vis-background img.logo {
   float: left;
   margin-right: 5px;
