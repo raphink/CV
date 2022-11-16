@@ -9,6 +9,7 @@
   {"content": "OS coding"},
   {"content": "Configuration<br />Management", "name": "cfgmgmt"},
   {"content": "Security"},
+  {"content": "Networking"},
   {"content": "Containers"},
   {"content": "Databases"},
   {"content": "Cloud / PAAS", "name": "paas"},
