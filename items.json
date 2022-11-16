@@ -62,8 +62,8 @@
   {"group": "containers", "content": "Argo CD", "name": "argocd", "start": "2020", "end": "2022-03", "className": "contributed"},
   {"group": "containers", "content": "Flux CD", "name": "fluxcd", "start": "2022-03", "className": "used"},
 
-  {"group": "databases", "content": "MySQL", "name": "mysql", "start": "2002", "className": "implemented"},
-  {"group": "databases", "content": "PostgreSQL", "name": "postgresql", "start": "2007", "className": "implemented"},
+  {"group": "databases", "content": "MySQL", "name": "mysql", "start": "2002", "end": "2022", "className": "implemented"},
+  {"group": "databases", "content": "PostgreSQL", "name": "postgresql", "start": "2007", "end": "2022", "className": "implemented"},
 
 
   { "group": "paas", "content": "Google AppEngine", "name": "google_appengine", "start": "2008", "end": "2010", "className": "used"},
