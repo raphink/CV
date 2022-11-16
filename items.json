@@ -55,7 +55,8 @@
   {"group": "containers", "content": "Rancher", "name": "rancher", "start": "2015", "className": "contributed"},
   {"group": "containers", "content": "Kubernetes", "name": "kubernetes", "start": "2017", "className": "implemented"},
   {"group": "containers", "content": "OpenShift", "name": "openshift", "start": "2017", "className": "implemented"},
-  {"group": "containers", "content": "Argo CD", "name": "argocd", "start": "2020", "className": "contributed"},
+  {"group": "containers", "content": "Argo CD", "name": "argocd", "start": "2020", "end": "2022-03", "className": "contributed"},
+  {"group": "containers", "content": "Flux CD", "name": "fluxcd", "start": "2022-03", "className": "used"},
 
   {"group": "databases", "content": "MySQL", "name": "mysql", "start": "2002", "className": "implemented"},
   {"group": "databases", "content": "PostgreSQL", "name": "postgresql", "start": "2007", "className": "implemented"},
