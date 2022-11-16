@@ -40,8 +40,8 @@
   {"group": "os coding", "content": "Go", "name": "go", "start": "2016", "className": "implemented"},
 
   {"group": "cfgmgmt", "content": "Cfengine", "name": "cfengine", "start": "2006", "end": "2012-03-01", "className": "implemented"},
-  {"group": "cfgmgmt", "content": "Puppet", "name": "puppet", "start": "2007", "className": "contributed", "award": true},
-  {"group": "cfgmgmt", "content": "Augeas", "name": "augeas", "start": "2008", "className": "developed"},
+  {"group": "cfgmgmt", "content": "Puppet", "name": "puppet", "start": "2007", "end": "2022-03", "className": "contributed", "award": true},
+  {"group": "cfgmgmt", "content": "Augeas", "name": "augeas", "start": "2008", "end": "2022-03", "className": "developed"},
 
   {"group": "security", "content": "OpenSSH", "name": "openssh", "start": "2005", "className": "implemented"},
   {"group": "security", "content": "GnuPG", "name": "gnupg", "start": "2005", "className": "used"},
@@ -63,25 +63,25 @@
 
   { "group": "paas", "content": "Google AppEngine", "name": "google_appengine", "start": "2008", "end": "2010", "className": "used"},
 
-  { "group": "web server", "content": "Apache", "name": "apache", "start": "2005", "className": "implemented"},
+  { "group": "web server", "content": "Apache", "name": "apache", "start": "2005", "end": "2015", "className": "implemented"},
   { "group": "web server", "content": "Lighttpd", "name": "lighttpd", "start": "2006", "end": "2013", "className": "implemented"},
   { "group": "web server", "content": "Nginx", "name": "nginx", "start": "2012", "className": "implemented"},
-  { "group": "web server", "content": "Varnish Cache", "name": "varnish", "start": "2013", "className": "used"},
-  { "group": "web server", "content": "Traefik", "name": "traefik", "start": "2020", "className": "used"},
+  { "group": "web server", "content": "Varnish Cache", "name": "varnish", "start": "2013", "end": "2020", "className": "used"},
+  { "group": "web server", "content": "Traefik", "name": "traefik", "start": "2020", "end": "2022", "className": "used"},
 
   { "group": "web backend", "content": "PHP", "name": "php", "start": "2002", "end": "2017", "className": "used"},
-  { "group": "web backend", "content": "Python", "name": "python", "details": "python", "start": "2008", "className": "implemented"},
-  { "group": "web backend", "content": "Ruby", "name": "ruby", "details": "ruby", "start": "2013", "className": "implemented"},
+  { "group": "web backend", "content": "Python", "name": "python", "details": "python", "start": "2008", "end": "2020-07", "className": "implemented"},
+  { "group": "web backend", "content": "Ruby", "name": "ruby", "details": "ruby", "start": "2013", "end": "2022-03", "className": "implemented"},
   { "group": "web backend", "content": "Go", "name": "go", "details": "go", "start": "2016", "className": "implemented"},
 
   { "group": "web frontend", "content": "HTML / Javascript / CSS", "name": "html_css_js", "details": "html_css_js", "start": "2002", "className": "implemented"},
-  { "group": "web frontend", "content": "JQuery", "name": "jquery", "start": "2012-03-01", "className": "used"},
-  { "group": "web frontend", "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"},
-  { "group": "web frontend", "content": "AngularJS", "name": "angularjs", "start": "2017", "className": "used"},
+  { "group": "web frontend", "content": "JQuery", "name": "jquery", "start": "2012-03-01", "end": "2021", "className": "used"},
+  { "group": "web frontend", "content": "Bootstrap", "name": "bootstrap", "start": "2015", "end": "2021", "className": "used"},
+  { "group": "web frontend", "content": "AngularJS", "name": "angularjs", "start": "2017", "end": "2021", "className": "used"},
 
-  { "group": "web generators", "content": "GoHugo", "name": "gohugo", "start": "2018", "className": "used"},
-  { "group": "web generators", "content": "Jekyll", "name": "jekyll", "start": "2020", "className": "used"},
-  { "group": "web generators", "content": "Netlify", "name": "netlify", "start": "2020", "className": "implemented"},
+  { "group": "web generators", "content": "GoHugo", "name": "gohugo", "start": "2018", "end": "2022", "className": "used"},
+  { "group": "web generators", "content": "Jekyll", "name": "jekyll", "start": "2020", "end": "2022", "className": "used"},
+  { "group": "web generators", "content": "Netlify", "name": "netlify", "start": "2020", "end": "2022", "className": "implemented"},
 
-  { "group": "typesetting", "content": "LaTeX", "name": "latex", "start": "2001", "className": "contributed"}
+  { "group": "typesetting", "content": "LaTeX", "name": "latex", "start": "2001", "end": "2019", "className": "contributed"}
 ]
