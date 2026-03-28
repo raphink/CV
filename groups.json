@@ -13,6 +13,7 @@
   {"content": "Containers"},
   {"content": "Databases"},
   {"content": "Cloud / PAAS", "name": "paas"},
+  {"content": "Platforms"},
   {"content": "Web server"},
   {"content": "Web backend"},
   {"content": "Web frontend"},
