@@ -8,12 +8,12 @@
   {"group": "provisioning", "content": "Terraform", "name": "terraform", "start": "2016-05-01", "className": "contributed"},
 
   {"group": "cloud", "content": "Amazon Web Services", "name": "aws", "start": "2010", "className": "implemented", "details": false},
-  {"group": "cloud", "content": "Google Cloud Platform", "name": "gcp", "start": "2018", "className": "implemented", "details": false},
+  {"group": "cloud", "content": "Google Cloud Platform", "name": "gcp", "start": "2022", "className": "implemented", "details": false},
   {"group": "cloud", "content": "Openstack", "name": "openstack", "start": "2013", "end": "2022", "className": "used", "details": false},
   {"group": "cloud", "content": "Microsoft Azure", "name": "azure", "start": "2021", "className": "used", "details": false},
 
   {"group": "paas", "content": "Google AppEngine", "name": "google_appengine", "start": "2008", "end": "2010", "className": "used"},
-  {"group": "paas", "content": "Google Cloud Functions", "name": "gcf", "start": "2020", "className": "implemented"},
+  {"group": "paas", "content": "Google Cloud Functions", "name": "gcf", "start": "2023", "className": "implemented"},
 
   {"group": "virtualization", "content": "Qemu", "name": "qemu", "start": "2005", "end": "2007", "className": "used", "details": false},
   {"group": "virtualization", "content": "Xen", "name": "xen", "start": "2008", "end": "2012-03-01", "className": "used", "details": false},
@@ -40,7 +40,7 @@
   {"group": "os coding", "content": "Bash / Dash", "name": "bash", "start": "2005", "className": "used"},
   {"group": "os coding", "content": "Perl", "name": "perl", "start": "2006", "end": "2012-03-01", "className": "implemented"},
   {"group": "os coding", "content": "C", "name": "c", "start": "2008", "end": "2016", "className": "used", "logo": false},
-  {"group": "os coding", "content": "Ruby", "name": "ruby", "start": "2012-03-01", "end": "2022", "className": "implemented"},
+  {"group": "os coding", "content": "Ruby", "name": "ruby", "start": "2012-03-01", "end": "2023", "className": "implemented"},
   {"group": "os coding", "content": "Go", "name": "go", "start": "2016", "className": "implemented"},
 
   {"group": "cfgmgmt", "content": "Cfengine", "name": "cfengine", "start": "2006", "end": "2012-03-01", "className": "implemented"},
@@ -48,7 +48,7 @@
   {"group": "cfgmgmt", "content": "Augeas", "name": "augeas", "start": "2008", "end": "2022-03", "className": "developed"},
 
   {"group": "security", "content": "OpenSSH", "name": "openssh", "start": "2005", "className": "implemented"},
-  {"group": "security", "content": "GnuPG", "name": "gnupg", "start": "2005", "end": "2022", "className": "used"},
+  {"group": "security", "content": "GnuPG", "name": "gnupg", "start": "2005", "end": "2023", "className": "used"},
   {"group": "security", "content": "Let's Encrypt", "name": "letsencrypt", "start": "2016", "className": "implemented"},
   {"group": "security", "content": "Cert Manager", "name": "cert-manager", "start": "2020", "className": "contributed"},
   {"group": "security", "content": "Tetragon", "name": "tetragon", "start": "2022-03", "className": "contributed"},
