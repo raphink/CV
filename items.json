@@ -4,39 +4,43 @@
   {"id": "Isovalent", "content": "<img src='img/isovalent.png' class='logo' /><b>Isovalent</b><br />Solutions Architect", "start": "2022-03-01", "type": "background", "className": "isovalent"},
 
   {"group": "provisioning", "content": "Debian FAI", "start": "2006-06-01", "end": "2012-03-01", "className": "contributed"},
-  {"group": "provisioning", "content": "Kickstart", "start": "2006-06-01", "className": "implemented"},
+  {"group": "provisioning", "content": "Kickstart", "start": "2006-06-01", "end": "2022", "className": "implemented"},
   {"group": "provisioning", "content": "Terraform", "name": "terraform", "start": "2016-05-01", "className": "contributed"},
 
   {"group": "cloud", "content": "Amazon Web Services", "name": "aws", "start": "2010", "className": "implemented", "details": false},
-  {"group": "cloud", "content": "Openstack", "name": "openstack", "start": "2013", "className": "used", "details": false},
+  {"group": "cloud", "content": "Google Cloud Platform", "name": "gcp", "start": "2018", "className": "implemented", "details": false},
+  {"group": "cloud", "content": "Openstack", "name": "openstack", "start": "2013", "end": "2022", "className": "used", "details": false},
   {"group": "cloud", "content": "Microsoft Azure", "name": "azure", "start": "2021", "className": "used", "details": false},
+
+  {"group": "paas", "content": "Google AppEngine", "name": "google_appengine", "start": "2008", "end": "2010", "className": "used"},
+  {"group": "paas", "content": "Google Cloud Functions", "name": "gcf", "start": "2020", "className": "implemented"},
 
   {"group": "virtualization", "content": "Qemu", "name": "qemu", "start": "2005", "end": "2007", "className": "used", "details": false},
   {"group": "virtualization", "content": "Xen", "name": "xen", "start": "2008", "end": "2012-03-01", "className": "used", "details": false},
   {"group": "virtualization", "content": "Virtualbox / Vagrant", "name": "virtualbox", "start": "2012-03-01", "end": "2019", "className": "used", "details": false},
   {"group": "virtualization", "content": "KVM", "name": "kvm", "start": "2014", "className": "used", "details": false},
 
-  {"group": "os", "content": "Debian", "name": "debian", "start": "2002", "className": "contributed"},
+  {"group": "os", "content": "Debian", "name": "debian", "start": "2002", "end": "2022", "className": "contributed"},
   {"group": "os", "content": "Ubuntu", "name": "ubuntu", "start": "2004", "className": "developed"},
   {"group": "os", "content": "RedHat / CentOS", "name": "redhat", "start": "2006", "className": "implemented"},
 
   {"group": "forges", "content": "Launchpad", "name": "launchpad", "start": "2005", "end": "2010", "className": "used", "details": false},
   {"group": "forges", "content": "GForge", "name": "gforge", "start": "2006", "end": "2011", "className": "implemented", "details": false},
   {"group": "forges", "content": "GitHub", "name": "github", "start": "2008", "className": "used", "details": false},
-  {"group": "forges", "content": "Bitbucket", "name": "bitbucket", "start": "2016", "className": "used", "details": false},
-  {"group": "forges", "content": "GitLab", "name": "gitlab", "start": "2019", "className": "used", "details": false},
+  {"group": "forges", "content": "Bitbucket", "name": "bitbucket", "start": "2016", "end": "2022", "className": "used", "details": false},
+  {"group": "forges", "content": "GitLab", "name": "gitlab", "start": "2019", "end": "2022", "className": "used", "details": false},
 
   {"group": "vcs", "content": "Bazaar NG", "name": "bzr", "start": "2005", "end": "2008", "className": "used", "details": false},
   {"group": "vcs", "content": "Git", "name": "git", "start": "2008", "className": "implemented", "details": false},
 
   {"group": "methods", "content": "Pair programming", "name": "pair_programming", "start": "2008", "className": "used", "details": false, "logo": false},
   {"group": "methods", "content": "Test Driven Development", "name": "tdd", "start": "2008", "className": "used", "logo": false},
-  {"group": "methods", "content": "Behavior Driven Development", "name": "bdd", "start": "2013", "className": "used", "logo": false},
+  {"group": "methods", "content": "Behavior Driven Development", "name": "bdd", "start": "2013", "end": "2022", "className": "used", "logo": false},
 
   {"group": "os coding", "content": "Bash / Dash", "name": "bash", "start": "2005", "className": "used"},
   {"group": "os coding", "content": "Perl", "name": "perl", "start": "2006", "end": "2012-03-01", "className": "implemented"},
   {"group": "os coding", "content": "C", "name": "c", "start": "2008", "end": "2016", "className": "used", "logo": false},
-  {"group": "os coding", "content": "Ruby", "name": "ruby", "start": "2012-03-01", "className": "implemented"},
+  {"group": "os coding", "content": "Ruby", "name": "ruby", "start": "2012-03-01", "end": "2022", "className": "implemented"},
   {"group": "os coding", "content": "Go", "name": "go", "start": "2016", "className": "implemented"},
 
   {"group": "cfgmgmt", "content": "Cfengine", "name": "cfengine", "start": "2006", "end": "2012-03-01", "className": "implemented"},
@@ -44,7 +48,7 @@
   {"group": "cfgmgmt", "content": "Augeas", "name": "augeas", "start": "2008", "end": "2022-03", "className": "developed"},
 
   {"group": "security", "content": "OpenSSH", "name": "openssh", "start": "2005", "className": "implemented"},
-  {"group": "security", "content": "GnuPG", "name": "gnupg", "start": "2005", "className": "used"},
+  {"group": "security", "content": "GnuPG", "name": "gnupg", "start": "2005", "end": "2022", "className": "used"},
   {"group": "security", "content": "Let's Encrypt", "name": "letsencrypt", "start": "2016", "className": "implemented"},
   {"group": "security", "content": "Cert Manager", "name": "cert-manager", "start": "2020", "className": "contributed"},
   {"group": "security", "content": "Tetragon", "name": "tetragon", "start": "2022-03", "className": "contributed"},
@@ -56,37 +60,38 @@
   {"group": "containers", "content": "LXC", "name": "lxc", "start": "2008", "end": "2012-03-01", "className": "implemented"},
   {"group": "containers", "content": "OpenVZ", "name": "openvz", "start": "2012-03-01", "end": "2014", "className": "used"},
   {"group": "containers", "content": "Docker", "name": "docker", "start": "2014", "className": "implemented"},
-  {"group": "containers", "content": "Rancher", "name": "rancher", "start": "2015", "className": "contributed"},
+  {"group": "containers", "content": "Rancher", "name": "rancher", "start": "2015", "end": "2024", "className": "contributed"},
   {"group": "containers", "content": "Kubernetes", "name": "kubernetes", "start": "2017", "className": "implemented"},
-  {"group": "containers", "content": "OpenShift", "name": "openshift", "start": "2017", "className": "implemented"},
+  {"group": "containers", "content": "OpenShift", "name": "openshift", "start": "2017", "end": "2024", "className": "implemented"},
+  {"group": "containers", "content": "Kind", "name": "kind", "start": "2020", "className": "used"},
   {"group": "containers", "content": "Argo CD", "name": "argocd", "start": "2020", "end": "2022-03", "className": "contributed"},
-  {"group": "containers", "content": "Flux CD", "name": "fluxcd", "start": "2022-03", "className": "used"},
+  {"group": "containers", "content": "Flux CD", "name": "fluxcd", "start": "2022-03", "end": "2024", "className": "used"},
 
   {"group": "databases", "content": "MySQL", "name": "mysql", "start": "2002", "end": "2022", "className": "implemented"},
   {"group": "databases", "content": "PostgreSQL", "name": "postgresql", "start": "2007", "end": "2022", "className": "implemented"},
 
+  {"group": "web server", "content": "Apache", "name": "apache", "start": "2005", "end": "2015", "className": "implemented"},
+  {"group": "web server", "content": "Lighttpd", "name": "lighttpd", "start": "2006", "end": "2013", "className": "implemented"},
+  {"group": "web server", "content": "Nginx", "name": "nginx", "start": "2012", "end": "2024", "className": "implemented"},
+  {"group": "web server", "content": "Varnish Cache", "name": "varnish", "start": "2013", "end": "2020", "className": "used"},
+  {"group": "web server", "content": "Traefik", "name": "traefik", "start": "2020", "end": "2022", "className": "used"},
 
-  { "group": "paas", "content": "Google AppEngine", "name": "google_appengine", "start": "2008", "end": "2010", "className": "used"},
+  {"group": "web backend", "content": "PHP", "name": "php", "start": "2002", "end": "2017", "className": "used"},
+  {"group": "web backend", "content": "Python", "name": "python", "details": "python", "start": "2008", "end": "2020-07", "className": "implemented"},
+  {"group": "web backend", "content": "Ruby", "name": "ruby", "details": "ruby", "start": "2013", "end": "2022-03", "className": "implemented"},
+  {"group": "web backend", "content": "Go", "name": "go", "details": "go", "start": "2016", "className": "implemented"},
 
-  { "group": "web server", "content": "Apache", "name": "apache", "start": "2005", "end": "2015", "className": "implemented"},
-  { "group": "web server", "content": "Lighttpd", "name": "lighttpd", "start": "2006", "end": "2013", "className": "implemented"},
-  { "group": "web server", "content": "Nginx", "name": "nginx", "start": "2012", "className": "implemented"},
-  { "group": "web server", "content": "Varnish Cache", "name": "varnish", "start": "2013", "end": "2020", "className": "used"},
-  { "group": "web server", "content": "Traefik", "name": "traefik", "start": "2020", "end": "2022", "className": "used"},
+  {"group": "web frontend", "content": "HTML / Javascript / CSS", "name": "html_css_js", "details": "html_css_js", "start": "2002", "className": "implemented"},
+  {"group": "web frontend", "content": "JQuery", "name": "jquery", "start": "2012-03-01", "className": "used"},
+  {"group": "web frontend", "content": "Bootstrap", "name": "bootstrap", "start": "2015", "className": "used"},
+  {"group": "web frontend", "content": "AngularJS", "name": "angularjs", "start": "2017", "end": "2021", "className": "used"},
 
-  { "group": "web backend", "content": "PHP", "name": "php", "start": "2002", "end": "2017", "className": "used"},
-  { "group": "web backend", "content": "Python", "name": "python", "details": "python", "start": "2008", "end": "2020-07", "className": "implemented"},
-  { "group": "web backend", "content": "Ruby", "name": "ruby", "details": "ruby", "start": "2013", "end": "2022-03", "className": "implemented"},
-  { "group": "web backend", "content": "Go", "name": "go", "details": "go", "start": "2016", "className": "implemented"},
+  {"group": "web generators", "content": "GoHugo", "name": "gohugo", "start": "2018", "end": "2022", "className": "used"},
+  {"group": "web generators", "content": "Jekyll", "name": "jekyll", "start": "2020", "end": "2022", "className": "used"},
+  {"group": "web generators", "content": "Netlify", "name": "netlify", "start": "2020", "end": "2022", "className": "implemented"},
 
-  { "group": "web frontend", "content": "HTML / Javascript / CSS", "name": "html_css_js", "details": "html_css_js", "start": "2002", "className": "implemented"},
-  { "group": "web frontend", "content": "JQuery", "name": "jquery", "start": "2012-03-01", "end": "2021", "className": "used"},
-  { "group": "web frontend", "content": "Bootstrap", "name": "bootstrap", "start": "2015", "end": "2021", "className": "used"},
-  { "group": "web frontend", "content": "AngularJS", "name": "angularjs", "start": "2017", "end": "2021", "className": "used"},
+  {"group": "platforms", "content": "HubSpot", "name": "hubspot", "start": "2022-03", "className": "developed"},
+  {"group": "platforms", "content": "Slack", "name": "slack", "start": "2023", "className": "developed"},
 
-  { "group": "web generators", "content": "GoHugo", "name": "gohugo", "start": "2018", "end": "2022", "className": "used"},
-  { "group": "web generators", "content": "Jekyll", "name": "jekyll", "start": "2020", "end": "2022", "className": "used"},
-  { "group": "web generators", "content": "Netlify", "name": "netlify", "start": "2020", "end": "2022", "className": "implemented"},
-
-  { "group": "typesetting", "content": "LaTeX", "name": "latex", "start": "2001", "end": "2019", "className": "contributed"}
+  {"group": "typesetting", "content": "LaTeX", "name": "latex", "start": "2001", "end": "2019", "className": "contributed"}
 ]
