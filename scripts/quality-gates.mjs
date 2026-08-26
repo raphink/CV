@@ -1,6 +1,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../css/overrides.css', import.meta.url), 'utf8');
+const mobileCss = readFileSync(new URL('../css/mobile.css', import.meta.url), 'utf8');
 const js = readFileSync(new URL('../js/skills.js', import.meta.url), 'utf8');
 let failed = 0;
 const gate = (name, condition) => { if (condition) console.log(`PASS  ${name}`); else { failed++; console.error(`FAIL  ${name}`); } };
@@ -17,9 +18,10 @@ gate('P1 semantic landmarks and one H1', all(html, ['<header class="site-header"
 gate('P2 interaction works without dependency', all(html, ['<script src="js/skills.js" defer></script>']) && !/<script[^>]+https?:|<link[^>]+https?:/i.test(html));
 gate('P3 keyboard route navigation', all(js, ['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft', 'Home', 'End', "setAttribute('aria-selected'"]));
 gate('P4 current portrait is local', html.includes('img/raphael-pinson-2025.webp') && existsSync(new URL('../img/raphael-pinson-2025.webp', import.meta.url)));
-gate('P5 responsive layouts cover map and evidence', all(css, ['@media(max-width:900px)', '.route{grid-template-columns:1fr', '.journey{grid-template-columns:1fr 1fr', '@media(max-width:520px)']));
-gate('P6 accessible focus and reduced motion', all(css, ['a:focus-visible,button:focus-visible', '@media(prefers-reduced-motion:reduce)']));
-gate('P7 no product funnel language', !/see the interfaces in action|work-card|system-map|hero-cta/i.test(html));
+gate('P5 responsive layouts cover map and evidence', all(css, ['@media(max-width:900px)', '.route{grid-template-columns:1fr', '.journey{grid-template-columns:1fr 1fr', '@media(max-width:520px)']) && all(mobileCss, ['.route-step,', 'display: none', 'Selected · journey below ↓', 'scroll-margin-top: 78px']));
+gate('P6 mobile selection reveals evidence immediately', all(js, ["matchMedia('(max-width: 900px)')", 'detailPanel.scrollIntoView', "detailPanel.focus({ preventScroll: true })"]));
+gate('P7 accessible focus and reduced motion', all(css, ['a:focus-visible,button:focus-visible', '@media(prefers-reduced-motion:reduce)']));
+gate('P8 no product funnel language', !/see the interfaces in action|work-card|system-map|hero-cta/i.test(html));
 
 if (failed) { console.error(`\n${failed} quality gate(s) failed.`); process.exitCode = 1; }
 else console.log('\nAll conceptual portfolio gates passed.');

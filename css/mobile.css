@@ -1,0 +1,92 @@
+.back-to-routes {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .map-heading {
+    margin-bottom: 38px;
+  }
+
+  .routes {
+    gap: 7px;
+  }
+
+  .route {
+    min-height: 76px;
+    padding: 16px 18px;
+  }
+
+  .route:hover {
+    transform: none;
+  }
+
+  .route-name {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    gap: 0 8px;
+    align-items: baseline;
+  }
+
+  .route-name b {
+    grid-row: 1;
+  }
+
+  .route-name small {
+    justify-self: end;
+  }
+
+  .route-step,
+  .route-arrow {
+    display: none;
+  }
+
+  .route::after {
+    grid-column: 1 / -1;
+    margin: 3px 0 0 36px;
+    color: #718087;
+    content: "Select to explore";
+    font: 650 9px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+
+  .route.is-active::after {
+    color: var(--yellow);
+    content: "Selected · journey below ↓";
+  }
+
+  .back-to-routes {
+    display: inline-block;
+    margin-bottom: 28px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--yellow);
+    color: #d4e2e6;
+    font: 650 9px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .08em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .route-detail {
+    scroll-margin-top: 78px;
+  }
+}
+
+@media (max-width: 520px) {
+  .map-heading > p {
+    font-size: 16px;
+  }
+
+  .route-name {
+    font-size: 16px;
+  }
+
+  .detail-intro h3 {
+    font-size: 34px;
+    line-height: 1.04;
+  }
+
+  .detail-intro > p:last-child {
+    font-size: 15px;
+  }
+}

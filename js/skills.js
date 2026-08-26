@@ -53,6 +53,7 @@
   var journey = document.getElementById('detail-journey');
   var tools = document.getElementById('detail-tools');
   var link = document.getElementById('detail-link');
+  var detailPanel = document.getElementById('route-detail');
 
   function render(key, focusPanel) {
     var route = routes[key];
@@ -75,7 +76,18 @@
   }
 
   buttons.forEach(function (button, index) {
-    button.addEventListener('click', function () { render(button.dataset.route, false); });
+    button.addEventListener('click', function () {
+      render(button.dataset.route, false);
+      if (window.matchMedia('(max-width: 900px)').matches) {
+        window.requestAnimationFrame(function () {
+          detailPanel.scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'start'
+          });
+          detailPanel.focus({ preventScroll: true });
+        });
+      }
+    });
     button.addEventListener('keydown', function (event) {
       if (!['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
       event.preventDefault();
