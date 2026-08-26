@@ -1,28 +1,25 @@
-import { readFileSync } from 'node:fs';
-
+import { readFileSync, existsSync } from 'node:fs';
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../css/overrides.css', import.meta.url), 'utf8');
+const js = readFileSync(new URL('../js/skills.js', import.meta.url), 'utf8');
 let failed = 0;
-const gate = (name, condition) => {
-  if (condition) console.log(`PASS  ${name}`);
-  else { failed += 1; console.error(`FAIL  ${name}`); }
-};
-const includesAll = (source, terms) => terms.every((term) => source.includes(term));
+const gate = (name, condition) => { if (condition) console.log(`PASS  ${name}`); else { failed++; console.error(`FAIL  ${name}`); } };
+const all = (source, terms) => terms.every((term) => source.includes(term));
 
-gate('C1 personal identity leads the page', includesAll(html, ['Raphaël Pinson', 'Technical Marketing Engineer', 'Isovalent at Cisco', 'img/raphael-pinson-2025.webp']));
-gate('C2 clear human-centred proposition', includesAll(html, ['Making infrastructure', 'for people.', 'tracked constraints holding teams back', 'technical and human interfaces']));
-gate('C3 concrete scope of practice', includesAll(html, ['implementation meets adoption', 'Theory of Constraints', 'a UI, automation, a platform capability, or a learning experience', 'give people a clear way to understand the system']));
-gate('C4 curated work, not generic claims', (html.match(/class="project"/g) ?? []).length === 3 && includesAll(html, ['DEVOPS', 'PLATFORM ENGINEERING', 'TECHNICAL EDUCATION', 'eBPF', 'Terraform']));
-gate('C5 accurate public record', includesAll(html, ['20+ talks', 'More than 20 delivered; 19 recorded', '100k+']));
-gate('C6 public evidence remains reachable', includesAll(html, ['yf_exP0ohOU', 'isovalent.com/blog/post/cilium-lab-champion/', '8yzDqDHGLGw', 'PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe']) && !html.includes('n_g60hLXZOk'));
-gate('C7 no generic or product-funnel language', !/seamlessly|help teams adopt complex systems|hero-cta|see the interfaces in action/i.test(html));
-gate('P1 semantic portfolio landmarks', includesAll(html, ['<header class="site-header">', '<main id="top">', '<footer>', '<nav aria-label="Primary navigation">']));
-gate('P2 single personal page title', (html.match(/<h1[ >]/g) ?? []).length === 1);
-gate('P3 contemporary editorial hierarchy and personal image', includesAll(html, ['class="intro"', 'class="portrait-wrap"', 'class="margin-note"']) && includesAll(css, ['.intro h1{max-width:850px;font-size:clamp(52px,7.4vw,112px);font-weight:750', 'radial-gradient(circle at 13% 21%']));
-gate('P4 work reads as a curated record', includesAll(html, ['Selected work', 'The longer record', 'Public thinking']) && !html.includes('class="work-card"'));
-gate('P5 responsive layout coverage', includesAll(css, ['@media(max-width:850px)', '.intro{grid-template-columns:82px 1fr', '.project{grid-template-columns:1fr', '.record dl{grid-template-columns:1fr 1fr']));
-gate('P6 accessible focus and reduced motion', includesAll(css, ['a:focus-visible', '@media(prefers-reduced-motion:reduce)']));
-gate('P7 no runtime dependency', !/<script\b|<link[^>]+https?:/i.test(html));
+gate('C1 identity and human proposition lead', all(html, ['Raphaël Pinson', 'Making infrastructure work better', 'for people.', 'people on both sides of the interface']));
+gate('C2 active constraint practice is explicit', all(html, ['tracked constraints holding teams back', 'technical and human interfaces']));
+gate('C3 three impact routes replace tool inventory', (html.match(/class="route(?: |")/g) ?? []).length === 3 && all(html, ['DevOps', 'Platform engineering', 'Technical education']));
+gate('C4 repeated constraint-interface-capability grammar', all(html, ['Constraint</span>', 'Interface</span>', 'Shared capability</span>']));
+gate('C5 histories are accurate', all(html, ['2005—now', '2012—now', '2008—now']) && all(js, ['OpenStack', 'Rancher', 'Debian packaging', 'Terraform providers']));
+gate('C6 evidence is subordinate but reachable', all(js, ['yf_exP0ohOU', 'cilium-lab-champion']) && all(html, ['100k+', '20+']));
+gate('C7 public-speaking record is accurate', all(html, ['More than 20 talks delivered; 19 recorded.', 'PlatformCon', '19 recordings']));
+gate('P1 semantic landmarks and one H1', all(html, ['<header class="site-header">', '<main id="top">', '<footer>', 'role="tablist"', 'role="tabpanel"']) && (html.match(/<h1[ >]/g) ?? []).length === 1);
+gate('P2 interaction works without dependency', all(html, ['<script src="js/skills.js" defer></script>']) && !/<script[^>]+https?:|<link[^>]+https?:/i.test(html));
+gate('P3 keyboard route navigation', all(js, ['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft', 'Home', 'End', "setAttribute('aria-selected'"]));
+gate('P4 current portrait is local', html.includes('img/raphael-pinson-2025.webp') && existsSync(new URL('../img/raphael-pinson-2025.webp', import.meta.url)));
+gate('P5 responsive layouts cover map and evidence', all(css, ['@media(max-width:900px)', '.route{grid-template-columns:1fr', '.journey{grid-template-columns:1fr 1fr', '@media(max-width:520px)']));
+gate('P6 accessible focus and reduced motion', all(css, ['a:focus-visible,button:focus-visible', '@media(prefers-reduced-motion:reduce)']));
+gate('P7 no product funnel language', !/see the interfaces in action|work-card|system-map|hero-cta/i.test(html));
 
 if (failed) { console.error(`\n${failed} quality gate(s) failed.`); process.exitCode = 1; }
-else console.log('\nAll portfolio quality gates passed.');
+else console.log('\nAll conceptual portfolio gates passed.');

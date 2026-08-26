@@ -3,59 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Raphaël Pinson — Portfolio</title>
-  <meta name="description" content="Portfolio of Raphaël Pinson: architecture, learning environments, and technical practice that let infrastructure teams work better together.">
-  <meta property="og:title" content="Raphaël Pinson — Portfolio">
-  <meta property="og:description" content="Twenty years of turning infrastructure friction into shared technical practice.">
+  <title>Raphaël Pinson — Interfaces for people and systems</title>
+  <meta name="description" content="Explore how Raphaël Pinson has turned constraints across infrastructure, platforms, and education into interfaces that enable people.">
+  <meta property="og:title" content="Raphaël Pinson — Interfaces for people and systems">
+  <meta property="og:description" content="Twenty years of tracking constraints and building interfaces that enable people.">
   <meta property="og:image" content="https://raphink.info/img/og_img.jpg">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/overrides.css">
+  <script src="js/skills.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a class="wordmark" href="#top">Raphaël Pinson</a>
-    <nav aria-label="Primary navigation"><a href="#work">Selected work</a><a href="#record">Record</a><a href="#talks">Talks</a></nav>
-    <a class="resume-link" href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé <span>↗</span></a>
+    <nav aria-label="Primary"><a href="#map">Explore</a><a href="#record">Record</a><a href="#talks">Talks</a></nav>
+    <a class="resume-link" href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a>
   </header>
+
   <main id="top">
-    <section class="intro" aria-labelledby="page-title">
-      <div class="portrait-wrap"><img src="img/raphael-pinson-2025.webp" alt="Raphaël Pinson"></div>
-      <div class="intro-copy">
-        <p class="kicker">Technical Marketing Engineer · Isovalent at Cisco<br>Lausanne, Switzerland</p>
-        <h1 id="page-title">Making infrastructure<br>work better <em>for people.</em></h1>
-        <p class="statement">For more than twenty years, I have tracked constraints holding teams back—opaque systems, fragile handoffs, gaps between knowing and doing—and redesigned the technical and human interfaces around them.</p>
-        <p class="margin-note">Architecture is only useful when it becomes a practice people can share.</p>
-        <div class="intro-links"><a href="https://github.com/raphink">GitHub ↗</a><a href="https://www.linkedin.com/in/raphink">LinkedIn ↗</a><a href="#talks">Public talks ↓</a></div>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="identity"><img src="img/raphael-pinson-2025.webp" alt="Raphaël Pinson"><p>Technical Marketing Engineer<br>Isovalent at Cisco · Lausanne</p></div>
+      <div class="hero-copy">
+        <p class="eyebrow">People × interfaces × systems</p>
+        <h1 id="page-title">Making infrastructure work better <em>for people.</em></h1>
+        <p class="hero-statement">For more than twenty years, I have tracked constraints holding teams back—opaque systems, fragile handoffs, gaps between knowing and doing—and redesigned the technical and human interfaces around them.</p>
+        <a class="start" href="#map">Explore the practice <span>↓</span></a>
       </div>
+      <p class="hero-principle">IT is about people on both sides of the interface.</p>
     </section>
-    <section class="about" aria-labelledby="about-title">
-      <p class="section-label">A point of view</p>
-      <div><h2 id="about-title">IT is about people on both sides of the interface.</h2><p>My work begins where implementation meets adoption. Guided by the Theory of Constraints, I track what limits a team’s flow—technical friction, unclear handoffs, or inaccessible knowledge—and make the path forward usable. The intervention changes with the problem: a UI, automation, a platform capability, or a learning experience. The goal is always the same: give people a clear way to understand the system, act with confidence, and improve it together.</p></div>
-    </section>
-    <section class="work" id="work" aria-labelledby="work-title">
-      <div class="section-intro"><p class="section-label">Selected work</p><h2 id="work-title">A few ways that<br>work has taken shape.</h2></div>
-      <div class="project-list">
-        <article class="project"><p class="project-meta">01 · DEVOPS · 2005—NOW</p><div><h3>Teach the why, not just the tool.</h3><p>From Puppet and Terraform providers to Kubernetes and Cilium, I have taught the history, purpose, and trade-offs behind the tools—not just their commands. In the DevOps movement, the point has always been to improve human processes; automation without that understanding only moves the problem.</p></div><a href="https://github.com/raphink">Explore the work on GitHub <span>↗</span></a></article>
-        <article class="project"><p class="project-meta">02 · PLATFORM ENGINEERING · 2012—NOW</p><div><h3>Make the useful path easier than the workaround.</h3><p>I turn complex infrastructure into practical models and tooling that help people see the system, make decisions, and operate it together. The recurring constraint: complexity without a shared view.</p></div><a href="https://www.youtube.com/watch?v=yf_exP0ohOU">Watch: Bridging Dev and Ops with eBPF <span>↗</span></a></article>
-        <article class="project"><p class="project-meta">03 · TECHNICAL EDUCATION · 2008—NOW</p><div><h3>Turn expertise into practice at scale.</h3><p>From teaching colleagues at Orange how to package for Debian, to building programmes for Puppet, Docker, Terraform, Kubernetes, and cloud-native networking and security, I have made complex practice teachable. The latest generation—hands-on labs and the automation behind them—has supported more than 100,000 lab sessions. The recurring constraint: expertise trapped in a room.</p></div><a href="https://isovalent.com/blog/post/cilium-lab-champion/">Read: the Lab Champion programme <span>↗</span></a></article>
+
+    <section class="map" id="map" aria-labelledby="map-title">
+      <div class="map-heading">
+        <div><p class="eyebrow">An interface to the work</p><h2 id="map-title">Follow the constraint.</h2></div>
+        <p>Select a route. Each one shows the same practice applied to a different system: find what blocks people, design the interface, make capability shareable.</p>
       </div>
+
+      <div class="route-legend" aria-hidden="true"><span>Constraint</span><span>Interface</span><span>Shared capability</span></div>
+      <div class="routes" role="tablist" aria-label="Practice routes">
+        <button class="route is-active" type="button" role="tab" aria-selected="true" aria-controls="route-detail" data-route="devops">
+          <span class="route-name"><b>01</b> DevOps <small>2005—now</small></span>
+          <span class="route-step"><i>Tool-first change</i><small>Context and intent disappear</small></span>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <span class="route-step"><i>Context + automation</i><small>Teach why, then encode practice</small></span>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <span class="route-step"><i>Better human process</i><small>Teams learn and improve together</small></span>
+        </button>
+        <button class="route" type="button" role="tab" aria-selected="false" aria-controls="route-detail" data-route="platform">
+          <span class="route-name"><b>02</b> Platform engineering <small>2012—now</small></span>
+          <span class="route-step"><i>Infrastructure complexity</i><small>No shared view of the system</small></span>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <span class="route-step"><i>Usable platform interface</i><small>Expose the useful path</small></span>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <span class="route-step"><i>Confident operation</i><small>People decide and act together</small></span>
+        </button>
+        <button class="route" type="button" role="tab" aria-selected="false" aria-controls="route-detail" data-route="education">
+          <span class="route-name"><b>03</b> Technical education <small>2008—now</small></span>
+          <span class="route-step"><i>Expertise trapped in a room</i><small>Knowing is not yet doing</small></span>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <span class="route-step"><i>Hands-on learning system</i><small>Real practice, immediate feedback</small></span>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <span class="route-step"><i>Capability at scale</i><small>100k+ lab sessions</small></span>
+        </button>
+      </div>
+
+      <section class="route-detail" id="route-detail" role="tabpanel" tabindex="0" aria-live="polite">
+        <div class="detail-intro"><p class="eyebrow" id="detail-period">2005—now</p><h3 id="detail-title">Teach the why, not just the tool.</h3><p id="detail-summary">Tools must serve people and human processes. Understanding their history, purpose, and trade-offs is what turns automation into better work.</p></div>
+        <ol class="journey" id="detail-journey"></ol>
+        <div class="detail-foot"><div><span>Technical evidence</span><p id="detail-tools"></p></div><a id="detail-link" href="https://github.com/raphink">Explore the work ↗</a></div>
+      </section>
     </section>
+
+    <section class="principle" aria-labelledby="principle-title">
+      <p class="eyebrow">The constant</p>
+      <h2 id="principle-title">Implementation matters.<br><em>Enablement is the test.</em></h2>
+      <p>A well-programmed system with an unusable interface will be worked around or left behind. The goal is to give people a clear way to understand the system, act with confidence, and improve it together.</p>
+    </section>
+
     <section class="record" id="record" aria-labelledby="record-title">
-      <div><p class="section-label">The longer record</p><h2 id="record-title">Two decades of making technical work more shareable.</h2></div>
-      <dl><div><dt>20+ years</dt><dd>working across infrastructure, automation, and enablement</dd></div><div><dt>20+ talks</dt><dd>public technical talks delivered</dd></div><div><dt>100k+</dt><dd>cloud-native lab sessions supported</dd></div><div><dt>Since 2005</dt><dd>contributing to open source</dd></div></dl>
-      <p class="record-note">The complete chronology, roles, and technical detail are in the <a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">résumé ↗</a>.</p>
+      <div><p class="eyebrow">Public record</p><h2 id="record-title">The work leaves traces.</h2></div>
+      <dl><div><dt>20+</dt><dd>years across infrastructure and enablement</dd></div><div><dt>20+</dt><dd>public technical talks delivered</dd></div><div><dt>100k+</dt><dd>cloud-native lab sessions supported</dd></div><div><dt>2005</dt><dd>contributing to open source since</dd></div></dl>
     </section>
+
     <section class="talks" id="talks" aria-labelledby="talks-title">
-      <div class="section-intro"><p class="section-label">Public thinking</p><h2 id="talks-title">Teaching is part<br>of the engineering.</h2><p>Talks and workshops are where an interface becomes shared language. More than 20 delivered; 19 recorded.</p></div>
+      <div class="talks-heading"><p class="eyebrow">Public thinking</p><h2 id="talks-title">Teaching is part of the engineering.</h2><p>More than 20 talks delivered; 19 recorded.</p></div>
       <div class="talk-list">
-        <a href="https://www.youtube.com/watch?v=j8nT0eZcj54"><span>PlatformCon · 2024</span><strong>Exploring Cilium: a hands-on workshop on Cilium, Tetragon &amp; eBPF</strong><i>1h 55m ↗</i></a>
-        <a href="https://www.youtube.com/watch?v=HqQlLtsZEp4"><span>DevOpsDays Tel Aviv</span><strong>The Tortoise &amp; the Hare: avoiding tech debt in a cloud-native world</strong><i>38m ↗</i></a>
-        <a href="https://www.youtube.com/watch?v=8yzDqDHGLGw"><span>PlatformCon</span><strong>Kubernetes networking foundations</strong><i>Watch ↗</i></a>
-        <a class="playlist" href="https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe"><span>19 recorded sessions</span><strong>Browse the full playlist</strong><i>YouTube ↗</i></a>
+        <a href="https://www.youtube.com/watch?v=j8nT0eZcj54"><small>PlatformCon · 2024</small><strong>Exploring Cilium, Tetragon &amp; eBPF</strong><span>Workshop ↗</span></a>
+        <a href="https://www.youtube.com/watch?v=HqQlLtsZEp4"><small>DevOpsDays Tel Aviv</small><strong>Avoiding technical debt in a cloud-native world</strong><span>Talk ↗</span></a>
+        <a href="https://www.youtube.com/watch?v=8yzDqDHGLGw"><small>PlatformCon</small><strong>Kubernetes networking foundations</strong><span>Talk ↗</span></a>
+        <a href="https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe"><small>19 recordings</small><strong>Browse the public archive</strong><span>Playlist ↗</span></a>
       </div>
     </section>
-    <section class="closing"><p>Looking for the detailed record?</p><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Read the résumé <span>↗</span></a></section>
   </main>
-  <footer><span>© Raphaël Pinson</span><span>Lausanne, Switzerland</span><a href="https://github.com/raphink">GitHub ↗</a><a href="https://www.linkedin.com/in/raphink">LinkedIn ↗</a></footer>
+  <footer><span>Raphaël Pinson · Lausanne</span><a href="https://github.com/raphink">GitHub ↗</a><a href="https://www.linkedin.com/in/raphink">LinkedIn ↗</a><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a></footer>
 </body>
 </html>

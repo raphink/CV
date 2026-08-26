@@ -1,22 +1,23 @@
-# Portfolio quality gates
+# Conceptual portfolio quality gates
 
-The page is evaluated as a personal portfolio for a future employer or Principal Engineer reviewer. Every gate must pass before the page is considered ready.
+The page is an interface to Raphaël Pinson’s practice, not a project list or technology inventory.
 
-## Content
+## Meaning
 
-1. **A person leads** — name, current role, location, and a real portrait appear before the work.
-2. **The point of view is immediate** — within the opening, explain that the work is about making infrastructure better for people, not merely operating technology.
-3. **The scope is concrete** — name the kinds of work: architecture, platforms, workflows, labs, and feedback loops.
-4. **Work is curated and evidenced** — three distinct bodies of work show learning at scale, technical communication/observability, and long-term open-source practice; public links support the claims.
-5. **The public record is accurate** — 20+ talks delivered, 19 recorded, 100k+ lab sessions, and open-source work since 2005.
-6. **Language earns its place** — no generic adoption claim or sales-funnel language; keep the user’s own interface thesis only where it explains the work.
+1. **Human proposition first** — identity and “Making infrastructure work better for people” are understood before interaction.
+2. **Practice, not personality claim** — the page states the repeated action: track constraints, redesign technical and human interfaces.
+3. **One transferable grammar** — every route visibly connects a constraint to an interface and a shared capability.
+4. **Impact before tooling** — DevOps, Platform Engineering, and Technical Education are the primary routes; technologies appear only as chronological evidence.
+5. **Accurate continuity** — DevOps since 2005, Technical Education since 2008, Platform Engineering since 2012.
+6. **Public proof** — 20+ talks, 19 recordings, 100k+ lab sessions, and open-source work since 2005 remain visible and linked.
 
-## Presentation and usability
+## Experience
 
-7. **It reads as a portfolio, not a product** — an editorial identity, portrait, selected-work list, and longer record replace product diagrams, dashboard metrics, and conversion CTAs.
-8. **The reading order is calm** — identity → point of view → selected work → record → talks → résumé, with one clear H1.
-9. **Mobile is intentional** — header, opening, project list, record, and talks reflow without squeezed columns.
-10. **Accessible by default** — semantic landmarks, visible keyboard focus, useful image alt text, and reduced-motion handling.
-11. **Self-contained and fast** — no framework, tracking script, or third-party runtime is needed to render the page.
+7. **Exploration teaches the thesis** — selecting a route reveals its history, medium, and evidence using the same interaction each time.
+8. **Immediate orientation** — route columns are explicitly labelled Constraint, Interface, and Shared capability.
+9. **Keyboard-complete** — routes use tab semantics and support arrow, Home, and End keys.
+10. **Responsive transformation** — the horizontal system becomes a vertical journey on narrow screens.
+11. **Self-contained** — the experience uses local HTML, CSS, JavaScript, and imagery with no rendering dependency.
+12. **Accessible and calm** — visible focus, semantic landmarks, useful alt text, and reduced-motion support.
 
-`scripts/quality-gates.mjs` checks the deterministic parts of these gates. `node scripts/quality-gates.mjs && git diff --check` is the release check.
+Run `node scripts/quality-gates.mjs && node --check js/skills.js && git diff --check` before release.
