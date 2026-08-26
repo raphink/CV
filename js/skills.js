@@ -28,7 +28,7 @@
       link: 'https://www.youtube.com/watch?v=yf_exP0ohOU',
       linkText: 'Watch here: Bridging Dev and Ops ↓',
       cases: [
-        ['Infrastructure made inspectable', 'Terraboard', 'Built a web interface for Terraform state so teams could understand shared infrastructure without reading raw state files.', 'https://github.com/camptocamp/terraboard', 'Explore Terraboard ↗'],
+        ['Infrastructure made inspectable', 'Terraboard', 'Built a web interface for Terraform state so teams could understand shared infrastructure without reading raw state files.', 'https://terraboard.io/', 'Explore Terraboard ↗'],
         ['A reusable path to operation', 'DevOps Stack', 'Helped shape a shared Kubernetes platform around declarative delivery, reusable components, and an operable path for teams.', 'https://devops-stack.io/', 'Explore DevOps Stack ↗']
       ],
       journey: [
