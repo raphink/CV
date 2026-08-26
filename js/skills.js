@@ -1,203 +1,64 @@
-function skills() {
+/* global vis, commonmark */
+(function () {
+  'use strict';
+  var timeline, allDetailsVisible = false;
+  var startDate = new Date('2006-01-01');
+  var endDate = new Date(); endDate.setMonth(endDate.getMonth() + 4);
 
-  var container = document.getElementById('visualization');
-
-  var start_date = new Date('2006-01-01');
-  var min_date = new Date();
-  min_date.setFullYear(start_date.getFullYear() - 5);
-
-  var end_date = new Date();
-  end_date.setMonth(end_date.getMonth() + 4);
-  var max_date = new Date();
-  max_date.setFullYear(end_date.getFullYear() + 2);
-
-  var options = {
-    start: start_date,
-    end: end_date,
-    min: min_date,
-    max: max_date,
-    zoomMin: 18144000000,  // 1000*3600*24*7*30 = 1 month
-    editable: false,
-    groupOrder: function(a, b) {
-      return b.id - a.id;
-    },
-    order: function(a, b) {
-      return b.id - a.id;
-    },
-    orientation: 'both',
-    autoResize: true,
-    zoomKey: 'altKey',
-    template: function(item) {
-      var title = '';
-      if (typeof item.name === 'string' && !(typeof item.logo === 'boolean' && item.logo === false)) {
-        var logo_file_type = 'png';
-        if (typeof item.logo_type === 'string') {
-          logo_file_type = item.logo_type;
-        }
-        title += '<img src="skills/'+item.name+'/logo.'+logo_file_type+'" class="logo small" onerror="this.parentNode.removeChild(this)" /> ';
-      }
-      title += item.content;
-      if (item.award) {
-        title += ' <i class="fa fa-trophy" style="color: gold;" title="Award received"></i>';
-      }
-
-      if (item.type === 'background') {
-        return title;
-      } else {
-        var html = '<span class="zoom" vis-item-id="'+item.id+'" title="Zoom on item and display details"><i class="glyphicon glyphicon-zoom-in"></i></span> ';
-        html += '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'" title="Toggle details">'+title+'</a>';
-        html += '<div class="details collapse" id="details-'+item.id+'"></div>';
-        return html;
-      }
-    }
-  };
-
-  var timeline = new vis.Timeline(container);
-  timeline.setOptions(options);
-
-  loadGroups(timeline);
-}
-$(document).ready(function () {
-  skills()
-});
-
-function zoomItem(timeline, id) {
-  var data = timeline.components[3].items[id].data;
-  timeline.setWindow(data.start, data.end);
-  $('#details-'+id).collapse('show');
-}
-
-function filterItems(timeline, type) {
-  $('.vis-item').not('.'+type).not('.vis-background').hide();
-  $('.vis-item.'+type).show();
-  timeline.redraw();
-}
-
-function toggleDetails() {
-  $('.details').collapse('toggle');
-}
-
-function loadGroups(timeline) {
-  $.ajax({
-    url: './groups.json',
-    timeline: timeline,
-    success: function(data) {
-      var group_name_to_id_map = {};
-      for (var id = 0; id < data.length; id++) {
-        if (typeof data[id].id === 'undefined') {
-          data[id].id = id;
-        }
-        var name;
-        if (typeof data[id].name === 'string') {
-          name = data[id].name;
-        } else {
-          name = data[id].content.toLowerCase();
-        }
-        group_name_to_id_map[name] = data[id].id;
-      }
-      var items = new vis.DataSet(data);
-      var timeline = this.timeline;
-      timeline.setGroups(items);
-      loadItems(timeline, group_name_to_id_map);
-    }
-  });
-}
-
-function loadItems(timeline, group_name_to_id_map) {
-  $.ajax({
-    url: './items.json',
-    timeline: timeline,
-    success: function(data) {
-      for (var id = 0; id < data.length; id++) {
-        if (typeof data[id].id === 'undefined') {
-          data[id].id = id;
-        }
-        if (typeof data[id].group === 'string') {
-          var group_name = data[id].group;
-          data[id].group = group_name_to_id_map[group_name];
-          if (typeof data[id].group === 'undefined') {
-            console.warn("Group name '" + group_name + "' is not defined!");
-          }
-        }
-      }
-      var items = new vis.DataSet(data);
-
-      // Preprocess items
-      // Add end if missing
-      var now = new Date();
-      for (var item in items._data) {
-        if (items._data[item].end === undefined) {
-          items._data[item].end = now;
-        }
-      }
-
-      this.timeline.setItems(items);
-
-      loadDetails(items);
-
-      var timeline = this.timeline;
-
-      $('div.details').on('shown.bs.collapse hidden.bs.collapse', function(e) {
-        timeline.redraw();
-      });
-
-      // Toggle items when legend is clicked
-      $('#legend .used').on('click', function(e) {
-        filterItems(timeline, 'used');
-      });
-
-      $('#legend .implemented').on('click', function(e) {
-        filterItems(timeline, 'implemented');
-      });
-
-      $('#legend .contributed').on('click', function(e) {
-        filterItems(timeline, 'contributed');
-      });
-
-      $('#legend .developed').on('click', function(e) {
-        filterItems(timeline, 'developed');
-      });
-
-      $('#showAllItems').on('click', function(e) {
-        // All items
-        filterItems(timeline, 'vis-item');
-      });
-
-      $('.zoom').on('click', function(e) {
-        zoomItem(timeline, e.currentTarget.getAttribute('vis-item-id'));
-      });
-
-      $('#toggle-details').on('click', function(e) {
-        toggleDetails();
-      });
-
-      $('#reset-zoom').on('click', function(e) {
-        timeline.setWindow(timeline.options.start, timeline.options.end);
-      });
-    }
-  });
-}
-
-function loadDetails(items) {
-  for (var i in items._data) {
-    var ii = items._data[i];
-    if ((typeof ii.details === 'boolean' && ii.details === false) || typeof ii.name === 'undefined') {
-      $('#details-'+ii.id).html('No details');
-    } else {
-      $.ajax({
-          url: './skills/'+ii.name+'/details.md',
-          id: i,
-          success: function(details) {
-            var reader = new commonmark.Parser();
-            var writer = new commonmark.HtmlRenderer();
-            var parsed = reader.parse(details);
-            var html = writer.render(parsed);
-            $('#details-'+this.id).html(html);
-          },
-          error: function() {
-            $('#details-'+this.id).html('No details');
-          }
-      });
-    }
+  function logo(item) {
+    if (typeof item.name !== 'string' || item.logo === false) return '';
+    var type = typeof item.logo_type === 'string' ? item.logo_type : 'png';
+    return '<img src="skills/' + item.name + '/logo.' + type + '" class="logo small" alt="" onerror="this.remove()">';
   }
-}
+  function template(item) {
+    var title = logo(item) + '<span>' + item.content + (item.award ? ' <span title="Award received">★</span>' : '') + '</span>';
+    if (item.type === 'background') return title;
+    return '<div class="skill-title"><button class="zoom" type="button" data-zoom-id="' + item.id + '" aria-label="Zoom to ' + item.content + '">⌕</button><button class="skill-toggle" type="button" data-details-id="' + item.id + '" aria-expanded="false">' + title + '</button></div><div class="details" id="details-' + item.id + '" hidden></div>';
+  }
+  function redraw() { window.setTimeout(function () { timeline.redraw(); }, 0); }
+  function toggleDetail(id, show) {
+    var detail = document.getElementById('details-' + id);
+    var toggle = document.querySelector('[data-details-id="' + id + '"]');
+    if (!detail) return;
+    detail.hidden = typeof show === 'boolean' ? !show : !detail.hidden;
+    if (toggle) toggle.setAttribute('aria-expanded', String(!detail.hidden));
+    redraw();
+  }
+  function loadDetails(items) {
+    items.forEach(function (item) {
+      var detail = document.getElementById('details-' + item.id);
+      if (!detail) return;
+      if (item.details === false || typeof item.name === 'undefined') { detail.textContent = 'No details available.'; return; }
+      fetch('./skills/' + item.name + '/details.md').then(function (response) { if (!response.ok) throw new Error(); return response.text(); }).then(function (markdown) {
+        var reader = new commonmark.Parser(); detail.innerHTML = new commonmark.HtmlRenderer().render(reader.parse(markdown));
+      }).catch(function () { detail.textContent = 'No details available.'; });
+    });
+  }
+  function applyFilter(filter) {
+    document.querySelectorAll('.vis-item:not(.vis-background)').forEach(function (item) { item.classList.toggle('is-filtered-out', filter !== 'all' && !item.classList.contains(filter)); });
+    document.querySelectorAll('.filter').forEach(function (button) { var active = button.dataset.filter === filter; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
+  }
+  function init(items, groups) {
+    var maxDate = new Date(endDate); maxDate.setFullYear(maxDate.getFullYear() + 2);
+    timeline = new vis.Timeline(document.getElementById('visualization'));
+    timeline.setOptions({start:startDate,end:endDate,min:new Date('2001-01-01'),max:maxDate,zoomMin:18144000000,editable:false,groupOrder:function(a,b){return b.id-a.id;},order:function(a,b){return b.id-a.id;},orientation:'both',autoResize:true,zoomKey:'altKey',template:template});
+    timeline.setGroups(new vis.DataSet(groups)); timeline.setItems(items); timeline.addCustomTime(new Date(), 'today'); timeline.setCustomTimeTitle('Today', 'today'); loadDetails(items);
+    document.getElementById('visualization').addEventListener('click', function (event) {
+      var zoom = event.target.closest('[data-zoom-id]'), details = event.target.closest('[data-details-id]');
+      if (zoom) { var data = items.get(zoom.dataset.zoomId); timeline.setWindow(data.start, data.end); toggleDetail(zoom.dataset.zoomId, true); }
+      if (details) toggleDetail(details.dataset.detailsId);
+    });
+    document.querySelectorAll('.filter').forEach(function (button) { button.addEventListener('click', function () { applyFilter(button.dataset.filter); }); });
+    document.getElementById('reset-zoom').addEventListener('click', function () { timeline.setWindow(startDate, endDate); });
+    document.getElementById('jump-to-now').addEventListener('click', function () { timeline.moveTo(new Date(), { animation: { duration: 400, easingFunction: 'easeInOutQuad' } }); });
+    document.getElementById('toggle-details').addEventListener('click', function (event) { allDetailsVisible = !allDetailsVisible; items.forEach(function (item) { toggleDetail(item.id, allDetailsVisible); }); event.currentTarget.textContent = allDetailsVisible ? 'Hide details' : 'Show details'; });
+  }
+  window.addEventListener('DOMContentLoaded', function () {
+    Promise.all([fetch('./groups.json').then(function(r){return r.json();}),fetch('./items.json').then(function(r){return r.json();})]).then(function (data) {
+      var groups = data[0], sourceItems = data[1], map = {}, now = new Date();
+      groups.forEach(function (group, index) { group.id = typeof group.id === 'undefined' ? index : group.id; map[group.content.toLowerCase()] = group.id; });
+      sourceItems.forEach(function (item, index) { item.id = typeof item.id === 'undefined' ? index : item.id; if (typeof item.group === 'string') item.group = map[item.group]; if (typeof item.end === 'undefined') item.end = now; });
+      init(new vis.DataSet(sourceItems), groups);
+    });
+  });
+}());
