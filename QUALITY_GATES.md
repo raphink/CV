@@ -19,5 +19,6 @@ The page is an interface to Raphaël Pinson’s practice, not a project list or 
 10. **Responsive transformation** — narrow screens read as three complete chapters in order beneath a compact sticky route selector.
 11. **Self-contained** — the experience uses local HTML, CSS, JavaScript, and imagery with no rendering dependency.
 12. **Accessible and calm** — visible focus, semantic landmarks, useful alt text, and reduced-motion support.
+13. **Archive continuity** — the technical timeline remains dense and functional while clearly belonging to the portfolio’s visual system.
 
 Run `node scripts/quality-gates.mjs && node --check js/skills.js && git diff --check` before release.

@@ -34,7 +34,7 @@ function skills() {
         if (typeof item.logo_type === 'string') {
           logo_file_type = item.logo_type;
         }
-        title += '<img src="skills/'+item.name+'/logo.'+logo_file_type+'" class="logo small" onerror="this.parentNode.removeChild(this)" /> ';
+        title += '<img src="skills/'+item.name+'/logo.'+logo_file_type+'" class="logo small" alt="" onerror="this.parentNode.removeChild(this)" /> ';
       }
       title += item.content;
       if (item.award) {
@@ -58,7 +58,8 @@ function skills() {
   loadGroups(timeline);
 }
 $(document).ready(function () {
-  skills()
+  $('a[href^="http"]').attr({ target: '_blank', rel: 'noopener noreferrer' });
+  skills();
 });
 
 function zoomItem(timeline, id) {
@@ -70,6 +71,9 @@ function zoomItem(timeline, id) {
 function filterItems(timeline, type) {
   $('.vis-item').not('.'+type).not('.vis-background').hide();
   $('.vis-item.'+type).show();
+  $('#legend li').removeClass('is-active');
+  if (type === 'vis-item') $('#showAllItems').addClass('is-active');
+  else $('#legend .'+type).addClass('is-active');
   timeline.redraw();
 }
 
@@ -168,11 +172,20 @@ function loadItems(timeline, group_name_to_id_map) {
       });
 
       $('#toggle-details').on('click', function(e) {
+        e.preventDefault();
         toggleDetails();
       });
 
       $('#reset-zoom').on('click', function(e) {
+        e.preventDefault();
         timeline.setWindow(timeline.options.start, timeline.options.end);
+      });
+
+      $('#legend li').on('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          $(this).trigger('click');
+        }
       });
     }
   });
@@ -192,7 +205,7 @@ function loadDetails(items) {
             var writer = new commonmark.HtmlRenderer();
             var parsed = reader.parse(details);
             var html = writer.render(parsed);
-            $('#details-'+this.id).html(html);
+            $('#details-'+this.id).html(html).find('a[href^="http"]').attr({ target: '_blank', rel: 'noopener noreferrer' });
           },
           error: function() {
             $('#details-'+this.id).html('No details');
@@ -201,4 +214,3 @@ function loadDetails(items) {
     }
   }
 }
-

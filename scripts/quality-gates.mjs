@@ -3,6 +3,9 @@ const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../css/overrides.css', import.meta.url), 'utf8');
 const mobileCss = readFileSync(new URL('../css/mobile.css', import.meta.url), 'utf8');
 const js = readFileSync(new URL('../js/skills.js', import.meta.url), 'utf8');
+const archiveHtml = readFileSync(new URL('../archive.html', import.meta.url), 'utf8');
+const archiveCss = readFileSync(new URL('../css/archive.css', import.meta.url), 'utf8');
+const archiveJs = readFileSync(new URL('../js/archive.js', import.meta.url), 'utf8');
 let failed = 0;
 const gate = (name, condition) => { if (condition) console.log(`PASS  ${name}`); else { failed++; console.error(`FAIL  ${name}`); } };
 const all = (source, terms) => terms.every((term) => source.includes(term));
@@ -32,6 +35,7 @@ gate('P12 mobile routes read as complete sequential chapters', html.includes('id
 gate('P13 restrained scroll motion with a static fallback', all(js, ['IntersectionObserver', "querySelectorAll('main > section:not(.hero)')", "matchMedia('(prefers-reduced-motion: reduce)')", "hero.classList.add('is-visible')"]) && all(mobileCss, ['.motion-ready .hero-orbit-copy', 'transform: rotate(38deg)', '.motion-ready .scroll-slide', '@media (prefers-reduced-motion: reduce)']));
 gate('P14 accessible focus and reduced motion', all(css, ['a:focus-visible,button:focus-visible', '@media(prefers-reduced-motion:reduce)']));
 gate('P15 no product funnel language', !/see the interfaces in action|work-card|system-map|hero-cta/i.test(html));
+gate('P16 technical archive is a polished, usable companion', all(archiveHtml, ['archive-kicker', 'timeline-shell', 'Interactive timeline', 'role="button" tabindex="0"']) && all(archiveCss, ['--night: #061820', '.timeline-shell', '.vis-item.vis-selected', '#legend li.is-active', '@media (prefers-reduced-motion: reduce)']) && all(archiveJs, ['new vis.Timeline', "target: '_blank'", "e.key === 'Enter' || e.key === ' '"]));
 
 if (failed) { console.error(`\n${failed} quality gate(s) failed.`); process.exitCode = 1; }
 else console.log('\nAll conceptual portfolio gates passed.');
