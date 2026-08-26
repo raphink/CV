@@ -6,9 +6,13 @@
       period: '2005—now',
       title: 'Teach the why, not just the tool.',
       summary: 'Tools must serve people and human processes. Understanding their history, purpose, and trade-offs is what turns automation into better work.',
-      tools: '<a href="https://www.debian.org/">Debian</a> · <a href="https://www.puppet.com/">Puppet</a> · <a href="https://augeas.net/">Augeas</a> · <a href="https://developer.hashicorp.com/terraform/plugin">Terraform providers</a> · <a href="https://www.docker.com/">Docker</a> · <a href="https://kubernetes.io/">Kubernetes</a> · <a href="https://cilium.io/">Cilium</a>',
+      tools: 'Debian · Puppet · Augeas · Terraform providers · Docker · Kubernetes · Cilium',
       link: 'https://github.com/raphink',
       linkText: 'Explore the work ↗',
+      cases: [
+        ['Open-source configuration', 'Augeas as an interface', 'Contributed lenses and APIs, then became the main developer of AugeasProviders: typed, testable configuration interfaces for Puppet.', 'https://github.com/hercules-team/augeas/tree/master/lenses', 'Explore the lenses ↗'],
+        ['Practice shared at ecosystem scale', 'Puppet contributor and educator', 'Turned operational practice into modules, courses, and community contribution; recognised as an Extraordinary Puppeteer Champion in 2020.', 'https://puppet-champions.github.io/puppeteers/raphink.html', 'See the recognition ↗']
+      ],
       journey: [
         ['2005', 'Ubuntu Developer', 'Reproducible operations', 'Turn server knowledge into code and shared practice.'],
         ['2007', 'Systems Engineer · Orange', 'Configuration as an interface', 'Puppet and Augeas connect intent to system state.'],
@@ -20,9 +24,13 @@
       period: '2012—now',
       title: 'Make the useful path easier than the workaround.',
       summary: 'A platform is an interface between infrastructure and the people who depend on it. Its value is not hidden capability, but confident, shared operation.',
-      tools: '<a href="https://www.openstack.org/">OpenStack</a> · <a href="https://www.rancher.com/">Rancher</a> · <a href="https://kubernetes.io/">Kubernetes</a> · <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">OpenShift</a> · <a href="https://argo-cd.readthedocs.io/">Argo CD</a> · <a href="https://cilium.io/">Cilium</a> · <a href="https://docs.cilium.io/en/stable/observability/hubble/">Hubble</a> · <a href="https://tetragon.io/">Tetragon</a>',
+      tools: 'OpenStack · Rancher · Kubernetes · OpenShift · Argo CD · Cilium · Hubble · Tetragon',
       link: 'https://www.youtube.com/watch?v=yf_exP0ohOU',
       linkText: 'Watch: Bridging Dev and Ops ↗',
+      cases: [
+        ['Infrastructure made inspectable', 'Terraboard', 'Built a web interface for Terraform state so teams could understand shared infrastructure without reading raw state files.', 'https://github.com/camptocamp/terraboard', 'Explore Terraboard ↗'],
+        ['A reusable path to operation', 'DevOps Stack', 'Helped shape a shared Kubernetes platform around declarative delivery, reusable components, and an operable path for teams.', 'https://devops-stack.io/', 'Explore DevOps Stack ↗']
+      ],
       journey: [
         ['2012', 'Infrastructure Developer · Camptocamp', 'Cloud foundations', 'Expose infrastructure as a coherent service with OpenStack.'],
         ['2015', 'Infrastructure Developer · Camptocamp', 'Container platforms', 'Rancher begins the path from clusters to usable operations.'],
@@ -34,9 +42,13 @@
       period: '2008—now',
       title: 'Turn expertise into practice at scale.',
       summary: 'Education is an interface between knowing and doing. The learning environment must let people form a mental model, act on a real system, and learn from feedback.',
-      tools: '<a href="https://www.debian.org/doc/manuals/maint-guide/">Debian packaging</a> · <a href="https://www.puppet.com/">Puppet</a> · <a href="https://www.docker.com/">Docker</a> · <a href="https://developer.hashicorp.com/terraform">Terraform</a> · <a href="https://kubernetes.io/">Kubernetes</a> · <a href="https://cilium.io/">Cilium</a> · <a href="https://tetragon.io/">Tetragon</a>',
+      tools: 'Debian packaging · Puppet · Docker · Terraform · Kubernetes · Cilium · Tetragon',
       link: 'https://isovalent.com/blog/post/cilium-lab-champion/',
       linkText: 'Read: Lab Champion programme ↗',
+      cases: [
+        ['Learning environment as product', 'Isovalent labs', 'Built a guided cloud-native practice environment with immediate feedback, clear progress, and more than 100k lab sessions supported.', 'https://labs.isovalent.com/', 'Enter the labs ↗'],
+        ['Mental model, then real system', 'Public workshops and talks', 'Made complex infrastructure approachable through explanations, live systems, and reusable hands-on workshops delivered to public audiences.', 'https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe', 'Browse 19 recordings ↗']
+      ],
       journey: [
         ['2008', 'Systems Engineer · Orange', 'Teach the local practice', 'Help colleagues at Orange package software for Debian.'],
         ['2012', 'Infrastructure Developer · Camptocamp', 'Build a curriculum', 'Teach Puppet, then develop structured technical programmes.'],
@@ -51,6 +63,7 @@
   var title = document.getElementById('detail-title');
   var summary = document.getElementById('detail-summary');
   var journey = document.getElementById('detail-journey');
+  var cases = document.getElementById('detail-cases');
   var tools = document.getElementById('detail-tools');
   var link = document.getElementById('detail-link');
   var detailPanel = document.getElementById('route-detail');
@@ -71,6 +84,9 @@
     link.textContent = route.linkText;
     journey.innerHTML = route.journey.map(function (stop) {
       return '<li><time><span>' + stop[0] + '</span><small>' + stop[1] + '</small></time><strong>' + stop[2] + '</strong><p>' + stop[3] + '</p></li>';
+    }).join('');
+    cases.innerHTML = route.cases.map(function (project) {
+      return '<a class="case-card" href="' + project[3] + '"><small>' + project[0] + '</small><strong>' + project[1] + '</strong><p>' + project[2] + '</p><span>' + project[4] + '</span></a>';
     }).join('');
     prepareExternalLinks(detailPanel);
     if (focusPanel) document.getElementById('route-detail').focus({ preventScroll: true });

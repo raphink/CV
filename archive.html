@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raphaël Pinson — Technical Archive</title>
+  <meta property="og:title" content="Raphaël Pinson — Technical Archive" />
+  <meta name="description" content="Infrastructure builder who spots gaps and builds systems that enable others at scale. 20+ years across cloud-native stack." />
+  <meta property="og:description" content="Infrastructure builder who spots gaps and builds systems that enable others at scale. 20+ years across cloud-native stack." />
+  <meta property="og:image" content="https://raphink.info/img/og_img.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.css" integrity="sha384-u716h6lCH9r+vMunuNOBPDPKgZnK4k+PvzzRvtzbspOEjfdY4uUvDU3wDi6BWe3S" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+
+  <link href="css/archive.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.js" integrity="sha384-M+SxeH/xY48fto4LZCrQuZ4v9X1OLttWV+kDLN2g0otGp5P3JCUeIFL6M9m8/jOT" crossorigin="anonymous"></script>
+
+  <script src="js/archive.js"></script>
+  <script src="js/commonmark.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1DK6MCNH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-F1DK6MCNH6');
+  </script>
+</head>
+
+<body>
+  <a class="archive-return" href="index.html">← Back to the portfolio</a>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown btn-group pull-right">
+
+          <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="glyphicon glyphicon-filter"></i>
+            <span class="header-text"> Filter </span><span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu" id="legend">
+            <li id="showAllItems"><h4>Show all items</h4></li>
+            <li class="used">
+              <h4>Used</h4>
+              Technology I have used or language I have coded with
+            </li>
+            <li class="implemented">
+              <h4>Implemented</h4>
+              Technology I have implemented / set up, or language for which I maintain code packages</li>
+            <li class="contributed">
+              <h4>Contributed</h4>
+              Technology I have contributed to
+            </li>
+            <li class="developed">
+              <h4>Developed</h4>
+              Technology I maintain/develop
+            </li>
+          </ul>
+        </li>
+        <li class="pull-right">
+          <a href="#" id="reset-zoom"><i class="glyphicon glyphicon-zoom-out"></i><span class="header-text"> Reset Zoom</span></a>
+        </li>
+        <li class="pull-right">
+          <a href="#" id="toggle-details"><i class="glyphicon glyphicon-list-alt"></i><span class="header-text"> Toggle details</span></a></li>
+        <li class="dropdown btn-group pull-right">
+          <a href="#" class="dropdow-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-file"></i><span class="header-text"> Download PDF </span><span class="caret"></span></a>
+
+          <ul class="dropdown-menu" id="pdf">
+            <li><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true"><img src="img/united_kingdom_great_britain.png" alt="English" /> English</a></li>
+            <li><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_fr.pdf?raw=true"><img src="img/france.png" alt="Français" /> Français</a></li>
+          </ul>
+        </li>
+        <li class="dropdown btn-group pull-right">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-info-sign"></i><span class="header-text"> What is this? </span><span class="caret"></span></a>
+          <div class="dropdown-menu jumbotron" id="info">
+            <p>
+            This timeline describes the technical stacks I have used in my job as a systems engineer over the years.
+            </p>
+
+            <p>
+            Elements in the graph are clickable and will display details.
+            </p>
+
+            <p> The legend can also be used to filter them. To zoom on the timeline, use the <code>Alt</code> key or pinching on mobile devices.
+            </p>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row fake-page-header">
+
+    <div class="col-sm-6">
+      <h1>Raphaël Pinson<br /> <small>Technical Archive</small></h1>
+    </div>
+
+    <div class="col-sm-6 info">
+      <a href="https://www.linkedin.com/in/raphink" title="LinkedIn Profile"><i class="fab fa-lg fa-linkedin"></i></a>
+      <a href="https://dev.to/raphink" title="Dev.to Profile"><i class="fab fa-lg fa-dev"></i></a>
+      <a rel="me" href="https://hachyderm.io/@raphink" title="Mastodon Profile"><i class="fab fa-lg fa-mastodon"></i></a>
+      <a href="https://github.com/raphink" title="GitHub Profile"><i class="fab fa-lg fa-github"></i></a>
+      <a href="http://stackexchange.com/users/82664/%E2%84%9Daphink" title="StackExchange Profile"><i class="fab fa-lg fa-stack-exchange"></i></a><br />
+    </div>
+
+
+  </div>
+
+  <div class="row motto" style="text-align:center; color: orange;">
+    <h4>Freely you have received, freely give<br /> <small>Matthew 10:8</small></h4>
+  </div>
+
+  <div class="row">
+    <div id="visualization"></div>
+  </div>
+</div>
+</body>
+</html>
