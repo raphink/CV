@@ -1,4 +1,22 @@
-.back-to-routes {
+.detail-foot p a {
+  color: #d4e2e6;
+  text-decoration-color: rgba(97, 224, 231, .5);
+  text-underline-offset: 3px;
+}
+
+.detail-foot p a:hover {
+  color: var(--cyan);
+}
+
+.record dt a {
+  text-decoration: none;
+}
+
+.record dt a:hover {
+  color: var(--cyan);
+}
+
+.route-label-short {
   display: none;
 }
 
@@ -8,12 +26,23 @@
   }
 
   .routes {
-    gap: 7px;
+    position: sticky;
+    top: 68px;
+    z-index: 12;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+    margin: 0 -12px;
+    padding: 8px 12px;
+    background: rgba(242, 246, 246, .94);
+    box-shadow: 0 10px 24px rgba(6, 24, 32, .08);
+    backdrop-filter: blur(14px);
   }
 
   .route {
-    min-height: 76px;
-    padding: 16px 18px;
+    min-height: 54px;
+    padding: 10px 8px;
+    border-radius: 10px;
+    text-align: center;
   }
 
   .route:hover {
@@ -21,18 +50,27 @@
   }
 
   .route-name {
-    display: grid;
-    grid-template-columns: 28px 1fr auto;
-    gap: 0 8px;
-    align-items: baseline;
+    display: block;
+    font-size: 12px;
+    line-height: 1.12;
   }
 
-  .route-name b {
-    grid-row: 1;
-  }
-
+  .route-name b,
   .route-name small {
-    justify-self: end;
+    display: none;
+  }
+
+  .route-label-full {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .route-label-short {
+    display: inline;
   }
 
   .route-step,
@@ -41,43 +79,16 @@
   }
 
   .route::after {
-    grid-column: 1 / -1;
-    margin: 3px 0 0 36px;
-    color: #718087;
-    content: "Select to explore";
-    font: 650 9px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
-    letter-spacing: .07em;
-    text-transform: uppercase;
-  }
-
-  .route.is-active::after {
-    color: var(--yellow);
-    content: "Selected · journey below ↓";
-  }
-
-  .back-to-routes {
-    display: inline-block;
-    margin-bottom: 28px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--yellow);
-    color: #d4e2e6;
-    font: 650 9px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
-    letter-spacing: .08em;
-    text-decoration: none;
-    text-transform: uppercase;
+    display: none;
   }
 
   .route-detail {
-    scroll-margin-top: 78px;
+    scroll-margin-top: 140px;
   }
 }
 
 @media (max-width: 520px) {
   .map-heading > p {
-    font-size: 16px;
-  }
-
-  .route-name {
     font-size: 16px;
   }
 
