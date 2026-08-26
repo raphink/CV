@@ -86,6 +86,29 @@
     }
   };
 
+  var playlistRecordings = [
+    ['yf_exP0ohOU', 'Bridging Dev and Ops with eBPF'],
+    ['kTGU-Nc2Db0', 'Security observability with eBPF and Cilium Tetragon'],
+    ['5dBbQlzUep8', 'How eBPF enables next-generation security enforcement'],
+    ['0c_uSDD9r8U', 'Hands-on labs with Instruqt, gamification, and AI'],
+    ['ge-iruUlYYs', 'Révolution eBPF : un noyau Linux dynamique · DevOps D-Day'],
+    ['BO4MWeFkvRM', 'Révolution eBPF : un noyau Linux dynamique · CND France'],
+    ['HqQlLtsZEp4', 'Avoiding technical debt in a cloud-native world'],
+    ['nmJYlh-Vr0c', 'Open source, standards, and technical debt'],
+    ['hzMif_cytLs', 'eBPF superpowers a dynamic kernel'],
+    ['j8nT0eZcj54', 'Exploring Cilium, Tetragon, and eBPF'],
+    ['goWY2S43cnE', 'Orchestrated functional testing with Puppet'],
+    ['nGoB-w4tjvo', 'Cilium Service Mesh'],
+    ['wBrlhctsmYs', 'Cilium and eBPF · CNCF Research End User Group'],
+    ['qYXoA2gOXzU', 'Five-minute talks · DevOpsDays Amsterdam'],
+    ['JJ1bFnJenms', 'Cloud-native application security with Cilium and eBPF'],
+    ['n_g60hLXZOk', '100,000 sessions de labs réseau et sécurité cloud-native'],
+    ['onzP72ZMXcw', 'Running Puppet on Kubernetes'],
+    ['j_0KwA72ZPo', 'The platform engineer’s guide to Kubernetes networking'],
+    ['8yzDqDHGLGw', 'Kubernetes networking foundations']
+  ];
+  var playlistCurrentIndex = 0;
+
   function render(key, focusPanel) {
     var route = routes[key];
     if (!route) return;
@@ -156,6 +179,48 @@
     });
   }
 
+  function recordingEmbedUrl(id) {
+    return 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+  }
+
+  function renderPlaylistRecording(index) {
+    var recording = playlistRecordings[index];
+    if (!recording) return;
+    playlistCurrentIndex = index;
+    var frame = viewerBody.querySelector('iframe');
+    var currentTitle = viewerBody.querySelector('.playlist-current-title');
+    var currentCount = viewerBody.querySelector('.playlist-current-count');
+    var previous = viewerBody.querySelector('[data-playlist-step="-1"]');
+    var next = viewerBody.querySelector('[data-playlist-step="1"]');
+    frame.src = recordingEmbedUrl(recording[0]);
+    frame.title = recording[1];
+    currentTitle.textContent = recording[1];
+    currentCount.textContent = String(index + 1).padStart(2, '0') + ' / ' + playlistRecordings.length;
+    previous.disabled = index === 0;
+    next.disabled = index === playlistRecordings.length - 1;
+    var currentButton = null;
+    Array.prototype.forEach.call(viewerBody.querySelectorAll('[data-playlist-index]'), function (button) {
+      var selected = Number(button.dataset.playlistIndex) === index;
+      button.classList.toggle('is-current', selected);
+      if (selected) {
+        button.setAttribute('aria-current', 'true');
+        currentButton = button;
+      }
+      else button.removeAttribute('aria-current');
+    });
+    if (currentButton && viewer.open) currentButton.scrollIntoView({ block: 'nearest' });
+    viewerSource.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(recording[0]) + '&list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe';
+  }
+
+  function renderPlaylist() {
+    viewerKind.textContent = 'Video archive · 19 recordings';
+    viewerTitle.textContent = 'Choose a recording';
+    viewerBody.innerHTML = '<div class="playlist-browser"><div class="playlist-stage"><div class="viewer-frame"><iframe title="Public recording" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="playlist-current"><p class="playlist-current-count"></p><h3 class="playlist-current-title"></h3><div class="playlist-controls"><button type="button" data-playlist-step="-1">← Previous</button><button type="button" data-playlist-step="1">Next →</button></div></div></div><div class="playlist-index" role="list" aria-label="Public recordings">' + playlistRecordings.map(function (recording, index) {
+      return '<button type="button" role="listitem" data-playlist-index="' + index + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + escapeHtml(recording[1]) + '</strong></button>';
+    }).join('') + '</div></div>';
+    renderPlaylistRecording(0);
+  }
+
   function openViewer(trigger) {
     if (typeof viewer.showModal !== 'function') return false;
     var kind = trigger.dataset.contentKind;
@@ -164,14 +229,16 @@
     viewerTrigger = trigger;
     viewerSource.href = trigger.href;
 
-    if (kind === 'video' || kind === 'playlist') {
-      var embedUrl = kind === 'video'
-        ? 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0'
-        : 'https://www.youtube-nocookie.com/embed/videoseries?list=' + encodeURIComponent(id) + '&autoplay=1&rel=0';
-      viewerKind.textContent = kind === 'video' ? 'Recording' : 'Video archive';
+    viewer.classList.toggle('playlist-mode', kind === 'playlist');
+
+    if (kind === 'video') {
+      var embedUrl = recordingEmbedUrl(id);
+      viewerKind.textContent = 'Recording';
       viewerTitle.textContent = titleElement ? titleElement.textContent : 'Public recording';
       viewerBody.innerHTML = '<div class="viewer-frame"><iframe src="' + embedUrl + '" title="' + escapeHtml(viewerTitle.textContent) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>';
     }
+
+    if (kind === 'playlist') renderPlaylist();
 
     if (kind === 'article') {
       var article = articles[id];
@@ -261,10 +328,15 @@
 
   viewerClose.addEventListener('click', closeViewer);
   viewer.addEventListener('click', function (event) {
+    var selection = event.target.closest('[data-playlist-index]');
+    var step = event.target.closest('[data-playlist-step]');
+    if (selection) renderPlaylistRecording(Number(selection.dataset.playlistIndex));
+    if (step && !step.disabled) renderPlaylistRecording(playlistCurrentIndex + Number(step.dataset.playlistStep));
     if (event.target === viewer) closeViewer();
   });
   viewer.addEventListener('close', function () {
     document.body.classList.remove('viewer-open');
+    viewer.classList.remove('playlist-mode');
     viewerBody.innerHTML = '';
     if (viewerTrigger) viewerTrigger.focus();
     viewerTrigger = null;
