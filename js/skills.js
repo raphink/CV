@@ -78,6 +78,7 @@
   var routesControl = document.querySelector('.routes');
   var mobileRouteSequence = document.getElementById('mobile-route-sequence');
   var mobileRouteMedia = window.matchMedia('(max-width: 900px)');
+  var routeStageProgress = document.getElementById('route-stage-progress');
   var activeRouteKey = null;
   var routeChapterLabels = {
     devops: '01 · DevOps',
@@ -140,6 +141,7 @@
   }
 
   function updateRouteSelection(key) {
+    routeStageProgress.textContent = routeChapterLabels[key];
     buttons.forEach(function (button) {
       var selected = button.dataset.route === key;
       button.classList.toggle('is-active', selected);

@@ -20,5 +20,6 @@ The page is an interface to Raphaël Pinson’s practice, not a project list or 
 11. **Self-contained** — the experience uses local HTML, CSS, JavaScript, and imagery with no rendering dependency.
 12. **Accessible and calm** — visible focus, semantic landmarks, useful alt text, and reduced-motion support.
 13. **Archive continuity** — the technical timeline remains dense and functional while clearly belonging to the portfolio’s visual system.
+14. **Shareable identity** — canonical, Open Graph, and Twitter metadata resolve to a purpose-built 1200×630 card.
 
 Run `node scripts/quality-gates.mjs && node --check js/skills.js && git diff --check` before release.

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061820"/>
+      <stop offset="1" stop-color="#0b303c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#1a657b" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#1a657b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="portrait-clip">
+      <rect x="900" y="142" width="218" height="218" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <circle cx="1010" cy="332" r="292" fill="url(#glow)"/>
+  <circle cx="1010" cy="332" r="270" fill="none" stroke="#61e0e7" stroke-opacity=".72"/>
+  <circle cx="1010" cy="332" r="236" fill="none" stroke="#ffd562" stroke-opacity=".88"/>
+  <circle cx="1051" cy="88" r="4" fill="#ffd562"/>
+  <circle cx="1125" cy="480" r="3" fill="#ff8c70"/>
+  <circle cx="865" cy="113" r="2.5" fill="#61e0e7"/>
+
+  <text x="78" y="76" fill="#61e0e7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" letter-spacing="2.2">RAPHAËL PINSON · PORTFOLIO</text>
+  <text x="78" y="177" fill="#f5fafb" font-family="Inter, Helvetica, Arial, sans-serif" font-size="67" font-weight="760" letter-spacing="-2.1">
+    <tspan x="78" dy="0">Making infrastructure</tspan>
+    <tspan x="78" dy="76">work better</tspan>
+    <tspan x="78" dy="76" fill="#ffd562">for people.</tspan>
+  </text>
+
+  <text x="80" y="468" fill="#bdd2d7" font-family="Inter, Helvetica, Arial, sans-serif" font-size="23" font-weight="520">People × interfaces × systems</text>
+  <line x1="80" y1="514" x2="760" y2="514" stroke="#ffffff" stroke-opacity=".2"/>
+  <text x="80" y="558" fill="#a6c2ca" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="1.5">DEVOPS  ·  PLATFORM ENGINEERING  ·  TECHNICAL EDUCATION</text>
+
+  <rect x="894" y="136" width="230" height="230" rx="12" fill="#061820" stroke="#ffffff" stroke-opacity=".45"/>
+  <image x="900" y="142" width="218" height="218" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-clip)" xlink:href="raphael-pinson-2025.webp"/>
+  <text x="899" y="401" fill="#f5fafb" font-family="Inter, Helvetica, Arial, sans-serif" font-size="21" font-weight="720">Raphaël Pinson</text>
+  <text x="899" y="427" fill="#a6c2ca" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="1">LAUSANNE · SWITZERLAND</text>
+</svg>
