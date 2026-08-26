@@ -28,12 +28,25 @@
   transform-origin: 50% 50%;
 }
 
-.hero-orbit-copy text {
-  fill: #dce9ec;
-  filter: drop-shadow(0 2px 3px rgba(4, 21, 29, .7));
-  font: 620 15px/1.1 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  letter-spacing: .012em;
-  text-anchor: middle;
+.orbit-label circle {
+  fill: var(--yellow);
+}
+
+.orbit-label path {
+  fill: none;
+  stroke: rgba(255, 213, 98, .75);
+  stroke-width: 1;
+}
+
+.orbit-label text {
+  fill: #edf5f6;
+  font: 610 18px/1.25 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -.01em;
+}
+
+.orbit-label tspan + tspan {
+  fill: #bdd2d7;
+  font-weight: 510;
 }
 
 .hero-principle {
@@ -100,7 +113,7 @@
   }
 
   .hero-orbit-copy text {
-    font-size: 13px;
+    font-size: 21px;
   }
 }
 
