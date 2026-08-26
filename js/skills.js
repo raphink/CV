@@ -10,10 +10,10 @@
       link: 'https://github.com/raphink',
       linkText: 'Explore the work ↗',
       journey: [
-        ['2005', 'Reproducible operations', 'Turn server knowledge into code and shared practice.'],
-        ['2007', 'Configuration as an interface', 'Puppet and Augeas connect intent to system state.'],
-        ['2016', 'Infrastructure as code', 'Reusable Terraform work makes change reviewable.'],
-        ['Today', 'Context before commands', 'Teach the reason a tool exists, then how to use it.']
+        ['2005', 'Ubuntu Developer', 'Reproducible operations', 'Turn server knowledge into code and shared practice.'],
+        ['2007', 'Systems Engineer · Orange', 'Configuration as an interface', 'Puppet and Augeas connect intent to system state.'],
+        ['2016', 'Infrastructure Developer · Camptocamp', 'Infrastructure as code', 'Reusable Terraform work makes change reviewable.'],
+        ['Today', 'Technical Marketing Engineer · Isovalent at Cisco', 'Context before commands', 'Teach the reason a tool exists, then how to use it.']
       ]
     },
     platform: {
@@ -24,10 +24,10 @@
       link: 'https://www.youtube.com/watch?v=yf_exP0ohOU',
       linkText: 'Watch: Bridging Dev and Ops ↗',
       journey: [
-        ['2012', 'Cloud foundations', 'Expose infrastructure as a coherent service with OpenStack.'],
-        ['2015', 'Container platforms', 'Rancher begins the path from clusters to usable operations.'],
-        ['2017', 'Kubernetes practice', 'Build, teach, and operate shared cloud-native foundations.'],
-        ['2022', 'See the system together', 'Cilium, Hubble, and eBPF connect technical signals to action.']
+        ['2012', 'Infrastructure Developer · Camptocamp', 'Cloud foundations', 'Expose infrastructure as a coherent service with OpenStack.'],
+        ['2015', 'Infrastructure Developer · Camptocamp', 'Container platforms', 'Rancher begins the path from clusters to usable operations.'],
+        ['2017', 'Infrastructure Developer · Camptocamp', 'Kubernetes practice', 'Build, teach, and operate shared cloud-native foundations.'],
+        ['2022', 'Solutions Architect · Isovalent', 'See the system together', 'Cilium, Hubble, and eBPF connect technical signals to action.']
       ]
     },
     education: {
@@ -38,10 +38,10 @@
       link: 'https://isovalent.com/blog/post/cilium-lab-champion/',
       linkText: 'Read: Lab Champion programme ↗',
       journey: [
-        ['2008', 'Teach the local practice', 'Help colleagues at Orange package software for Debian.'],
-        ['2012', 'Build a curriculum', 'Teach Puppet, then develop structured technical programmes.'],
-        ['2014—21', 'Follow the platform shift', 'Create programmes for Docker, Terraform, and Kubernetes.'],
-        ['2022—now', 'Learning as a system', 'Hands-on labs, automation, feedback, badges—and 100k+ sessions.']
+        ['2008', 'Systems Engineer · Orange', 'Teach the local practice', 'Help colleagues at Orange package software for Debian.'],
+        ['2012', 'Infrastructure Developer · Camptocamp', 'Build a curriculum', 'Teach Puppet, then develop structured technical programmes.'],
+        ['2014—21', 'Infrastructure Developer · Camptocamp', 'Follow the platform shift', 'Create programmes for Docker, Terraform, and Kubernetes.'],
+        ['2022—now', 'Isovalent · now Cisco', 'Learning as a system', 'Hands-on labs, automation, feedback, badges—and 100k+ sessions.']
       ]
     }
   };
@@ -70,7 +70,7 @@
     link.href = route.link;
     link.textContent = route.linkText;
     journey.innerHTML = route.journey.map(function (stop) {
-      return '<li><time>' + stop[0] + '</time><strong>' + stop[1] + '</strong><p>' + stop[2] + '</p></li>';
+      return '<li><time><span>' + stop[0] + '</span><small>' + stop[1] + '</small></time><strong>' + stop[2] + '</strong><p>' + stop[3] + '</p></li>';
     }).join('');
     prepareExternalLinks(detailPanel);
     if (focusPanel) document.getElementById('route-detail').focus({ preventScroll: true });
