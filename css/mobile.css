@@ -29,12 +29,10 @@
 }
 
 .hero-orbit-copy text {
-  fill: #d9e8eb;
-  stroke: var(--night);
-  stroke-width: 5px;
-  paint-order: stroke fill;
-  font: 750 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: .025em;
+  fill: #dce9ec;
+  filter: drop-shadow(0 2px 3px rgba(4, 21, 29, .7));
+  font: 620 15px/1.1 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: .012em;
   text-anchor: middle;
 }
 
@@ -94,6 +92,16 @@
 
 .route-label-short {
   display: none;
+}
+
+@media (min-width: 901px) and (max-width: 1050px) {
+  .hero-orbit-copy {
+    right: -11vw;
+  }
+
+  .hero-orbit-copy text {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 900px) {
