@@ -16,6 +16,7 @@ gate('C6 evidence is specific, attributable, and reachable', all(js, ['hercules-
 gate('C7 public-speaking record is accurate', all(html, ['More than 20 talks delivered; 19 recorded.', 'PlatformCon', '19 recordings']));
 gate('C8 route introduction is direct', html.includes('Each route below shows the same practice') && !html.includes('Select a route.'));
 gate('C9 original technical depth remains available', all(html, ['href="archive.html"', 'Explore the full working history.', 'Technical archive ↗']) && existsSync(new URL('../archive.html', import.meta.url)) && existsSync(new URL('../js/archive.js', import.meta.url)) && existsSync(new URL('../css/archive.css', import.meta.url)));
+gate('C10 recordings and writing can be experienced in-page', all(html, ['id="content-viewer"', 'Watch here ↓', 'Open viewer ↓']) && all(js, ['youtube-nocookie.com/embed/', "'lab-champion'", 'Introducing the Isovalent Lab Champion Program', 'article-reader']));
 gate('P1 semantic landmarks and one H1', all(html, ['<header class="site-header">', '<main id="top">', '<footer>', 'role="tablist"', 'role="tabpanel"']) && (html.match(/<h1[ >]/g) ?? []).length === 1);
 gate('P2 interaction works without dependency', all(html, ['<script src="js/skills.js" defer></script>']) && !/<script[^>]+https?:|<link[^>]+https?:/i.test(html));
 gate('P3 keyboard route navigation', all(js, ['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft', 'Home', 'End', "setAttribute('aria-selected'"]));
@@ -25,9 +26,10 @@ gate('P6 responsive layouts cover map and evidence', all(css, ['@media(max-width
 gate('P7 mobile selection reveals evidence immediately', all(js, ["matchMedia('(max-width: 900px)')", 'detailPanel.scrollIntoView', "detailPanel.focus({ preventScroll: true })"]));
 gate('P8 external evidence opens safely in new tabs', all(js, ["querySelectorAll('a[href^=\"http\"]')", "externalLink.target = '_blank'", "externalLink.rel = 'noopener noreferrer'"]));
 gate('P9 selected cases are part of every route', (js.match(/cases: \[/g) ?? []).length === 3 && all(html, ['class="case-studies"', 'id="detail-cases"']) && all(mobileCss, ['.case-grid', '.case-card', 'grid-template-columns: 1fr']));
-gate('P10 restrained scroll motion with a static fallback', all(js, ['IntersectionObserver', "querySelectorAll('main > section:not(.hero)')", "matchMedia('(prefers-reduced-motion: reduce)')", "hero.classList.add('is-visible')"]) && all(mobileCss, ['.motion-ready .hero-orbit-copy', 'transform: rotate(38deg)', '.motion-ready .scroll-slide', '@media (prefers-reduced-motion: reduce)']));
-gate('P11 accessible focus and reduced motion', all(css, ['a:focus-visible,button:focus-visible', '@media(prefers-reduced-motion:reduce)']));
-gate('P12 no product funnel language', !/see the interfaces in action|work-card|system-map|hero-cta/i.test(html));
+gate('P10 embedded viewer is accessible and progressively enhanced', all(html, ['<dialog class="content-viewer"', 'aria-labelledby="viewer-title"', 'aria-label="Close content viewer"', 'Open original ↗']) && all(js, ["typeof viewer.showModal !== 'function'", "setAttribute('aria-haspopup', 'dialog')", "viewer.addEventListener('close'", "viewerTrigger.focus()", "viewerBody.innerHTML = ''"]));
+gate('P11 restrained scroll motion with a static fallback', all(js, ['IntersectionObserver', "querySelectorAll('main > section:not(.hero)')", "matchMedia('(prefers-reduced-motion: reduce)')", "hero.classList.add('is-visible')"]) && all(mobileCss, ['.motion-ready .hero-orbit-copy', 'transform: rotate(38deg)', '.motion-ready .scroll-slide', '@media (prefers-reduced-motion: reduce)']));
+gate('P12 accessible focus and reduced motion', all(css, ['a:focus-visible,button:focus-visible', '@media(prefers-reduced-motion:reduce)']));
+gate('P13 no product funnel language', !/see the interfaces in action|work-card|system-map|hero-cta/i.test(html));
 
 if (failed) { console.error(`\n${failed} quality gate(s) failed.`); process.exitCode = 1; }
 else console.log('\nAll conceptual portfolio gates passed.');

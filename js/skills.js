@@ -26,7 +26,7 @@
       summary: 'A platform is an interface between infrastructure and the people who depend on it. Its value is not hidden capability, but confident, shared operation.',
       tools: 'OpenStack · Rancher · Kubernetes · OpenShift · Argo CD · Cilium · Hubble · Tetragon',
       link: 'https://www.youtube.com/watch?v=yf_exP0ohOU',
-      linkText: 'Watch: Bridging Dev and Ops ↗',
+      linkText: 'Watch here: Bridging Dev and Ops ↓',
       cases: [
         ['Infrastructure made inspectable', 'Terraboard', 'Built a web interface for Terraform state so teams could understand shared infrastructure without reading raw state files.', 'https://github.com/camptocamp/terraboard', 'Explore Terraboard ↗'],
         ['A reusable path to operation', 'DevOps Stack', 'Helped shape a shared Kubernetes platform around declarative delivery, reusable components, and an operable path for teams.', 'https://devops-stack.io/', 'Explore DevOps Stack ↗']
@@ -44,7 +44,7 @@
       summary: 'Education is an interface between knowing and doing. The learning environment must let people form a mental model, act on a real system, and learn from feedback.',
       tools: 'Debian packaging · Puppet · Docker · Terraform · Kubernetes · Cilium · Tetragon',
       link: 'https://isovalent.com/blog/post/cilium-lab-champion/',
-      linkText: 'Read: Lab Champion programme ↗',
+      linkText: 'Read here: Lab Champion programme ↓',
       cases: [
         ['Learning environment as product', 'Isovalent labs', 'Built a guided cloud-native practice environment with immediate feedback, clear progress, and more than 100k lab sessions supported.', 'https://labs.isovalent.com/', 'Enter the labs ↗'],
         ['Mental model, then real system', 'Public workshops and talks', 'Made complex infrastructure approachable through explanations, live systems, and reusable hands-on workshops delivered to public audiences.', 'https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe', 'Browse 19 recordings ↗']
@@ -67,6 +67,24 @@
   var tools = document.getElementById('detail-tools');
   var link = document.getElementById('detail-link');
   var detailPanel = document.getElementById('route-detail');
+  var viewer = document.getElementById('content-viewer');
+  var viewerBody = document.getElementById('viewer-body');
+  var viewerKind = document.getElementById('viewer-kind');
+  var viewerTitle = document.getElementById('viewer-title');
+  var viewerSource = document.getElementById('viewer-source');
+  var viewerClose = viewer.querySelector('.viewer-close');
+  var viewerTrigger = null;
+
+  var articles = {
+    'lab-champion': {
+      title: 'Introducing the Isovalent Lab Champion Program',
+      meta: '16 May 2024 · Raphaël Pinson & Nico Vibert · Isovalent',
+      image: 'https://cdn.sanity.io/images/xinsvxfu/production/44d09c29515cf6ce45320f68a23841b4cadc4463-6085x5539.png?rect=0,1173,6085,3195&w=1200&h=630',
+      imageAlt: 'Isovalent Lab Champion Program',
+      summary: 'A look at the programme built around Isovalent’s hands-on labs: how repeated practice becomes visible progress, recognised expertise, and a path for learners to help others.',
+      points: ['Learning through real cloud-native environments', 'Progress and recognition designed into the experience', 'A community path from learner to champion']
+    }
+  };
 
   function render(key, focusPanel) {
     var route = routes[key];
@@ -88,6 +106,7 @@
     cases.innerHTML = route.cases.map(function (project) {
       return '<a class="case-card" href="' + project[3] + '"><small>' + project[0] + '</small><strong>' + project[1] + '</strong><p>' + project[2] + '</p><span>' + project[4] + '</span></a>';
     }).join('');
+    prepareEmbeddableLinks(detailPanel);
     prepareExternalLinks(detailPanel);
     if (focusPanel) document.getElementById('route-detail').focus({ preventScroll: true });
   }
@@ -97,6 +116,79 @@
       externalLink.target = '_blank';
       externalLink.rel = 'noopener noreferrer';
     });
+  }
+
+  function youtubeContent(url) {
+    var parsed = new URL(url);
+    var videoId = parsed.searchParams.get('v');
+    var playlistId = parsed.searchParams.get('list');
+    if (videoId) return { kind: 'video', id: videoId };
+    if (playlistId) return { kind: 'playlist', id: playlistId };
+    return null;
+  }
+
+  function escapeHtml(value) {
+    return value.replace(/[&<>"']/g, function (character) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[character];
+    });
+  }
+
+  function prepareEmbeddableLinks(root) {
+    Array.prototype.forEach.call(root.querySelectorAll('a[href]'), function (contentLink) {
+      var href = contentLink.href;
+      delete contentLink.dataset.contentKind;
+      delete contentLink.dataset.contentId;
+      contentLink.classList.remove('has-embedded-content');
+      contentLink.removeAttribute('aria-haspopup');
+      var youtube = href.includes('youtube.com/') ? youtubeContent(href) : null;
+      if (youtube) {
+        contentLink.dataset.contentKind = youtube.kind;
+        contentLink.dataset.contentId = youtube.id;
+      }
+      if (href === 'https://isovalent.com/blog/post/cilium-lab-champion/') {
+        contentLink.dataset.contentKind = 'article';
+        contentLink.dataset.contentId = 'lab-champion';
+      }
+      if (contentLink.dataset.contentKind) {
+        contentLink.classList.add('has-embedded-content');
+        contentLink.setAttribute('aria-haspopup', 'dialog');
+      }
+    });
+  }
+
+  function openViewer(trigger) {
+    if (typeof viewer.showModal !== 'function') return false;
+    var kind = trigger.dataset.contentKind;
+    var id = trigger.dataset.contentId;
+    var titleElement = trigger.querySelector('strong');
+    viewerTrigger = trigger;
+    viewerSource.href = trigger.href;
+
+    if (kind === 'video' || kind === 'playlist') {
+      var embedUrl = kind === 'video'
+        ? 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0'
+        : 'https://www.youtube-nocookie.com/embed/videoseries?list=' + encodeURIComponent(id) + '&autoplay=1&rel=0';
+      viewerKind.textContent = kind === 'video' ? 'Recording' : 'Video archive';
+      viewerTitle.textContent = titleElement ? titleElement.textContent : 'Public recording';
+      viewerBody.innerHTML = '<div class="viewer-frame"><iframe src="' + embedUrl + '" title="' + escapeHtml(viewerTitle.textContent) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>';
+    }
+
+    if (kind === 'article') {
+      var article = articles[id];
+      if (!article) return false;
+      viewerKind.textContent = 'Article preview';
+      viewerTitle.textContent = article.title;
+      viewerBody.innerHTML = '<article class="article-reader"><img src="' + escapeHtml(article.image) + '" alt="' + escapeHtml(article.imageAlt) + '"><div><p class="article-meta">' + escapeHtml(article.meta) + '</p><p class="article-summary">' + escapeHtml(article.summary) + '</p><ul>' + article.points.map(function (point) { return '<li>' + escapeHtml(point) + '</li>'; }).join('') + '</ul></div></article>';
+    }
+
+    document.body.classList.add('viewer-open');
+    viewer.showModal();
+    viewerClose.focus();
+    return true;
+  }
+
+  function closeViewer() {
+    viewer.close();
   }
 
   function prepareScrollMotion() {
@@ -160,7 +252,26 @@
     });
   });
 
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('a[data-content-kind]');
+    if (!trigger) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (openViewer(trigger)) event.preventDefault();
+  });
+
+  viewerClose.addEventListener('click', closeViewer);
+  viewer.addEventListener('click', function (event) {
+    if (event.target === viewer) closeViewer();
+  });
+  viewer.addEventListener('close', function () {
+    document.body.classList.remove('viewer-open');
+    viewerBody.innerHTML = '';
+    if (viewerTrigger) viewerTrigger.focus();
+    viewerTrigger = null;
+  });
+
   prepareExternalLinks(document);
+  prepareEmbeddableLinks(document);
   render('devops', false);
   prepareScrollMotion();
 }());
