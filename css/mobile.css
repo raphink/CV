@@ -466,6 +466,10 @@
   display: none;
 }
 
+.mobile-route-sequence {
+  display: none;
+}
+
 @media (min-width: 901px) {
   .route-legend {
     display: flex;
@@ -633,8 +637,24 @@
 }
 
 @media (max-width: 900px) {
+  .route-stage {
+    display: contents;
+  }
+
+  .route-sequence-ready .route-stage > .route-detail,
   .route-scroll-track {
     display: none;
+  }
+
+  .route-sequence-ready .mobile-route-sequence {
+    display: grid;
+    gap: 18px;
+    margin-top: 14px;
+  }
+
+  .mobile-route-panel {
+    margin-top: 0;
+    scroll-margin-top: 140px;
   }
 
   .hero-orbit-copy {

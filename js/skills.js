@@ -75,7 +75,15 @@
   var viewerClose = viewer.querySelector('.viewer-close');
   var viewerTrigger = null;
   var routeStops = Array.prototype.slice.call(document.querySelectorAll('[data-scroll-route]'));
+  var routesControl = document.querySelector('.routes');
+  var mobileRouteSequence = document.getElementById('mobile-route-sequence');
+  var mobileRouteMedia = window.matchMedia('(max-width: 900px)');
   var activeRouteKey = null;
+  var routeChapterLabels = {
+    devops: '01 · DevOps',
+    platform: '02 · Platform engineering',
+    education: '03 · Technical education'
+  };
 
   var articles = {
     'lab-champion': {
@@ -111,32 +119,74 @@
   ];
   var playlistCurrentIndex = 0;
 
+  function journeyMarkup(route) {
+    return route.journey.map(function (stop) {
+      return '<li><time><span>' + stop[0] + '</span><small>' + stop[1] + '</small></time><strong>' + stop[2] + '</strong><p>' + stop[3] + '</p></li>';
+    }).join('');
+  }
+
+  function casesMarkup(route) {
+    return route.cases.map(function (project) {
+      return '<a class="case-card" href="' + project[3] + '"><small>' + project[0] + '</small><strong>' + project[1] + '</strong><p>' + project[2] + '</p><span>' + project[4] + '</span></a>';
+    }).join('');
+  }
+
+  function buildMobileRouteSequence() {
+    mobileRouteSequence.innerHTML = Object.keys(routes).map(function (key) {
+      var route = routes[key];
+      return '<section class="route-detail mobile-route-panel" id="mobile-route-' + key + '" data-mobile-route="' + key + '" tabindex="-1"><div class="detail-intro"><p class="eyebrow">' + routeChapterLabels[key] + ' · ' + route.period + '</p><h3>' + route.title + '</h3><p>' + route.summary + '</p></div><ol class="journey">' + journeyMarkup(route) + '</ol><div class="case-studies"><span>Selected cases</span><div class="case-grid">' + casesMarkup(route) + '</div></div><div class="detail-foot"><div><span>Technical landscape</span><p>' + route.tools + '</p></div><a href="' + route.link + '">' + route.linkText + '</a></div></section>';
+    }).join('');
+    document.documentElement.classList.add('route-sequence-ready');
+  }
+
+  function updateRouteSelection(key) {
+    buttons.forEach(function (button) {
+      var selected = button.dataset.route === key;
+      button.classList.toggle('is-active', selected);
+      if (mobileRouteMedia.matches) {
+        button.removeAttribute('aria-selected');
+        if (selected) button.setAttribute('aria-current', 'step');
+        else button.removeAttribute('aria-current');
+      } else {
+        button.removeAttribute('aria-current');
+        button.setAttribute('aria-selected', String(selected));
+      }
+    });
+  }
+
+  function syncRouteMode() {
+    routesControl.setAttribute('role', mobileRouteMedia.matches ? 'navigation' : 'tablist');
+    buttons.forEach(function (button) {
+      if (mobileRouteMedia.matches) {
+        button.removeAttribute('role');
+        button.setAttribute('aria-controls', 'mobile-route-' + button.dataset.route);
+      } else {
+        button.setAttribute('role', 'tab');
+        button.setAttribute('aria-controls', 'route-detail');
+      }
+    });
+    updateRouteSelection(activeRouteKey || 'devops');
+  }
+
   function render(key, focusPanel) {
     var route = routes[key];
     if (!route) return;
     if (activeRouteKey === key) {
+      updateRouteSelection(key);
       if (focusPanel) detailPanel.focus({ preventScroll: true });
       return;
     }
     var changing = activeRouteKey !== null;
     activeRouteKey = key;
-    buttons.forEach(function (button) {
-      var selected = button.dataset.route === key;
-      button.classList.toggle('is-active', selected);
-      button.setAttribute('aria-selected', String(selected));
-    });
+    updateRouteSelection(key);
     period.textContent = route.period;
     title.textContent = route.title;
     summary.textContent = route.summary;
     tools.innerHTML = route.tools;
     link.href = route.link;
     link.textContent = route.linkText;
-    journey.innerHTML = route.journey.map(function (stop) {
-      return '<li><time><span>' + stop[0] + '</span><small>' + stop[1] + '</small></time><strong>' + stop[2] + '</strong><p>' + stop[3] + '</p></li>';
-    }).join('');
-    cases.innerHTML = route.cases.map(function (project) {
-      return '<a class="case-card" href="' + project[3] + '"><small>' + project[0] + '</small><strong>' + project[1] + '</strong><p>' + project[2] + '</p><span>' + project[4] + '</span></a>';
-    }).join('');
+    journey.innerHTML = journeyMarkup(route);
+    cases.innerHTML = casesMarkup(route);
     prepareEmbeddableLinks(detailPanel);
     prepareExternalLinks(detailPanel);
     if (changing && typeof detailPanel.animate === 'function' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -159,6 +209,18 @@
       threshold: 0
     });
     routeStops.forEach(function (stop) { routeObserver.observe(stop); });
+
+    var mobileRouteObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && mobileRouteMedia.matches) render(entry.target.dataset.mobileRoute, false);
+      });
+    }, {
+      rootMargin: '-30% 0px -60% 0px',
+      threshold: 0
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-mobile-route]'), function (panel) {
+      mobileRouteObserver.observe(panel);
+    });
   }
 
   function scrollToRoute(key) {
@@ -168,6 +230,16 @@
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
       block: 'center'
     });
+  }
+
+  function scrollToMobileRoute(key) {
+    var panel = document.getElementById('mobile-route-' + key);
+    if (!panel) return;
+    panel.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start'
+    });
+    panel.focus({ preventScroll: true });
   }
 
   function prepareExternalLinks(root) {
@@ -332,13 +404,9 @@
   buttons.forEach(function (button, index) {
     button.addEventListener('click', function () {
       render(button.dataset.route, false);
-      if (window.matchMedia('(max-width: 900px)').matches) {
+      if (mobileRouteMedia.matches) {
         window.requestAnimationFrame(function () {
-          detailPanel.scrollIntoView({
-            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-            block: 'start'
-          });
-          detailPanel.focus({ preventScroll: true });
+          scrollToMobileRoute(button.dataset.route);
         });
       } else scrollToRoute(button.dataset.route);
     });
@@ -352,7 +420,8 @@
       if (event.key === 'End') next = buttons.length - 1;
       buttons[next].focus();
       render(buttons[next].dataset.route, false);
-      if (!window.matchMedia('(max-width: 900px)').matches) scrollToRoute(buttons[next].dataset.route);
+      if (mobileRouteMedia.matches) scrollToMobileRoute(buttons[next].dataset.route);
+      else scrollToRoute(buttons[next].dataset.route);
     });
   });
 
@@ -379,6 +448,9 @@
     viewerTrigger = null;
   });
 
+  buildMobileRouteSequence();
+  syncRouteMode();
+  if (typeof mobileRouteMedia.addEventListener === 'function') mobileRouteMedia.addEventListener('change', syncRouteMode);
   prepareExternalLinks(document);
   prepareEmbeddableLinks(document);
   render('devops', false);
