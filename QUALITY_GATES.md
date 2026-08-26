@@ -13,10 +13,10 @@ The page is an interface to Raphaël Pinson’s practice, not a project list or 
 
 ## Experience
 
-7. **Exploration teaches the thesis** — selecting a route reveals its history, medium, and evidence using the same interaction each time.
+7. **Exploration teaches the thesis** — scrolling advances DevOps, Platform Engineering, and Technical Education through one stable evidence stage; direct selection remains available.
 8. **Immediate orientation** — route columns are explicitly labelled Constraint, Interface, and Shared capability.
 9. **Keyboard-complete** — routes use tab semantics and support arrow, Home, and End keys.
-10. **Responsive transformation** — the horizontal system becomes a vertical journey on narrow screens.
+10. **Responsive transformation** — the scroll narrative becomes a direct, compact route selector on narrow screens.
 11. **Self-contained** — the experience uses local HTML, CSS, JavaScript, and imagery with no rendering dependency.
 12. **Accessible and calm** — visible focus, semantic landmarks, useful alt text, and reduced-motion support.
 

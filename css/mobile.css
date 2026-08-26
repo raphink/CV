@@ -466,6 +466,162 @@
   display: none;
 }
 
+@media (min-width: 901px) {
+  .route-legend {
+    display: flex;
+    gap: 16px;
+    margin: 0 0 16px;
+  }
+
+  .route-legend span + span::before {
+    margin-right: 16px;
+    color: #0a899c;
+    content: '→';
+  }
+
+  .route-explorer {
+    display: grid;
+  }
+
+  .route-stage,
+  .route-scroll-track {
+    grid-area: 1 / 1;
+  }
+
+  .route-stage {
+    position: sticky;
+    top: 84px;
+    z-index: 2;
+    align-self: start;
+    display: grid;
+    grid-template-columns: minmax(220px, .32fr) minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .route-scroll-track {
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .route-scroll-stop {
+    display: block;
+    height: max(72vh, 590px);
+  }
+
+  .route-stage .routes {
+    align-content: start;
+  }
+
+  .route-stage .route {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 17px 18px;
+  }
+
+  .route-stage .route-name {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 5px 8px;
+  }
+
+  .route-stage .route-name b {
+    grid-row: 1 / 3;
+    padding-top: 4px;
+  }
+
+  .route-stage .route-name small {
+    grid-column: 2;
+  }
+
+  .route-stage .route-step {
+    min-height: 0;
+    margin-top: 10px;
+    padding: 9px 0 0 32px;
+    border-top: 1px solid rgba(16, 36, 45, .16);
+    border-left: 0;
+  }
+
+  .route-stage .is-active .route-step {
+    border-color: rgba(255, 255, 255, .15);
+  }
+
+  .route-stage .route-step i {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .route-stage .route-step small,
+  .route-stage .route-arrow {
+    display: none;
+  }
+
+  .route-stage .route-detail {
+    margin-top: 0;
+    padding: clamp(27px, 3vw, 40px);
+  }
+
+  .route-stage .detail-intro {
+    grid-template-columns: 125px 1.1fr .9fr;
+    gap: clamp(20px, 2.5vw, 34px);
+  }
+
+  .route-stage .detail-intro h3 {
+    font-size: clamp(28px, 3vw, 43px);
+  }
+
+  .route-stage .detail-intro > p:last-child {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .route-stage .journey {
+    margin-top: 34px;
+  }
+
+  .route-stage .journey li {
+    min-height: 126px;
+    padding-top: 22px;
+  }
+
+  .route-stage .journey strong {
+    font-size: 15px;
+  }
+
+  .route-stage .journey p {
+    font-size: 11px;
+  }
+
+  .route-stage .case-studies {
+    margin-top: 24px;
+    padding-top: 19px;
+  }
+
+  .route-stage .case-card {
+    min-height: 144px;
+    padding: 18px;
+  }
+
+  .route-stage .case-card strong {
+    margin-top: 9px;
+    font-size: 17px;
+  }
+
+  .route-stage .case-card p {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .route-stage .case-card span {
+    padding-top: 12px;
+  }
+
+  .route-stage .detail-foot {
+    margin-top: 22px;
+    padding-top: 18px;
+  }
+}
+
 @media (min-width: 901px) and (max-width: 1050px) {
   .hero-orbit-copy {
     right: -11vw;
@@ -477,6 +633,10 @@
 }
 
 @media (max-width: 900px) {
+  .route-scroll-track {
+    display: none;
+  }
+
   .hero-orbit-copy {
     display: none;
   }
