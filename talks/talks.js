@@ -138,7 +138,7 @@
     }
     yearRail.hidden = false;
     yearRail.parentElement.classList.add('has-year-rail');
-    yearRail.innerHTML = '<span class="year-rail-label">Year</span><output id="year-current" for="year-range">' + visibleYears[visibleYears.length - 1] + '</output><input id="year-range" type="range" min="0" max="' + (visibleYears.length - 1) + '" step="1" value="' + (visibleYears.length - 1) + '" aria-label="Jump to year ' + visibleYears[visibleYears.length - 1] + '"><span class="year-rail-end">' + visibleYears[visibleYears.length - 1] + '</span><span class="year-rail-end">' + visibleYears[0] + '</span>';
+    yearRail.innerHTML = '<span class="year-rail-label">Year</span><output id="year-current" for="year-range">' + visibleYears[visibleYears.length - 1] + '</output><input id="year-range" type="range" min="0" max="' + (visibleYears.length - 1) + '" step="1" value="' + (visibleYears.length - 1) + '" aria-label="Jump to year ' + visibleYears[visibleYears.length - 1] + '"><span class="year-rail-end">' + visibleYears[0] + '</span>';
   }
 
   function scheduleYearRailUpdate() {
