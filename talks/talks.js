@@ -191,7 +191,7 @@
     var remoteDeckOnly = !hasVideo && !hasDeck && Boolean(talk.slideUrl);
     var mediaClass = hasBoth ? 'detail-media' : (hasDeck ? 'detail-media deck-only' : (hasVideo ? 'detail-media video-only' : 'detail-media remote-deck-only'));
     var mobileTabs = hasBoth ? '<div class="mobile-media-tabs" role="group" aria-label="Choose media"><button type="button" data-media="video" aria-pressed="true">Video</button><button type="button" data-media="slides" aria-pressed="false">Slides</button></div>' : '';
-    var playerToolbar = hasBoth ? '<div class="player-toolbar"><div class="layout-controls" role="group" aria-label="Player layout"><button type="button" data-layout="split" aria-pressed="true">Side by side</button><button type="button" data-layout="video" aria-pressed="false">Focus video</button><button type="button" data-layout="slides" aria-pressed="false">Focus slides</button></div><div class="player-toolbar-right">' + syncControl + mobileTabs + '<button class="expand-player" type="button" data-expand-player aria-pressed="false">Expand view</button></div></div>' : '';
+    var playerToolbar = hasBoth ? '<div class="player-toolbar"><div class="layout-controls" role="group" aria-label="Player layout"><button type="button" data-layout="split" aria-pressed="true">Side by side</button><button type="button" data-layout="video" aria-pressed="false">Focus video</button><button type="button" data-layout="slides" aria-pressed="false">Focus slides</button></div><div class="player-toolbar-right">' + syncControl + mobileTabs + '<button class="expand-player" type="button" data-expand-player aria-label="Expand side-by-side view" title="Expand side-by-side view" aria-pressed="false"><svg data-expand-icon viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3M21 16v3a2 2 0 0 1-2 2h-3"/></svg><span class="visually-hidden">Expand side-by-side view</span></button></div></div>' : '';
     detail.innerHTML = '<a class="detail-back" href="./">← All talks</a>' +
       '<div class="detail-heading"><div><p class="eyebrow">' + escapeHtml(talk.topic) + (talk.event ? ' · ' + escapeHtml(talk.event) : '') + ' · ' + escapeHtml(talk.dateDisplay || formatDate(talk.date || '')) + '</p><h1 id="modal-title">' + escapeHtml(talk.title) + '</h1></div></div>' +
       playerToolbar + '<div class="' + mediaClass + '" data-layout="' + (hasBoth ? 'split' : (hasDeck ? 'slides' : 'video')) + '" data-active="video">' + videoMarkup + localDeck + (remoteDeckOnly ? '<div class="remote-deck-card"><span class="eyebrow">SlideShare deck · ' + (Number(talk.slideCount) ? Number(talk.slideCount) + ' slides' : 'presentation') + '</span><a href="' + escapeHtml(talk.slideUrl) + '" target="_blank" rel="noopener noreferrer">View presentation ↗</a></div>' : '') + '</div>' + (talk.slideCueNote ? '<p class="slide-cue-note">' + escapeHtml(talk.slideCueNote) + '</p>' : '') +
@@ -373,7 +373,11 @@
     if (expandButton) {
       var expanded = modal.classList.toggle('expanded');
       expandButton.setAttribute('aria-pressed', String(expanded));
-      expandButton.textContent = expanded ? 'Restore size' : 'Expand view';
+      var label = expanded ? 'Restore normal size' : 'Expand side-by-side view';
+      expandButton.setAttribute('aria-label', label);
+      expandButton.title = label;
+      expandButton.querySelector('.visually-hidden').textContent = label;
+      expandButton.querySelector('[data-expand-icon]').innerHTML = expanded ? '<path d="M9 4v5H4M20 9h-5V4M4 15h5v5M15 20v-5h5"/>' : '<path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3M21 16v3a2 2 0 0 1-2 2h-3"/>';
       return;
     }
     var layoutButton = event.target.closest('[data-layout]');
