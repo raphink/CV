@@ -58,3 +58,7 @@
 .talk-card-formats svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
 .talk-thumb-kind{justify-content:center;min-width:26px;padding:0 6px}
 .talk-thumb-kind svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
+.expand-player{padding:8px 10px;border:1px solid rgba(255,255,255,.2);border-radius:3px;background:transparent;color:#b4c8ce;font:650 9px ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;cursor:pointer}
+.expand-player:hover,.expand-player[aria-pressed=true]{border-color:#61e0e7;color:#f5fafb}
+.talk-modal.expanded{width:calc(100vw - 20px);max-width:none;max-height:calc(100dvh - 20px);height:fit-content;border-radius:7px}
+@media(max-width:900px){.expand-player{display:none}}

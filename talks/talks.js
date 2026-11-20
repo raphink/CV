@@ -177,6 +177,7 @@
 
   function renderDetail(talk) {
     activeTalk = talk;
+    modal.classList.remove('expanded');
     currentSlide = (talk.slideCues && talk.slideCues.length) ? talk.slideCues[0].page : 1;
     var pageCount = Number(talk.pageCount) || 1;
     var hasVideo = Boolean(talk.id);
@@ -190,7 +191,7 @@
     var remoteDeckOnly = !hasVideo && !hasDeck && Boolean(talk.slideUrl);
     var mediaClass = hasBoth ? 'detail-media' : (hasDeck ? 'detail-media deck-only' : (hasVideo ? 'detail-media video-only' : 'detail-media remote-deck-only'));
     var mobileTabs = hasBoth ? '<div class="mobile-media-tabs" role="group" aria-label="Choose media"><button type="button" data-media="video" aria-pressed="true">Video</button><button type="button" data-media="slides" aria-pressed="false">Slides</button></div>' : '';
-    var playerToolbar = hasBoth ? '<div class="player-toolbar"><div class="layout-controls" role="group" aria-label="Player layout"><button type="button" data-layout="split" aria-pressed="true">Side by side</button><button type="button" data-layout="video" aria-pressed="false">Focus video</button><button type="button" data-layout="slides" aria-pressed="false">Focus slides</button></div><div class="player-toolbar-right">' + syncControl + mobileTabs + '</div></div>' : '';
+    var playerToolbar = hasBoth ? '<div class="player-toolbar"><div class="layout-controls" role="group" aria-label="Player layout"><button type="button" data-layout="split" aria-pressed="true">Side by side</button><button type="button" data-layout="video" aria-pressed="false">Focus video</button><button type="button" data-layout="slides" aria-pressed="false">Focus slides</button></div><div class="player-toolbar-right">' + syncControl + mobileTabs + '<button class="expand-player" type="button" data-expand-player aria-pressed="false">Expand view</button></div></div>' : '';
     detail.innerHTML = '<a class="detail-back" href="./">← All talks</a>' +
       '<div class="detail-heading"><div><p class="eyebrow">' + escapeHtml(talk.topic) + (talk.event ? ' · ' + escapeHtml(talk.event) : '') + ' · ' + escapeHtml(talk.dateDisplay || formatDate(talk.date || '')) + '</p><h1 id="modal-title">' + escapeHtml(talk.title) + '</h1></div></div>' +
       playerToolbar + '<div class="' + mediaClass + '" data-layout="' + (hasBoth ? 'split' : (hasDeck ? 'slides' : 'video')) + '" data-active="video">' + videoMarkup + localDeck + (remoteDeckOnly ? '<div class="remote-deck-card"><span class="eyebrow">SlideShare deck · ' + (Number(talk.slideCount) ? Number(talk.slideCount) + ' slides' : 'presentation') + '</span><a href="' + escapeHtml(talk.slideUrl) + '" target="_blank" rel="noopener noreferrer">View presentation ↗</a></div>' : '') + '</div>' + (talk.slideCueNote ? '<p class="slide-cue-note">' + escapeHtml(talk.slideCueNote) + '</p>' : '') +
@@ -296,6 +297,7 @@
 
   function showArchive() {
     if (modal.open) modal.close();
+    modal.classList.remove('expanded');
     detail.innerHTML = '';
     browser.hidden = false;
     document.title = 'Talks — Raphaël Pinson';
@@ -367,6 +369,13 @@
   document.querySelector('.modal-close').addEventListener('click', function () { modal.close(); });
   modal.addEventListener('click', function (event) { if (event.target === modal) modal.close(); });
   modal.addEventListener('click', function (event) {
+    var expandButton = event.target.closest('[data-expand-player]');
+    if (expandButton) {
+      var expanded = modal.classList.toggle('expanded');
+      expandButton.setAttribute('aria-pressed', String(expanded));
+      expandButton.textContent = expanded ? 'Restore size' : 'Expand view';
+      return;
+    }
     var layoutButton = event.target.closest('[data-layout]');
     if (layoutButton) {
       var layout = layoutButton.dataset.layout;
