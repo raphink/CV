@@ -164,9 +164,10 @@
     "slideCount": 66,
     "slideTitle": "Cfgmgmtcamp 2024 — eBPF-based Security Observability & Runtime Enforcement with Cilium Tetragon.pdf",
     "event": "Cfgmgmtcamp 2024",
-    "date": "2024-02-05",
-    "dateDisplay": "Feb 5–7, 2024",
-    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2024/"
+    "date": "2024-02-06",
+    "dateDisplay": "Feb 6, 2024",
+    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2024/",
+    "programUrl": "https://cfp.cfgmgmtcamp.org/2024/talk/JSW89F/"
   },
   {
     "id": "5dBbQlzUep8",
@@ -177,7 +178,174 @@
     "pageCount": 67,
     "date": "2025-10-16",
     "dateDisplay": "Oct 16–17, 2025",
-    "conferenceUrl": "https://taloscon.com/"
+    "conferenceUrl": "https://taloscon.com/",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 47,
+        "page": 2
+      },
+      {
+        "time": 51,
+        "page": 3
+      },
+      {
+        "time": 59,
+        "page": 4
+      },
+      {
+        "time": 86,
+        "page": 5
+      },
+      {
+        "time": 308,
+        "page": 8
+      },
+      {
+        "time": 398,
+        "page": 9
+      },
+      {
+        "time": 412,
+        "page": 10
+      },
+      {
+        "time": 487,
+        "page": 11
+      },
+      {
+        "time": 523,
+        "page": 12
+      },
+      {
+        "time": 553,
+        "page": 13
+      },
+      {
+        "time": 591,
+        "page": 14
+      },
+      {
+        "time": 620,
+        "page": 15
+      },
+      {
+        "time": 653,
+        "page": 16
+      },
+      {
+        "time": 784,
+        "page": 18
+      },
+      {
+        "time": 911,
+        "page": 19
+      },
+      {
+        "time": 1163,
+        "page": 28
+      },
+      {
+        "time": 1180,
+        "page": 29
+      },
+      {
+        "time": 1207,
+        "page": 30
+      },
+      {
+        "time": 1283,
+        "page": 31
+      },
+      {
+        "time": 1309,
+        "page": 32
+      },
+      {
+        "time": 1359,
+        "page": 33
+      },
+      {
+        "time": 1479,
+        "page": 34
+      },
+      {
+        "time": 1526,
+        "page": 35
+      },
+      {
+        "time": 1548,
+        "page": 36
+      },
+      {
+        "time": 1674,
+        "page": 37
+      },
+      {
+        "time": 1784,
+        "page": 38
+      },
+      {
+        "time": 1801,
+        "page": 39
+      },
+      {
+        "time": 1809,
+        "page": 40
+      },
+      {
+        "time": 1823,
+        "page": 41
+      },
+      {
+        "time": 1828,
+        "page": 42
+      },
+      {
+        "time": 1845,
+        "page": 43
+      },
+      {
+        "time": 1905,
+        "page": 48
+      },
+      {
+        "time": 1971,
+        "page": 50
+      },
+      {
+        "time": 1981,
+        "page": 51
+      },
+      {
+        "time": 1987,
+        "page": 54
+      },
+      {
+        "time": 1991,
+        "page": 55
+      },
+      {
+        "time": 2028,
+        "page": 59
+      },
+      {
+        "time": 2039,
+        "page": 65
+      },
+      {
+        "time": 2054,
+        "page": 66
+      },
+      {
+        "time": 2075,
+        "page": 67
+      }
+    ],
+    "slideCueNote": "Approximate cues use timestamps from YouTube auto-generated captions at the first narration match for corresponding PDF slide text; slide changes may happen slightly before or after the spoken mention."
   },
   {
     "id": "0c_uSDD9r8U",
@@ -194,9 +362,6 @@
     "id": "ge-iruUlYYs",
     "title": "Révolution eBPF : un noyau Linux dynamique · DevOps D-Day",
     "topic": "eBPF and Linux",
-    "slideUrl": "https://www.slideshare.net/slideshow/rvolution-ebpf-un-noyau-dynamique/256301252",
-    "slideCount": 70,
-    "slideTitle": "Révolution eBPF - un noyau dynamique",
     "event": "DevOps D-Day 2022 · Marseille",
     "deck": "decks/devops-dday-marseille-ebpf.pdf",
     "pageCount": 40,
@@ -468,9 +633,10 @@
     "event": "Cfgmgmtcamp 2023",
     "deck": "decks/cfgmgmtcamp-2023-ebpf.pdf",
     "pageCount": 76,
-    "date": "2023-02-06",
-    "dateDisplay": "Feb 6–8, 2023",
-    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2023/"
+    "date": "2023-02-08",
+    "dateDisplay": "Feb 8, 2023",
+    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2023/",
+    "programUrl": "https://cfp.cfgmgmtcamp.org/2023/talk/SNY9ZV/"
   },
   {
     "id": "j8nT0eZcj54",
@@ -496,6 +662,7 @@
     "event": "PuppetConf 2014",
     "deck": "decks/puppetconf-2014-functional-testing.pdf",
     "pageCount": 35,
+    "conferenceUrl": "https://2014.puppetconf.com/",
     "date": "2014",
     "dateDisplay": "2014"
   },
@@ -516,7 +683,8 @@
     "topic": "Cloud native networking",
     "date": "2022-09-21",
     "dateDisplay": "Sep 21, 2022",
-    "event": "CNCF Research End User Group"
+    "event": "CNCF Research End User Group",
+    "conferenceUrl": "https://community.cncf.io/research-end-user-group/"
   },
   {
     "id": "qYXoA2gOXzU",
@@ -732,8 +900,18 @@
     "slideUrl": "https://www.slideshare.net/slideshow/augeas-rmll-2012/13602653",
     "slideCount": 38,
     "slideTitle": "Augeas @RMLL 2012",
+    "conferenceUrl": "https://2012.rmll.info/en/",
     "date": "2012",
     "dateDisplay": "2012"
+  },
+  {
+    "title": "The Hare and the Tortoise: Open Source, Standards & Technological Debt",
+    "topic": "Open source and practice",
+    "slideUrl": "https://www.slideshare.net/slideshow/the-hare-and-the-tortoise-open-source-standards-technological-debt/250597997",
+    "slideCount": 15,
+    "slideTitle": "The Hare and the Tortoise: Open Source, Standards & Technological Debt",
+    "date": null,
+    "dateDisplay": "Date not listed"
   },
   {
     "title": "The Agentic Lab Factory",

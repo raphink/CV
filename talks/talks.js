@@ -98,17 +98,19 @@
   function cardMarkup(talk) {
     var slug = talkSlug(talk);
     var event = talk.event ? talk.event : (talk.id ? 'Public recording' : 'Slide deck');
-    var format = talk.id ? (talk.deck ? 'Video + slides' : (talk.slideUrl ? 'Video + deck link' : 'Video')) : (talk.deck ? 'PDF deck' : 'SlideShare deck');
-    var thumbnail = talk.deck ? '<img src="' + escapeHtml(slideImagePath(talk, 1)) + '" alt="Cover slide for ' + escapeHtml(talk.title) + '" loading="lazy">' : (talk.id ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(talk.id) + '/hqdefault.jpg" alt="" loading="lazy"><span class="play-mark" aria-hidden="true">▶</span>' : '<img src="' + fallbackCover(talk) + '" alt="Deck artwork for ' + escapeHtml(talk.title) + '" loading="lazy">');
-    if (talk.id && talk.deck) thumbnail += '<span class="play-mark" aria-hidden="true">▶</span>';
+    var hasSlides = Boolean(talk.deck || talk.slideUrl);
+    var thumbnail = talk.deck ? '<img src="' + escapeHtml(slideImagePath(talk, 1)) + '" alt="Cover slide for ' + escapeHtml(talk.title) + '" loading="lazy">' : (talk.id ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(talk.id) + '/hqdefault.jpg" alt="" loading="lazy">' : '<img src="' + fallbackCover(talk) + '" alt="Deck artwork for ' + escapeHtml(talk.title) + '" loading="lazy">');
+    if (talk.id) thumbnail += '<span class="play-mark" aria-hidden="true">▶</span>';
     var thumbClass = talk.deck ? ' deck-cover' : '';
     var dateMarkup = talk.date ? '<time class="talk-card-date" datetime="' + escapeHtml(talk.date) + '">' + escapeHtml(talk.dateDisplay || formatDate(talk.date)) + '</time>' : '<span class="talk-card-date">' + escapeHtml(talk.dateDisplay || 'Date not listed') + '</span>';
+    var formatLabel = talk.id ? (hasSlides ? 'Video and slides' : 'Video') : (talk.deck ? 'PDF slides' : 'SlideShare deck');
+    var formatIcons = (talk.id ? '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="12" height="12" rx="1.5"/><path d="m15 10 6-3v10l-6-3z"/></svg>' : '') + (hasSlides ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h5M9 12h7M9 16h7"/></svg>' : '');
+    var thumbBrand = '<span class="talk-thumb-brand" aria-hidden="true"><span class="talk-thumb-brand-mark"></span>RAPHINK.INFO</span><span class="talk-thumb-kind" role="img" aria-label="' + formatLabel + '" title="' + formatLabel + '">' + formatIcons + '</span>';
     var year = talk.date && talk.date.match(/^\d{4}/) ? talk.date.slice(0, 4) : '';
     return '<a class="talk-card" href="?talk=' + encodeURIComponent(slug) + '" data-talk="' + escapeHtml(slug) + '" data-year="' + year + '">' +
-      '<span class="talk-thumb' + thumbClass + '">' + thumbnail + '</span>' +
-      '<span class="talk-card-copy"><span class="talk-card-meta"><span>' + escapeHtml(talk.topic) + '</span><span>' + format + '</span></span>' +
-      '<h3>' + escapeHtml(talk.title) + '</h3><span class="talk-card-event">' + escapeHtml(event) + '</span>' + dateMarkup +
-      '<span class="talk-card-action"><span>View talk</span><b aria-hidden="true">↗</b></span></span></a>';
+      '<span class="talk-thumb' + thumbClass + '">' + thumbnail + thumbBrand + '</span>' +
+      '<span class="talk-card-copy"><span class="talk-card-meta"><span>' + escapeHtml(talk.topic) + '</span><span class="talk-card-meta-right">' + dateMarkup + '<span class="talk-card-formats" role="img" aria-label="' + formatLabel + '" title="' + formatLabel + '">' + formatIcons + '</span></span></span>' +
+      '<h3>' + escapeHtml(talk.title) + '</h3><span class="talk-card-event">' + escapeHtml(event) + '</span></span></a>';
   }
 
   function renderGrid() {
@@ -136,7 +138,7 @@
     }
     yearRail.hidden = false;
     yearRail.parentElement.classList.add('has-year-rail');
-    yearRail.innerHTML = '<span class="year-rail-label">Year</span><output id="year-current" for="year-range">' + visibleYears[visibleYears.length - 1] + '</output><input id="year-range" type="range" min="0" max="' + (visibleYears.length - 1) + '" step="1" value="' + (visibleYears.length - 1) + '" aria-label="Jump to year ' + visibleYears[visibleYears.length - 1] + '"><span class="year-rail-end">' + visibleYears[0] + '</span><span class="year-rail-end">' + visibleYears[visibleYears.length - 1] + '</span>';
+    yearRail.innerHTML = '<span class="year-rail-label">Year</span><output id="year-current" for="year-range">' + visibleYears[visibleYears.length - 1] + '</output><input id="year-range" type="range" min="0" max="' + (visibleYears.length - 1) + '" step="1" value="' + (visibleYears.length - 1) + '" aria-label="Jump to year ' + visibleYears[visibleYears.length - 1] + '"><span class="year-rail-end">' + visibleYears[visibleYears.length - 1] + '</span><span class="year-rail-end">' + visibleYears[0] + '</span>';
   }
 
   function scheduleYearRailUpdate() {
