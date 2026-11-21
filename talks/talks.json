@@ -1357,6 +1357,7 @@
     "id": "qYXoA2gOXzU",
     "title": "Five-minute talks · DevOpsDays Amsterdam",
     "topic": "Open source and practice",
+    "event": "DevOpsDays Amsterdam",
     "videoStart": 1020,
     "date": null,
     "dateDisplay": "Date not listed",
@@ -1366,6 +1367,7 @@
     "id": "JJ1bFnJenms",
     "title": "Cloud Native Networking & Security with Cilium & eBPF",
     "topic": "Cloud native security",
+    "event": "Les Compagnons du DevOps",
     "deck": "decks/cloud-native-networking-security-cilium-ebpf.pdf",
     "pageCount": 49,
     "slideUrl": "https://www.slideshare.net/slideshow/cloud-native-networking-security-with-cilium-ebpf/253373760",
@@ -1672,13 +1674,14 @@
   },
   {
     "id": "j_0KwA72ZPo",
-    "title": "The platform engineer’s guide to Kubernetes networking",
+    "title": "The platform engineer’s survival guide to Kubernetes networking",
     "topic": "Cloud native networking",
+    "event": "Humanitec Webinar",
     "deck": "decks/platform-engineer-survival-guide-kubernetes-networking.pdf",
     "pageCount": 56,
     "date": "2024-07-09",
     "dateDisplay": "Jul 9, 2024",
-    "programUrl": "https://platformengineering.org/events/the-platform-engineer-s-survival-guide-to-kubernetes-networking",
+    "programUrl": "https://humanitec.com/events/the-platform-engineers-survival-guide-to-kubernetes-networking-2024-07-09",
     "slideCues": [
       {
         "time": 0,

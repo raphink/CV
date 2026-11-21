@@ -50,6 +50,8 @@
 .browser-tools{margin-top:0}
 .talk-card-meta{align-items:center}
 .talk-card-meta-right{display:inline-flex;align-items:center;gap:8px;color:#75848a}
+.talk-card-language{display:inline-flex;align-items:center;gap:3px;color:#61747a;font:700 8px ui-monospace,monospace;letter-spacing:.04em;white-space:nowrap}
+.talk-card-language span:first-child{font:10px system-ui,sans-serif;line-height:1}
 .talk-card-date{display:inline;margin:0;color:inherit;font:inherit;letter-spacing:inherit;white-space:nowrap}
 .talk-card-formats{display:inline-flex;align-items:center;gap:3px;color:#087c8d}
 .talk-card-formats svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}

@@ -1,12 +1,10 @@
 # Talks archive
 
-The archive is a static GitHub Pages page with 23 recordings: 19 from the public YouTube playlist and 4 direct event-recording links added from separate event streams.
+The archive is a static GitHub Pages page with 23 recordings: 19 from the public YouTube playlist and 4 direct event-recording links added from separate event streams. It also includes talks with decks but no recording.
 
 `https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe`
 
-The SlideShare profile has 27 presentations across two pages. Every presentation is represented in `talks.json`; repeated uploads are grouped under one talk and exposed as alternate links. Entries with no local PDF link to SlideShare:
-
-`https://www.slideshare.net/raphink`
+The SlideShare profile had 27 presentations across two pages. All 27 uploads have been matched to PDFs in the archive; alternate editions are grouped with their talk where appropriate. The profile was used as a source during migration, but visitors do not need SlideShare to view these decks.
 
 ## Add a locally hosted deck
 
@@ -14,8 +12,8 @@ The SlideShare profile has 27 presentations across two pages. Every presentation
 2. Render the PDF into local slide images with `python3 talks/render-deck.py talks/decks/<filename>.pdf`. This uses Poppler (`pdftoppm`) and writes optimized JPEG slides under `talks/decks/rendered/<filename-without-extension>/`.
    For PDFs whose landscape slides have oversized page margins, add `--crop-to-content` (requires `pdfcrop` and Pillow) to trim the margins and fit the slide into a 16:9 canvas.
 3. Add a `deck` field and its PDF `pageCount` to the matching record in `talks.json`, for example `"deck": "decks/bridging-dev-and-ops.pdf", "pageCount": 42`. The player uses the images for display and the count for its previous/next controls. Add `date` as an ISO date (or year when only that is known), `dateDisplay` for a range or a qualified label, and `programUrl` or `conferenceUrl` when available.
-4. To enable optional video-to-slide sync, add timestamp/page cues in playback order, for example `"slideCues": [{"time": 0, "page": 1}, {"time": 48, "page": 2}]`. `time` is seconds from the start of the video; `page` is the PDF page number.
-5. Commit the PDF, rendered images, and JSON change. For talks with both video and a local PDF, the modal shows the paired player with side-by-side, focus, and mobile tab layouts. When timestamp cues are present, **Slides follow video** is available; manual slide navigation pauses sync.
+4. To enable video-to-slide sync, add timestamp/page cues in playback order, for example `"slideCues": [{"time": 0, "page": 1}, {"time": 48, "page": 2}]`. `time` is seconds from the start of the video; `page` is the PDF page number. Sync starts enabled when cue data exists; viewers can turn it off, and manual slide navigation pauses it.
+5. Commit the PDF, rendered images, and JSON change. For talks with both video and a PDF, the modal shows the paired player with side-by-side, focus, and mobile tab layouts, plus an expand control. Talks with only one media type use a single-media layout.
 
 Several recordings have approximate cue maps based on event chapter markers or the first spoken matches between YouTube captions and slide text. Refine these with the local editor and keep the cue note explicit about its accuracy.
 
