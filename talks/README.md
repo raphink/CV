@@ -4,7 +4,7 @@ The archive is a static GitHub Pages page with 23 recordings: 19 from the public
 
 `https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe`
 
-The SlideShare profile had 27 presentations across two pages. All 27 uploads have been matched to PDFs in the archive; alternate editions are grouped with their talk where appropriate. The profile was used as a source during migration, but visitors do not need SlideShare to view these decks.
+The archive includes 27 imported presentations, all matched to PDFs in the collection. Alternate editions are grouped with their talk where appropriate.
 
 ## Add a locally hosted deck
 

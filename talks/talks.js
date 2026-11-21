@@ -5,6 +5,7 @@
   var grid = document.getElementById('talk-grid');
   var filters = document.getElementById('topic-filters');
   var search = document.getElementById('talk-search');
+  var languageFilter = document.getElementById('language-filter');
   var count = document.getElementById('talk-count');
   var deckCount = document.getElementById('deck-count');
   var results = document.getElementById('results-label');
@@ -15,6 +16,7 @@
   var browser = document.querySelector('.talk-browser');
   var talks = [];
   var activeTopic = 'All topics';
+  var activeLanguage = '';
   var searchTerm = '';
   var youtubePlayer = null;
   var youtubePlayerReady = false;
@@ -50,8 +52,7 @@
   function talkLanguage(talk) {
     var languages = {
       en: { name: 'English', flag: '🇬🇧', code: 'EN' },
-      fr: { name: 'French', flag: '🇫🇷', code: 'FR' },
-      multi: { name: 'Multiple languages', flag: '↔', code: 'MULTI' }
+      fr: { name: 'French', flag: '🇫🇷', code: 'FR' }
     };
     return talk.id ? languages[talk.language] || null : null;
   }
@@ -80,11 +81,11 @@
   }
 
   function talkSlug(talk) {
+    if (talk.slug) return talk.slug;
     var base = slugify(talk.title);
     var duplicates = talks.filter(function (item) { return slugify(item.title) === base; });
     if (duplicates.length < 2) return base;
-    var slideShareId = talk.slideUrl && talk.slideUrl.match(/\/(\d+)(?:\/?(?:#.*)?)?$/);
-    return base + '-' + (talk.id || (slideShareId && slideShareId[1]) || talks.indexOf(talk));
+    return base + '-' + (talk.id || talks.indexOf(talk));
   }
 
   function topicList() {
@@ -100,13 +101,13 @@
 
   function talkMatches(talk) {
     var text = [talk.title, talk.topic, talk.event || '', talk.dateDisplay || '', talk.date || ''].join(' ').toLowerCase();
-    return (activeTopic === 'All topics' || talk.topic === activeTopic) && (!searchTerm || text.includes(searchTerm));
+    return (activeTopic === 'All topics' || talk.topic === activeTopic) && (!activeLanguage || talk.language === activeLanguage) && (!searchTerm || text.includes(searchTerm));
   }
 
   function cardMarkup(talk) {
     var slug = talkSlug(talk);
     var event = talk.event ? talk.event : (talk.id ? 'Public recording' : 'Slide deck');
-    var hasSlides = Boolean(talk.deck || talk.slideUrl);
+    var hasSlides = Boolean(talk.deck);
     // Reuse a local deck cover across entries from the same event so the archive
     // reads as one visual set even when an event has several recordings.
     var eventDeck = talk.event && talks.find(function (item) { return item.deck && item.event === talk.event; });
@@ -117,7 +118,7 @@
     var dateMarkup = talk.date ? '<time class="talk-card-date" datetime="' + escapeHtml(talk.date) + '">' + escapeHtml(talk.dateDisplay || formatDate(talk.date)) + '</time>' : '<span class="talk-card-date">' + escapeHtml(talk.dateDisplay || 'Date not listed') + '</span>';
     var language = talkLanguage(talk);
     var languageMarkup = language ? '<span class="talk-card-language" role="img" aria-label="Language: ' + language.name + '" title="Language: ' + language.name + '"><span aria-hidden="true">' + language.flag + '</span><span>' + language.code + '</span></span>' : '';
-    var formatLabel = talk.id ? (hasSlides ? 'Video and slides' : 'Video') : (talk.deck ? 'PDF slides' : 'SlideShare deck');
+    var formatLabel = talk.id ? (hasSlides ? 'Video and slides' : 'Video') : (talk.deck ? 'PDF slides' : 'Presentation');
     var formatIcons = (talk.id ? '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="12" height="12" rx="1.5"/><path d="m15 10 6-3v10l-6-3z"/></svg>' : '') + (hasSlides ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h5M9 12h7M9 16h7"/></svg>' : '');
     var thumbFormat = '<span class="talk-thumb-kind" role="img" aria-label="' + formatLabel + '" title="' + formatLabel + '">' + formatIcons + '</span>';
     var year = talk.date && talk.date.match(/^\d{4}/) ? talk.date.slice(0, 4) : '';
@@ -154,7 +155,7 @@
     }
     yearRail.hidden = false;
     yearRail.parentElement.classList.add('has-year-rail');
-    yearRail.innerHTML = '<span class="year-rail-label">Year</span><output id="year-current" for="year-range">' + visibleYears[visibleYears.length - 1] + '</output><input id="year-range" type="range" min="0" max="' + (visibleYears.length - 1) + '" step="1" value="' + (visibleYears.length - 1) + '" aria-label="Jump to year ' + visibleYears[visibleYears.length - 1] + '"><span class="year-rail-end">' + visibleYears[0] + '</span>';
+    yearRail.innerHTML = '<span class="year-rail-label">Year</span><output id="year-current" for="year-range">' + visibleYears[visibleYears.length - 1] + '</output><input id="year-range" type="range" min="0" max="' + (visibleYears.length - 1) + '" step="1" value="' + (visibleYears.length - 1) + '" aria-label="Jump to year ' + visibleYears[visibleYears.length - 1] + '" aria-valuetext="' + visibleYears[visibleYears.length - 1] + '"><span class="year-rail-end">' + visibleYears[0] + '</span>';
   }
 
   function scheduleYearRailUpdate() {
@@ -188,7 +189,10 @@
     var output = yearRail.querySelector('#year-current');
     if (range && Number(range.value) !== yearIndex) range.value = String(yearIndex);
     if (output && output.textContent !== activeCard.dataset.year) output.textContent = activeCard.dataset.year;
-    if (range) range.setAttribute('aria-label', 'Jump to year ' + activeCard.dataset.year);
+    if (range) {
+      range.setAttribute('aria-label', 'Jump to year ' + activeCard.dataset.year);
+      range.setAttribute('aria-valuetext', activeCard.dataset.year);
+    }
   }
 
   function renderDetail(talk) {
@@ -204,14 +208,13 @@
     var cuesAvailable = hasBoth && Array.isArray(talk.slideCues) && talk.slideCues.length;
     var syncControl = cuesAvailable ? '<div class="sync-control-wrap"><label class="sync-control"><input type="checkbox" id="sync-slides" checked> <span>Slides follow video</span></label><span class="sync-status" id="sync-status" aria-live="polite">Waiting for video</span></div>' : '';
     var videoMarkup = hasVideo ? '<section class="media-pane video-pane" aria-label="Video"><div class="detail-video"><iframe id="talk-video-frame" src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(talk.id) + '?autoplay=1&rel=0&enablejsapi=1&origin=' + encodeURIComponent(window.location.origin) + (videoStart > 0 ? '&start=' + Math.floor(videoStart) : '') + '" title="' + escapeHtml(talk.title) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></section>' : '';
-    var remoteDeckOnly = !hasVideo && !hasDeck && Boolean(talk.slideUrl);
-    var mediaClass = hasBoth ? 'detail-media' : (hasDeck ? 'detail-media deck-only' : (hasVideo ? 'detail-media video-only' : 'detail-media remote-deck-only'));
+    var mediaClass = hasBoth ? 'detail-media' : (hasDeck ? 'detail-media deck-only' : 'detail-media video-only');
     var mobileTabs = hasBoth ? '<div class="mobile-media-tabs" role="group" aria-label="Choose media"><button type="button" data-media="video" aria-pressed="true">Video</button><button type="button" data-media="slides" aria-pressed="false">Slides</button></div>' : '';
     var playerToolbar = hasBoth ? '<div class="player-toolbar"><div class="layout-controls" role="group" aria-label="Player layout"><button type="button" data-layout="split" aria-pressed="true">Side by side</button><button type="button" data-layout="video" aria-pressed="false">Focus video</button><button type="button" data-layout="slides" aria-pressed="false">Focus slides</button></div><div class="player-toolbar-right">' + syncControl + mobileTabs + '<button class="expand-player" type="button" data-expand-player aria-label="Expand side-by-side view" title="Expand side-by-side view" aria-pressed="false"><svg data-expand-icon viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3M21 16v3a2 2 0 0 1-2 2h-3"/></svg><span class="visually-hidden">Expand side-by-side view</span></button></div></div>' : '';
     detail.innerHTML = '<a class="detail-back" href="./">← All talks</a>' +
       '<div class="detail-heading"><div><p class="eyebrow">' + escapeHtml(talk.topic) + (talk.event ? ' · ' + escapeHtml(talk.event) : '') + ' · ' + escapeHtml(talk.dateDisplay || formatDate(talk.date || '')) + '</p><h1 id="modal-title">' + escapeHtml(talk.title) + '</h1></div></div>' +
-      playerToolbar + '<div class="' + mediaClass + '" data-layout="' + (hasBoth ? 'split' : (hasDeck ? 'slides' : 'video')) + '" data-active="video">' + videoMarkup + localDeck + (remoteDeckOnly ? '<div class="remote-deck-card"><span class="eyebrow">SlideShare deck · ' + (Number(talk.slideCount) ? Number(talk.slideCount) + ' slides' : 'presentation') + '</span><a href="' + escapeHtml(talk.slideUrl) + '" target="_blank" rel="noopener noreferrer">View presentation ↗</a></div>' : '') + '</div>' + (talk.slideCueNote ? '<p class="slide-cue-note">' + escapeHtml(talk.slideCueNote) + '</p>' : '') +
-      '<div class="detail-actions">' + (talk.id ? '<a href="https://www.youtube.com/watch?v=' + encodeURIComponent(talk.id) + '" target="_blank" rel="noopener noreferrer">Open recording on YouTube ↗</a>' : '') + (talk.alternateDeck ? '<a href="' + escapeHtml(talk.alternateDeck) + '" target="_blank" rel="noopener noreferrer">Open alternate PDF deck ↗</a>' : '') + (talk.slideUrl && !hasDeck ? '<a href="' + escapeHtml(talk.slideUrl) + '" target="_blank" rel="noopener noreferrer">Open SlideShare deck ↗</a>' : '') + (talk.alternateSlideUrl && !hasDeck ? '<a href="' + escapeHtml(talk.alternateSlideUrl) + '" target="_blank" rel="noopener noreferrer">Alternate SlideShare copy ↗</a>' : '') + (talk.programUrl ? '<a href="' + escapeHtml(talk.programUrl) + '" target="_blank" rel="noopener noreferrer">Conference program ↗</a>' : (talk.conferenceUrl ? '<a href="' + escapeHtml(talk.conferenceUrl) + '" target="_blank" rel="noopener noreferrer">Conference site ↗</a>' : '')) + '<button type="button" class="copy-permalink">Copy permalink</button></div>';
+      playerToolbar + '<div class="' + mediaClass + '" data-layout="' + (hasBoth ? 'split' : (hasDeck ? 'slides' : 'video')) + '" data-active="video">' + videoMarkup + localDeck + '</div>' + (talk.slideCueNote ? '<p class="slide-cue-note">' + escapeHtml(talk.slideCueNote) + '</p>' : '') +
+      '<div class="detail-actions">' + (talk.id ? '<a href="https://www.youtube.com/watch?v=' + encodeURIComponent(talk.id) + '" target="_blank" rel="noopener noreferrer">Open recording on YouTube ↗</a>' : '') + (talk.alternateDeck ? '<a href="' + escapeHtml(talk.alternateDeck) + '" target="_blank" rel="noopener noreferrer">Open alternate PDF deck ↗</a>' : '') + (talk.programUrl ? '<a href="' + escapeHtml(talk.programUrl) + '" target="_blank" rel="noopener noreferrer">Conference program ↗</a>' : (talk.conferenceUrl ? '<a href="' + escapeHtml(talk.conferenceUrl) + '" target="_blank" rel="noopener noreferrer">Conference site ↗</a>' : '')) + '<button type="button" class="copy-permalink">Copy permalink</button></div>';
     detail.querySelectorAll('[data-slide-step]').forEach(function (button) {
       button.addEventListener('click', function () {
         setSlidePage(currentSlide + Number(button.dataset.slideStep), true);
@@ -335,6 +338,12 @@
     renderGrid();
   });
 
+  languageFilter.addEventListener('change', function () {
+    activeLanguage = languageFilter.value;
+    languageFilter.closest('.language-filter').classList.toggle('is-active', Boolean(activeLanguage));
+    renderGrid();
+  });
+
   filters.addEventListener('click', function (event) {
     var button = event.target.closest('[data-topic]');
     if (!button) return;
@@ -342,12 +351,13 @@
     renderGrid();
   });
 
-  yearRail.addEventListener('input', function (event) {
+  yearRail.addEventListener('change', function (event) {
     if (!event.target.matches('#year-range')) return;
     var year = visibleYears[Number(event.target.value)];
     var output = yearRail.querySelector('#year-current');
     if (output) output.textContent = year;
     event.target.setAttribute('aria-label', 'Jump to year ' + year);
+    event.target.setAttribute('aria-valuetext', year);
     var card = grid.querySelector('[data-year="' + year + '"]');
     if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });

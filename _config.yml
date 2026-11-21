@@ -3,4 +3,4 @@ exclude:
   - talks/cue-editor.css
   - talks/cue-editor.js
   - talks/README.md
-  - talks/slideshare-missing.md
+  - talks/archive-import-notes.md

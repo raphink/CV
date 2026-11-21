@@ -33,14 +33,17 @@
     <section class="talk-browser" aria-label="Browse the archive">
       <div class="browser-tools">
         <label class="talk-search"><span class="visually-hidden">Search talks</span><input id="talk-search" type="search" placeholder="Search talks, topics, events…" autocomplete="off"><span aria-hidden="true">⌕</span></label>
-        <div class="topic-filters" id="topic-filters" aria-label="Filter by topic"></div>
+        <div class="browser-filter-side">
+          <div class="topic-filters" id="topic-filters" aria-label="Filter by topic"></div>
+          <label class="language-filter"><span class="visually-hidden">Filter by language</span><select id="language-filter"><option value="">All languages</option><option value="en">English</option><option value="fr">French</option></select></label>
+        </div>
       </div>
       <p class="results-label" id="results-label" aria-live="polite"></p>
       <div class="archive-year-layout">
         <div class="talk-grid" id="talk-grid"></div>
         <aside class="year-rail" id="year-rail" aria-label="Browse talks by year" hidden></aside>
       </div>
-      <p class="no-results" id="no-results" hidden>No talks match that search. Try another title or topic.</p>
+      <p class="no-results" id="no-results" hidden>No talks match these filters. Try another title, topic, or language.</p>
     </section>
     <dialog class="talk-modal" id="talk-modal" aria-labelledby="modal-title">
       <button class="modal-close" type="button" aria-label="Close talk">Close ×</button>
