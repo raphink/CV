@@ -68,7 +68,9 @@
       "Ryan Kollist",
       "Patrick Whyte"
     ],
-    "dateBasis": "Isovalent announced Session 2 for Aug 4, 2026; the session is listed on Raphaël Pinson’s public author page."
+    "dateBasis": "Isovalent announced Session 2 for Aug 4, 2026; the session is listed on Raphaël Pinson’s public author page.",
+    "deck": "decks/isovalent-security-summer-school-session-2-2026.pdf",
+    "pageCount": 2
   },
   {
     "title": "Security Summer School: Session 1",
@@ -127,6 +129,17 @@
     "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Jun 9, 2026.",
     "deck": "decks/multi-cloud-service-mesh-workshop-2026.pdf",
     "pageCount": 90
+  },
+  {
+    "title": "Defend the Space Nest: Practical Network Policies",
+    "topic": "Cloud native networking",
+    "event": "KubeCon + CloudNativeCon Europe 2026 · Isovalent booth",
+    "date": "2026-03-24",
+    "dateDisplay": "Mar 24, 2026",
+    "language": "en",
+    "sessionType": "Lightning talk",
+    "programUrl": "https://isovalent.com/events/cilium-and-ebpf-kubecon-eu-2026/",
+    "dateBasis": "The official Isovalent KubeCon Europe 2026 agenda lists this 10-minute booth lightning talk for Mar 24, 2026, at 11:00 CET."
   },
   {
     "id": "n_g60hLXZOk",
@@ -301,6 +314,36 @@
     "dateBasis": "The Isovalent video archive lists the webinar recording as published Apr 29, 2025."
   },
   {
+    "title": "Isovalent Discovery Workshop: A Fast-Track to Cilium for Platform Engineers",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Virtual workshop",
+    "date": "2025-03-25",
+    "dateDisplay": "Mar 25, 2025",
+    "recordingPageUrl": "https://isovalent.com/videos/5/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Nico Vibert"
+    ],
+    "dateBasis": "The Isovalent video archive lists this workshop recording as published Mar 25, 2025."
+  },
+  {
+    "title": "Isovalent Discovery Workshop: A Fast-Track to Cilium for Network Engineers",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Virtual workshop",
+    "date": "2025-03-20",
+    "dateDisplay": "Mar 20, 2025",
+    "recordingPageUrl": "https://isovalent.com/events/2025-03-20-discovery-workshop-network-engineer/",
+    "recordingLinkLabel": "Watch workshop ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Nico Vibert"
+    ],
+    "dateBasis": "The official Isovalent event page lists the virtual workshop on Mar 20, 2025 and says it is available on demand."
+  },
+  {
     "title": "Introduction to Cilium: The De-Facto Networking and Security Platform for Kubernetes",
     "topic": "Cloud native networking",
     "event": "Cisco Live EMEA 2025 · Amsterdam · with Nico Vibert",
@@ -334,36 +377,6 @@
       "Jorge Quintero"
     ],
     "dateBasis": "Cisco Live EMEA Amsterdam ran Feb 9–14, 2025; the exact session day is not listed in the available public materials. Cisco lists LTRSEC-2274 as a hands-on lab session."
-  },
-  {
-    "title": "Isovalent Discovery Workshop: A Fast-Track to Cilium for Platform Engineers",
-    "topic": "Cloud native networking",
-    "event": "Isovalent · Virtual workshop",
-    "date": "2025-03-25",
-    "dateDisplay": "Mar 25, 2025",
-    "recordingPageUrl": "https://isovalent.com/videos/5/",
-    "recordingLinkLabel": "Watch on Isovalent ↗",
-    "language": "en",
-    "sessionType": "Hands-on workshop",
-    "coPresenters": [
-      "Nico Vibert"
-    ],
-    "dateBasis": "The Isovalent video archive lists this workshop recording as published Mar 25, 2025."
-  },
-  {
-    "title": "Isovalent Discovery Workshop: A Fast-Track to Cilium for Network Engineers",
-    "topic": "Cloud native networking",
-    "event": "Isovalent · Virtual workshop",
-    "date": "2025-03-20",
-    "dateDisplay": "Mar 20, 2025",
-    "recordingPageUrl": "https://isovalent.com/events/2025-03-20-discovery-workshop-network-engineer/",
-    "recordingLinkLabel": "Watch workshop ↗",
-    "language": "en",
-    "sessionType": "Hands-on workshop",
-    "coPresenters": [
-      "Nico Vibert"
-    ],
-    "dateBasis": "The official Isovalent event page lists the virtual workshop on Mar 20, 2025 and says it is available on demand."
   },
   {
     "title": "Hands-on labs with Instruqt, gamification, and AI",
@@ -430,6 +443,18 @@
       "Stephane Karagulmez"
     ],
     "dateBasis": "The official Isovalent event page identifies the online workshop; eCHO News 56 lists it for May 30, 2024."
+  },
+  {
+    "id": "j5FHvAnp9Bc",
+    "title": "Breakdown of Isovalent Labs: Live from KubeCon!",
+    "topic": "Technical education",
+    "event": "KubeCon + CloudNativeCon Europe 2024 · Isovalent booth",
+    "date": "2024-03",
+    "dateDisplay": "Mar 2024",
+    "language": "en",
+    "sessionType": "Booth presentation",
+    "conferenceUrl": "https://events.linuxfoundation.org/archive/2024/kubecon-cloudnativecon-europe/",
+    "dateBasis": "The video was published May 9, 2024 and is described as live from KubeCon. KubeCon Europe 2024 ran Mar 19–22 in Paris; the exact recording day is not stated."
   },
   {
     "title": "eBPF-based Security Observability & Runtime Enforcement with Cilium Tetragon",
