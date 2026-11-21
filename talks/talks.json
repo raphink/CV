@@ -6,7 +6,8 @@
     "event": "Kubernetes Community Days Zürich 2023",
     "deck": "decks/kcd-zurich-2023-bridging-dev-ops.pdf",
     "pageCount": 43,
-    "alternateSlideUrl": "https://www.slideshare.net/slideshow/devopsdays-zurich-2023-bridging-dev-and-ops-with-ebpf-extending-observability-upwards-and-downwards/257670563",
+    "alternateDeck": "decks/devopsdays-zurich-2023-bridging-dev-ops.pdf",
+    "alternatePageCount": 42,
     "slideCues": [
       {
         "time": 0,
@@ -155,12 +156,15 @@
     "date": "2023-06-15",
     "dateDisplay": "Jun 15, 2023",
     "conferenceUrl": "https://kcdzurich.ch/",
-    "slideCueNote": "Timestamps and slide matches are approximate, based on captions and deck text."
+    "slideCueNote": "Timestamps and slide matches are approximate, based on captions and deck text.",
+    "language": "en"
   },
   {
     "id": "kTGU-Nc2Db0",
     "title": "Security observability with eBPF and Cilium Tetragon",
     "topic": "Cloud native security",
+    "deck": "decks/cfgmgmtcamp-2024-tetragon.pdf",
+    "pageCount": 66,
     "slideUrl": "https://www.slideshare.net/slideshow/cfgmgmtcamp-2024-ebpfbased-security-observability-runtime-enforcement-with-cilium-tetragonpdf/266249813",
     "slideCount": 66,
     "slideTitle": "Cfgmgmtcamp 2024 — eBPF-based Security Observability & Runtime Enforcement with Cilium Tetragon.pdf",
@@ -168,7 +172,8 @@
     "date": "2024-02-06",
     "dateDisplay": "Feb 6, 2024",
     "conferenceUrl": "https://cfgmgmtcamp.org/ghent2024/",
-    "programUrl": "https://cfp.cfgmgmtcamp.org/2024/talk/JSW89F/"
+    "programUrl": "https://cfp.cfgmgmtcamp.org/2024/talk/JSW89F/",
+    "language": "en"
   },
   {
     "id": "5dBbQlzUep8",
@@ -346,7 +351,8 @@
         "page": 67
       }
     ],
-    "slideCueNote": "Approximate cues use timestamps from YouTube auto-generated captions at the first narration match for corresponding PDF slide text; slide changes may happen slightly before or after the spoken mention."
+    "slideCueNote": "Approximate cues use timestamps from YouTube auto-generated captions at the first narration match for corresponding PDF slide text; slide changes may happen slightly before or after the spoken mention.",
+    "language": "en"
   },
   {
     "id": "0c_uSDD9r8U",
@@ -456,7 +462,8 @@
         "page": 25
       }
     ],
-    "slideCueNote": "Approximate cue times use the first spoken matches for slide text in auto-generated captions. Slide changes may happen before or after the narrated mention; some animated builds are intentionally uncued."
+    "slideCueNote": "Approximate cue times use the first spoken matches for slide text in auto-generated captions. Slide changes may happen before or after the narrated mention; some animated builds are intentionally uncued.",
+    "language": "en"
   },
   {
     "id": "ge-iruUlYYs",
@@ -510,7 +517,8 @@
         "page": 40
       }
     ],
-    "slideCueNote": "Chapter times are exact; slide pages are approximate."
+    "slideCueNote": "Chapter times are exact; slide pages are approximate.",
+    "language": "fr"
   },
   {
     "id": "BO4MWeFkvRM",
@@ -571,7 +579,8 @@
         "page": 71
       }
     ],
-    "slideCueNote": "Chapter times are exact; slide pages are approximate."
+    "slideCueNote": "Chapter times are exact; slide pages are approximate.",
+    "language": "en"
   },
   {
     "id": "HqQlLtsZEp4",
@@ -645,7 +654,8 @@
         "page": 48
       }
     ],
-    "slideCueNote": "Times follow the chapter markers; page mapping is approximate for this 50-slide edition."
+    "slideCueNote": "Times follow the chapter markers; page mapping is approximate for this 50-slide edition.",
+    "language": "en"
   },
   {
     "id": "nmJYlh-Vr0c",
@@ -721,7 +731,8 @@
         "time": 2177,
         "page": 20
       }
-    ]
+    ],
+    "language": "en"
   },
   {
     "id": "hzMif_cytLs",
@@ -859,7 +870,8 @@
         "page": 76
       }
     ],
-    "slideCueNote": "Approximate cue times are first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued."
+    "slideCueNote": "Approximate cue times are first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued.",
+    "language": "en"
   },
   {
     "id": "j8nT0eZcj54",
@@ -948,7 +960,8 @@
         "page": 88
       }
     ],
-    "slideCueNote": "Approximate cue times use the first spoken matches for deck text in auto-generated captions. This is a long workshop recording; many demonstration/build slides have no reliable narration match."
+    "slideCueNote": "Approximate cue times use the first spoken matches for deck text in auto-generated captions. This is a long workshop recording; many demonstration/build slides have no reliable narration match.",
+    "language": "en"
   },
   {
     "id": "goWY2S43cnE",
@@ -1105,7 +1118,8 @@
         "page": 35
       }
     ],
-    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition."
+    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition.",
+    "language": "en"
   },
   {
     "id": "nGoB-w4tjvo",
@@ -1315,7 +1329,8 @@
         "page": 52
       }
     ],
-    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued."
+    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued.",
+    "language": "en"
   },
   {
     "id": "wBrlhctsmYs",
@@ -1324,7 +1339,8 @@
     "date": "2022-09-21",
     "dateDisplay": "Sep 21, 2022",
     "event": "CNCF Research End User Group",
-    "conferenceUrl": "https://community.cncf.io/research-end-user-group/"
+    "conferenceUrl": "https://community.cncf.io/research-end-user-group/",
+    "language": "en"
   },
   {
     "id": "qYXoA2gOXzU",
@@ -1332,17 +1348,21 @@
     "topic": "Open source and practice",
     "videoStart": 1020,
     "date": null,
-    "dateDisplay": "Date not listed"
+    "dateDisplay": "Date not listed",
+    "language": "multi"
   },
   {
     "id": "JJ1bFnJenms",
     "title": "Cloud-native application security with Cilium and eBPF",
     "topic": "Cloud native security",
+    "deck": "decks/cloud-native-networking-security-cilium-ebpf.pdf",
+    "pageCount": 49,
     "slideUrl": "https://www.slideshare.net/slideshow/cloud-native-networking-security-with-cilium-ebpf/253373760",
     "slideCount": 49,
     "slideTitle": "Cloud Native Networking & Security with Cilium & eBPF",
     "date": null,
-    "dateDisplay": "Date not listed"
+    "dateDisplay": "Date not listed",
+    "language": "en"
   },
   {
     "id": "n_g60hLXZOk",
@@ -1523,7 +1543,8 @@
         "page": 82
       }
     ],
-    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition. Some slide builds lack a text match."
+    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition. Some slide builds lack a text match.",
+    "language": "fr"
   },
   {
     "id": "onzP72ZMXcw",
@@ -1564,7 +1585,8 @@
         "page": 10
       }
     ],
-    "slideCueNote": "Approximate points sampled from the recording. The video starts on PDF page 2; intermediate transitions were not all sampled."
+    "slideCueNote": "Approximate points sampled from the recording. The video starts on PDF page 2; intermediate transitions were not all sampled.",
+    "language": "en"
   },
   {
     "id": "j_0KwA72ZPo",
@@ -1601,7 +1623,8 @@
         "page": 33
       }
     ],
-    "slideCueNote": "The video opens on PDF page 1. Remaining page matches are approximate sampled points; the recording revisits deck sections, so page numbers can move backward."
+    "slideCueNote": "The video opens on PDF page 1. Remaining page matches are approximate sampled points; the recording revisits deck sections, so page numbers can move backward.",
+    "language": "en"
   },
   {
     "id": "8yzDqDHGLGw",
@@ -1623,7 +1646,8 @@
         "page": 31
       }
     ],
-    "slideCueNote": "Topic-level approximate cues only. The recording mainly shows the Instruqt lab interface rather than the PDF, so these are not confirmed slide transitions."
+    "slideCueNote": "Topic-level approximate cues only. The recording mainly shows the Instruqt lab interface rather than the PDF, so these are not confirmed slide transitions.",
+    "language": "en"
   },
   {
     "title": "Cilium Workshop: Kubernetes Networking with eBPF",
@@ -1715,7 +1739,8 @@
         "page": 16
       }
     ],
-    "slideCueNote": "Approximate narration-based cues from auto-generated captions; transition frames were not verified. Later Q&A and closing slides are omitted."
+    "slideCueNote": "Approximate narration-based cues from auto-generated captions; transition frames were not verified. Later Q&A and closing slides are omitted.",
+    "language": "en"
   },
   {
     "title": "YAML Engineering: why we need a new paradigm",
@@ -1864,7 +1889,8 @@
         "page": 28
       }
     ],
-    "slideCueNote": "Approximate cue anchors from auto-generated narration; pages 1, 5, 9 and 10 were directly observed in playback. Other transition frames were not verified. The page-29 end card and image-only/blank pages are omitted."
+    "slideCueNote": "Approximate cue anchors from auto-generated narration; pages 1, 5, 9 and 10 were directly observed in playback. Other transition frames were not verified. The page-29 end card and image-only/blank pages are omitted.",
+    "language": "en"
   },
   {
     "title": "Argocd up and running",
@@ -1931,7 +1957,8 @@
         "page": 19
       }
     ],
-    "slideCueNote": "Page 1 is visually confirmed around 4956s; remaining cues are approximate transcript and topic alignments. Exact transition frames are not verified."
+    "slideCueNote": "Page 1 is visually confirmed around 4956s; remaining cues are approximate transcript and topic alignments. Exact transition frames are not verified.",
+    "language": "en"
   },
   {
     "title": "Bivac - Container Volumes Backup",
@@ -2006,7 +2033,8 @@
         "page": 15
       }
     ],
-    "slideCueNote": "Approximate points sampled from the recording; each timestamp identifies a page visible at that time, not an exact transition. Page 2 is visible at the supplied start time; Q&A and the final page are not mapped."
+    "slideCueNote": "Approximate points sampled from the recording; each timestamp identifies a page visible at that time, not an exact transition. Page 2 is visible at the supplied start time; Q&A and the final page are not mapped.",
+    "language": "en"
   },
   {
     "title": "Automating Puppet Certificates Renewal",
