@@ -75,3 +75,18 @@
 .expand-player:hover,.expand-player[aria-pressed=true]{border-color:#61e0e7;color:#f5fafb}
 .talk-modal.expanded{width:calc(100vw - 20px);max-width:none;max-height:calc(100dvh - 20px);height:fit-content;border-radius:7px}
 @media(max-width:900px){.expand-player{display:none}}
+.slide-controls button{display:grid;width:36px;height:34px;place-items:center;padding:0;border:1px solid rgba(255,255,255,.22);border-radius:4px;background:transparent;color:#f5fafb;cursor:pointer}
+.slide-controls button svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}
+.slide-controls button:hover,.slide-controls button:focus-visible{border-color:#ffd562;color:#ffd562}
+.slide-controls button:focus-visible{outline:2px solid #61e0e7;outline-offset:2px}
+@media(max-width:900px){
+  .detail-media:not(.deck-only)[data-active=both]{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-height:0}
+  .detail-media:not(.deck-only)[data-active=both] .media-pane{display:flex;min-height:0;aspect-ratio:auto}
+  .detail-media:not(.deck-only)[data-active=both] .video-pane{aspect-ratio:16/9}
+  .detail-media:not(.deck-only)[data-active=both] .slides-pane{flex-direction:column}
+  .detail-media:not(.deck-only)[data-active=both] .slide-canvas{width:100%;flex:none;aspect-ratio:16/9}
+}
+@media(max-width:560px){
+  .player-toolbar-right{flex-wrap:wrap;row-gap:8px}
+  .slide-controls button{width:36px;height:36px}
+}

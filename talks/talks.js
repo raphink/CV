@@ -216,12 +216,12 @@
     var hasDeck = Boolean(talk.deck);
     var hasBoth = hasVideo && hasDeck;
     var videoStart = Number(talk.videoStart) || 0;
-    var localDeck = hasDeck ? '<section class="media-pane slides-pane" aria-label="Slides"><div class="slide-toolbar"><div class="slide-toolbar-title"><span class="eyebrow">Slides</span><span class="slide-page-status" aria-live="polite">Slide <b id="slide-current">' + currentSlide + '</b> of ' + pageCount + '</span></div><div class="slide-controls"><button type="button" data-slide-step="-1" aria-label="Previous slide">←</button><button type="button" data-slide-step="1" aria-label="Next slide">→</button></div><a class="open-pdf" href="' + escapeHtml(talk.deck) + '" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></div><div class="slide-canvas"><img id="slide-image" src="' + escapeHtml(slideImagePath(talk, currentSlide)) + '" alt="Slide ' + currentSlide + ' of ' + escapeHtml(talk.title) + '" decoding="async"></div></section>' : '';
+    var localDeck = hasDeck ? '<section class="media-pane slides-pane" aria-label="Slides"><div class="slide-toolbar"><div class="slide-toolbar-title"><span class="eyebrow">Slides</span><span class="slide-page-status" aria-live="polite">Slide <b id="slide-current">' + currentSlide + '</b> of ' + pageCount + '</span></div><div class="slide-controls"><button type="button" data-slide-step="-1" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button type="button" data-slide-step="1" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div><a class="open-pdf" href="' + escapeHtml(talk.deck) + '" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></div><div class="slide-canvas"><img id="slide-image" src="' + escapeHtml(slideImagePath(talk, currentSlide)) + '" alt="Slide ' + currentSlide + ' of ' + escapeHtml(talk.title) + '" decoding="async"></div></section>' : '';
     var cuesAvailable = hasBoth && Array.isArray(talk.slideCues) && talk.slideCues.length;
     var syncControl = cuesAvailable ? '<div class="sync-control-wrap"><label class="sync-control"><input type="checkbox" id="sync-slides" checked> <span>Slides follow video</span></label><span class="sync-status" id="sync-status" aria-live="polite">Waiting for video</span></div>' : '';
     var videoMarkup = hasVideo ? '<section class="media-pane video-pane" aria-label="Recording"><div class="detail-video">' + (talk.id ? '<iframe id="talk-video-frame" src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(talk.id) + '?autoplay=1&rel=0&enablejsapi=1&origin=' + encodeURIComponent(window.location.origin) + (videoStart > 0 ? '&start=' + Math.floor(videoStart) : '') + '" title="' + escapeHtml(talk.title) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' : '<video id="talk-video-frame" controls playsinline preload="metadata"' + (videoStart > 0 ? ' data-start="' + Math.floor(videoStart) + '"' : '') + '><source src="' + escapeHtml(talk.recordingUrl) + '" type="' + escapeHtml(talk.recordingType || 'video/webm') + '"></video>') + '</div></section>' : '';
     var mediaClass = hasBoth ? 'detail-media' : (hasDeck ? 'detail-media deck-only' : 'detail-media video-only');
-    var mobileTabs = hasBoth ? '<div class="mobile-media-tabs" role="group" aria-label="Choose media"><button type="button" data-media="video" aria-pressed="true">Video</button><button type="button" data-media="slides" aria-pressed="false">Slides</button></div>' : '';
+    var mobileTabs = hasBoth ? '<div class="mobile-media-tabs" role="group" aria-label="Choose media"><button type="button" data-media="video" aria-pressed="true">Video</button><button type="button" data-media="slides" aria-pressed="false">Slides</button><button type="button" data-media="both" aria-label="Show video and slides together" aria-pressed="false">Both</button></div>' : '';
     var playerToolbar = hasBoth ? '<div class="player-toolbar"><div class="layout-controls" role="group" aria-label="Player layout"><button type="button" data-layout="split" aria-pressed="true">Side by side</button><button type="button" data-layout="video" aria-pressed="false">Focus video</button><button type="button" data-layout="slides" aria-pressed="false">Focus slides</button></div><div class="player-toolbar-right">' + syncControl + mobileTabs + '<button class="expand-player" type="button" data-expand-player aria-label="Expand side-by-side view" title="Expand side-by-side view" aria-pressed="false"><svg data-expand-icon viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3M21 16v3a2 2 0 0 1-2 2h-3"/></svg><span class="visually-hidden">Expand side-by-side view</span></button></div></div>' : '';
     var mediaMarkup = hasVideo || hasDeck ? playerToolbar + '<div class="' + mediaClass + '" data-layout="' + (hasBoth ? 'split' : (hasDeck ? 'slides' : 'video')) + '" data-active="video">' + videoMarkup + localDeck + '</div>' : '';
     detail.innerHTML = '<a class="detail-back" href="./">← All talks</a>' +
@@ -499,19 +499,20 @@
       expandButton.querySelector('[data-expand-icon]').innerHTML = expanded ? '<path d="M9 4v5H4M20 9h-5V4M4 15h5v5M15 20v-5h5"/>' : '<path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3M21 16v3a2 2 0 0 1-2 2h-3"/>';
       return;
     }
-    var layoutButton = event.target.closest('[data-layout]');
+    var layoutButton = event.target.closest('.layout-controls [data-layout]');
     if (layoutButton) {
       var layout = layoutButton.dataset.layout;
       var media = detail.querySelector('.detail-media');
+      var activeMedia = layout === 'slides' ? 'slides' : (layout === 'video' ? 'video' : 'both');
       if (media) {
         media.dataset.layout = layout;
-        media.dataset.active = layout === 'slides' ? 'slides' : 'video';
+        media.dataset.active = activeMedia;
       }
       modal.querySelectorAll('.layout-controls [data-layout]').forEach(function (button) { button.setAttribute('aria-pressed', String(button === layoutButton)); });
-      modal.querySelectorAll('.mobile-media-tabs [data-media]').forEach(function (button) { button.setAttribute('aria-pressed', String(button.dataset.media === (layout === 'slides' ? 'slides' : 'video'))); });
+      modal.querySelectorAll('.mobile-media-tabs [data-media]').forEach(function (button) { button.setAttribute('aria-pressed', String(button.dataset.media === activeMedia)); });
       return;
     }
-    var mediaButton = event.target.closest('[data-media]');
+    var mediaButton = event.target.closest('.mobile-media-tabs [data-media]');
     if (mediaButton) {
       var mediaStage = detail.querySelector('.detail-media');
       if (mediaStage) mediaStage.dataset.active = mediaButton.dataset.media;
