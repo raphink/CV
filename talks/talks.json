@@ -102,7 +102,9 @@
     "coPresenters": [
       "Rui De Abreu"
     ],
-    "dateBasis": "The official Isovalent event page identifies this Madrid workshop in July 2026; no specific day is published in the page title or searchable listing."
+    "dateBasis": "The official Isovalent event page identifies this Madrid workshop in July 2026; no specific day is published in the page title or searchable listing.",
+    "deck": "decks/isovalent-ebee-quest-madrid-2026.pdf",
+    "pageCount": 17
   },
   {
     "title": "Isovalent eBee Quest Zurich",
@@ -114,7 +116,9 @@
     "recordingLinkLabel": "Workshop details ↗",
     "language": "en",
     "sessionType": "Hands-on workshop",
-    "dateBasis": "The official Isovalent event page lists the Zurich hands-on workshop on Jun 10, 2026."
+    "dateBasis": "The official Isovalent event page lists the Zurich hands-on workshop on Jun 10, 2026.",
+    "deck": "decks/isovalent-ebee-quest-zurich-2026.pdf",
+    "pageCount": 15
   },
   {
     "title": "Multi-Cloud Service Mesh: Security and Scale Without the Complexity",
