@@ -121,6 +121,20 @@
     "pageCount": 15
   },
   {
+    "title": "How eBPF is used for next generation security enforcement",
+    "topic": "Cloud native security",
+    "event": "Cisco Connect Switzerland 2026 · Zurich",
+    "date": "2026-06-17",
+    "dateDisplay": "Jun 17, 2026",
+    "language": "en",
+    "sessionType": "Partner-led talk",
+    "deck": "decks/cisco-connect-2026-ebpf-security-enforcement.pdf",
+    "pageCount": 70,
+    "programUrl": "https://cs.co/6049BB8AwU",
+    "conferenceUrl": "https://www.linkedin.com/posts/cisco_cisco-connect-2026-switzerland-activity-7439973879101472768--HyW",
+    "dateBasis": "The supplied deck’s title slide names the talk and dates it Jun 17, 2026. Cisco’s event announcement places Cisco Connect Switzerland at the Zurich Circle Convention Center, and a Cisco partner’s announcement describes Raphaël Pinson’s Isovalent Kubernetes security session."
+  },
+  {
     "title": "Multi-Cloud Service Mesh: Security and Scale Without the Complexity",
     "topic": "Cloud native networking",
     "event": "Isovalent · Virtual workshop",
