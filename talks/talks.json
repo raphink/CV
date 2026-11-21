@@ -325,7 +325,9 @@
     "coPresenters": [
       "Jeremy Colvin"
     ],
-    "dateBasis": "The Isovalent video archive lists the webinar recording as published Apr 29, 2025."
+    "dateBasis": "The Isovalent video archive lists the webinar recording as published Apr 29, 2025.",
+    "deck": "decks/meet-the-isovalent-platform-connect-secure-scale-2025.pdf",
+    "pageCount": 72
   },
   {
     "title": "Isovalent Discovery Workshop: A Fast-Track to Cilium for Platform Engineers",
