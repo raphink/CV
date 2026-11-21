@@ -1,0 +1,61 @@
+{
+  "slideCues": [
+    {
+      "time": 295,
+      "page": 2
+    },
+    {
+      "time": 350,
+      "page": 3
+    },
+    {
+      "time": 390,
+      "page": 4
+    },
+    {
+      "time": 485,
+      "page": 5
+    },
+    {
+      "time": 665,
+      "page": 6
+    },
+    {
+      "time": 700,
+      "page": 7
+    },
+    {
+      "time": 803,
+      "page": 8
+    },
+    {
+      "time": 870,
+      "page": 9
+    },
+    {
+      "time": 986,
+      "page": 10
+    },
+    {
+      "time": 1024,
+      "page": 11
+    },
+    {
+      "time": 1109,
+      "page": 12
+    },
+    {
+      "time": 1120,
+      "page": 13
+    },
+    {
+      "time": 1200,
+      "page": 14
+    },
+    {
+      "time": 1233,
+      "page": 15
+    }
+  ],
+  "slideCueNote": "Approximate points sampled from the recording; each timestamp identifies a page visible at that time, not an exact transition. Page 2 is visible at the supplied start time; Q&A and the final page are not mapped."
+}

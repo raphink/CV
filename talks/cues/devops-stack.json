@@ -1,0 +1,37 @@
+{
+  "slideCues": [
+    {
+      "time": 4330,
+      "page": 1
+    },
+    {
+      "time": 4399,
+      "page": 2
+    },
+    {
+      "time": 4454,
+      "page": 4
+    },
+    {
+      "time": 4513,
+      "page": 9
+    },
+    {
+      "time": 4721,
+      "page": 11
+    },
+    {
+      "time": 4774,
+      "page": 12
+    },
+    {
+      "time": 4860,
+      "page": 13
+    },
+    {
+      "time": 5290,
+      "page": 16
+    }
+  ],
+  "slideCueNote": "Approximate narration-based cues from auto-generated captions; transition frames were not verified. Later Q&A and closing slides are omitted."
+}

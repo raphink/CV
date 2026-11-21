@@ -1,0 +1,145 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 65,
+      "page": 2
+    },
+    {
+      "time": 158,
+      "page": 3
+    },
+    {
+      "time": 290,
+      "page": 4
+    },
+    {
+      "time": 365,
+      "page": 5
+    },
+    {
+      "time": 445,
+      "page": 6
+    },
+    {
+      "time": 505,
+      "page": 7
+    },
+    {
+      "time": 569,
+      "page": 8
+    },
+    {
+      "time": 614,
+      "page": 9
+    },
+    {
+      "time": 645,
+      "page": 10
+    },
+    {
+      "time": 688,
+      "page": 11
+    },
+    {
+      "time": 703,
+      "page": 12
+    },
+    {
+      "time": 854,
+      "page": 13
+    },
+    {
+      "time": 1027,
+      "page": 14
+    },
+    {
+      "time": 1080,
+      "page": 15
+    },
+    {
+      "time": 1156,
+      "page": 16
+    },
+    {
+      "time": 1328,
+      "page": 17
+    },
+    {
+      "time": 1416,
+      "page": 18
+    },
+    {
+      "time": 1512,
+      "page": 19
+    },
+    {
+      "time": 1554,
+      "page": 20
+    },
+    {
+      "time": 1581,
+      "page": 21
+    },
+    {
+      "time": 1638,
+      "page": 22
+    },
+    {
+      "time": 1674,
+      "page": 23
+    },
+    {
+      "time": 1728,
+      "page": 24
+    },
+    {
+      "time": 1794,
+      "page": 25
+    },
+    {
+      "time": 1833,
+      "page": 26
+    },
+    {
+      "time": 1930,
+      "page": 27
+    },
+    {
+      "time": 1968,
+      "page": 28
+    },
+    {
+      "time": 2010,
+      "page": 29
+    },
+    {
+      "time": 2142,
+      "page": 30
+    },
+    {
+      "time": 2188,
+      "page": 31
+    },
+    {
+      "time": 2198,
+      "page": 32
+    },
+    {
+      "time": 2260,
+      "page": 33
+    },
+    {
+      "time": 2673,
+      "page": 34
+    },
+    {
+      "time": 2686,
+      "page": 35
+    }
+  ],
+  "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition."
+}

@@ -1,0 +1,29 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 2
+    },
+    {
+      "time": 120,
+      "page": 6
+    },
+    {
+      "time": 147,
+      "page": 7
+    },
+    {
+      "time": 176,
+      "page": 8
+    },
+    {
+      "time": 288,
+      "page": 9
+    },
+    {
+      "time": 389,
+      "page": 10
+    }
+  ],
+  "slideCueNote": "Approximate points sampled from the recording. The video starts on PDF page 2; intermediate transitions were not all sampled."
+}

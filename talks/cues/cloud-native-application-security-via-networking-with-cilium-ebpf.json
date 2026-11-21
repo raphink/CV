@@ -1,0 +1,73 @@
+{
+  "slideCues": [
+    {
+      "time": 143,
+      "page": 1
+    },
+    {
+      "time": 203,
+      "page": 2
+    },
+    {
+      "time": 215,
+      "page": 4
+    },
+    {
+      "time": 235,
+      "page": 5
+    },
+    {
+      "time": 370,
+      "page": 8
+    },
+    {
+      "time": 390,
+      "page": 9
+    },
+    {
+      "time": 825,
+      "page": 12
+    },
+    {
+      "time": 838,
+      "page": 13
+    },
+    {
+      "time": 867,
+      "page": 14
+    },
+    {
+      "time": 894,
+      "page": 15
+    },
+    {
+      "time": 910,
+      "page": 16
+    },
+    {
+      "time": 1099,
+      "page": 17
+    },
+    {
+      "time": 1487,
+      "page": 20
+    },
+    {
+      "time": 1848,
+      "page": 27
+    },
+    {
+      "time": 2207,
+      "page": 33
+    },
+    {
+      "time": 2550,
+      "page": 37
+    },
+    {
+      "time": 2759,
+      "page": 44
+    }
+  ],
+  "slideCueNote": "Page 1 at 143s, page 2 at 203s, page 4 at 215s, pages 5 and 8 at 235s and 370s were visually checked; remaining points are approximate French-transcript topic anchors. Page 3/4 alignment is ambiguous, and exact transition times are not verified."
+}

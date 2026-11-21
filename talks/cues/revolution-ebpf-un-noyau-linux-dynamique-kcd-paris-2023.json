@@ -1,0 +1,49 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 201,
+      "page": 16
+    },
+    {
+      "time": 536,
+      "page": 61
+    },
+    {
+      "time": 714,
+      "page": 27
+    },
+    {
+      "time": 799,
+      "page": 36
+    },
+    {
+      "time": 946,
+      "page": 40
+    },
+    {
+      "time": 1008,
+      "page": 44
+    },
+    {
+      "time": 1606,
+      "page": 52
+    },
+    {
+      "time": 2117,
+      "page": 61
+    },
+    {
+      "time": 2245,
+      "page": 66
+    },
+    {
+      "time": 2326,
+      "page": 71
+    }
+  ],
+  "slideCueNote": "Chapter times are exact; slide pages are approximate."
+}

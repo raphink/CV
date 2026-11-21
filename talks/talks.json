@@ -46,7 +46,9 @@
     "recordingLinkLabel": "Watch on Isovalent ↗",
     "language": "en",
     "sessionType": "Hands-on workshop",
-    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Jun 9, 2026."
+    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Jun 9, 2026.",
+    "deck": "decks/multi-cloud-service-mesh-workshop-2026.pdf",
+    "pageCount": 91
   },
   {
     "id": "n_g60hLXZOk",
@@ -58,174 +60,8 @@
     "date": "2026-02-03",
     "dateDisplay": "Feb 3, 2026",
     "programUrl": "https://cloudnativedays.fr/programme/2026",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 149,
-        "page": 11
-      },
-      {
-        "time": 158,
-        "page": 12
-      },
-      {
-        "time": 186,
-        "page": 13
-      },
-      {
-        "time": 195,
-        "page": 14
-      },
-      {
-        "time": 212,
-        "page": 16
-      },
-      {
-        "time": 224,
-        "page": 18
-      },
-      {
-        "time": 250,
-        "page": 19
-      },
-      {
-        "time": 306,
-        "page": 20
-      },
-      {
-        "time": 321,
-        "page": 21
-      },
-      {
-        "time": 352,
-        "page": 23
-      },
-      {
-        "time": 358,
-        "page": 24
-      },
-      {
-        "time": 463,
-        "page": 25
-      },
-      {
-        "time": 565,
-        "page": 26
-      },
-      {
-        "time": 638,
-        "page": 27
-      },
-      {
-        "time": 680,
-        "page": 28
-      },
-      {
-        "time": 857,
-        "page": 30
-      },
-      {
-        "time": 900,
-        "page": 32
-      },
-      {
-        "time": 940,
-        "page": 33
-      },
-      {
-        "time": 1044,
-        "page": 34
-      },
-      {
-        "time": 1087,
-        "page": 35
-      },
-      {
-        "time": 1218,
-        "page": 36
-      },
-      {
-        "time": 1294,
-        "page": 38
-      },
-      {
-        "time": 1358,
-        "page": 41
-      },
-      {
-        "time": 1375,
-        "page": 43
-      },
-      {
-        "time": 1472,
-        "page": 44
-      },
-      {
-        "time": 1528,
-        "page": 46
-      },
-      {
-        "time": 1610,
-        "page": 47
-      },
-      {
-        "time": 1710,
-        "page": 48
-      },
-      {
-        "time": 1778,
-        "page": 49
-      },
-      {
-        "time": 1800,
-        "page": 50
-      },
-      {
-        "time": 1822,
-        "page": 56
-      },
-      {
-        "time": 2146,
-        "page": 64
-      },
-      {
-        "time": 2173,
-        "page": 65
-      },
-      {
-        "time": 2419,
-        "page": 75
-      },
-      {
-        "time": 2436,
-        "page": 76
-      },
-      {
-        "time": 2487,
-        "page": 77
-      },
-      {
-        "time": 2568,
-        "page": 79
-      },
-      {
-        "time": 2577,
-        "page": 80
-      },
-      {
-        "time": 2583,
-        "page": 81
-      },
-      {
-        "time": 2584,
-        "page": 82
-      }
-    ],
-    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition. Some slide builds lack a text match.",
-    "language": "fr"
+    "language": "fr",
+    "cueFile": "cues/100-000-sessions-de-labs-reseau-et-securite-cloud-native.json"
   },
   {
     "title": "Trust, but Verify: Making Network Segmentation Visible",
@@ -237,7 +73,9 @@
     "recordingLinkLabel": "Watch on Isovalent ↗",
     "language": "en",
     "sessionType": "Hands-on workshop",
-    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Jan 29, 2026."
+    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Jan 29, 2026.",
+    "deck": "decks/trust-but-verify-connectivity-visibility-2026.pdf",
+    "pageCount": 30
   },
   {
     "id": "8yzDqDHGLGw",
@@ -249,18 +87,8 @@
     "date": "2026",
     "dateDisplay": "2026",
     "conferenceUrl": "https://platformcon.com/",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 2661,
-        "page": 31
-      }
-    ],
-    "slideCueNote": "Topic-level approximate cues only. The recording mainly shows the Instruqt lab interface rather than the PDF, so these are not confirmed slide transitions.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/kubernetes-networking-foundations.json"
   },
   {
     "title": "Integrate Splunk with runtime security for kernel-level observability",
@@ -287,175 +115,9 @@
     "date": "2025-10-16",
     "dateDisplay": "Oct 16–17, 2025",
     "conferenceUrl": "https://taloscon.com/",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 47,
-        "page": 2
-      },
-      {
-        "time": 51,
-        "page": 3
-      },
-      {
-        "time": 59,
-        "page": 4
-      },
-      {
-        "time": 86,
-        "page": 5
-      },
-      {
-        "time": 308,
-        "page": 8
-      },
-      {
-        "time": 398,
-        "page": 9
-      },
-      {
-        "time": 412,
-        "page": 10
-      },
-      {
-        "time": 487,
-        "page": 11
-      },
-      {
-        "time": 523,
-        "page": 12
-      },
-      {
-        "time": 553,
-        "page": 13
-      },
-      {
-        "time": 591,
-        "page": 14
-      },
-      {
-        "time": 620,
-        "page": 15
-      },
-      {
-        "time": 653,
-        "page": 16
-      },
-      {
-        "time": 784,
-        "page": 18
-      },
-      {
-        "time": 911,
-        "page": 19
-      },
-      {
-        "time": 1163,
-        "page": 28
-      },
-      {
-        "time": 1180,
-        "page": 29
-      },
-      {
-        "time": 1207,
-        "page": 30
-      },
-      {
-        "time": 1283,
-        "page": 31
-      },
-      {
-        "time": 1309,
-        "page": 32
-      },
-      {
-        "time": 1359,
-        "page": 33
-      },
-      {
-        "time": 1479,
-        "page": 34
-      },
-      {
-        "time": 1526,
-        "page": 35
-      },
-      {
-        "time": 1548,
-        "page": 36
-      },
-      {
-        "time": 1674,
-        "page": 37
-      },
-      {
-        "time": 1784,
-        "page": 38
-      },
-      {
-        "time": 1801,
-        "page": 39
-      },
-      {
-        "time": 1809,
-        "page": 40
-      },
-      {
-        "time": 1823,
-        "page": 41
-      },
-      {
-        "time": 1828,
-        "page": 42
-      },
-      {
-        "time": 1845,
-        "page": 43
-      },
-      {
-        "time": 1905,
-        "page": 48
-      },
-      {
-        "time": 1971,
-        "page": 50
-      },
-      {
-        "time": 1981,
-        "page": 51
-      },
-      {
-        "time": 1987,
-        "page": 54
-      },
-      {
-        "time": 1991,
-        "page": 55
-      },
-      {
-        "time": 2028,
-        "page": 59
-      },
-      {
-        "time": 2039,
-        "page": 65
-      },
-      {
-        "time": 2054,
-        "page": 66
-      },
-      {
-        "time": 2075,
-        "page": 67
-      }
-    ],
-    "slideCueNote": "Approximate cues use timestamps from YouTube auto-generated captions at the first narration match for corresponding PDF slide text; slide changes may happen slightly before or after the spoken mention.",
     "language": "en",
-    "recordingPublishedAt": "2025-11-19"
+    "recordingPublishedAt": "2025-11-19",
+    "cueFile": "cues/how-ebpf-enables-next-generation-security-enforcement.json"
   },
   {
     "title": "Exploring the World of Cilium: a hands-workshop on Cilium, Tetragon & eBPF",
@@ -491,34 +153,8 @@
     "date": "2024-07-09",
     "dateDisplay": "Jul 9, 2024",
     "programUrl": "https://humanitec.com/events/the-platform-engineers-survival-guide-to-kubernetes-networking-2024-07-09",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 691,
-        "page": 43
-      },
-      {
-        "time": 1037,
-        "page": 22
-      },
-      {
-        "time": 1382,
-        "page": 27
-      },
-      {
-        "time": 1728,
-        "page": 38
-      },
-      {
-        "time": 2074,
-        "page": 33
-      }
-    ],
-    "slideCueNote": "The video opens on PDF page 1. Remaining page matches are approximate sampled points; the recording revisits deck sections, so page numbers can move backward.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/the-platform-engineer-s-survival-guide-to-kubernetes-networking.json"
   },
   {
     "title": "Cilium Workshop: Kubernetes networking with eBPF",
@@ -542,82 +178,8 @@
     "date": "2024-06-11",
     "dateDisplay": "Jun 11, 2024",
     "programUrl": "https://2024.platformcon.com/talks?7a95d203_page=3",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 3,
-        "page": 2
-      },
-      {
-        "time": 27,
-        "page": 9
-      },
-      {
-        "time": 97,
-        "page": 11
-      },
-      {
-        "time": 181,
-        "page": 14
-      },
-      {
-        "time": 588,
-        "page": 21
-      },
-      {
-        "time": 640,
-        "page": 27
-      },
-      {
-        "time": 1176,
-        "page": 36
-      },
-      {
-        "time": 1406,
-        "page": 38
-      },
-      {
-        "time": 1488,
-        "page": 40
-      },
-      {
-        "time": 1692,
-        "page": 50
-      },
-      {
-        "time": 1768,
-        "page": 51
-      },
-      {
-        "time": 1879,
-        "page": 55
-      },
-      {
-        "time": 1921,
-        "page": 57
-      },
-      {
-        "time": 2060,
-        "page": 58
-      },
-      {
-        "time": 2148,
-        "page": 60
-      },
-      {
-        "time": 2387,
-        "page": 83
-      },
-      {
-        "time": 2576,
-        "page": 88
-      }
-    ],
-    "slideCueNote": "Approximate cue times use the first spoken matches for deck text in auto-generated captions. This is a long workshop recording; many demonstration/build slides have no reliable narration match.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/exploring-cilium-tetragon-and-ebpf.json"
   },
   {
     "title": "eBPF-based Security Observability & Runtime Enforcement with Cilium Tetragon",
@@ -641,206 +203,8 @@
     "date": "2023-11-16",
     "dateDisplay": "Nov 16, 2023",
     "conferenceUrl": "https://www.cloudnativealliance.ch/",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 34,
-        "page": 2
-      },
-      {
-        "time": 89,
-        "page": 3
-      },
-      {
-        "time": 91,
-        "page": 4
-      },
-      {
-        "time": 93,
-        "page": 5
-      },
-      {
-        "time": 96,
-        "page": 6
-      },
-      {
-        "time": 99,
-        "page": 7
-      },
-      {
-        "time": 101,
-        "page": 8
-      },
-      {
-        "time": 103,
-        "page": 9
-      },
-      {
-        "time": 156,
-        "page": 10
-      },
-      {
-        "time": 294,
-        "page": 11
-      },
-      {
-        "time": 339,
-        "page": 12
-      },
-      {
-        "time": 352,
-        "page": 13
-      },
-      {
-        "time": 397,
-        "page": 14
-      },
-      {
-        "time": 519,
-        "page": 15
-      },
-      {
-        "time": 520,
-        "page": 16
-      },
-      {
-        "time": 536,
-        "page": 17
-      },
-      {
-        "time": 559,
-        "page": 18
-      },
-      {
-        "time": 714,
-        "page": 19
-      },
-      {
-        "time": 727,
-        "page": 20
-      },
-      {
-        "time": 735,
-        "page": 21
-      },
-      {
-        "time": 760,
-        "page": 22
-      },
-      {
-        "time": 861,
-        "page": 23
-      },
-      {
-        "time": 886,
-        "page": 24
-      },
-      {
-        "time": 916,
-        "page": 25
-      },
-      {
-        "time": 923,
-        "page": 26
-      },
-      {
-        "time": 927,
-        "page": 27
-      },
-      {
-        "time": 1055,
-        "page": 28
-      },
-      {
-        "time": 1067,
-        "page": 29
-      },
-      {
-        "time": 1068,
-        "page": 30
-      },
-      {
-        "time": 1081,
-        "page": 31
-      },
-      {
-        "time": 1095,
-        "page": 32
-      },
-      {
-        "time": 1099,
-        "page": 33
-      },
-      {
-        "time": 1125,
-        "page": 35
-      },
-      {
-        "time": 1127,
-        "page": 36
-      },
-      {
-        "time": 1163,
-        "page": 37
-      },
-      {
-        "time": 1205,
-        "page": 38
-      },
-      {
-        "time": 1265,
-        "page": 39
-      },
-      {
-        "time": 1271,
-        "page": 40
-      },
-      {
-        "time": 1359,
-        "page": 41
-      },
-      {
-        "time": 1500,
-        "page": 42
-      },
-      {
-        "time": 1542,
-        "page": 43
-      },
-      {
-        "time": 1545,
-        "page": 44
-      },
-      {
-        "time": 1576,
-        "page": 46
-      },
-      {
-        "time": 1776,
-        "page": 47
-      },
-      {
-        "time": 1801,
-        "page": 48
-      },
-      {
-        "time": 1819,
-        "page": 49
-      },
-      {
-        "time": 1825,
-        "page": 50
-      },
-      {
-        "time": 1839,
-        "page": 52
-      }
-    ],
-    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/cilium-service-mesh.json"
   },
   {
     "title": "Cilium Workshop: Kubernetes Networking with eBPF",
@@ -862,153 +226,11 @@
     "pageCount": 43,
     "alternateDeck": "decks/devopsdays-zurich-2023-bridging-dev-ops.pdf",
     "alternatePageCount": 42,
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 57,
-        "page": 2
-      },
-      {
-        "time": 121,
-        "page": 3
-      },
-      {
-        "time": 138,
-        "page": 4
-      },
-      {
-        "time": 149,
-        "page": 9
-      },
-      {
-        "time": 203,
-        "page": 10
-      },
-      {
-        "time": 232,
-        "page": 11
-      },
-      {
-        "time": 288,
-        "page": 12
-      },
-      {
-        "time": 381,
-        "page": 13
-      },
-      {
-        "time": 449,
-        "page": 15
-      },
-      {
-        "time": 514,
-        "page": 16
-      },
-      {
-        "time": 618,
-        "page": 17
-      },
-      {
-        "time": 706,
-        "page": 18
-      },
-      {
-        "time": 807,
-        "page": 19
-      },
-      {
-        "time": 820,
-        "page": 20
-      },
-      {
-        "time": 847,
-        "page": 22
-      },
-      {
-        "time": 872,
-        "page": 23
-      },
-      {
-        "time": 976,
-        "page": 25
-      },
-      {
-        "time": 1111,
-        "page": 26
-      },
-      {
-        "time": 1201,
-        "page": 27
-      },
-      {
-        "time": 1222,
-        "page": 28
-      },
-      {
-        "time": 1243,
-        "page": 29
-      },
-      {
-        "time": 1260,
-        "page": 30
-      },
-      {
-        "time": 1273,
-        "page": 31
-      },
-      {
-        "time": 1303,
-        "page": 32
-      },
-      {
-        "time": 1324,
-        "page": 33
-      },
-      {
-        "time": 1351,
-        "page": 34
-      },
-      {
-        "time": 1427,
-        "page": 35
-      },
-      {
-        "time": 1454,
-        "page": 36
-      },
-      {
-        "time": 1468,
-        "page": 37
-      },
-      {
-        "time": 1523,
-        "page": 38
-      },
-      {
-        "time": 1536,
-        "page": 39
-      },
-      {
-        "time": 1549,
-        "page": 40
-      },
-      {
-        "time": 1570,
-        "page": 42
-      },
-      {
-        "time": 1580,
-        "page": 43
-      }
-    ],
     "date": "2023-06-15",
     "dateDisplay": "Jun 15, 2023",
     "conferenceUrl": "https://www.cloudnativezurich.ch/archive-2023/",
-    "slideCueNote": "Timestamps and slide matches are approximate, based on captions and deck text.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/bridging-dev-and-ops-with-ebpf.json"
   },
   {
     "title": "Cloud Native Bern 05.2023 — Zero Trust Visibility",
@@ -1043,54 +265,8 @@
     "date": "2023-03-07",
     "dateDisplay": "Mar 7, 2023",
     "programUrl": "https://assets.website-files.com/633187a23a99dd18ff6fa77e/64009fab60e140a5d661d3e0_programmation_kcd_07_03.pdf",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 201,
-        "page": 16
-      },
-      {
-        "time": 536,
-        "page": 61
-      },
-      {
-        "time": 714,
-        "page": 27
-      },
-      {
-        "time": 799,
-        "page": 36
-      },
-      {
-        "time": 946,
-        "page": 40
-      },
-      {
-        "time": 1008,
-        "page": 44
-      },
-      {
-        "time": 1606,
-        "page": 52
-      },
-      {
-        "time": 2117,
-        "page": 61
-      },
-      {
-        "time": 2245,
-        "page": 66
-      },
-      {
-        "time": 2326,
-        "page": 71
-      }
-    ],
-    "slideCueNote": "Chapter times are exact; slide pages are approximate.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/revolution-ebpf-un-noyau-linux-dynamique-kcd-paris-2023.json"
   },
   {
     "id": "hzMif_cytLs",
@@ -1103,130 +279,8 @@
     "dateDisplay": "Feb 8, 2023",
     "conferenceUrl": "https://cfgmgmtcamp.org/ghent2023/",
     "programUrl": "https://cfp.cfgmgmtcamp.org/2023/talk/SNY9ZV/",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 28,
-        "page": 2
-      },
-      {
-        "time": 44,
-        "page": 9
-      },
-      {
-        "time": 153,
-        "page": 10
-      },
-      {
-        "time": 203,
-        "page": 11
-      },
-      {
-        "time": 231,
-        "page": 12
-      },
-      {
-        "time": 292,
-        "page": 13
-      },
-      {
-        "time": 319,
-        "page": 14
-      },
-      {
-        "time": 321,
-        "page": 15
-      },
-      {
-        "time": 323,
-        "page": 16
-      },
-      {
-        "time": 465,
-        "page": 18
-      },
-      {
-        "time": 480,
-        "page": 19
-      },
-      {
-        "time": 639,
-        "page": 27
-      },
-      {
-        "time": 675,
-        "page": 29
-      },
-      {
-        "time": 788,
-        "page": 30
-      },
-      {
-        "time": 856,
-        "page": 31
-      },
-      {
-        "time": 907,
-        "page": 36
-      },
-      {
-        "time": 927,
-        "page": 37
-      },
-      {
-        "time": 998,
-        "page": 39
-      },
-      {
-        "time": 1142,
-        "page": 44
-      },
-      {
-        "time": 1291,
-        "page": 47
-      },
-      {
-        "time": 1446,
-        "page": 49
-      },
-      {
-        "time": 1531,
-        "page": 52
-      },
-      {
-        "time": 1565,
-        "page": 53
-      },
-      {
-        "time": 1580,
-        "page": 54
-      },
-      {
-        "time": 2092,
-        "page": 60
-      },
-      {
-        "time": 2228,
-        "page": 62
-      },
-      {
-        "time": 2510,
-        "page": 68
-      },
-      {
-        "time": 2710,
-        "page": 72
-      },
-      {
-        "time": 2792,
-        "page": 76
-      }
-    ],
-    "slideCueNote": "Approximate cue times are first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/ebpf-superpowers-a-dynamic-kernel.json"
   },
   {
     "id": "HqQlLtsZEp4",
@@ -1238,70 +292,8 @@
     "date": "2022-12-14",
     "dateDisplay": "Dec 14–15, 2022",
     "conferenceUrl": "https://devopsdays.org/events/2022-tel-aviv/",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 84,
-        "page": 2
-      },
-      {
-        "time": 118,
-        "page": 10
-      },
-      {
-        "time": 192,
-        "page": 12
-      },
-      {
-        "time": 517,
-        "page": 16
-      },
-      {
-        "time": 903,
-        "page": 23
-      },
-      {
-        "time": 1106,
-        "page": 25
-      },
-      {
-        "time": 1197,
-        "page": 29
-      },
-      {
-        "time": 1462,
-        "page": 33
-      },
-      {
-        "time": 1539,
-        "page": 34
-      },
-      {
-        "time": 1681,
-        "page": 38
-      },
-      {
-        "time": 1718,
-        "page": 39
-      },
-      {
-        "time": 1789,
-        "page": 40
-      },
-      {
-        "time": 2075,
-        "page": 44
-      },
-      {
-        "time": 2177,
-        "page": 48
-      }
-    ],
-    "slideCueNote": "Times follow the chapter markers; page mapping is approximate for this 50-slide edition.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/avoiding-technical-debt-in-a-cloud-native-world.json"
   },
   {
     "id": "ge-iruUlYYs",
@@ -1313,50 +305,8 @@
     "date": "2022-12-01",
     "dateDisplay": "Dec 1, 2022",
     "programUrl": "https://www.devopsdday.com/copy-of-conferences/r%C3%A9volution-ebpf%3A-un-noyau-linux-dynamique",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 250,
-        "page": 3
-      },
-      {
-        "time": 502,
-        "page": 8
-      },
-      {
-        "time": 796,
-        "page": 14
-      },
-      {
-        "time": 1072,
-        "page": 20
-      },
-      {
-        "time": 1263,
-        "page": 24
-      },
-      {
-        "time": 1616,
-        "page": 32
-      },
-      {
-        "time": 2035,
-        "page": 35
-      },
-      {
-        "time": 2245,
-        "page": 37
-      },
-      {
-        "time": 2417,
-        "page": 40
-      }
-    ],
-    "slideCueNote": "Chapter times are exact; slide pages are approximate.",
-    "language": "fr"
+    "language": "fr",
+    "cueFile": "cues/revolution-ebpf-un-noyau-linux-dynamique-devops-d-day.json"
   },
   {
     "id": "JJ1bFnJenms",
@@ -1368,80 +318,10 @@
     "date": "2022-10-05",
     "dateDisplay": "Around Oct 5, 2022",
     "language": "fr",
-    "slideCues": [
-      {
-        "time": 143,
-        "page": 1
-      },
-      {
-        "time": 203,
-        "page": 2
-      },
-      {
-        "time": 215,
-        "page": 4
-      },
-      {
-        "time": 235,
-        "page": 5
-      },
-      {
-        "time": 370,
-        "page": 8
-      },
-      {
-        "time": 390,
-        "page": 9
-      },
-      {
-        "time": 825,
-        "page": 12
-      },
-      {
-        "time": 838,
-        "page": 13
-      },
-      {
-        "time": 867,
-        "page": 14
-      },
-      {
-        "time": 894,
-        "page": 15
-      },
-      {
-        "time": 910,
-        "page": 16
-      },
-      {
-        "time": 1099,
-        "page": 17
-      },
-      {
-        "time": 1487,
-        "page": 20
-      },
-      {
-        "time": 1848,
-        "page": 27
-      },
-      {
-        "time": 2207,
-        "page": 33
-      },
-      {
-        "time": 2550,
-        "page": 37
-      },
-      {
-        "time": 2759,
-        "page": 44
-      }
-    ],
-    "slideCueNote": "Page 1 at 143s, page 2 at 203s, page 4 at 215s, pages 5 and 8 at 235s and 370s were visually checked; remaining points are approximate French-transcript topic anchors. Page 3/4 alignment is ambiguous, and exact transition times are not verified.",
     "dateBasis": "The deck file timestamp is Oct 6, 2022. The presentation date is estimated as the previous day; the exact date is unverified.",
     "conferenceUrl": "https://www.compagnons-devops.fr/",
-    "sessionType": "Community livestream / podcast interview"
+    "sessionType": "Community livestream / podcast interview",
+    "cueFile": "cues/cloud-native-application-security-via-networking-with-cilium-ebpf.json"
   },
   {
     "id": "wBrlhctsmYs",
@@ -1463,70 +343,8 @@
     "date": "2022-05-12",
     "dateDisplay": "May 12–13, 2022",
     "programUrl": "https://devopsdays.org/events/2022-geneva/program/raphael-pinson",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 84,
-        "page": 3
-      },
-      {
-        "time": 118,
-        "page": 4
-      },
-      {
-        "time": 192,
-        "page": 5
-      },
-      {
-        "time": 517,
-        "page": 7
-      },
-      {
-        "time": 903,
-        "page": 9
-      },
-      {
-        "time": 1106,
-        "page": 10
-      },
-      {
-        "time": 1197,
-        "page": 11
-      },
-      {
-        "time": 1462,
-        "page": 12
-      },
-      {
-        "time": 1539,
-        "page": 13
-      },
-      {
-        "time": 1681,
-        "page": 14
-      },
-      {
-        "time": 1718,
-        "page": 15
-      },
-      {
-        "time": 1789,
-        "page": 16
-      },
-      {
-        "time": 2075,
-        "page": 18
-      },
-      {
-        "time": 2177,
-        "page": 20
-      }
-    ],
     "language": "en",
-    "slideCueNote": "Approximate narration-based cue points; exact slide transition frames were not verified."
+    "cueFile": "cues/the-hare-and-the-tortoise-open-source-standards-technical-debt.json"
   },
   {
     "title": "SKS in GitOps mode",
@@ -1563,42 +381,8 @@
     "event": "Cloud Native Meetup Romandie",
     "videoStart": 4330,
     "dateBasis": "Date supplied by user.",
-    "slideCues": [
-      {
-        "time": 4330,
-        "page": 1
-      },
-      {
-        "time": 4399,
-        "page": 2
-      },
-      {
-        "time": 4454,
-        "page": 4
-      },
-      {
-        "time": 4513,
-        "page": 9
-      },
-      {
-        "time": 4721,
-        "page": 11
-      },
-      {
-        "time": 4774,
-        "page": 12
-      },
-      {
-        "time": 4860,
-        "page": 13
-      },
-      {
-        "time": 5290,
-        "page": 16
-      }
-    ],
-    "slideCueNote": "Approximate narration-based cues from auto-generated captions; transition frames were not verified. Later Q&A and closing slides are omitted.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/devops-stack.json"
   },
   {
     "title": "YAML Engineering: why we need a new paradigm",
@@ -1636,110 +420,8 @@
     "videoStart": 3832,
     "dateBasis": "Date supplied by user; meetup series inferred from adjacent recordings.",
     "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
-    "slideCues": [
-      {
-        "time": 3832,
-        "page": 1
-      },
-      {
-        "time": 3891,
-        "page": 2
-      },
-      {
-        "time": 3937,
-        "page": 5
-      },
-      {
-        "time": 3949,
-        "page": 6
-      },
-      {
-        "time": 3980,
-        "page": 7
-      },
-      {
-        "time": 3987,
-        "page": 8
-      },
-      {
-        "time": 4040,
-        "page": 9
-      },
-      {
-        "time": 4080,
-        "page": 10
-      },
-      {
-        "time": 4131,
-        "page": 11
-      },
-      {
-        "time": 4184,
-        "page": 12
-      },
-      {
-        "time": 4230,
-        "page": 13
-      },
-      {
-        "time": 4258,
-        "page": 14
-      },
-      {
-        "time": 4383,
-        "page": 15
-      },
-      {
-        "time": 4460,
-        "page": 16
-      },
-      {
-        "time": 4611,
-        "page": 17
-      },
-      {
-        "time": 4678,
-        "page": 18
-      },
-      {
-        "time": 4714,
-        "page": 20
-      },
-      {
-        "time": 4754,
-        "page": 21
-      },
-      {
-        "time": 4790,
-        "page": 22
-      },
-      {
-        "time": 4842,
-        "page": 23
-      },
-      {
-        "time": 4892,
-        "page": 24
-      },
-      {
-        "time": 4915,
-        "page": 25
-      },
-      {
-        "time": 4968,
-        "page": 26
-      },
-      {
-        "time": 5020,
-        "page": 27
-      },
-      {
-        "time": 5037,
-        "page": 28
-      }
-    ],
-    "slideCueNote": "Approximate cue anchors from auto-generated narration; pages 1, 5, 9 and 10 were directly observed in playback. Other transition frames were not verified. The page-29 end card and image-only/blank pages are omitted.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/k9s-kubernetes-cli-to-manage-your-clusters-in-style.json"
   },
   {
     "id": "onzP72ZMXcw",
@@ -1751,37 +433,11 @@
     "dateDisplay": "Nov 19, 2020",
     "conferenceUrl": "https://www.perforce.com/resources/video/running-puppet-kubernetes",
     "dateBasis": "The conference took place Nov 19, 2020; the recording was published the following day.",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 2
-      },
-      {
-        "time": 120,
-        "page": 6
-      },
-      {
-        "time": 147,
-        "page": 7
-      },
-      {
-        "time": 176,
-        "page": 8
-      },
-      {
-        "time": 288,
-        "page": 9
-      },
-      {
-        "time": 389,
-        "page": 10
-      }
-    ],
-    "slideCueNote": "Approximate points sampled from the recording. The video starts on PDF page 2; intermediate transitions were not all sampled.",
     "language": "en",
     "event": "Puppetize Digital 2020",
     "alternateTitle": "Running the Puppet Stack in Containers",
-    "recordingPublishedAt": "2020-11-20"
+    "recordingPublishedAt": "2020-11-20",
+    "cueFile": "cues/running-puppet-on-kubernetes.json"
   },
   {
     "title": "Argocd up and running",
@@ -1795,58 +451,8 @@
     "videoStart": 4951,
     "dateBasis": "Date supplied by user; recording URL starts at 49:51.",
     "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
-    "slideCues": [
-      {
-        "time": 4956,
-        "page": 1
-      },
-      {
-        "time": 4979,
-        "page": 2
-      },
-      {
-        "time": 5001,
-        "page": 3
-      },
-      {
-        "time": 5068,
-        "page": 6
-      },
-      {
-        "time": 5123,
-        "page": 8
-      },
-      {
-        "time": 5156,
-        "page": 9
-      },
-      {
-        "time": 5243,
-        "page": 10
-      },
-      {
-        "time": 5425,
-        "page": 11
-      },
-      {
-        "time": 5484,
-        "page": 14
-      },
-      {
-        "time": 5567,
-        "page": 15
-      },
-      {
-        "time": 6424,
-        "page": 18
-      },
-      {
-        "time": 6532,
-        "page": 19
-      }
-    ],
-    "slideCueNote": "Page 1 is visually confirmed around 4956s; remaining cues are approximate transcript and topic alignments. Exact transition frames are not verified.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/argocd-up-and-running.json"
   },
   {
     "title": "Bivac - Container Volumes Backup",
@@ -1860,66 +466,8 @@
     "dateBasis": "Date supplied by user; Lausanne is probable.",
     "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
     "videoStart": 295,
-    "slideCues": [
-      {
-        "time": 295,
-        "page": 2
-      },
-      {
-        "time": 350,
-        "page": 3
-      },
-      {
-        "time": 390,
-        "page": 4
-      },
-      {
-        "time": 485,
-        "page": 5
-      },
-      {
-        "time": 665,
-        "page": 6
-      },
-      {
-        "time": 700,
-        "page": 7
-      },
-      {
-        "time": 803,
-        "page": 8
-      },
-      {
-        "time": 870,
-        "page": 9
-      },
-      {
-        "time": 986,
-        "page": 10
-      },
-      {
-        "time": 1024,
-        "page": 11
-      },
-      {
-        "time": 1109,
-        "page": 12
-      },
-      {
-        "time": 1120,
-        "page": 13
-      },
-      {
-        "time": 1200,
-        "page": 14
-      },
-      {
-        "time": 1233,
-        "page": 15
-      }
-    ],
-    "slideCueNote": "Approximate points sampled from the recording; each timestamp identifies a page visible at that time, not an exact transition. Page 2 is visible at the supplied start time; Q&A and the final page are not mapped.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/bivac-container-volumes-backup.json"
   },
   {
     "id": "qYXoA2gOXzU",
@@ -1969,27 +517,7 @@
     "conferenceUrl": "https://cfgmgmtcamp.org/ghent2019/schedule/tuesday/",
     "language": "en",
     "sessionType": "Ignite talk",
-    "slideCues": [
-      { "time": 1365, "page": 1 },
-      { "time": 1382, "page": 2 },
-      { "time": 1400, "page": 3 },
-      { "time": 1416, "page": 4 },
-      { "time": 1432, "page": 5 },
-      { "time": 1448, "page": 6 },
-      { "time": 1464, "page": 7 },
-      { "time": 1480, "page": 8 },
-      { "time": 1496, "page": 9 },
-      { "time": 1512, "page": 10 },
-      { "time": 1528, "page": 11 },
-      { "time": 1544, "page": 12 },
-      { "time": 1560, "page": 13 },
-      { "time": 1576, "page": 14 },
-      { "time": 1592, "page": 15 },
-      { "time": 1608, "page": 16 },
-      { "time": 1624, "page": 17 },
-      { "time": 1640, "page": 18 }
-    ],
-    "slideCueNote": "Approximate transitions are interpolated from the supplied 22:45 start and sampled video frames showing slides 3 at 23:20 and 17 at 27:04; intermediate transitions were not individually verified."
+    "cueFile": "cues/narcissus-mapping-configs-in-go.json"
   },
   {
     "title": "Automating Puppet Certificates Renewal",
@@ -2032,150 +560,8 @@
     "conferenceUrl": "https://2014.puppetconf.com/",
     "date": "2014",
     "dateDisplay": "2014",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 65,
-        "page": 2
-      },
-      {
-        "time": 158,
-        "page": 3
-      },
-      {
-        "time": 290,
-        "page": 4
-      },
-      {
-        "time": 365,
-        "page": 5
-      },
-      {
-        "time": 445,
-        "page": 6
-      },
-      {
-        "time": 505,
-        "page": 7
-      },
-      {
-        "time": 569,
-        "page": 8
-      },
-      {
-        "time": 614,
-        "page": 9
-      },
-      {
-        "time": 645,
-        "page": 10
-      },
-      {
-        "time": 688,
-        "page": 11
-      },
-      {
-        "time": 703,
-        "page": 12
-      },
-      {
-        "time": 854,
-        "page": 13
-      },
-      {
-        "time": 1027,
-        "page": 14
-      },
-      {
-        "time": 1080,
-        "page": 15
-      },
-      {
-        "time": 1156,
-        "page": 16
-      },
-      {
-        "time": 1328,
-        "page": 17
-      },
-      {
-        "time": 1416,
-        "page": 18
-      },
-      {
-        "time": 1512,
-        "page": 19
-      },
-      {
-        "time": 1554,
-        "page": 20
-      },
-      {
-        "time": 1581,
-        "page": 21
-      },
-      {
-        "time": 1638,
-        "page": 22
-      },
-      {
-        "time": 1674,
-        "page": 23
-      },
-      {
-        "time": 1728,
-        "page": 24
-      },
-      {
-        "time": 1794,
-        "page": 25
-      },
-      {
-        "time": 1833,
-        "page": 26
-      },
-      {
-        "time": 1930,
-        "page": 27
-      },
-      {
-        "time": 1968,
-        "page": 28
-      },
-      {
-        "time": 2010,
-        "page": 29
-      },
-      {
-        "time": 2142,
-        "page": 30
-      },
-      {
-        "time": 2188,
-        "page": 31
-      },
-      {
-        "time": 2198,
-        "page": 32
-      },
-      {
-        "time": 2260,
-        "page": 33
-      },
-      {
-        "time": 2673,
-        "page": 34
-      },
-      {
-        "time": 2686,
-        "page": 35
-      }
-    ],
-    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition.",
-    "language": "en"
+    "language": "en",
+    "cueFile": "cues/orchestrated-functional-testing-with-puppet.json"
   },
   {
     "title": "Augeas @RMLL 2012",
@@ -2223,68 +609,6 @@
     "conferenceUrl": "https://media.ccc.de/c/linuxtag06/linuxtag06",
     "language": "en",
     "dateBasis": "The LinuxTag event record lists Raphaël Pinson’s Kubuntu session on May 6, 2006.",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 58,
-        "page": 2
-      },
-      {
-        "time": 120,
-        "page": 3
-      },
-      {
-        "time": 420,
-        "page": 4
-      },
-      {
-        "time": 480,
-        "page": 5
-      },
-      {
-        "time": 600,
-        "page": 6
-      },
-      {
-        "time": 720,
-        "page": 7
-      },
-      {
-        "time": 960,
-        "page": 8
-      },
-      {
-        "time": 1200,
-        "page": 9
-      },
-      {
-        "time": 1320,
-        "page": 10
-      },
-      {
-        "time": 1440,
-        "page": 11
-      },
-      {
-        "time": 1560,
-        "page": 12
-      },
-      {
-        "time": 1680,
-        "page": 13
-      },
-      {
-        "time": 1800,
-        "page": 14
-      },
-      {
-        "time": 1860,
-        "page": 15
-      }
-    ],
-    "slideCueNote": "Approximate slide cues were matched by sampling the recording every 20 seconds against the local deck. The video includes desktop demonstrations between slides; cue points are anchors and may differ from the exact transition by about a minute."
+    "cueFile": "cues/kubuntu.json"
   }
 ]

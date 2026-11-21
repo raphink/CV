@@ -1,0 +1,145 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 57,
+      "page": 2
+    },
+    {
+      "time": 121,
+      "page": 3
+    },
+    {
+      "time": 138,
+      "page": 4
+    },
+    {
+      "time": 149,
+      "page": 9
+    },
+    {
+      "time": 203,
+      "page": 10
+    },
+    {
+      "time": 232,
+      "page": 11
+    },
+    {
+      "time": 288,
+      "page": 12
+    },
+    {
+      "time": 381,
+      "page": 13
+    },
+    {
+      "time": 449,
+      "page": 15
+    },
+    {
+      "time": 514,
+      "page": 16
+    },
+    {
+      "time": 618,
+      "page": 17
+    },
+    {
+      "time": 706,
+      "page": 18
+    },
+    {
+      "time": 807,
+      "page": 19
+    },
+    {
+      "time": 820,
+      "page": 20
+    },
+    {
+      "time": 847,
+      "page": 22
+    },
+    {
+      "time": 872,
+      "page": 23
+    },
+    {
+      "time": 976,
+      "page": 25
+    },
+    {
+      "time": 1111,
+      "page": 26
+    },
+    {
+      "time": 1201,
+      "page": 27
+    },
+    {
+      "time": 1222,
+      "page": 28
+    },
+    {
+      "time": 1243,
+      "page": 29
+    },
+    {
+      "time": 1260,
+      "page": 30
+    },
+    {
+      "time": 1273,
+      "page": 31
+    },
+    {
+      "time": 1303,
+      "page": 32
+    },
+    {
+      "time": 1324,
+      "page": 33
+    },
+    {
+      "time": 1351,
+      "page": 34
+    },
+    {
+      "time": 1427,
+      "page": 35
+    },
+    {
+      "time": 1454,
+      "page": 36
+    },
+    {
+      "time": 1468,
+      "page": 37
+    },
+    {
+      "time": 1523,
+      "page": 38
+    },
+    {
+      "time": 1536,
+      "page": 39
+    },
+    {
+      "time": 1549,
+      "page": 40
+    },
+    {
+      "time": 1570,
+      "page": 42
+    },
+    {
+      "time": 1580,
+      "page": 43
+    }
+  ],
+  "slideCueNote": "Timestamps and slide matches are approximate, based on captions and deck text."
+}

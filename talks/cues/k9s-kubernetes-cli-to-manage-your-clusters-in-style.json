@@ -1,0 +1,105 @@
+{
+  "slideCues": [
+    {
+      "time": 3832,
+      "page": 1
+    },
+    {
+      "time": 3891,
+      "page": 2
+    },
+    {
+      "time": 3937,
+      "page": 5
+    },
+    {
+      "time": 3949,
+      "page": 6
+    },
+    {
+      "time": 3980,
+      "page": 7
+    },
+    {
+      "time": 3987,
+      "page": 8
+    },
+    {
+      "time": 4040,
+      "page": 9
+    },
+    {
+      "time": 4080,
+      "page": 10
+    },
+    {
+      "time": 4131,
+      "page": 11
+    },
+    {
+      "time": 4184,
+      "page": 12
+    },
+    {
+      "time": 4230,
+      "page": 13
+    },
+    {
+      "time": 4258,
+      "page": 14
+    },
+    {
+      "time": 4383,
+      "page": 15
+    },
+    {
+      "time": 4460,
+      "page": 16
+    },
+    {
+      "time": 4611,
+      "page": 17
+    },
+    {
+      "time": 4678,
+      "page": 18
+    },
+    {
+      "time": 4714,
+      "page": 20
+    },
+    {
+      "time": 4754,
+      "page": 21
+    },
+    {
+      "time": 4790,
+      "page": 22
+    },
+    {
+      "time": 4842,
+      "page": 23
+    },
+    {
+      "time": 4892,
+      "page": 24
+    },
+    {
+      "time": 4915,
+      "page": 25
+    },
+    {
+      "time": 4968,
+      "page": 26
+    },
+    {
+      "time": 5020,
+      "page": 27
+    },
+    {
+      "time": 5037,
+      "page": 28
+    }
+  ],
+  "slideCueNote": "Approximate cue anchors from auto-generated narration; pages 1, 5, 9 and 10 were directly observed in playback. Other transition frames were not verified. The page-29 end card and image-only/blank pages are omitted."
+}

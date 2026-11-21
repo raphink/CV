@@ -1,0 +1,77 @@
+{
+  "slideCues": [
+    {
+      "time": 1365,
+      "page": 1
+    },
+    {
+      "time": 1382,
+      "page": 2
+    },
+    {
+      "time": 1400,
+      "page": 3
+    },
+    {
+      "time": 1416,
+      "page": 4
+    },
+    {
+      "time": 1432,
+      "page": 5
+    },
+    {
+      "time": 1448,
+      "page": 6
+    },
+    {
+      "time": 1464,
+      "page": 7
+    },
+    {
+      "time": 1480,
+      "page": 8
+    },
+    {
+      "time": 1496,
+      "page": 9
+    },
+    {
+      "time": 1512,
+      "page": 10
+    },
+    {
+      "time": 1528,
+      "page": 11
+    },
+    {
+      "time": 1544,
+      "page": 12
+    },
+    {
+      "time": 1560,
+      "page": 13
+    },
+    {
+      "time": 1576,
+      "page": 14
+    },
+    {
+      "time": 1592,
+      "page": 15
+    },
+    {
+      "time": 1608,
+      "page": 16
+    },
+    {
+      "time": 1624,
+      "page": 17
+    },
+    {
+      "time": 1640,
+      "page": 18
+    }
+  ],
+  "slideCueNote": "Approximate transitions are interpolated from the supplied 22:45 start and sampled video frames showing slides 3 at 23:20 and 17 at 27:04; intermediate transitions were not individually verified."
+}

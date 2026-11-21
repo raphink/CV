@@ -1,0 +1,29 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 691,
+      "page": 43
+    },
+    {
+      "time": 1037,
+      "page": 22
+    },
+    {
+      "time": 1382,
+      "page": 27
+    },
+    {
+      "time": 1728,
+      "page": 38
+    },
+    {
+      "time": 2074,
+      "page": 33
+    }
+  ],
+  "slideCueNote": "The video opens on PDF page 1. Remaining page matches are approximate sampled points; the recording revisits deck sections, so page numbers can move backward."
+}

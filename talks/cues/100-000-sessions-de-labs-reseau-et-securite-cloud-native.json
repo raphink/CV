@@ -1,0 +1,169 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 149,
+      "page": 11
+    },
+    {
+      "time": 158,
+      "page": 12
+    },
+    {
+      "time": 186,
+      "page": 13
+    },
+    {
+      "time": 195,
+      "page": 14
+    },
+    {
+      "time": 212,
+      "page": 16
+    },
+    {
+      "time": 224,
+      "page": 18
+    },
+    {
+      "time": 250,
+      "page": 19
+    },
+    {
+      "time": 306,
+      "page": 20
+    },
+    {
+      "time": 321,
+      "page": 21
+    },
+    {
+      "time": 352,
+      "page": 23
+    },
+    {
+      "time": 358,
+      "page": 24
+    },
+    {
+      "time": 463,
+      "page": 25
+    },
+    {
+      "time": 565,
+      "page": 26
+    },
+    {
+      "time": 638,
+      "page": 27
+    },
+    {
+      "time": 680,
+      "page": 28
+    },
+    {
+      "time": 857,
+      "page": 30
+    },
+    {
+      "time": 900,
+      "page": 32
+    },
+    {
+      "time": 940,
+      "page": 33
+    },
+    {
+      "time": 1044,
+      "page": 34
+    },
+    {
+      "time": 1087,
+      "page": 35
+    },
+    {
+      "time": 1218,
+      "page": 36
+    },
+    {
+      "time": 1294,
+      "page": 38
+    },
+    {
+      "time": 1358,
+      "page": 41
+    },
+    {
+      "time": 1375,
+      "page": 43
+    },
+    {
+      "time": 1472,
+      "page": 44
+    },
+    {
+      "time": 1528,
+      "page": 46
+    },
+    {
+      "time": 1610,
+      "page": 47
+    },
+    {
+      "time": 1710,
+      "page": 48
+    },
+    {
+      "time": 1778,
+      "page": 49
+    },
+    {
+      "time": 1800,
+      "page": 50
+    },
+    {
+      "time": 1822,
+      "page": 56
+    },
+    {
+      "time": 2146,
+      "page": 64
+    },
+    {
+      "time": 2173,
+      "page": 65
+    },
+    {
+      "time": 2419,
+      "page": 75
+    },
+    {
+      "time": 2436,
+      "page": 76
+    },
+    {
+      "time": 2487,
+      "page": 77
+    },
+    {
+      "time": 2568,
+      "page": 79
+    },
+    {
+      "time": 2577,
+      "page": 80
+    },
+    {
+      "time": 2583,
+      "page": 81
+    },
+    {
+      "time": 2584,
+      "page": 82
+    }
+  ],
+  "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition. Some slide builds lack a text match."
+}

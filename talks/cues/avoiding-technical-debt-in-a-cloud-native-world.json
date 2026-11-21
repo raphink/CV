@@ -1,0 +1,65 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 84,
+      "page": 2
+    },
+    {
+      "time": 118,
+      "page": 10
+    },
+    {
+      "time": 192,
+      "page": 12
+    },
+    {
+      "time": 517,
+      "page": 16
+    },
+    {
+      "time": 903,
+      "page": 23
+    },
+    {
+      "time": 1106,
+      "page": 25
+    },
+    {
+      "time": 1197,
+      "page": 29
+    },
+    {
+      "time": 1462,
+      "page": 33
+    },
+    {
+      "time": 1539,
+      "page": 34
+    },
+    {
+      "time": 1681,
+      "page": 38
+    },
+    {
+      "time": 1718,
+      "page": 39
+    },
+    {
+      "time": 1789,
+      "page": 40
+    },
+    {
+      "time": 2075,
+      "page": 44
+    },
+    {
+      "time": 2177,
+      "page": 48
+    }
+  ],
+  "slideCueNote": "Times follow the chapter markers; page mapping is approximate for this 50-slide edition."
+}

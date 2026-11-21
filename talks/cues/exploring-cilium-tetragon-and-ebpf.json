@@ -1,0 +1,77 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 3,
+      "page": 2
+    },
+    {
+      "time": 27,
+      "page": 9
+    },
+    {
+      "time": 97,
+      "page": 11
+    },
+    {
+      "time": 181,
+      "page": 14
+    },
+    {
+      "time": 588,
+      "page": 21
+    },
+    {
+      "time": 640,
+      "page": 27
+    },
+    {
+      "time": 1176,
+      "page": 36
+    },
+    {
+      "time": 1406,
+      "page": 38
+    },
+    {
+      "time": 1488,
+      "page": 40
+    },
+    {
+      "time": 1692,
+      "page": 50
+    },
+    {
+      "time": 1768,
+      "page": 51
+    },
+    {
+      "time": 1879,
+      "page": 55
+    },
+    {
+      "time": 1921,
+      "page": 57
+    },
+    {
+      "time": 2060,
+      "page": 58
+    },
+    {
+      "time": 2148,
+      "page": 60
+    },
+    {
+      "time": 2387,
+      "page": 83
+    },
+    {
+      "time": 2576,
+      "page": 88
+    }
+  ],
+  "slideCueNote": "Approximate cue times use the first spoken matches for deck text in auto-generated captions. This is a long workshop recording; many demonstration/build slides have no reliable narration match."
+}

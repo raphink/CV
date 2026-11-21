@@ -1,0 +1,65 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 58,
+      "page": 2
+    },
+    {
+      "time": 120,
+      "page": 3
+    },
+    {
+      "time": 420,
+      "page": 4
+    },
+    {
+      "time": 480,
+      "page": 5
+    },
+    {
+      "time": 600,
+      "page": 6
+    },
+    {
+      "time": 720,
+      "page": 7
+    },
+    {
+      "time": 960,
+      "page": 8
+    },
+    {
+      "time": 1200,
+      "page": 9
+    },
+    {
+      "time": 1320,
+      "page": 10
+    },
+    {
+      "time": 1440,
+      "page": 11
+    },
+    {
+      "time": 1560,
+      "page": 12
+    },
+    {
+      "time": 1680,
+      "page": 13
+    },
+    {
+      "time": 1800,
+      "page": 14
+    },
+    {
+      "time": 1860,
+      "page": 15
+    }
+  ],
+  "slideCueNote": "Approximate slide cues were matched by sampling the recording every 20 seconds against the local deck. The video includes desktop demonstrations between slides; cue points are anchors and may differ from the exact transition by about a minute."
+}

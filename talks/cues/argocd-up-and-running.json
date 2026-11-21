@@ -1,0 +1,53 @@
+{
+  "slideCues": [
+    {
+      "time": 4956,
+      "page": 1
+    },
+    {
+      "time": 4979,
+      "page": 2
+    },
+    {
+      "time": 5001,
+      "page": 3
+    },
+    {
+      "time": 5068,
+      "page": 6
+    },
+    {
+      "time": 5123,
+      "page": 8
+    },
+    {
+      "time": 5156,
+      "page": 9
+    },
+    {
+      "time": 5243,
+      "page": 10
+    },
+    {
+      "time": 5425,
+      "page": 11
+    },
+    {
+      "time": 5484,
+      "page": 14
+    },
+    {
+      "time": 5567,
+      "page": 15
+    },
+    {
+      "time": 6424,
+      "page": 18
+    },
+    {
+      "time": 6532,
+      "page": 19
+    }
+  ],
+  "slideCueNote": "Page 1 is visually confirmed around 4956s; remaining cues are approximate transcript and topic alignments. Exact transition frames are not verified."
+}

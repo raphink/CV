@@ -24,6 +24,7 @@
   var youtubeApiCallbacks = [];
   var activeTalk = null;
   var currentSlide = 1;
+  var detailRenderSequence = 0;
   var visibleYears = [];
   var yearRailFrame = null;
 
@@ -192,6 +193,7 @@
   }
 
   function renderDetail(talk) {
+    var renderSequence = ++detailRenderSequence;
     activeTalk = talk;
     modal.classList.remove('expanded');
     currentSlide = (talk.slideCues && talk.slideCues.length) ? talk.slideCues[0].page : 1;
@@ -224,6 +226,50 @@
       htmlVideo.addEventListener('loadedmetadata', function () { htmlVideo.currentTime = Number(htmlVideo.dataset.start); }, { once: true });
     }
     if (cuesAvailable) initializeSlideSync(talk);
+    else if (talk.cueFile) {
+      loadTalkCues(talk).then(function (loaded) {
+        if (!loaded || activeTalk !== talk || renderSequence !== detailRenderSequence || !modal.open) return;
+        activateLoadedCues(talk);
+      });
+    }
+  }
+
+  function loadTalkCues(talk) {
+    if (Array.isArray(talk.slideCues)) return Promise.resolve(true);
+    if (!talk.cueFile) return Promise.resolve(false);
+    if (talk.cueLoadPromise) return talk.cueLoadPromise;
+    talk.cueLoadPromise = fetch(talk.cueFile).then(function (response) {
+      if (!response.ok) throw new Error('Could not load slide cues.');
+      return response.json();
+    }).then(function (data) {
+      if (!Array.isArray(data.slideCues) || !data.slideCues.length) throw new Error('Invalid slide cue data.');
+      talk.slideCues = data.slideCues;
+      if (data.slideCueNote) talk.slideCueNote = data.slideCueNote;
+      return true;
+    }).catch(function () {
+      delete talk.cueLoadPromise;
+      return false;
+    });
+    return talk.cueLoadPromise;
+  }
+
+  function activateLoadedCues(talk) {
+    var controls = detail.querySelector('.player-toolbar-right');
+    if (!controls || !talk.slideCues || !talk.slideCues.length) return;
+    if (!detail.querySelector('#sync-slides')) {
+      controls.insertAdjacentHTML('afterbegin', '<div class="sync-control-wrap"><label class="sync-control"><input type="checkbox" id="sync-slides" checked> <span>Slides follow video</span></label><span class="sync-status" id="sync-status" aria-live="polite">Waiting for video</span></div>');
+    }
+    if (talk.slideCueNote && !detail.querySelector('.slide-cue-note')) {
+      var media = detail.querySelector('.detail-media');
+      if (media) {
+        var note = document.createElement('p');
+        note.className = 'slide-cue-note';
+        note.textContent = talk.slideCueNote;
+        media.insertAdjacentElement('afterend', note);
+      }
+    }
+    setSlidePage(talk.slideCues[0].page, false);
+    initializeSlideSync(talk);
   }
 
   function loadYouTubeApi(callback) {

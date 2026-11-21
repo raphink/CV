@@ -1,0 +1,13 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 2661,
+      "page": 31
+    }
+  ],
+  "slideCueNote": "Topic-level approximate cues only. The recording mainly shows the Instruqt lab interface rather than the PDF, so these are not confirmed slide transitions."
+}

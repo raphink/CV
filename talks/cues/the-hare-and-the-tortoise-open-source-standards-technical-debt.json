@@ -1,0 +1,65 @@
+{
+  "slideCues": [
+    {
+      "time": 0,
+      "page": 1
+    },
+    {
+      "time": 84,
+      "page": 3
+    },
+    {
+      "time": 118,
+      "page": 4
+    },
+    {
+      "time": 192,
+      "page": 5
+    },
+    {
+      "time": 517,
+      "page": 7
+    },
+    {
+      "time": 903,
+      "page": 9
+    },
+    {
+      "time": 1106,
+      "page": 10
+    },
+    {
+      "time": 1197,
+      "page": 11
+    },
+    {
+      "time": 1462,
+      "page": 12
+    },
+    {
+      "time": 1539,
+      "page": 13
+    },
+    {
+      "time": 1681,
+      "page": 14
+    },
+    {
+      "time": 1718,
+      "page": 15
+    },
+    {
+      "time": 1789,
+      "page": 16
+    },
+    {
+      "time": 2075,
+      "page": 18
+    },
+    {
+      "time": 2177,
+      "page": 20
+    }
+  ],
+  "slideCueNote": "Approximate narration-based cue points; exact slide transition frames were not verified."
+}
