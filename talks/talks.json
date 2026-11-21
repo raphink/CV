@@ -37,6 +37,84 @@
     "sessionType": "Fireside chat"
   },
   {
+    "title": "Security Summer School: Session 3",
+    "topic": "Cloud native security",
+    "event": "Isovalent Security Summer School 2026 · Online workshop",
+    "date": "2026-08-18",
+    "dateDisplay": "Aug 18, 2026",
+    "recordingPageUrl": "https://isovalent.com/authors/raphael-pinson/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Patrick Whyte",
+      "Christian Hernandez",
+      "Jeremy Colvin"
+    ],
+    "dateBasis": "Isovalent announced Session 3 for Aug 18, 2026; the session is listed on Raphaël Pinson’s public author page."
+  },
+  {
+    "title": "Security Summer School: Session 2",
+    "topic": "Cloud native security",
+    "event": "Isovalent Security Summer School 2026 · Online workshop",
+    "date": "2026-08-04",
+    "dateDisplay": "Aug 4, 2026",
+    "recordingPageUrl": "https://isovalent.com/authors/raphael-pinson/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Jeroen Wittock",
+      "Ryan Kollist",
+      "Patrick Whyte"
+    ],
+    "dateBasis": "Isovalent announced Session 2 for Aug 4, 2026; the session is listed on Raphaël Pinson’s public author page."
+  },
+  {
+    "title": "Security Summer School: Session 1",
+    "topic": "Cloud native security",
+    "event": "Isovalent Security Summer School 2026 · Online workshop",
+    "date": "2026-07-21",
+    "dateDisplay": "Jul 21, 2026",
+    "recordingPageUrl": "https://isovalent.com/authors/raphael-pinson/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Nico Vibert",
+      "Jeremy Colvin",
+      "Christian Hernandez"
+    ],
+    "dateBasis": "Isovalent announced Session 1 for Jul 21, 2026; the session is listed on Raphaël Pinson’s public author page."
+  },
+  {
+    "title": "Kubernetes Security with Isovalent & eBee Quest Madrid",
+    "topic": "Cloud native security",
+    "event": "Isovalent · Hands-on workshop · Madrid",
+    "date": "2026-07",
+    "dateDisplay": "Jul 2026",
+    "recordingPageUrl": "https://isovalent.com/events/2026-07-ebee-quest-madrid/",
+    "recordingLinkLabel": "Workshop details ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Rui De Abreu"
+    ],
+    "dateBasis": "The official Isovalent event page identifies this Madrid workshop in July 2026; no specific day is published in the page title or searchable listing."
+  },
+  {
+    "title": "Isovalent eBee Quest Zurich",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Hands-on workshop · Zurich",
+    "date": "2026-06-10",
+    "dateDisplay": "Jun 10, 2026",
+    "recordingPageUrl": "https://isovalent.com/events/2026-06-10-ebee-quest-zurich/",
+    "recordingLinkLabel": "Workshop details ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "dateBasis": "The official Isovalent event page lists the Zurich hands-on workshop on Jun 10, 2026."
+  },
+  {
     "title": "Multi-Cloud Service Mesh: Security and Scale Without the Complexity",
     "topic": "Cloud native networking",
     "event": "Isovalent · Virtual workshop",
@@ -122,6 +200,81 @@
     "cueFile": "cues/how-ebpf-enables-next-generation-security-enforcement.json"
   },
   {
+    "title": "Kubernetes Summer School: Session 4 — Egress Gateway",
+    "topic": "Cloud native networking",
+    "event": "Kubernetes Summer School 2025 · Virtual workshop",
+    "date": "2025-08-21",
+    "dateDisplay": "Aug 21, 2025",
+    "recordingPageUrl": "https://isovalent.com/videos/3/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Workshop",
+    "dateBasis": "The Isovalent video archive lists this session on Aug 21, 2025; the series recap describes it as a hands-on workshop."
+  },
+  {
+    "title": "Kubernetes Summer School: Session 3 — Hubble",
+    "topic": "Cloud native observability",
+    "event": "Kubernetes Summer School 2025 · Virtual workshop",
+    "date": "2025-08-12",
+    "dateDisplay": "Aug 12, 2025",
+    "recordingPageUrl": "https://isovalent.com/videos/3/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Workshop",
+    "dateBasis": "The Isovalent video archive lists this session on Aug 12, 2025; the series recap describes it as a hands-on workshop."
+  },
+  {
+    "title": "Kubernetes Summer School: Session 2 — Gateway API",
+    "topic": "Cloud native networking",
+    "event": "Kubernetes Summer School 2025 · Virtual workshop",
+    "date": "2025-07-31",
+    "dateDisplay": "Jul 31, 2025",
+    "recordingPageUrl": "https://isovalent.com/videos/3/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Workshop",
+    "dateBasis": "The Isovalent video archive lists this session on Jul 31, 2025; the series recap describes it as a hands-on workshop."
+  },
+  {
+    "title": "Kubernetes Summer School: Session 1 — Load Balancer",
+    "topic": "Cloud native networking",
+    "event": "Kubernetes Summer School 2025 · Virtual workshop",
+    "date": "2025-07-22",
+    "dateDisplay": "Jul 22, 2025",
+    "recordingPageUrl": "https://isovalent.com/events/2025-kubernetes-summer-school-session1/",
+    "recordingLinkLabel": "Workshop details ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Nico Vibert"
+    ],
+    "dateBasis": "The event page identifies the session; an eCHO News issue dated Jul 1, 2025 lists its hands-on workshop on Jul 22, 2025."
+  },
+  {
+    "title": "Leveling Up EKS Clusters with the Isovalent Platform",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Virtual workshop",
+    "date": "2025-05-28",
+    "dateDisplay": "May 28, 2025",
+    "recordingPageUrl": "https://isovalent.com/events/2025-05-eks-workshop/",
+    "recordingLinkLabel": "Workshop details ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "dateBasis": "The official Isovalent event page lists the virtual workshop on May 28, 2025."
+  },
+  {
+    "title": "Enhancing AKS Networking and Security with the Isovalent Platform",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Online workshop",
+    "date": "2025-05-22",
+    "dateDisplay": "May 22, 2025",
+    "recordingPageUrl": "https://isovalent.com/events/2025-05-aks-workshop/",
+    "recordingLinkLabel": "Workshop details ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "dateBasis": "The official Isovalent event page lists the online workshop on May 22, 2025."
+  },
+  {
     "title": "Exploring the World of Cilium: a hands-workshop on Cilium, Tetragon & eBPF",
     "topic": "Cloud native networking",
     "event": "DevOpsDays Geneva 2025",
@@ -131,6 +284,51 @@
     "dateDisplay": "May 20, 2025",
     "programUrl": "https://devopsdays.org/events/2025-geneva/program/exploring-the-world-of-cilium",
     "conferenceUrl": "https://devopsdays.org/events/2025-geneva/welcome/"
+  },
+  {
+    "title": "Meet the Isovalent Platform: Connect, Secure, and Scale Kubernetes",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Webinar",
+    "date": "2025-04-29",
+    "dateDisplay": "Apr 29, 2025",
+    "recordingPageUrl": "https://isovalent.com/videos/5/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Webinar",
+    "coPresenters": [
+      "Jeremy Colvin"
+    ],
+    "dateBasis": "The Isovalent video archive lists the webinar recording as published Apr 29, 2025."
+  },
+  {
+    "title": "Isovalent Discovery Workshop: A Fast-Track to Cilium for Platform Engineers",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Virtual workshop",
+    "date": "2025-03-25",
+    "dateDisplay": "Mar 25, 2025",
+    "recordingPageUrl": "https://isovalent.com/videos/5/",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Nico Vibert"
+    ],
+    "dateBasis": "The Isovalent video archive lists this workshop recording as published Mar 25, 2025."
+  },
+  {
+    "title": "Isovalent Discovery Workshop: A Fast-Track to Cilium for Network Engineers",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Virtual workshop",
+    "date": "2025-03-20",
+    "dateDisplay": "Mar 20, 2025",
+    "recordingPageUrl": "https://isovalent.com/events/2025-03-20-discovery-workshop-network-engineer/",
+    "recordingLinkLabel": "Watch workshop ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Nico Vibert"
+    ],
+    "dateBasis": "The official Isovalent event page lists the virtual workshop on Mar 20, 2025 and says it is available on demand."
   },
   {
     "title": "Hands-on labs with Instruqt, gamification, and AI",
@@ -182,6 +380,21 @@
     "programUrl": "https://2024.platformcon.com/talks?7a95d203_page=3",
     "language": "en",
     "cueFile": "cues/exploring-cilium-tetragon-and-ebpf.json"
+  },
+  {
+    "title": "Isovalent Enterprise for Cilium 1.15",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Virtual workshop",
+    "date": "2024-05-30",
+    "dateDisplay": "May 30, 2024",
+    "recordingPageUrl": "https://isovalent.com/events/2024-05-30-cilium-1-15-release-workshop/",
+    "recordingLinkLabel": "Workshop details ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Stephane Karagulmez"
+    ],
+    "dateBasis": "The official Isovalent event page identifies the online workshop; eCHO News 56 lists it for May 30, 2024."
   },
   {
     "title": "eBPF-based Security Observability & Runtime Enforcement with Cilium Tetragon",
