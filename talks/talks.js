@@ -99,9 +99,13 @@
     var slug = talkSlug(talk);
     var event = talk.event ? talk.event : (talk.id ? 'Public recording' : 'Slide deck');
     var hasSlides = Boolean(talk.deck || talk.slideUrl);
-    var thumbnail = talk.deck ? '<img src="' + escapeHtml(slideImagePath(talk, 1)) + '" alt="Cover slide for ' + escapeHtml(talk.title) + '" loading="lazy">' : (talk.id ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(talk.id) + '/hqdefault.jpg" alt="" loading="lazy">' : '<img src="' + fallbackCover(talk) + '" alt="Deck artwork for ' + escapeHtml(talk.title) + '" loading="lazy">');
+    // Reuse a local deck cover across entries from the same event so the archive
+    // reads as one visual set even when an event has several recordings.
+    var eventDeck = talk.event && talks.find(function (item) { return item.deck && item.event === talk.event; });
+    var imageDeck = talk.deck ? talk : eventDeck;
+    var thumbnail = imageDeck ? '<img src="' + escapeHtml(slideImagePath(imageDeck, 1)) + '" alt="" loading="lazy">' : (talk.id ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(talk.id) + '/hqdefault.jpg" alt="" loading="lazy">' : '<img src="' + fallbackCover(talk) + '" alt="" loading="lazy">');
     if (talk.id) thumbnail += '<span class="play-mark" aria-hidden="true">▶</span>';
-    var thumbClass = talk.deck ? ' deck-cover' : '';
+    var thumbClass = imageDeck ? ' deck-cover' : '';
     var dateMarkup = talk.date ? '<time class="talk-card-date" datetime="' + escapeHtml(talk.date) + '">' + escapeHtml(talk.dateDisplay || formatDate(talk.date)) + '</time>' : '<span class="talk-card-date">' + escapeHtml(talk.dateDisplay || 'Date not listed') + '</span>';
     var formatLabel = talk.id ? (hasSlides ? 'Video and slides' : 'Video') : (talk.deck ? 'PDF slides' : 'SlideShare deck');
     var formatIcons = (talk.id ? '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="12" height="12" rx="1.5"/><path d="m15 10 6-3v10l-6-3z"/></svg>' : '') + (hasSlides ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h5M9 12h7M9 16h7"/></svg>' : '');
