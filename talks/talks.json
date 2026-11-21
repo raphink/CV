@@ -176,7 +176,7 @@
     ],
     "date": "2023-06-15",
     "dateDisplay": "Jun 15, 2023",
-    "conferenceUrl": "https://kcdzurich.ch/",
+    "conferenceUrl": "https://www.cloudnativezurich.ch/archive-2023/",
     "slideCueNote": "Timestamps and slide matches are approximate, based on captions and deck text.",
     "language": "en"
   },
@@ -1727,9 +1727,10 @@
     "event": "Cloud Native Bern 2023",
     "deck": "decks/cloud-native-bern-2023-zero-trust-visibility.pdf",
     "pageCount": 40,
-    "date": "2023-05-23",
-    "dateDisplay": "May 23, 2023",
-    "conferenceUrl": "https://www.meetup.com/cloudnativebern/"
+    "date": "2023-05",
+    "dateDisplay": "May 2023",
+    "conferenceUrl": "https://www.meetup.com/cloudnativebern/",
+    "dateBasis": "The deck title identifies May 2023; the exact day is not confirmed."
   },
   {
     "title": "SKS in GitOps mode",
@@ -2096,10 +2097,9 @@
     "event": "Paris Open Source Summit 2018",
     "deck": "decks/ftth-factory-poss-2018.pdf",
     "pageCount": 24,
-    "date": "2018-12-05",
-    "dateDisplay": "Dec 5–6, 2018",
-    "dateBasis": "The filename identifies POSS 2018; the event ran Dec 5–6, 2018. Exact session day was not confirmed.",
-    "conferenceUrl": "https://www.parisopensourcesummit.com/"
+    "date": "2018",
+    "dateDisplay": "2018",
+    "dateBasis": "The local filename associates this deck with POSS 2018, but no program listing or session date was independently confirmed."
   },
   {
     "title": "Puppet Test Driven Development with Travis CI and Docker",
