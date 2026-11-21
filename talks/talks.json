@@ -301,6 +301,41 @@
     "dateBasis": "The Isovalent video archive lists the webinar recording as published Apr 29, 2025."
   },
   {
+    "title": "Introduction to Cilium: The De-Facto Networking and Security Platform for Kubernetes",
+    "topic": "Cloud native networking",
+    "event": "Cisco Live EMEA 2025 · Amsterdam · with Nico Vibert",
+    "deck": "decks/cisco-live-amsterdam-2025-introduction-to-cilium.pdf",
+    "pageCount": 76,
+    "date": "2025-02",
+    "dateDisplay": "Feb 2025",
+    "recordingPageUrl": "https://www.ciscolive.com/on-demand/on-demand-library.html?search=BRKCLD-2696&zid=global#/session/1740098278606001dYa6",
+    "recordingLinkLabel": "Watch Cisco Live replay ↗",
+    "language": "en",
+    "sessionType": "Breakout session",
+    "coPresenters": [
+      "Nico Vibert"
+    ],
+    "dateBasis": "Cisco Live EMEA Amsterdam ran Feb 9–14, 2025; the exact session day is not listed in the available public materials."
+  },
+  {
+    "title": "Introduction to eBPF and Practical Use-Cases",
+    "topic": "Cloud native networking",
+    "event": "Cisco Live EMEA 2025 · Amsterdam · with Jorge Quintero",
+    "deck": "decks/cisco-live-amsterdam-2025-introduction-to-ebpf-workshop.pdf",
+    "pageCount": 51,
+    "date": "2025-02",
+    "dateDisplay": "Feb 2025",
+    "recordingPageUrl": "https://isovalent.site/ltrsec-2274-lab",
+    "recordingLinkLabel": "Open practical lab ↗",
+    "conferenceUrl": "https://www.ciscolive.com/on-demand/on-demand-library.html?search=LTRSEC-2274&zid=global",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Jorge Quintero"
+    ],
+    "dateBasis": "Cisco Live EMEA Amsterdam ran Feb 9–14, 2025; the exact session day is not listed in the available public materials. Cisco lists LTRSEC-2274 as a hands-on lab session."
+  },
+  {
     "title": "Isovalent Discovery Workshop: A Fast-Track to Cilium for Platform Engineers",
     "topic": "Cloud native networking",
     "event": "Isovalent · Virtual workshop",
