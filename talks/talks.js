@@ -49,6 +49,28 @@
     return Number.isNaN(date.getTime()) ? value : date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
   }
 
+  function trackPageView(title) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'page_view', {
+      page_title: title,
+      page_location: window.location.href
+    });
+  }
+
+  function trackTalkView(talk) {
+    if (typeof window.gtag !== 'function') return;
+    var hasVideo = Boolean(talk.id || talk.recordingUrl);
+    var hasSlides = Boolean(talk.deck);
+    window.gtag('event', 'view_talk', {
+      talk_title: talk.title,
+      talk_slug: talkSlug(talk),
+      talk_event: talk.event || '',
+      talk_topic: talk.topic || '',
+      talk_year: String(talk.date || '').slice(0, 4),
+      media_type: hasVideo && hasSlides ? 'video_and_slides' : (hasVideo ? 'video' : (hasSlides ? 'slides' : 'details_only'))
+    });
+  }
+
   function talkLanguage(talk) {
     var languages = {
       en: { name: 'English', flag: '🇬🇧', code: 'EN' },
@@ -221,6 +243,8 @@
     });
     if (!modal.open) modal.showModal();
     document.title = talk.title + ' — Raphaël Pinson';
+    trackPageView(document.title);
+    trackTalkView(talk);
     var htmlVideo = detail.querySelector('video#talk-video-frame');
     if (htmlVideo && Number(htmlVideo.dataset.start)) {
       htmlVideo.addEventListener('loadedmetadata', function () { htmlVideo.currentTime = Number(htmlVideo.dataset.start); }, { once: true });
@@ -389,6 +413,7 @@
     detail.innerHTML = '';
     browser.hidden = false;
     document.title = 'Talks — Raphaël Pinson';
+    trackPageView(document.title);
   }
 
   function applyUrl() {
