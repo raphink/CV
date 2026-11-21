@@ -1664,7 +1664,6 @@
     "dateDisplay": "Nov 17, 2021",
     "dateBasis": "The Geneva event listing names Raphaël Pinson and gives Nov 17, 2021. The uploaded deck cover says Nov 16, while its SlideShare upload timestamp filename is Nov 17; the one-day discrepancy is retained here.",
     "programUrl": "https://cominmag.ch/conference-cloud-suisse-entre-reve-et-realite/",
-    "programUrl": "https://events.exoscale.com/the-future-of-swiss-cloud-geneva",
     "conferenceUrl": "https://events.exoscale.com/the-future-of-swiss-cloud-geneva"
   },
   {
@@ -2031,8 +2030,9 @@
     "slideUrl": "https://www.slideshare.net/slideshow/narcissus-mapping-configs-in-go/130591098",
     "slideCount": 18,
     "slideTitle": "Narcissus — mapping configs in Go",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "date": "2019-02-05",
+    "dateDisplay": "Published Feb 5, 2019",
+    "dateBasis": "SlideShare lists Feb 5, 2019 as the publication date. The deck does not identify its event, and no matching session was found in the official CfgMgmtCamp 2019 program; this is a publication date, not a confirmed delivery date."
   },
   {
     "title": "FTTH Factory — an illustration of the \"Everything as Code\" paradigm",

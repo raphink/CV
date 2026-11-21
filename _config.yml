@@ -1,0 +1,6 @@
+exclude:
+  - talks/cue-editor.html
+  - talks/cue-editor.css
+  - talks/cue-editor.js
+  - talks/README.md
+  - talks/slideshare-missing.md
