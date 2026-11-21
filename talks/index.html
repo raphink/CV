@@ -35,7 +35,7 @@
         <label class="talk-search"><span class="visually-hidden">Search talks</span><input id="talk-search" type="search" placeholder="Search talks, topics, events…" autocomplete="off"><span aria-hidden="true">⌕</span></label>
         <div class="browser-filter-side">
           <div class="topic-filters" id="topic-filters" aria-label="Filter by topic"></div>
-          <label class="language-filter"><span class="visually-hidden">Filter by language</span><select id="language-filter"><option value="">All languages</option><option value="en">English</option><option value="fr">French</option></select></label>
+          <div class="language-filter"><span class="language-filter-label">Language</span><div class="language-filter-options" id="language-filters" role="group" aria-label="Filter by language"><button type="button" data-language="" aria-label="All languages" aria-pressed="true">All</button><button type="button" data-language="en" aria-label="English" title="English" aria-pressed="false"><span aria-hidden="true">🇬🇧</span><span>EN</span></button><button type="button" data-language="fr" aria-label="French" title="French" aria-pressed="false"><span aria-hidden="true">🇫🇷</span><span>FR</span></button></div></div>
         </div>
       </div>
       <p class="results-label" id="results-label" aria-live="polite"></p>

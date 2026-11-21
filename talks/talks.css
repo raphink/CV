@@ -55,17 +55,19 @@
 .talk-card-date{display:inline;margin:0;color:inherit;font:inherit;letter-spacing:inherit;white-space:nowrap}
 .talk-card-formats{display:inline-flex;align-items:center;gap:3px;color:#087c8d}
 .talk-card-formats svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
-.browser-filter-side{display:flex;min-width:0;flex:1;align-items:center;justify-content:flex-end;gap:12px}
-.language-filter{position:relative;display:inline-flex;flex:none;align-items:center}
-.language-filter::after{position:absolute;top:50%;right:12px;width:6px;height:6px;border-right:1.5px solid #51646b;border-bottom:1.5px solid #51646b;content:"";pointer-events:none;transform:translateY(-70%) rotate(45deg)}
-.language-filter select{min-height:34px;appearance:none;padding:9px 29px 9px 12px;border:1px solid transparent;border-radius:999px;background:#e4ecee;color:#51646b;font:650 9px ui-monospace,monospace;letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
-.language-filter:hover select{border-color:#087c8d}
-.language-filter.is-active select{background:#0b303c;color:#f5fafb}
-.language-filter.is-active::after{border-color:#f5fafb}
-.language-filter select:focus-visible{border-color:#087c8d;outline:2px solid rgba(8,124,141,.16);outline-offset:2px}
-.year-rail output,.year-rail-end{color:#087c8d;font:700 12px ui-monospace,monospace;letter-spacing:0;line-height:1;white-space:nowrap}
+.browser-filter-side{display:flex;min-width:0;flex:1;align-items:flex-end;flex-direction:column;justify-content:flex-end;gap:12px}
+.language-filter{display:inline-flex;min-height:42px;flex:none;align-items:center;gap:10px;color:#52636a}
+.language-filter-label{font:600 12px/1.2 ui-sans-serif,system-ui,sans-serif;letter-spacing:0;text-transform:none}
+.language-filter-options{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid rgba(16,36,45,.17);border-radius:7px;background:#fff;box-shadow:0 1px 2px rgba(6,24,32,.04)}
+.language-filter-options button{display:inline-flex;min-width:54px;height:36px;align-items:center;justify-content:center;gap:5px;padding:0 10px;border:0;border-radius:4px;background:transparent;color:#52636a;font:650 11px ui-sans-serif,system-ui,sans-serif;letter-spacing:0;cursor:pointer}
+.language-filter-options button span:first-child{font:14px system-ui,sans-serif;line-height:1}
+.language-filter-options button:hover{color:#087c8d}
+.language-filter-options button[aria-pressed=true]{background:#0b303c;color:#f5fafb}
+.language-filter-options button:focus-visible{outline:2px solid #087c8d;outline-offset:2px}
+.year-rail .year-value{display:block;min-width:4ch;color:#087c8d;font:700 14px/1 ui-monospace,monospace;font-variant-numeric:tabular-nums;letter-spacing:0;white-space:nowrap;text-align:center}
 .year-rail-end{color:#75848a}
-@media(max-width:900px){.browser-filter-side{width:100%;justify-content:flex-start;flex-wrap:wrap}}
+@media(max-width:900px){.browser-filter-side{width:100%;align-items:flex-start;flex-direction:column;gap:14px}.language-filter{align-self:flex-start}}
+@media(max-width:560px){.browser-filter-side{gap:18px}.language-filter{display:grid;width:100%;grid-template-columns:80px minmax(0,1fr);gap:10px}.language-filter-options{width:100%}.language-filter-options button{height:44px;flex:1}}
 .talk-thumb-kind{min-width:26px}
 .talk-thumb-kind svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
 .expand-player{display:grid;width:34px;height:34px;place-items:center;padding:0;border:1px solid rgba(255,255,255,.2);border-radius:3px;background:transparent;color:#b4c8ce;cursor:pointer}

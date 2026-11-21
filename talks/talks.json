@@ -731,7 +731,8 @@
         "page": 20
       }
     ],
-    "language": "en"
+    "language": "en",
+    "slideCueNote": "Approximate narration-based cue points; exact slide transition frames were not verified."
   },
   {
     "id": "hzMif_cytLs",
@@ -1425,7 +1426,8 @@
       }
     ],
     "slideCueNote": "Page 1 at 143s, page 2 at 203s, page 4 at 215s, pages 5 and 8 at 235s and 370s were visually checked; remaining points are approximate French-transcript topic anchors. Page 3/4 alignment is ambiguous, and exact transition times are not verified.",
-    "dateBasis": "The deck file timestamp is Oct 6, 2022. The presentation date is estimated as the previous day; the exact date is unverified."
+    "dateBasis": "The deck file timestamp is Oct 6, 2022. The presentation date is estimated as the previous day; the exact date is unverified.",
+    "conferenceUrl": "https://www.compagnons-devops.fr/"
   },
   {
     "id": "n_g60hLXZOk",
@@ -2129,7 +2131,8 @@
     "event": "Open Source Roundtables beim BIT",
     "date": "2021-11-04",
     "dateDisplay": "Nov 4, 2021",
-    "dateBasis": "Title slide lists Open Source Roundtables beim BIT on 04.11.2021"
+    "dateBasis": "Title slide lists Open Source Roundtables beim BIT on 04.11.2021",
+    "conferenceUrl": "https://www.bit.admin.ch/"
   },
   {
     "title": "The Agentic Lab Factory",

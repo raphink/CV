@@ -5,7 +5,7 @@
   var grid = document.getElementById('talk-grid');
   var filters = document.getElementById('topic-filters');
   var search = document.getElementById('talk-search');
-  var languageFilter = document.getElementById('language-filter');
+  var languageFilters = document.getElementById('language-filters');
   var count = document.getElementById('talk-count');
   var deckCount = document.getElementById('deck-count');
   var results = document.getElementById('results-label');
@@ -106,7 +106,7 @@
 
   function cardMarkup(talk) {
     var slug = talkSlug(talk);
-    var event = talk.event ? talk.event : (talk.id ? 'Public recording' : 'Slide deck');
+    var event = talk.event ? '<span class="talk-card-event">' + escapeHtml(talk.event) + '</span>' : '';
     var hasSlides = Boolean(talk.deck);
     // Reuse a local deck cover across entries from the same event so the archive
     // reads as one visual set even when an event has several recordings.
@@ -125,7 +125,7 @@
     return '<a class="talk-card" href="?talk=' + encodeURIComponent(slug) + '" data-talk="' + escapeHtml(slug) + '" data-year="' + year + '">' +
       '<span class="talk-thumb' + thumbClass + '">' + thumbnail + thumbFormat + '</span>' +
       '<span class="talk-card-copy"><span class="talk-card-meta"><span>' + escapeHtml(talk.topic) + '</span><span class="talk-card-meta-right">' + dateMarkup + languageMarkup + '<span class="talk-card-formats" role="img" aria-label="' + formatLabel + '" title="' + formatLabel + '">' + formatIcons + '</span></span></span>' +
-      '<h3>' + escapeHtml(talk.title) + '</h3><span class="talk-card-event">' + escapeHtml(event) + '</span></span></a>';
+      '<h3>' + escapeHtml(talk.title) + '</h3>' + event + '</span></a>';
   }
 
   function renderGrid() {
@@ -155,7 +155,7 @@
     }
     yearRail.hidden = false;
     yearRail.parentElement.classList.add('has-year-rail');
-    yearRail.innerHTML = '<span class="year-rail-label">Year</span><output id="year-current" for="year-range">' + visibleYears[visibleYears.length - 1] + '</output><input id="year-range" type="range" min="0" max="' + (visibleYears.length - 1) + '" step="1" value="' + (visibleYears.length - 1) + '" aria-label="Jump to year ' + visibleYears[visibleYears.length - 1] + '" aria-valuetext="' + visibleYears[visibleYears.length - 1] + '"><span class="year-rail-end">' + visibleYears[0] + '</span>';
+    yearRail.innerHTML = '<span class="year-rail-label">Year</span><output class="year-value" id="year-current" for="year-range">' + visibleYears[visibleYears.length - 1] + '</output><input id="year-range" type="range" min="0" max="' + (visibleYears.length - 1) + '" step="1" value="' + (visibleYears.length - 1) + '" aria-label="Jump to year ' + visibleYears[visibleYears.length - 1] + '" aria-valuetext="' + visibleYears[visibleYears.length - 1] + '"><span class="year-rail-end year-value">' + visibleYears[0] + '</span>';
   }
 
   function scheduleYearRailUpdate() {
@@ -338,9 +338,13 @@
     renderGrid();
   });
 
-  languageFilter.addEventListener('change', function () {
-    activeLanguage = languageFilter.value;
-    languageFilter.closest('.language-filter').classList.toggle('is-active', Boolean(activeLanguage));
+  languageFilters.addEventListener('click', function (event) {
+    var button = event.target.closest('[data-language]');
+    if (!button) return;
+    activeLanguage = button.dataset.language;
+    languageFilters.querySelectorAll('[data-language]').forEach(function (option) {
+      option.setAttribute('aria-pressed', String(option === button));
+    });
     renderGrid();
   });
 
