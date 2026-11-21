@@ -226,7 +226,9 @@
     "recordingLinkLabel": "Watch on Isovalent ↗",
     "language": "en",
     "sessionType": "Workshop",
-    "dateBasis": "The Isovalent video archive lists this session on Aug 21, 2025; the series recap describes it as a hands-on workshop."
+    "dateBasis": "The Isovalent video archive lists this session on Aug 21, 2025; the series recap describes it as a hands-on workshop.",
+    "deck": "decks/kubernetes-summer-school-2025-session-4.pdf",
+    "pageCount": 22
   },
   {
     "title": "Kubernetes Summer School: Session 3 — Hubble",
@@ -238,7 +240,9 @@
     "recordingLinkLabel": "Watch on Isovalent ↗",
     "language": "en",
     "sessionType": "Workshop",
-    "dateBasis": "The Isovalent video archive lists this session on Aug 12, 2025; the series recap describes it as a hands-on workshop."
+    "dateBasis": "The Isovalent video archive lists this session on Aug 12, 2025; the series recap describes it as a hands-on workshop.",
+    "deck": "decks/kubernetes-summer-school-2025-session-3.pdf",
+    "pageCount": 16
   },
   {
     "title": "Kubernetes Summer School: Session 2 — Gateway API",
@@ -250,7 +254,9 @@
     "recordingLinkLabel": "Watch on Isovalent ↗",
     "language": "en",
     "sessionType": "Workshop",
-    "dateBasis": "The Isovalent video archive lists this session on Jul 31, 2025; the series recap describes it as a hands-on workshop."
+    "dateBasis": "The Isovalent video archive lists this session on Jul 31, 2025; the series recap describes it as a hands-on workshop.",
+    "deck": "decks/kubernetes-summer-school-2025-session-2.pdf",
+    "pageCount": 12
   },
   {
     "title": "Kubernetes Summer School: Session 1 — Load Balancer",
@@ -265,7 +271,9 @@
     "coPresenters": [
       "Nico Vibert"
     ],
-    "dateBasis": "The event page identifies the session; an eCHO News issue dated Jul 1, 2025 lists its hands-on workshop on Jul 22, 2025."
+    "dateBasis": "The event page identifies the session; an eCHO News issue dated Jul 1, 2025 lists its hands-on workshop on Jul 22, 2025.",
+    "deck": "decks/kubernetes-summer-school-2025-session-1.pdf",
+    "pageCount": 35
   },
   {
     "title": "Leveling Up EKS Clusters with the Isovalent Platform",
