@@ -297,7 +297,9 @@
     "recordingLinkLabel": "Workshop details ↗",
     "language": "en",
     "sessionType": "Hands-on workshop",
-    "dateBasis": "The official Isovalent event page lists the online workshop on May 22, 2025."
+    "dateBasis": "The official Isovalent event page lists the online workshop on May 22, 2025.",
+    "deck": "decks/aks-networking-security-isovalent-platform-2025.pdf",
+    "pageCount": 31
   },
   {
     "title": "Exploring the World of Cilium: a hands-workshop on Cilium, Tetragon & eBPF",
