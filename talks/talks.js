@@ -19,6 +19,7 @@
   var youtubePlayer = null;
   var youtubePlayerReady = false;
   var youtubeTimer = null;
+  var nativeVideo = null;
   var youtubeApiLoading = false;
   var youtubeApiCallbacks = [];
   var activeTalk = null;
@@ -239,6 +240,26 @@
   }
 
   function initializeSlideSync(talk) {
+    if (!talk.id) {
+      nativeVideo = document.getElementById('talk-video-frame');
+      if (!nativeVideo) return;
+      nativeVideo.addEventListener('play', function () {
+        var toggle = document.getElementById('sync-slides');
+        if (toggle && toggle.checked) startSlideSync(talk);
+      });
+      nativeVideo.addEventListener('pause', function () {
+        stopSlideSync();
+        var toggle = document.getElementById('sync-slides');
+        if (toggle && toggle.checked) setSyncStatus('Paused');
+      });
+      nativeVideo.addEventListener('ended', function () {
+        stopSlideSync();
+        setSyncStatus('Video ended');
+      });
+      if (nativeVideo.paused) setSyncStatus('Play video to start');
+      else startSlideSync(talk);
+      return;
+    }
     loadYouTubeApi(function () {
       var videoFrame = document.getElementById('talk-video-frame');
       if (!videoFrame) return;
@@ -270,8 +291,10 @@
     var page = null;
     setSyncStatus('Following slides');
     youtubeTimer = window.setInterval(function () {
-      if (!youtubePlayer || !youtubePlayer.getCurrentTime) return;
-      var seconds = youtubePlayer.getCurrentTime();
+      var seconds;
+      if (youtubePlayer && youtubePlayer.getCurrentTime) seconds = youtubePlayer.getCurrentTime();
+      else if (nativeVideo) seconds = nativeVideo.currentTime;
+      else return;
       var cue = talk.slideCues.filter(function (item) { return item.time <= seconds; }).slice(-1)[0];
       if (!cue || cue.page === page) return;
       page = cue.page;
@@ -388,6 +411,11 @@
       setSyncStatus('Off');
       return;
     }
+    if (activeTalk && !activeTalk.id && nativeVideo) {
+      if (nativeVideo.paused) setSyncStatus('Play video to start');
+      else startSlideSync(activeTalk);
+      return;
+    }
     if (!youtubePlayerReady || !youtubePlayer) {
       setSyncStatus('Connecting to video…');
       return;
@@ -441,6 +469,7 @@
     if (youtubePlayer && youtubePlayer.destroy) youtubePlayer.destroy();
     youtubePlayer = null;
     youtubePlayerReady = false;
+    nativeVideo = null;
     activeTalk = null;
     detail.innerHTML = '';
     document.title = 'Talks — Raphaël Pinson';

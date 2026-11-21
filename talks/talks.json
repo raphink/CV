@@ -2022,12 +2022,12 @@
   {
     "title": "FTTH Factory — an illustration of the \"Everything as Code\" paradigm",
     "topic": "DevOps and automation",
-    "event": "Paris Open Source Summit 2018",
+    "event": "Event not identified",
     "deck": "decks/ftth-factory-poss-2018.pdf",
     "pageCount": 24,
     "date": "2018",
-    "dateDisplay": "2018",
-    "dateBasis": "The local filename associates this deck with POSS 2018, but no program listing or session date was independently confirmed."
+    "dateDisplay": "2018 (deck date; event unconfirmed)",
+    "dateBasis": "The local filename associates the deck with POSS 2018, but no speaker listing or session date was found; this is an approximate deck date."
   },
   {
     "title": "Puppet Test Driven Development with Travis CI and Docker",
@@ -2212,10 +2212,11 @@
     "event": "RMLL 2009 · Nantes",
     "deck": "decks/augeas-rmll-nantes-2009.pdf",
     "pageCount": 61,
-    "date": "2009-07-07",
-    "dateDisplay": "Jul 7–11, 2009",
+    "date": "2009-07-09",
+    "dateDisplay": "Jul 9, 2009 · 14:40–15:20",
     "conferenceUrl": "https://connect.ed-diamond.com/GNU-Linux-Magazine/glmf-120/rmll-09",
-    "dateBasis": "The event ran July 7–11; the session-specific day is not confirmed."
+    "dateBasis": "Archived RMLL programme lists the session on July 9, 2009, 14:40–15:20.",
+    "programUrl": "https://web.archive.org/web/20151029111703/http://2009.rmll.info/AUGEAS,272.html?lang=fr"
   },
   {
     "title": "Augeas",
@@ -2239,6 +2240,69 @@
     "dateDisplay": "May 6, 2006",
     "conferenceUrl": "https://media.ccc.de/c/linuxtag06/linuxtag06",
     "language": "en",
-    "dateBasis": "The LinuxTag event record lists Raphaël Pinson’s Kubuntu session on May 6, 2006."
+    "dateBasis": "The LinuxTag event record lists Raphaël Pinson’s Kubuntu session on May 6, 2006.",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 58,
+        "page": 2
+      },
+      {
+        "time": 120,
+        "page": 3
+      },
+      {
+        "time": 420,
+        "page": 4
+      },
+      {
+        "time": 480,
+        "page": 5
+      },
+      {
+        "time": 600,
+        "page": 6
+      },
+      {
+        "time": 720,
+        "page": 7
+      },
+      {
+        "time": 960,
+        "page": 8
+      },
+      {
+        "time": 1200,
+        "page": 9
+      },
+      {
+        "time": 1320,
+        "page": 10
+      },
+      {
+        "time": 1440,
+        "page": 11
+      },
+      {
+        "time": 1560,
+        "page": 12
+      },
+      {
+        "time": 1680,
+        "page": 13
+      },
+      {
+        "time": 1800,
+        "page": 14
+      },
+      {
+        "time": 1860,
+        "page": 15
+      }
+    ],
+    "slideCueNote": "Approximate slide cues were matched by sampling the recording every 20 seconds against the local deck. The video includes desktop demonstrations between slides; cue points are anchors and may differ from the exact transition by about a minute."
   }
 ]
