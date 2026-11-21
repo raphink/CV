@@ -6,6 +6,7 @@
     "event": "Kubernetes Community Days Zürich 2023",
     "deck": "decks/kcd-zurich-2023-bridging-dev-ops.pdf",
     "pageCount": 43,
+    "alternateSlideUrl": "https://www.slideshare.net/slideshow/devopsdays-zurich-2023-bridging-dev-and-ops-with-ebpf-extending-observability-upwards-and-downwards/257670563",
     "slideCues": [
       {
         "time": 0,
@@ -356,7 +357,106 @@
     "pageCount": 25,
     "date": "2024-08-20",
     "dateDisplay": "Aug 20, 2024",
-    "programUrl": "https://instruqt.com/blog/live-webinar-isovalents-the-world-of-cilium-mastering-the-art-of-hands-on-labs-with-instruqt-gamification-and-ai"
+    "programUrl": "https://instruqt.com/blog/live-webinar-isovalents-the-world-of-cilium-mastering-the-art-of-hands-on-labs-with-instruqt-gamification-and-ai",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 52,
+        "page": 2
+      },
+      {
+        "time": 107,
+        "page": 3
+      },
+      {
+        "time": 111,
+        "page": 4
+      },
+      {
+        "time": 179,
+        "page": 5
+      },
+      {
+        "time": 248,
+        "page": 6
+      },
+      {
+        "time": 355,
+        "page": 7
+      },
+      {
+        "time": 421,
+        "page": 8
+      },
+      {
+        "time": 540,
+        "page": 9
+      },
+      {
+        "time": 647,
+        "page": 10
+      },
+      {
+        "time": 1074,
+        "page": 11
+      },
+      {
+        "time": 1080,
+        "page": 12
+      },
+      {
+        "time": 1123,
+        "page": 13
+      },
+      {
+        "time": 1186,
+        "page": 14
+      },
+      {
+        "time": 1250,
+        "page": 15
+      },
+      {
+        "time": 1751,
+        "page": 17
+      },
+      {
+        "time": 1863,
+        "page": 18
+      },
+      {
+        "time": 1876,
+        "page": 19
+      },
+      {
+        "time": 2193,
+        "page": 20
+      },
+      {
+        "time": 2215,
+        "page": 21
+      },
+      {
+        "time": 2399,
+        "page": 22
+      },
+      {
+        "time": 2600,
+        "page": 23
+      },
+      {
+        "time": 3354,
+        "page": 24
+      },
+      {
+        "time": 3409,
+        "page": 25
+      }
+    ],
+    "slideCueNote": "Approximate cue times use the first spoken matches for slide text in auto-generated captions. Slide changes may happen before or after the narrated mention; some animated builds are intentionally uncued."
   },
   {
     "id": "ge-iruUlYYs",
@@ -636,7 +736,130 @@
     "date": "2023-02-08",
     "dateDisplay": "Feb 8, 2023",
     "conferenceUrl": "https://cfgmgmtcamp.org/ghent2023/",
-    "programUrl": "https://cfp.cfgmgmtcamp.org/2023/talk/SNY9ZV/"
+    "programUrl": "https://cfp.cfgmgmtcamp.org/2023/talk/SNY9ZV/",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 28,
+        "page": 2
+      },
+      {
+        "time": 44,
+        "page": 9
+      },
+      {
+        "time": 153,
+        "page": 10
+      },
+      {
+        "time": 203,
+        "page": 11
+      },
+      {
+        "time": 231,
+        "page": 12
+      },
+      {
+        "time": 292,
+        "page": 13
+      },
+      {
+        "time": 319,
+        "page": 14
+      },
+      {
+        "time": 321,
+        "page": 15
+      },
+      {
+        "time": 323,
+        "page": 16
+      },
+      {
+        "time": 465,
+        "page": 18
+      },
+      {
+        "time": 480,
+        "page": 19
+      },
+      {
+        "time": 639,
+        "page": 27
+      },
+      {
+        "time": 675,
+        "page": 29
+      },
+      {
+        "time": 788,
+        "page": 30
+      },
+      {
+        "time": 856,
+        "page": 31
+      },
+      {
+        "time": 907,
+        "page": 36
+      },
+      {
+        "time": 927,
+        "page": 37
+      },
+      {
+        "time": 998,
+        "page": 39
+      },
+      {
+        "time": 1142,
+        "page": 44
+      },
+      {
+        "time": 1291,
+        "page": 47
+      },
+      {
+        "time": 1446,
+        "page": 49
+      },
+      {
+        "time": 1531,
+        "page": 52
+      },
+      {
+        "time": 1565,
+        "page": 53
+      },
+      {
+        "time": 1580,
+        "page": 54
+      },
+      {
+        "time": 2092,
+        "page": 60
+      },
+      {
+        "time": 2228,
+        "page": 62
+      },
+      {
+        "time": 2510,
+        "page": 68
+      },
+      {
+        "time": 2710,
+        "page": 72
+      },
+      {
+        "time": 2792,
+        "page": 76
+      }
+    ],
+    "slideCueNote": "Approximate cue times are first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued."
   },
   {
     "id": "j8nT0eZcj54",
@@ -650,7 +873,82 @@
     "pageCount": 92,
     "date": "2024-06-11",
     "dateDisplay": "Jun 11, 2024",
-    "programUrl": "https://2024.platformcon.com/talks?7a95d203_page=3"
+    "programUrl": "https://2024.platformcon.com/talks?7a95d203_page=3",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 3,
+        "page": 2
+      },
+      {
+        "time": 27,
+        "page": 9
+      },
+      {
+        "time": 97,
+        "page": 11
+      },
+      {
+        "time": 181,
+        "page": 14
+      },
+      {
+        "time": 588,
+        "page": 21
+      },
+      {
+        "time": 640,
+        "page": 27
+      },
+      {
+        "time": 1176,
+        "page": 36
+      },
+      {
+        "time": 1406,
+        "page": 38
+      },
+      {
+        "time": 1488,
+        "page": 40
+      },
+      {
+        "time": 1692,
+        "page": 50
+      },
+      {
+        "time": 1768,
+        "page": 51
+      },
+      {
+        "time": 1879,
+        "page": 55
+      },
+      {
+        "time": 1921,
+        "page": 57
+      },
+      {
+        "time": 2060,
+        "page": 58
+      },
+      {
+        "time": 2148,
+        "page": 60
+      },
+      {
+        "time": 2387,
+        "page": 83
+      },
+      {
+        "time": 2576,
+        "page": 88
+      }
+    ],
+    "slideCueNote": "Approximate cue times use the first spoken matches for deck text in auto-generated captions. This is a long workshop recording; many demonstration/build slides have no reliable narration match."
   },
   {
     "id": "goWY2S43cnE",
@@ -664,7 +962,150 @@
     "pageCount": 35,
     "conferenceUrl": "https://2014.puppetconf.com/",
     "date": "2014",
-    "dateDisplay": "2014"
+    "dateDisplay": "2014",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 65,
+        "page": 2
+      },
+      {
+        "time": 158,
+        "page": 3
+      },
+      {
+        "time": 290,
+        "page": 4
+      },
+      {
+        "time": 365,
+        "page": 5
+      },
+      {
+        "time": 445,
+        "page": 6
+      },
+      {
+        "time": 505,
+        "page": 7
+      },
+      {
+        "time": 569,
+        "page": 8
+      },
+      {
+        "time": 614,
+        "page": 9
+      },
+      {
+        "time": 645,
+        "page": 10
+      },
+      {
+        "time": 688,
+        "page": 11
+      },
+      {
+        "time": 703,
+        "page": 12
+      },
+      {
+        "time": 854,
+        "page": 13
+      },
+      {
+        "time": 1027,
+        "page": 14
+      },
+      {
+        "time": 1080,
+        "page": 15
+      },
+      {
+        "time": 1156,
+        "page": 16
+      },
+      {
+        "time": 1328,
+        "page": 17
+      },
+      {
+        "time": 1416,
+        "page": 18
+      },
+      {
+        "time": 1512,
+        "page": 19
+      },
+      {
+        "time": 1554,
+        "page": 20
+      },
+      {
+        "time": 1581,
+        "page": 21
+      },
+      {
+        "time": 1638,
+        "page": 22
+      },
+      {
+        "time": 1674,
+        "page": 23
+      },
+      {
+        "time": 1728,
+        "page": 24
+      },
+      {
+        "time": 1794,
+        "page": 25
+      },
+      {
+        "time": 1833,
+        "page": 26
+      },
+      {
+        "time": 1930,
+        "page": 27
+      },
+      {
+        "time": 1968,
+        "page": 28
+      },
+      {
+        "time": 2010,
+        "page": 29
+      },
+      {
+        "time": 2142,
+        "page": 30
+      },
+      {
+        "time": 2188,
+        "page": 31
+      },
+      {
+        "time": 2198,
+        "page": 32
+      },
+      {
+        "time": 2260,
+        "page": 33
+      },
+      {
+        "time": 2673,
+        "page": 34
+      },
+      {
+        "time": 2686,
+        "page": 35
+      }
+    ],
+    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition."
   },
   {
     "id": "nGoB-w4tjvo",
@@ -675,7 +1116,206 @@
     "pageCount": 52,
     "date": "2023-11-16",
     "dateDisplay": "Nov 16, 2023",
-    "conferenceUrl": "https://www.cloudnativealliance.ch/"
+    "conferenceUrl": "https://www.cloudnativealliance.ch/",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 34,
+        "page": 2
+      },
+      {
+        "time": 89,
+        "page": 3
+      },
+      {
+        "time": 91,
+        "page": 4
+      },
+      {
+        "time": 93,
+        "page": 5
+      },
+      {
+        "time": 96,
+        "page": 6
+      },
+      {
+        "time": 99,
+        "page": 7
+      },
+      {
+        "time": 101,
+        "page": 8
+      },
+      {
+        "time": 103,
+        "page": 9
+      },
+      {
+        "time": 156,
+        "page": 10
+      },
+      {
+        "time": 294,
+        "page": 11
+      },
+      {
+        "time": 339,
+        "page": 12
+      },
+      {
+        "time": 352,
+        "page": 13
+      },
+      {
+        "time": 397,
+        "page": 14
+      },
+      {
+        "time": 519,
+        "page": 15
+      },
+      {
+        "time": 520,
+        "page": 16
+      },
+      {
+        "time": 536,
+        "page": 17
+      },
+      {
+        "time": 559,
+        "page": 18
+      },
+      {
+        "time": 714,
+        "page": 19
+      },
+      {
+        "time": 727,
+        "page": 20
+      },
+      {
+        "time": 735,
+        "page": 21
+      },
+      {
+        "time": 760,
+        "page": 22
+      },
+      {
+        "time": 861,
+        "page": 23
+      },
+      {
+        "time": 886,
+        "page": 24
+      },
+      {
+        "time": 916,
+        "page": 25
+      },
+      {
+        "time": 923,
+        "page": 26
+      },
+      {
+        "time": 927,
+        "page": 27
+      },
+      {
+        "time": 1055,
+        "page": 28
+      },
+      {
+        "time": 1067,
+        "page": 29
+      },
+      {
+        "time": 1068,
+        "page": 30
+      },
+      {
+        "time": 1081,
+        "page": 31
+      },
+      {
+        "time": 1095,
+        "page": 32
+      },
+      {
+        "time": 1099,
+        "page": 33
+      },
+      {
+        "time": 1125,
+        "page": 35
+      },
+      {
+        "time": 1127,
+        "page": 36
+      },
+      {
+        "time": 1163,
+        "page": 37
+      },
+      {
+        "time": 1205,
+        "page": 38
+      },
+      {
+        "time": 1265,
+        "page": 39
+      },
+      {
+        "time": 1271,
+        "page": 40
+      },
+      {
+        "time": 1359,
+        "page": 41
+      },
+      {
+        "time": 1500,
+        "page": 42
+      },
+      {
+        "time": 1542,
+        "page": 43
+      },
+      {
+        "time": 1545,
+        "page": 44
+      },
+      {
+        "time": 1576,
+        "page": 46
+      },
+      {
+        "time": 1776,
+        "page": 47
+      },
+      {
+        "time": 1801,
+        "page": 48
+      },
+      {
+        "time": 1819,
+        "page": 49
+      },
+      {
+        "time": 1825,
+        "page": 50
+      },
+      {
+        "time": 1839,
+        "page": 52
+      }
+    ],
+    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued."
   },
   {
     "id": "wBrlhctsmYs",
@@ -716,7 +1356,174 @@
     "event": "Cloud Native Days France 2026",
     "date": "2026-02-03",
     "dateDisplay": "Feb 3, 2026",
-    "programUrl": "https://cloudnativedays.fr/programme/2026"
+    "programUrl": "https://cloudnativedays.fr/programme/2026",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 149,
+        "page": 11
+      },
+      {
+        "time": 158,
+        "page": 12
+      },
+      {
+        "time": 186,
+        "page": 13
+      },
+      {
+        "time": 195,
+        "page": 14
+      },
+      {
+        "time": 212,
+        "page": 16
+      },
+      {
+        "time": 224,
+        "page": 18
+      },
+      {
+        "time": 250,
+        "page": 19
+      },
+      {
+        "time": 306,
+        "page": 20
+      },
+      {
+        "time": 321,
+        "page": 21
+      },
+      {
+        "time": 352,
+        "page": 23
+      },
+      {
+        "time": 358,
+        "page": 24
+      },
+      {
+        "time": 463,
+        "page": 25
+      },
+      {
+        "time": 565,
+        "page": 26
+      },
+      {
+        "time": 638,
+        "page": 27
+      },
+      {
+        "time": 680,
+        "page": 28
+      },
+      {
+        "time": 857,
+        "page": 30
+      },
+      {
+        "time": 900,
+        "page": 32
+      },
+      {
+        "time": 940,
+        "page": 33
+      },
+      {
+        "time": 1044,
+        "page": 34
+      },
+      {
+        "time": 1087,
+        "page": 35
+      },
+      {
+        "time": 1218,
+        "page": 36
+      },
+      {
+        "time": 1294,
+        "page": 38
+      },
+      {
+        "time": 1358,
+        "page": 41
+      },
+      {
+        "time": 1375,
+        "page": 43
+      },
+      {
+        "time": 1472,
+        "page": 44
+      },
+      {
+        "time": 1528,
+        "page": 46
+      },
+      {
+        "time": 1610,
+        "page": 47
+      },
+      {
+        "time": 1710,
+        "page": 48
+      },
+      {
+        "time": 1778,
+        "page": 49
+      },
+      {
+        "time": 1800,
+        "page": 50
+      },
+      {
+        "time": 1822,
+        "page": 56
+      },
+      {
+        "time": 2146,
+        "page": 64
+      },
+      {
+        "time": 2173,
+        "page": 65
+      },
+      {
+        "time": 2419,
+        "page": 75
+      },
+      {
+        "time": 2436,
+        "page": 76
+      },
+      {
+        "time": 2487,
+        "page": 77
+      },
+      {
+        "time": 2568,
+        "page": 79
+      },
+      {
+        "time": 2577,
+        "page": 80
+      },
+      {
+        "time": 2583,
+        "page": 81
+      },
+      {
+        "time": 2584,
+        "page": 82
+      }
+    ],
+    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition. Some slide builds lack a text match."
   },
   {
     "id": "onzP72ZMXcw",
@@ -730,7 +1537,34 @@
     "date": "2020-11-20",
     "dateDisplay": "Published Nov 20, 2020",
     "conferenceUrl": "https://www.perforce.com/resources/video/running-puppet-kubernetes",
-    "dateBasis": "video publication date"
+    "dateBasis": "video publication date",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 2
+      },
+      {
+        "time": 120,
+        "page": 6
+      },
+      {
+        "time": 147,
+        "page": 7
+      },
+      {
+        "time": 176,
+        "page": 8
+      },
+      {
+        "time": 288,
+        "page": 9
+      },
+      {
+        "time": 389,
+        "page": 10
+      }
+    ],
+    "slideCueNote": "Approximate points sampled from the recording. The video starts on PDF page 2; intermediate transitions were not all sampled."
   },
   {
     "id": "j_0KwA72ZPo",
@@ -740,7 +1574,34 @@
     "pageCount": 56,
     "date": "2024-07-09",
     "dateDisplay": "Jul 9, 2024",
-    "programUrl": "https://platformengineering.org/events/the-platform-engineer-s-survival-guide-to-kubernetes-networking"
+    "programUrl": "https://platformengineering.org/events/the-platform-engineer-s-survival-guide-to-kubernetes-networking",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 691,
+        "page": 43
+      },
+      {
+        "time": 1037,
+        "page": 22
+      },
+      {
+        "time": 1382,
+        "page": 27
+      },
+      {
+        "time": 1728,
+        "page": 38
+      },
+      {
+        "time": 2074,
+        "page": 33
+      }
+    ],
+    "slideCueNote": "The video opens on PDF page 1. Remaining page matches are approximate sampled points; the recording revisits deck sections, so page numbers can move backward."
   },
   {
     "id": "8yzDqDHGLGw",
@@ -751,7 +1612,18 @@
     "pageCount": 57,
     "date": "2026",
     "dateDisplay": "2026",
-    "conferenceUrl": "https://platformcon.com/"
+    "conferenceUrl": "https://platformcon.com/",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 2661,
+        "page": 31
+      }
+    ],
+    "slideCueNote": "Topic-level approximate cues only. The recording mainly shows the Instruqt lab interface rather than the PDF, so these are not confirmed slide transitions."
   },
   {
     "title": "Cilium Workshop: Kubernetes Networking with eBPF",
@@ -770,6 +1642,8 @@
     "title": "Cloud Native Bern 05.2023 — Zero Trust Visibility",
     "topic": "Cloud native security",
     "event": "Cloud Native Bern 2023",
+    "deck": "decks/cloud-native-bern-2023-zero-trust-visibility.pdf",
+    "pageCount": 40,
     "slideUrl": "https://www.slideshare.net/slideshow/cloud-native-bern-052023-zero-trust-visibility/257980151",
     "slideCount": 40,
     "slideTitle": "Cloud Native Bern 05.2023 — Zero Trust Visibility",
@@ -778,85 +1652,119 @@
     "conferenceUrl": "https://www.meetup.com/cloudnativebern/"
   },
   {
-    "title": "DevOpsDays Zurich 2023 — Bridging Dev and Ops with eBPF: Extending Observability Upwards and Downwards",
-    "topic": "Platform engineering",
-    "event": "DevOpsDays Zürich 2023",
-    "slideUrl": "https://www.slideshare.net/slideshow/devopsdays-zurich-2023-bridging-dev-and-ops-with-ebpf-extending-observability-upwards-and-downwards/257670563",
-    "slideCount": 42,
-    "slideTitle": "DevOpsDays Zurich 2023 — Bridging Dev and Ops with eBPF: Extending Observability Upwards and Downwards",
-    "date": "2023-05-03",
-    "dateDisplay": "May 3, 2023",
-    "programUrl": "https://devopsdays.org/events/2023-zurich/program/raphael-pinson"
-  },
-  {
-    "title": "SKS in git ops mode",
+    "title": "SKS in GitOps mode",
     "topic": "DevOps and automation",
+    "event": "The Future of Swiss Cloud 2021 · Geneva",
+    "deck": "decks/sks-in-gitops-mode-2021.pdf",
+    "pageCount": 21,
     "slideUrl": "https://www.slideshare.net/slideshow/sks-in-git-ops-mode/250667709",
     "slideCount": 21,
     "slideTitle": "SKS in git ops mode",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "date": "2021-11-17",
+    "dateDisplay": "Nov 17, 2021",
+    "dateBasis": "The Geneva event listing names Raphaël Pinson and gives Nov 17, 2021. The uploaded deck cover says Nov 16, while its SlideShare upload timestamp filename is Nov 17; the one-day discrepancy is retained here.",
+    "programUrl": "https://events.exoscale.com/the-future-of-swiss-cloud-geneva",
+    "conferenceUrl": "https://events.exoscale.com/the-future-of-swiss-cloud-geneva"
   },
   {
     "title": "Devops stack",
     "topic": "DevOps and automation",
+    "id": "21DZ6hD97kM",
+    "deck": "decks/devops-stack-2021.pdf",
+    "pageCount": 21,
     "slideUrl": "https://www.slideshare.net/slideshow/devops-stack/245067739",
     "slideCount": 21,
     "slideTitle": "Devops stack",
     "date": "2021-03-25",
-    "dateDisplay": "Approx. Mar 25, 2021",
+    "dateDisplay": "Mar 25, 2021",
     "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
-    "event": "Cloud Native Romandie Meetup",
-    "dateBasis": "approximate meetup date from event recap"
+    "event": "Cloud Native Meetup Romandie",
+    "videoStart": 4330,
+    "dateBasis": "Date supplied by user."
   },
   {
     "title": "YAML Engineering: why we need a new paradigm",
     "topic": "DevOps and automation",
+    "deck": "decks/devopscon-munich-2020-yaml-engineering.pdf",
+    "pageCount": 39,
     "slideUrl": "https://www.slideshare.net/slideshow/yaml-engineering-why-we-need-a-new-paradigm/239720701",
     "slideCount": 39,
     "slideTitle": "YAML Engineering: why we need a new paradigm",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "date": "2020-11-30",
+    "dateDisplay": "Nov 30–Dec 3, 2020",
+    "event": "DevOpsCon Munich 2020",
+    "dateBasis": "Official event archive gives conference range Nov 30–Dec 3, 2020; session day not listed",
+    "programUrl": "https://devopscon.io/continuous-integration-continuous-delivery/yaml-engineering-why-we-need-a-new-paradigm/",
+    "conferenceUrl": "https://devopscon.io/archive/archive-devopscon-munich-2020/"
   },
   {
     "title": "Container Security: a toolchain for automatic image rebuilds",
     "topic": "Cloud native security",
+    "deck": "decks/devopscon-munich-2020-container-security.pdf",
+    "pageCount": 35,
     "slideUrl": "https://www.slideshare.net/slideshow/container-security-a-toolchain-for-automatic-image-rebuilds/239720611",
     "slideCount": 35,
     "slideTitle": "Container Security: a toolchain for automatic image rebuilds",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "date": "2020-11-30",
+    "dateDisplay": "Nov 30–Dec 3, 2020",
+    "event": "DevOpsCon Munich 2020",
+    "dateBasis": "Official event archive gives conference range Nov 30–Dec 3, 2020; session day not listed",
+    "programUrl": "https://devopscon.io/security/container-security-a-toolchain-for-automatic-image-rebuilds/",
+    "conferenceUrl": "https://devopscon.io/archive/archive-devopscon-munich-2020/"
   },
   {
     "title": "K9s - Kubernetes CLI To Manage Your Clusters In Style",
     "topic": "Cloud native networking",
+    "id": "IiR-n5ttOiw",
+    "deck": "decks/k9s-kubernetes-cli-2020.pdf",
+    "pageCount": 29,
     "slideUrl": "https://www.slideshare.net/slideshow/k9s-kubernetes-cli-to-manage-your-clusters-in-style/239534564",
     "slideCount": 29,
     "slideTitle": "K9s - Kubernetes CLI To Manage Your Clusters In Style",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "event": "Cloud Native Meetup Romandie",
+    "date": "2020-11-26",
+    "dateDisplay": "Nov 26, 2020",
+    "videoStart": 3832,
+    "dateBasis": "Date supplied by user; meetup series inferred from adjacent recordings.",
+    "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/"
   },
   {
     "title": "Argocd up and running",
     "topic": "DevOps and automation",
+    "id": "UYxws9XhQ-Y",
+    "deck": "decks/argocd-up-and-running.pdf",
+    "pageCount": 22,
     "slideUrl": "https://www.slideshare.net/slideshow/argocd-up-and-running/239534457",
     "slideCount": 22,
     "slideTitle": "Argocd up and running",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "event": "Cloud Native Meetup Romandie",
+    "date": "2020-09-24",
+    "dateDisplay": "Sep 24, 2020",
+    "videoStart": 4951,
+    "dateBasis": "Date supplied by user; recording URL starts at 49:51.",
+    "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/"
   },
   {
     "title": "Bivac - Container Volumes Backup",
     "topic": "Cloud native infrastructure",
+    "id": "5qYekn6jwwg",
+    "deck": "decks/bivac-cloud-native-meetup-2020.pdf",
+    "pageCount": 16,
     "slideUrl": "https://www.slideshare.net/slideshow/bivac-container-volumes-backup/239534068",
     "slideCount": 16,
     "slideTitle": "Bivac - Container Volumes Backup",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "date": "2020-05-28",
+    "dateDisplay": "May 28, 2020",
+    "event": "Cloud Native Meetup Romandie",
+    "dateBasis": "Date supplied by user; Lausanne is probable.",
+    "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
+    "videoStart": 295
   },
   {
     "title": "Automating Puppet Certificates Renewal",
     "topic": "DevOps and automation",
+    "deck": "decks/puppet-certificate-renewal-2019.pdf",
+    "pageCount": 19,
     "slideUrl": "https://www.slideshare.net/slideshow/automating-puppet-certificates-renewal-236513853/236513853",
     "slideCount": 19,
     "slideTitle": "Automating Puppet Certificates Renewal",
@@ -869,6 +1777,8 @@
   {
     "title": "Narcissus — mapping configs in Go",
     "topic": "Open source and practice",
+    "deck": "decks/narcissus-mapping-configs-go.pdf",
+    "pageCount": 18,
     "slideUrl": "https://www.slideshare.net/slideshow/narcissus-mapping-configs-in-go/130591098",
     "slideCount": 18,
     "slideTitle": "Narcissus — mapping configs in Go",
@@ -878,40 +1788,57 @@
   {
     "title": "FTTH Factory — an illustration of the \"Everything as Code\" paradigm",
     "topic": "DevOps and automation",
+    "event": "Paris Open Source Summit 2018",
+    "deck": "decks/ftth-factory-poss-2018.pdf",
+    "pageCount": 24,
     "slideUrl": "https://www.slideshare.net/slideshow/ftth-factory-an-illustration-of-the-everything-as-code-paradigm/125030713",
     "slideCount": 24,
     "slideTitle": "FTTH Factory — an illustration of the \"Everything as Code\" paradigm",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "date": "2018-12-05",
+    "dateDisplay": "Dec 5–6, 2018",
+    "dateBasis": "The filename identifies POSS 2018; the event ran Dec 5–6, 2018. Exact session day was not confirmed.",
+    "conferenceUrl": "https://www.parisopensourcesummit.com/"
   },
   {
     "title": "Puppet Test Driven Development with Travis CI and Docker",
     "topic": "DevOps and automation",
+    "deck": "decks/puppet-tdd-travis-ci-docker-2015.pdf",
+    "pageCount": 16,
     "slideUrl": "https://www.slideshare.net/slideshow/puppet-test-driven-development/54988105",
     "slideCount": 16,
     "slideTitle": "Puppet Test Driven Development with Travis CI and Docker",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "date": "2015-11",
+    "dateDisplay": "Nov 2015",
+    "event": "Zürich Puppet Meetup",
+    "dateBasis": "Month stated in the SlideShare description",
+    "programUrl": "https://www.meetup.com/Zurich-Puppet-Meetup/events/225390962/"
   },
   {
     "title": "Augeas @RMLL 2012",
     "topic": "DevOps and automation",
     "event": "RMLL 2012",
+    "deck": "decks/augeas-rmll-2012.pdf",
+    "pageCount": 38,
     "slideUrl": "https://www.slideshare.net/slideshow/augeas-rmll-2012/13602653",
     "slideCount": 38,
     "slideTitle": "Augeas @RMLL 2012",
     "conferenceUrl": "https://2012.rmll.info/en/",
-    "date": "2012",
-    "dateDisplay": "2012"
+    "date": "2012-07-11",
+    "dateDisplay": "Jul 11, 2012",
+    "dateBasis": "PDF title slide lists LSM 2012, Geneva, 2012-07-11"
   },
   {
     "title": "The Hare and the Tortoise: Open Source, Standards & Technological Debt",
     "topic": "Open source and practice",
+    "deck": "decks/hare-and-tortoise-open-source-roundtables-bit-2021.pdf",
+    "pageCount": 15,
     "slideUrl": "https://www.slideshare.net/slideshow/the-hare-and-the-tortoise-open-source-standards-technological-debt/250597997",
     "slideCount": 15,
     "slideTitle": "The Hare and the Tortoise: Open Source, Standards & Technological Debt",
-    "date": null,
-    "dateDisplay": "Date not listed"
+    "event": "Open Source Roundtables beim BIT",
+    "date": "2021-11-04",
+    "dateDisplay": "Nov 4, 2021",
+    "dateBasis": "Title slide lists Open Source Roundtables beim BIT on 04.11.2021"
   },
   {
     "title": "The Agentic Lab Factory",
@@ -923,5 +1850,28 @@
     "dateDisplay": "Nov 20, 2026",
     "programUrl": "https://www.agenticdays.com/schedule",
     "conferenceUrl": "https://www.agenticdays.com/ai-conference-zurich"
+  },
+  {
+    "title": "Cilium Workshop: Kubernetes networking with eBPF",
+    "topic": "Cloud native networking",
+    "event": "KCD Munich 2024",
+    "deck": "decks/kcd-munich-2024-cilium-workshop.pdf",
+    "pageCount": 66,
+    "date": "2024-07-01",
+    "dateDisplay": "Jul 1–2, 2024",
+    "dateBasis": "The conference ran July 1–2; the specific workshop day was not available.",
+    "conferenceUrl": "https://community2.cncf.io/events/details/cncf-kcd-munich-presents-kcd-munich-2024/"
+  },
+  {
+    "title": "Exploring the World of Cilium: a hands-workshop on Cilium, Tetragon & eBPF",
+    "slideTitle": "Explore the World of Cilium, Tetragon & eBPF",
+    "topic": "Cloud native networking",
+    "event": "DevOpsDays Geneva 2025",
+    "deck": "decks/devopsdays-geneva-2025-explore-cilium.pdf",
+    "pageCount": 92,
+    "date": "2025-05-20",
+    "dateDisplay": "May 20, 2025",
+    "programUrl": "https://devopsdays.org/events/2025-geneva/program/exploring-the-world-of-cilium",
+    "conferenceUrl": "https://devopsdays.org/events/2025-geneva/welcome/"
   }
 ]

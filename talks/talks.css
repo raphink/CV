@@ -16,10 +16,7 @@
 .talk-thumb.deck-cover::after{display:block;background:linear-gradient(135deg,rgba(6,24,32,.1),transparent 58%,rgba(6,24,32,.12))}
 .talk-thumb.deck-cover img{object-fit:contain;object-position:center;background:#061820}
 .talk-card:hover .talk-thumb.deck-cover img{transform:none}
-.talk-thumb-brand,.talk-thumb-kind{position:absolute;top:12px;z-index:2;display:inline-flex;min-height:24px;align-items:center;gap:7px;padding:0 9px;border:1px solid rgba(255,255,255,.24);border-radius:3px;background:rgba(6,24,32,.82);color:#f5fafb;font:700 8px/1 ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(5px)}
-.talk-thumb-brand{left:12px;color:#b9d1d5}
-.talk-thumb-brand-mark{width:7px;height:7px;border-radius:50%;background:#61e0e7;box-shadow:0 0 0 3px rgba(97,224,231,.16)}
-.talk-thumb-kind{right:12px;border-color:rgba(255,213,98,.5);color:#ffd562;letter-spacing:.06em}
+.talk-thumb-kind{position:absolute;top:12px;right:12px;z-index:2;display:inline-flex;min-height:24px;align-items:center;justify-content:center;padding:0 6px;border:1px solid rgba(255,213,98,.5);border-radius:3px;background:rgba(6,24,32,.82);color:#ffd562;backdrop-filter:blur(5px)}
 .talk-thumb .play-mark{right:14px;bottom:13px;z-index:2;width:36px;height:36px;border-color:#ffd562;background:rgba(255,213,98,.94);color:#10242d;box-shadow:0 4px 15px rgba(6,24,32,.28)}
 .talk-modal .talk-detail{padding-top:35px}.talk-modal .detail-back{margin-bottom:17px}.talk-modal .detail-heading{margin-bottom:16px}.talk-modal .detail-heading h1{font-size:clamp(28px,3.3vw,46px)}.talk-modal .detail-heading p:last-child{margin-top:6px}
 .player-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 0 12px;padding:9px 0;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}.layout-controls,.player-toolbar-right,.mobile-media-tabs{display:flex;align-items:center;gap:6px}.layout-controls button,.mobile-media-tabs button{padding:8px 10px;border:1px solid rgba(255,255,255,.2);border-radius:3px;background:transparent;color:#b4c8ce;font:650 9px ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}.layout-controls button[aria-pressed=true],.mobile-media-tabs button[aria-pressed=true]{border-color:#61e0e7;background:rgba(97,224,231,.12);color:#f5fafb}.layout-controls button:hover,.mobile-media-tabs button:hover{border-color:#ffd562;color:#ffd562}.player-toolbar-right{gap:14px}.mobile-media-tabs{display:none}.sync-control{cursor:pointer}.sync-control input{width:15px;height:15px;margin:0;cursor:pointer}
@@ -56,7 +53,7 @@
 .talk-card-date{display:inline;margin:0;color:inherit;font:inherit;letter-spacing:inherit;white-space:nowrap}
 .talk-card-formats{display:inline-flex;align-items:center;gap:3px;color:#087c8d}
 .talk-card-formats svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
-.talk-thumb-kind{justify-content:center;min-width:26px;padding:0 6px}
+.talk-thumb-kind{min-width:26px}
 .talk-thumb-kind svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
 .expand-player{display:grid;width:34px;height:34px;place-items:center;padding:0;border:1px solid rgba(255,255,255,.2);border-radius:3px;background:transparent;color:#b4c8ce;cursor:pointer}
 .expand-player svg{display:block;width:15px;height:15px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
