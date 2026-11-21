@@ -179,22 +179,17 @@
   }
 
   function exportArchive() {
-    var output = JSON.parse(JSON.stringify(archive));
-    output.forEach(function (talk) {
-      var draft = drafts[talk.id];
-      if (draft && talk.deck && talk.id) {
-        talk.slideCues = draft.slideCues;
-        if (draft.slideCueNote) talk.slideCueNote = draft.slideCueNote;
-        else delete talk.slideCueNote;
-      }
-    });
+    if (!activeTalk) return;
+    sortCues();
+    var output = { slideCues: activeTalk.slideCues || [] };
+    if (activeTalk.slideCueNote) output.slideCueNote = activeTalk.slideCueNote;
     var blob = new Blob([JSON.stringify(output, null, 2) + '\n'], { type: 'application/json' });
     var link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'talks.json';
+    link.download = (activeTalk.cueFile || ('cues/' + activeTalk.id + '.json')).split('/').pop();
     link.click();
     URL.revokeObjectURL(link.href);
-    draftStatus.textContent = 'Exported talks.json';
+    draftStatus.textContent = 'Exported ' + (activeTalk.cueFile || ('cues/' + activeTalk.id + '.json')) + ' — replace that file in talks/';
   }
 
   function initialize() {
@@ -206,8 +201,6 @@
       safeLoadDrafts();
       var paired = archive.filter(function (talk) { return talk.id && talk.deck; }).sort(function (a, b) { return String(b.date || '').localeCompare(String(a.date || '')); });
       paired.forEach(function (talk) {
-        sourceCues[talk.id] = JSON.parse(JSON.stringify(talk.slideCues || []));
-        sourceNotes[talk.id] = talk.slideCueNote || '';
         var option = document.createElement('option');
         option.value = talk.id;
         option.textContent = (talk.dateDisplay || talk.event || 'Date not listed') + ' · ' + talk.title;
@@ -216,8 +209,26 @@
       if (!paired.length) throw new Error('No talks have both a video and a local deck');
       var initialId = new URLSearchParams(window.location.search).get('video');
       if (initialId && paired.some(function (talk) { return talk.id === initialId; })) select.value = initialId;
-      showTalk(paired.find(function (talk) { return talk.id === select.value; }) || paired[0]);
-      loadApi();
+      return Promise.all(paired.map(function (talk) {
+        if (!talk.cueFile) {
+          sourceCues[talk.id] = [];
+          sourceNotes[talk.id] = '';
+          return Promise.resolve();
+        }
+        return fetch(talk.cueFile).then(function (response) {
+          if (!response.ok) throw new Error('Could not load cue file');
+          return response.json();
+        }).then(function (data) {
+          sourceCues[talk.id] = Array.isArray(data.slideCues) ? data.slideCues : [];
+          sourceNotes[talk.id] = data.slideCueNote || '';
+        }).catch(function () {
+          sourceCues[talk.id] = [];
+          sourceNotes[talk.id] = '';
+        });
+      })).then(function () {
+        showTalk(paired.find(function (talk) { return talk.id === select.value; }) || paired[0]);
+        loadApi();
+      });
     }).catch(function (error) {
       draftStatus.textContent = error.message + ' — open this page through the local web server.';
     });

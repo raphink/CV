@@ -48,7 +48,7 @@
     "sessionType": "Hands-on workshop",
     "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Jun 9, 2026.",
     "deck": "decks/multi-cloud-service-mesh-workshop-2026.pdf",
-    "pageCount": 91
+    "pageCount": 90
   },
   {
     "id": "n_g60hLXZOk",
@@ -103,7 +103,9 @@
     "coPresenters": [
       "Jeremy Colvin"
     ],
-    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Nov 6, 2025."
+    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Nov 6, 2025.",
+    "deck": "decks/splunk-runtime-security-workshop-2025.pdf",
+    "pageCount": 34
   },
   {
     "id": "5dBbQlzUep8",
