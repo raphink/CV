@@ -78,7 +78,7 @@
   function renderCues() {
     sortCues();
     cueRows.innerHTML = (activeTalk.slideCues || []).map(function (cue, index) {
-      return '<tr class="cue-row" data-cue-index="' + index + '"><td><label><span class="visually-hidden">Cue time in seconds</span><input class="cue-time-input" type="number" min="0" step="0.1" value="' + cue.time + '"></label></td><td><label><span class="visually-hidden">PDF page</span><input class="cue-page-input" type="number" min="1" max="' + maxPage() + '" step="1" value="' + cue.page + '"></label></td><td>' + formatTime(cue.time) + '</td><td><button type="button" data-cue-seek>Seek</button> <button type="button" class="cue-delete" data-cue-delete>Remove</button></td></tr>';
+      return '<tr class="cue-row" data-cue-index="' + index + '"><td><label><span class="visually-hidden">PDF slide number</span><input class="cue-page-input" type="number" min="1" max="' + maxPage() + '" step="1" value="' + cue.page + '"></label></td><td><label><span class="visually-hidden">Cue time in seconds</span><input class="cue-time-input" type="number" min="0" step="0.1" value="' + cue.time + '"></label></td><td>' + formatTime(cue.time) + '</td><td><button type="button" data-cue-seek>Seek</button> <button type="button" class="cue-delete" data-cue-delete>Remove</button></td></tr>';
     }).join('');
     cueEmpty.hidden = Boolean(activeTalk.slideCues && activeTalk.slideCues.length);
   }
@@ -87,12 +87,21 @@
     if (!activeTalk) return;
     var cueTime = Math.max(0, Number(time) || 0);
     var page = Math.max(1, Math.min(maxPage(), Math.round(Number(currentPageInput.value) || 1)));
-    var nearby = (activeTalk.slideCues || []).findIndex(function (cue) { return Math.abs(cue.time - cueTime) < 1; });
-    if (nearby >= 0) activeTalk.slideCues[nearby] = { time: cueTime, page: page };
+    var cues = activeTalk.slideCues || [];
+    var existingSlide = cues.findIndex(function (cue) { return Number(cue.page) === page; });
+    var nearby = cues.findIndex(function (cue) { return Math.abs(cue.time - cueTime) < 1; });
+    if (existingSlide >= 0) cues[existingSlide] = { time: cueTime, page: page };
+    else if (nearby >= 0) cues[nearby] = { time: cueTime, page: page };
     else activeTalk.slideCues.push({ time: cueTime, page: page });
     sortCues();
     renderCues();
     saveDrafts();
+  }
+
+  function cueCurrentTimeAndAdvance() {
+    var currentPage = Number(currentPageInput.value) || 1;
+    addCue(currentTime());
+    setPage(currentPage + 1);
   }
 
   function seekVideo(time) {
@@ -241,11 +250,19 @@
   currentPageInput.addEventListener('change', function () { setPage(currentPageInput.value); });
   document.getElementById('slide-prev').addEventListener('click', function () { setPage(Number(currentPageInput.value) - 1); });
   document.getElementById('slide-next').addEventListener('click', function () { setPage(Number(currentPageInput.value) + 1); });
-  document.getElementById('add-current-cue').addEventListener('click', function () { addCue(currentTime()); });
+  document.getElementById('add-current-cue').addEventListener('click', cueCurrentTimeAndAdvance);
   document.getElementById('check-midpoint').addEventListener('click', renderMidpoint);
   document.getElementById('frame-old').addEventListener('click', function () { narrowWindow(false); });
   document.getElementById('frame-new').addEventListener('click', function () { narrowWindow(true); });
-  document.getElementById('add-boundary-cue').addEventListener('click', function () { addCue(Number(document.getElementById('search-end').value)); });
+  document.addEventListener('keydown', function (event) {
+    var target = event.target;
+    if (event.defaultPrevented || event.repeat || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)) return;
+    if (event.key.toLowerCase() === 'c') {
+      event.preventDefault();
+      cueCurrentTimeAndAdvance();
+    }
+  });
   cueNoteInput.addEventListener('change', function () {
     if (!activeTalk) return;
     activeTalk.slideCueNote = cueNoteInput.value.trim();

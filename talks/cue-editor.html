@@ -27,42 +27,47 @@
       <button id="restore-source" type="button">Discard draft</button>
       <button id="export-json" type="button" class="primary-action">Export cue file</button>
     </div>
-    <div class="cue-player-grid">
-      <section class="cue-player-pane" aria-label="Video recording">
-        <div id="video-player" class="cue-video-placeholder">Choose a talk to load its recording.</div>
-        <div class="cue-current-time"><span>Video time</span><output id="video-time">0:00</output><span>Duration</span><output id="video-duration">—</output></div>
-      </section>
-      <section class="cue-slide-pane" aria-label="Slide preview">
-        <div class="cue-slide-toolbar"><span id="slide-status">Slide 1</span><div><button id="slide-prev" type="button" aria-label="Previous slide">←</button><button id="slide-next" type="button" aria-label="Next slide">→</button><a id="open-deck" href="#" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></div></div>
-        <div class="cue-slide-image-wrap"><img id="slide-preview" alt="Slide 1 preview"></div>
-        <label class="cue-slide-select">Current slide <input id="current-page" type="number" min="1" step="1" value="1"></label>
-      </section>
+    <div class="cue-editor-workspace">
+      <aside class="cue-preview-column" aria-label="Video and slide preview">
+        <div class="cue-player-grid">
+          <section class="cue-player-pane" aria-label="Video recording">
+            <div id="video-player" class="cue-video-placeholder">Choose a talk to load its recording.</div>
+            <div class="cue-current-time"><span>Video time</span><output id="video-time">0:00</output><span>Duration</span><output id="video-duration">—</output></div>
+          </section>
+          <section class="cue-slide-pane" aria-label="Slide preview">
+            <div class="cue-slide-toolbar"><span id="slide-status">Slide 1</span><div><button id="slide-prev" type="button" aria-label="Previous slide">←</button><button id="slide-next" type="button" aria-label="Next slide">→</button><a id="open-deck" href="#" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></div></div>
+            <div class="cue-slide-image-wrap"><img id="slide-preview" alt="Slide 1 preview"></div>
+            <label class="cue-slide-select">Current slide <input id="current-page" type="number" min="1" step="1" value="1"></label>
+          </section>
+        </div>
+      </aside>
+      <div class="cue-edit-column" role="region" aria-label="Cue editing controls" tabindex="0">
+        <section class="transition-search" aria-labelledby="transition-title">
+          <div>
+            <p class="eyebrow">Frame-by-frame search</p>
+            <h2 id="transition-title">Find a slide transition</h2>
+            <p>Set a time window where the slide changes. Inspect the midpoint in the video, then say whether the new slide is already visible. The window halves with each step.</p>
+          </div>
+          <div class="transition-controls">
+            <label>Window start <input id="search-start" type="number" min="0" step="0.1" value="0"></label>
+            <label>Window end <input id="search-end" type="number" min="0" step="0.1"></label>
+            <button id="check-midpoint" type="button">Seek to midpoint</button>
+            <output id="midpoint-time">Midpoint: —</output>
+            <div class="transition-choices"><button id="frame-old" type="button">Still previous slide</button><button id="frame-new" type="button">New slide visible</button></div>
+            <p id="search-status" aria-live="polite">Choose a transition window, then inspect the video frame.</p>
+          </div>
+        </section>
+        <section class="cue-table-section" aria-labelledby="cue-list-title">
+          <div class="cue-table-heading"><div><p class="eyebrow">Current map</p><h2 id="cue-list-title">Slide cues</h2></div><button id="add-current-cue" type="button" class="primary-action" aria-keyshortcuts="C" title="Cue current video time (C)">Cue current video time <kbd aria-hidden="true">C</kbd></button></div>
+          <p class="cue-table-help">Press C to cue the current time and advance a slide. Edit the slide number or time directly; use Seek to check a cue.</p>
+          <label class="cue-note-field" for="cue-note">Cue note <input id="cue-note" type="text" placeholder="Describe how these cues were created"></label>
+          <div class="cue-table-scroll">
+            <table><thead><tr><th scope="col">Slide</th><th scope="col">Time</th><th scope="col">Video</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody id="cue-rows"></tbody></table>
+          </div>
+          <p id="cue-empty" hidden>No cues yet. Add a cue at the current video time or use the midpoint search.</p>
+        </section>
+      </div>
     </div>
-    <section class="transition-search" aria-labelledby="transition-title">
-      <div>
-        <p class="eyebrow">Frame-by-frame search</p>
-        <h2 id="transition-title">Find a slide transition</h2>
-        <p>Set a time window where the slide changes. Inspect the midpoint in the video, then say whether the new slide is already visible. The window halves with each step.</p>
-      </div>
-      <div class="transition-controls">
-        <label>Window start <input id="search-start" type="number" min="0" step="0.1" value="0"></label>
-        <label>Window end <input id="search-end" type="number" min="0" step="0.1"></label>
-        <button id="check-midpoint" type="button">Seek to midpoint</button>
-        <output id="midpoint-time">Midpoint: —</output>
-        <div class="transition-choices"><button id="frame-old" type="button">Still previous slide</button><button id="frame-new" type="button">New slide visible</button></div>
-        <p id="search-status" aria-live="polite">Choose a transition window, then inspect the video frame.</p>
-        <button id="add-boundary-cue" type="button" class="primary-action">Add cue at latest boundary</button>
-      </div>
-    </section>
-    <section class="cue-table-section" aria-labelledby="cue-list-title">
-      <div class="cue-table-heading"><div><p class="eyebrow">Current map</p><h2 id="cue-list-title">Slide cues</h2></div><button id="add-current-cue" type="button" class="primary-action">Cue current video time</button></div>
-      <p class="cue-table-help">Edit time in seconds or the PDF page. Click a row’s seek button to inspect that point in the recording.</p>
-      <label class="cue-note-field" for="cue-note">Cue note <input id="cue-note" type="text" placeholder="Describe how these cues were created"></label>
-      <div class="cue-table-scroll">
-        <table><thead><tr><th scope="col">Time</th><th scope="col">Page</th><th scope="col">Playback</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody id="cue-rows"></tbody></table>
-      </div>
-      <p id="cue-empty" hidden>No cues yet. Add a cue at the current video time or use the midpoint search.</p>
-    </section>
   </main>
 </body>
 </html>
