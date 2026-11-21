@@ -47,7 +47,7 @@
       linkText: 'Read here: Lab Champion programme ↓',
       cases: [
         ['Learning environment as product', 'Isovalent labs', 'Built a guided cloud-native practice environment with immediate feedback, clear progress, and more than 100k lab sessions supported.', 'https://labs.isovalent.com/', 'Enter the labs ↗'],
-        ['Mental model, then real system', 'Public workshops and talks', 'Made complex infrastructure approachable through explanations, live systems, and reusable hands-on workshops delivered to public audiences.', 'https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe', 'Browse 19 recordings ↗']
+        ['Mental model, then real system', 'Public workshops and talks', 'Made complex infrastructure approachable through explanations, live systems, and reusable hands-on workshops delivered to public audiences.', 'https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe', 'Browse recordings ↗']
       ],
       journey: [
         ['2008', 'Systems Engineer · Orange', 'Teach the local practice', 'Help colleagues at Orange package software for Debian.'],
@@ -323,7 +323,7 @@
   }
 
   function renderPlaylist() {
-    viewerKind.textContent = 'Video archive · 19 recordings';
+    viewerKind.textContent = 'Video archive';
     viewerTitle.textContent = 'Choose a recording';
     viewerBody.innerHTML = '<div class="playlist-browser"><div class="playlist-stage"><div class="viewer-frame"><iframe title="Public recording" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="playlist-current"><p class="playlist-current-count"></p><h3 class="playlist-current-title"></h3><div class="playlist-controls"><button type="button" data-playlist-step="-1">← Previous</button><button type="button" data-playlist-step="1">Next →</button></div></div></div><div class="playlist-index" role="list" aria-label="Public recordings">' + playlistRecordings.map(function (recording, index) {
       return '<button type="button" role="listitem" data-playlist-index="' + index + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + escapeHtml(recording[1]) + '</strong></button>';

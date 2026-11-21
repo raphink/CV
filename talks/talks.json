@@ -1,183 +1,227 @@
 [
   {
-    "id": "kTGU-Nc2Db0",
-    "title": "Tutorial: Getting Familiar with Security Observability Using eBPF & Cilium Tetragon",
-    "topic": "Cloud native security",
-    "event": "KubeCon + CloudNativeCon Europe 2023",
-    "date": "2023-04-18",
-    "dateDisplay": "Apr 18–21, 2023",
-    "conferenceUrl": "https://events.linuxfoundation.org/archive/2023/kubecon-cloudnativecon-europe/",
-    "programUrl": "https://tetragon.io/docs/resources/",
+    "title": "The Agentic Lab Factory",
+    "topic": "Technical education",
+    "event": "Agentic Engineering Days Zürich",
+    "date": "2026-11-20",
+    "deck": "decks/agentic-lab-factory-2026.pdf",
+    "pageCount": 24,
+    "dateDisplay": "Nov 20, 2026",
+    "programUrl": "https://www.agenticdays.com/schedule",
+    "conferenceUrl": "https://www.agenticdays.com/ai-conference-zurich"
+  },
+  {
+    "title": "Day 90 vs. Year Five: The Lab-Led Growth Conversation",
+    "topic": "Technical education",
+    "event": "HANDS-ON 2026 · Fireside",
+    "id": "jR1LzbXrbdU",
+    "date": "2026-09-29",
+    "dateDisplay": "Sep 29, 2026",
+    "programUrl": "https://instruqt.com/hands-on",
+    "conferenceUrl": "https://instruqt.com/hands-on",
     "language": "en",
-    "dateBasis": "The KubeCon Europe 2023 event ran Apr 18–21; the exact tutorial day was not listed in the sources found. YouTube published the recording on May 1, 2023."
+    "sessionType": "Fireside chat"
   },
   {
-    "title": "eBPF-based Security Observability & Runtime Enforcement with Cilium Tetragon",
-    "topic": "Cloud native security",
-    "event": "Cfgmgmtcamp 2024",
-    "deck": "decks/cfgmgmtcamp-2024-tetragon.pdf",
-    "pageCount": 66,
-    "date": "2024-02-06",
-    "dateDisplay": "Feb 6, 2024",
-    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2024/",
-    "programUrl": "https://cfp.cfgmgmtcamp.org/2024/talk/JSW89F/",
-    "dateBasis": "Program page dates the session Feb 6, 2024."
-  },
-  {
-    "id": "yf_exP0ohOU",
-    "title": "Bridging Dev and Ops with eBPF",
-    "topic": "Platform engineering",
-    "event": "Kubernetes Community Days Zürich 2023",
-    "deck": "decks/kcd-zurich-2023-bridging-dev-ops.pdf",
-    "pageCount": 43,
-    "alternateDeck": "decks/devopsdays-zurich-2023-bridging-dev-ops.pdf",
-    "alternatePageCount": 42,
+    "id": "n_g60hLXZOk",
+    "title": "100,000 sessions de labs réseau et sécurité cloud-native",
+    "topic": "Technical education",
+    "deck": "decks/cloud-native-days-france-labs.pdf",
+    "pageCount": 84,
+    "event": "Cloud Native Days France 2026",
+    "date": "2026-02-03",
+    "dateDisplay": "Feb 3, 2026",
+    "programUrl": "https://cloudnativedays.fr/programme/2026",
     "slideCues": [
       {
         "time": 0,
         "page": 1
       },
       {
-        "time": 57,
-        "page": 2
-      },
-      {
-        "time": 121,
-        "page": 3
-      },
-      {
-        "time": 138,
-        "page": 4
-      },
-      {
         "time": 149,
-        "page": 9
-      },
-      {
-        "time": 203,
-        "page": 10
-      },
-      {
-        "time": 232,
         "page": 11
       },
       {
-        "time": 288,
+        "time": 158,
         "page": 12
       },
       {
-        "time": 381,
+        "time": 186,
         "page": 13
       },
       {
-        "time": 449,
-        "page": 15
+        "time": 195,
+        "page": 14
       },
       {
-        "time": 514,
+        "time": 212,
         "page": 16
       },
       {
-        "time": 618,
-        "page": 17
-      },
-      {
-        "time": 706,
+        "time": 224,
         "page": 18
       },
       {
-        "time": 807,
+        "time": 250,
         "page": 19
       },
       {
-        "time": 820,
+        "time": 306,
         "page": 20
       },
       {
-        "time": 847,
-        "page": 22
+        "time": 321,
+        "page": 21
       },
       {
-        "time": 872,
+        "time": 352,
         "page": 23
       },
       {
-        "time": 976,
+        "time": 358,
+        "page": 24
+      },
+      {
+        "time": 463,
         "page": 25
       },
       {
-        "time": 1111,
+        "time": 565,
         "page": 26
       },
       {
-        "time": 1201,
+        "time": 638,
         "page": 27
       },
       {
-        "time": 1222,
+        "time": 680,
         "page": 28
       },
       {
-        "time": 1243,
-        "page": 29
-      },
-      {
-        "time": 1260,
+        "time": 857,
         "page": 30
       },
       {
-        "time": 1273,
-        "page": 31
-      },
-      {
-        "time": 1303,
+        "time": 900,
         "page": 32
       },
       {
-        "time": 1324,
+        "time": 940,
         "page": 33
       },
       {
-        "time": 1351,
+        "time": 1044,
         "page": 34
       },
       {
-        "time": 1427,
+        "time": 1087,
         "page": 35
       },
       {
-        "time": 1454,
+        "time": 1218,
         "page": 36
       },
       {
-        "time": 1468,
-        "page": 37
-      },
-      {
-        "time": 1523,
+        "time": 1294,
         "page": 38
       },
       {
-        "time": 1536,
-        "page": 39
+        "time": 1358,
+        "page": 41
       },
       {
-        "time": 1549,
-        "page": 40
-      },
-      {
-        "time": 1570,
-        "page": 42
-      },
-      {
-        "time": 1580,
+        "time": 1375,
         "page": 43
+      },
+      {
+        "time": 1472,
+        "page": 44
+      },
+      {
+        "time": 1528,
+        "page": 46
+      },
+      {
+        "time": 1610,
+        "page": 47
+      },
+      {
+        "time": 1710,
+        "page": 48
+      },
+      {
+        "time": 1778,
+        "page": 49
+      },
+      {
+        "time": 1800,
+        "page": 50
+      },
+      {
+        "time": 1822,
+        "page": 56
+      },
+      {
+        "time": 2146,
+        "page": 64
+      },
+      {
+        "time": 2173,
+        "page": 65
+      },
+      {
+        "time": 2419,
+        "page": 75
+      },
+      {
+        "time": 2436,
+        "page": 76
+      },
+      {
+        "time": 2487,
+        "page": 77
+      },
+      {
+        "time": 2568,
+        "page": 79
+      },
+      {
+        "time": 2577,
+        "page": 80
+      },
+      {
+        "time": 2583,
+        "page": 81
+      },
+      {
+        "time": 2584,
+        "page": 82
       }
     ],
-    "date": "2023-06-15",
-    "dateDisplay": "Jun 15, 2023",
-    "conferenceUrl": "https://www.cloudnativezurich.ch/archive-2023/",
-    "slideCueNote": "Timestamps and slide matches are approximate, based on captions and deck text.",
+    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition. Some slide builds lack a text match.",
+    "language": "fr"
+  },
+  {
+    "id": "8yzDqDHGLGw",
+    "title": "Kubernetes networking foundations",
+    "topic": "Cloud native networking",
+    "event": "PlatformCon 2026",
+    "deck": "decks/platformcon-2026-kubernetes-networking-workshop.pdf",
+    "pageCount": 57,
+    "date": "2026",
+    "dateDisplay": "2026",
+    "conferenceUrl": "https://platformcon.com/",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 2661,
+        "page": 31
+      }
+    ],
+    "slideCueNote": "Topic-level approximate cues only. The recording mainly shows the Instruqt lab interface rather than the PDF, so these are not confirmed slide transitions.",
     "language": "en"
   },
   {
@@ -357,7 +401,19 @@
       }
     ],
     "slideCueNote": "Approximate cues use timestamps from YouTube auto-generated captions at the first narration match for corresponding PDF slide text; slide changes may happen slightly before or after the spoken mention.",
-    "language": "en"
+    "language": "en",
+    "recordingPublishedAt": "2025-11-19"
+  },
+  {
+    "title": "Exploring the World of Cilium: a hands-workshop on Cilium, Tetragon & eBPF",
+    "topic": "Cloud native networking",
+    "event": "DevOpsDays Geneva 2025",
+    "deck": "decks/devopsdays-geneva-2025-explore-cilium.pdf",
+    "pageCount": 92,
+    "date": "2025-05-20",
+    "dateDisplay": "May 20, 2025",
+    "programUrl": "https://devopsdays.org/events/2025-geneva/program/exploring-the-world-of-cilium",
+    "conferenceUrl": "https://devopsdays.org/events/2025-geneva/welcome/"
   },
   {
     "id": "0c_uSDD9r8U",
@@ -471,404 +527,55 @@
     "language": "en"
   },
   {
-    "id": "ge-iruUlYYs",
-    "title": "Révolution eBPF : un noyau Linux dynamique · DevOps D-Day",
-    "topic": "eBPF and Linux",
-    "event": "DevOps D-Day 2022 · Marseille",
-    "deck": "decks/devops-dday-marseille-ebpf.pdf",
-    "pageCount": 40,
-    "date": "2022-12-01",
-    "dateDisplay": "Dec 1, 2022",
-    "programUrl": "https://www.devopsdday.com/copy-of-conferences/r%C3%A9volution-ebpf%3A-un-noyau-linux-dynamique",
+    "id": "j_0KwA72ZPo",
+    "title": "The platform engineer’s survival guide to Kubernetes networking",
+    "topic": "Cloud native networking",
+    "event": "Humanitec Webinar",
+    "deck": "decks/platform-engineer-survival-guide-kubernetes-networking.pdf",
+    "pageCount": 56,
+    "date": "2024-07-09",
+    "dateDisplay": "Jul 9, 2024",
+    "programUrl": "https://humanitec.com/events/the-platform-engineers-survival-guide-to-kubernetes-networking-2024-07-09",
     "slideCues": [
       {
         "time": 0,
         "page": 1
       },
       {
-        "time": 250,
-        "page": 3
+        "time": 691,
+        "page": 43
       },
       {
-        "time": 502,
-        "page": 8
+        "time": 1037,
+        "page": 22
       },
       {
-        "time": 796,
-        "page": 14
-      },
-      {
-        "time": 1072,
-        "page": 20
-      },
-      {
-        "time": 1263,
-        "page": 24
-      },
-      {
-        "time": 1616,
-        "page": 32
-      },
-      {
-        "time": 2035,
-        "page": 35
-      },
-      {
-        "time": 2245,
-        "page": 37
-      },
-      {
-        "time": 2417,
-        "page": 40
-      }
-    ],
-    "slideCueNote": "Chapter times are exact; slide pages are approximate.",
-    "language": "fr"
-  },
-  {
-    "id": "BO4MWeFkvRM",
-    "title": "Révolution eBPF : un noyau Linux dynamique · KCD Paris 2023",
-    "topic": "eBPF and Linux",
-    "event": "Kubernetes Community Days Paris 2023",
-    "deck": "decks/kcd-paris-2023-ebpf.pdf",
-    "pageCount": 71,
-    "date": "2023-03-07",
-    "dateDisplay": "Mar 7, 2023",
-    "programUrl": "https://assets.website-files.com/633187a23a99dd18ff6fa77e/64009fab60e140a5d661d3e0_programmation_kcd_07_03.pdf",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 201,
-        "page": 16
-      },
-      {
-        "time": 536,
-        "page": 61
-      },
-      {
-        "time": 714,
+        "time": 1382,
         "page": 27
       },
       {
-        "time": 799,
-        "page": 36
-      },
-      {
-        "time": 946,
-        "page": 40
-      },
-      {
-        "time": 1008,
-        "page": 44
-      },
-      {
-        "time": 1606,
-        "page": 52
-      },
-      {
-        "time": 2117,
-        "page": 61
-      },
-      {
-        "time": 2245,
-        "page": 66
-      },
-      {
-        "time": 2326,
-        "page": 71
-      }
-    ],
-    "slideCueNote": "Chapter times are exact; slide pages are approximate.",
-    "language": "en"
-  },
-  {
-    "id": "HqQlLtsZEp4",
-    "title": "Avoiding technical debt in a cloud-native world",
-    "topic": "Open source and practice",
-    "event": "DevOpsDays Tel Aviv 2022",
-    "deck": "decks/devopsdays-tel-aviv-hare-tortoise-en.pdf",
-    "pageCount": 50,
-    "date": "2022-12-14",
-    "dateDisplay": "Dec 14–15, 2022",
-    "conferenceUrl": "https://devopsdays.org/events/2022-tel-aviv/",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 84,
-        "page": 2
-      },
-      {
-        "time": 118,
-        "page": 10
-      },
-      {
-        "time": 192,
-        "page": 12
-      },
-      {
-        "time": 517,
-        "page": 16
-      },
-      {
-        "time": 903,
-        "page": 23
-      },
-      {
-        "time": 1106,
-        "page": 25
-      },
-      {
-        "time": 1197,
-        "page": 29
-      },
-      {
-        "time": 1462,
-        "page": 33
-      },
-      {
-        "time": 1539,
-        "page": 34
-      },
-      {
-        "time": 1681,
+        "time": 1728,
         "page": 38
       },
       {
-        "time": 1718,
-        "page": 39
-      },
-      {
-        "time": 1789,
-        "page": 40
-      },
-      {
-        "time": 2075,
-        "page": 44
-      },
-      {
-        "time": 2177,
-        "page": 48
+        "time": 2074,
+        "page": 33
       }
     ],
-    "slideCueNote": "Times follow the chapter markers; page mapping is approximate for this 50-slide edition.",
+    "slideCueNote": "The video opens on PDF page 1. Remaining page matches are approximate sampled points; the recording revisits deck sections, so page numbers can move backward.",
     "language": "en"
   },
   {
-    "id": "nmJYlh-Vr0c",
-    "title": "The Hare and the Tortoise: Open Source, Standards & Technical Debt",
-    "topic": "Open source and practice",
-    "event": "DevOpsDays Geneva 2022",
-    "deck": "decks/devopsdays-geneva-2022-hare-tortoise.pdf",
-    "pageCount": 22,
-    "date": "2022-05-12",
-    "dateDisplay": "May 12–13, 2022",
-    "programUrl": "https://devopsdays.org/events/2022-geneva/program/raphael-pinson",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 84,
-        "page": 3
-      },
-      {
-        "time": 118,
-        "page": 4
-      },
-      {
-        "time": 192,
-        "page": 5
-      },
-      {
-        "time": 517,
-        "page": 7
-      },
-      {
-        "time": 903,
-        "page": 9
-      },
-      {
-        "time": 1106,
-        "page": 10
-      },
-      {
-        "time": 1197,
-        "page": 11
-      },
-      {
-        "time": 1462,
-        "page": 12
-      },
-      {
-        "time": 1539,
-        "page": 13
-      },
-      {
-        "time": 1681,
-        "page": 14
-      },
-      {
-        "time": 1718,
-        "page": 15
-      },
-      {
-        "time": 1789,
-        "page": 16
-      },
-      {
-        "time": 2075,
-        "page": 18
-      },
-      {
-        "time": 2177,
-        "page": 20
-      }
-    ],
-    "language": "en",
-    "slideCueNote": "Approximate narration-based cue points; exact slide transition frames were not verified."
-  },
-  {
-    "id": "hzMif_cytLs",
-    "title": "eBPF superpowers a dynamic kernel",
-    "topic": "eBPF and Linux",
-    "event": "Cfgmgmtcamp 2023",
-    "deck": "decks/cfgmgmtcamp-2023-ebpf.pdf",
-    "pageCount": 76,
-    "date": "2023-02-08",
-    "dateDisplay": "Feb 8, 2023",
-    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2023/",
-    "programUrl": "https://cfp.cfgmgmtcamp.org/2023/talk/SNY9ZV/",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 28,
-        "page": 2
-      },
-      {
-        "time": 44,
-        "page": 9
-      },
-      {
-        "time": 153,
-        "page": 10
-      },
-      {
-        "time": 203,
-        "page": 11
-      },
-      {
-        "time": 231,
-        "page": 12
-      },
-      {
-        "time": 292,
-        "page": 13
-      },
-      {
-        "time": 319,
-        "page": 14
-      },
-      {
-        "time": 321,
-        "page": 15
-      },
-      {
-        "time": 323,
-        "page": 16
-      },
-      {
-        "time": 465,
-        "page": 18
-      },
-      {
-        "time": 480,
-        "page": 19
-      },
-      {
-        "time": 639,
-        "page": 27
-      },
-      {
-        "time": 675,
-        "page": 29
-      },
-      {
-        "time": 788,
-        "page": 30
-      },
-      {
-        "time": 856,
-        "page": 31
-      },
-      {
-        "time": 907,
-        "page": 36
-      },
-      {
-        "time": 927,
-        "page": 37
-      },
-      {
-        "time": 998,
-        "page": 39
-      },
-      {
-        "time": 1142,
-        "page": 44
-      },
-      {
-        "time": 1291,
-        "page": 47
-      },
-      {
-        "time": 1446,
-        "page": 49
-      },
-      {
-        "time": 1531,
-        "page": 52
-      },
-      {
-        "time": 1565,
-        "page": 53
-      },
-      {
-        "time": 1580,
-        "page": 54
-      },
-      {
-        "time": 2092,
-        "page": 60
-      },
-      {
-        "time": 2228,
-        "page": 62
-      },
-      {
-        "time": 2510,
-        "page": 68
-      },
-      {
-        "time": 2710,
-        "page": 72
-      },
-      {
-        "time": 2792,
-        "page": 76
-      }
-    ],
-    "slideCueNote": "Approximate cue times are first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued.",
-    "language": "en"
+    "title": "Cilium Workshop: Kubernetes networking with eBPF",
+    "slug": "cilium-workshop-kubernetes-networking-with-ebpf-36",
+    "topic": "Cloud native networking",
+    "event": "KCD Munich 2024",
+    "deck": "decks/kcd-munich-2024-cilium-workshop.pdf",
+    "pageCount": 66,
+    "date": "2024-07-01",
+    "dateDisplay": "Jul 1–2, 2024",
+    "dateBasis": "The conference ran July 1–2; the specific workshop day was not available.",
+    "conferenceUrl": "https://community2.cncf.io/events/details/cncf-kcd-munich-presents-kcd-munich-2024/"
   },
   {
     "id": "j8nT0eZcj54",
@@ -958,159 +665,16 @@
     "language": "en"
   },
   {
-    "id": "goWY2S43cnE",
-    "title": "Orchestrated functional testing with Puppet",
-    "topic": "DevOps and automation",
-    "event": "PuppetConf 2014",
-    "deck": "decks/puppetconf-2014-functional-testing.pdf",
-    "pageCount": 35,
-    "conferenceUrl": "https://2014.puppetconf.com/",
-    "date": "2014",
-    "dateDisplay": "2014",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 65,
-        "page": 2
-      },
-      {
-        "time": 158,
-        "page": 3
-      },
-      {
-        "time": 290,
-        "page": 4
-      },
-      {
-        "time": 365,
-        "page": 5
-      },
-      {
-        "time": 445,
-        "page": 6
-      },
-      {
-        "time": 505,
-        "page": 7
-      },
-      {
-        "time": 569,
-        "page": 8
-      },
-      {
-        "time": 614,
-        "page": 9
-      },
-      {
-        "time": 645,
-        "page": 10
-      },
-      {
-        "time": 688,
-        "page": 11
-      },
-      {
-        "time": 703,
-        "page": 12
-      },
-      {
-        "time": 854,
-        "page": 13
-      },
-      {
-        "time": 1027,
-        "page": 14
-      },
-      {
-        "time": 1080,
-        "page": 15
-      },
-      {
-        "time": 1156,
-        "page": 16
-      },
-      {
-        "time": 1328,
-        "page": 17
-      },
-      {
-        "time": 1416,
-        "page": 18
-      },
-      {
-        "time": 1512,
-        "page": 19
-      },
-      {
-        "time": 1554,
-        "page": 20
-      },
-      {
-        "time": 1581,
-        "page": 21
-      },
-      {
-        "time": 1638,
-        "page": 22
-      },
-      {
-        "time": 1674,
-        "page": 23
-      },
-      {
-        "time": 1728,
-        "page": 24
-      },
-      {
-        "time": 1794,
-        "page": 25
-      },
-      {
-        "time": 1833,
-        "page": 26
-      },
-      {
-        "time": 1930,
-        "page": 27
-      },
-      {
-        "time": 1968,
-        "page": 28
-      },
-      {
-        "time": 2010,
-        "page": 29
-      },
-      {
-        "time": 2142,
-        "page": 30
-      },
-      {
-        "time": 2188,
-        "page": 31
-      },
-      {
-        "time": 2198,
-        "page": 32
-      },
-      {
-        "time": 2260,
-        "page": 33
-      },
-      {
-        "time": 2673,
-        "page": 34
-      },
-      {
-        "time": 2686,
-        "page": 35
-      }
-    ],
-    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition.",
-    "language": "en"
+    "title": "eBPF-based Security Observability & Runtime Enforcement with Cilium Tetragon",
+    "topic": "Cloud native security",
+    "event": "Cfgmgmtcamp 2024",
+    "deck": "decks/cfgmgmtcamp-2024-tetragon.pdf",
+    "pageCount": 66,
+    "date": "2024-02-06",
+    "dateDisplay": "Feb 6, 2024",
+    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2024/",
+    "programUrl": "https://cfp.cfgmgmtcamp.org/2024/talk/JSW89F/",
+    "dateBasis": "Program page dates the session Feb 6, 2024."
   },
   {
     "id": "nGoB-w4tjvo",
@@ -1324,31 +888,525 @@
     "language": "en"
   },
   {
-    "id": "wBrlhctsmYs",
-    "title": "Cilium and eBPF · CNCF Research End User Group",
+    "title": "Cilium Workshop: Kubernetes Networking with eBPF",
+    "slug": "cilium-workshop-kubernetes-networking-with-ebpf-260898829",
     "topic": "Cloud native networking",
-    "date": "2022-09-21",
-    "dateDisplay": "Sep 21, 2022",
-    "event": "CNCF Research End User Group",
-    "conferenceUrl": "https://community.cncf.io/research-end-user-group/",
+    "event": "ContainerDays Hamburg 2023 · Workshop day",
+    "deck": "decks/containerdays-hamburg-cilium-workshop.pdf",
+    "pageCount": 66,
+    "date": "2023-09-13",
+    "dateDisplay": "Sep 13, 2023",
+    "conferenceUrl": "https://www.containerdays.io/containerdays-conference-2023/"
+  },
+  {
+    "id": "yf_exP0ohOU",
+    "title": "Bridging Dev and Ops with eBPF",
+    "topic": "Platform engineering",
+    "event": "Kubernetes Community Days Zürich 2023",
+    "deck": "decks/kcd-zurich-2023-bridging-dev-ops.pdf",
+    "pageCount": 43,
+    "alternateDeck": "decks/devopsdays-zurich-2023-bridging-dev-ops.pdf",
+    "alternatePageCount": 42,
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 57,
+        "page": 2
+      },
+      {
+        "time": 121,
+        "page": 3
+      },
+      {
+        "time": 138,
+        "page": 4
+      },
+      {
+        "time": 149,
+        "page": 9
+      },
+      {
+        "time": 203,
+        "page": 10
+      },
+      {
+        "time": 232,
+        "page": 11
+      },
+      {
+        "time": 288,
+        "page": 12
+      },
+      {
+        "time": 381,
+        "page": 13
+      },
+      {
+        "time": 449,
+        "page": 15
+      },
+      {
+        "time": 514,
+        "page": 16
+      },
+      {
+        "time": 618,
+        "page": 17
+      },
+      {
+        "time": 706,
+        "page": 18
+      },
+      {
+        "time": 807,
+        "page": 19
+      },
+      {
+        "time": 820,
+        "page": 20
+      },
+      {
+        "time": 847,
+        "page": 22
+      },
+      {
+        "time": 872,
+        "page": 23
+      },
+      {
+        "time": 976,
+        "page": 25
+      },
+      {
+        "time": 1111,
+        "page": 26
+      },
+      {
+        "time": 1201,
+        "page": 27
+      },
+      {
+        "time": 1222,
+        "page": 28
+      },
+      {
+        "time": 1243,
+        "page": 29
+      },
+      {
+        "time": 1260,
+        "page": 30
+      },
+      {
+        "time": 1273,
+        "page": 31
+      },
+      {
+        "time": 1303,
+        "page": 32
+      },
+      {
+        "time": 1324,
+        "page": 33
+      },
+      {
+        "time": 1351,
+        "page": 34
+      },
+      {
+        "time": 1427,
+        "page": 35
+      },
+      {
+        "time": 1454,
+        "page": 36
+      },
+      {
+        "time": 1468,
+        "page": 37
+      },
+      {
+        "time": 1523,
+        "page": 38
+      },
+      {
+        "time": 1536,
+        "page": 39
+      },
+      {
+        "time": 1549,
+        "page": 40
+      },
+      {
+        "time": 1570,
+        "page": 42
+      },
+      {
+        "time": 1580,
+        "page": 43
+      }
+    ],
+    "date": "2023-06-15",
+    "dateDisplay": "Jun 15, 2023",
+    "conferenceUrl": "https://www.cloudnativezurich.ch/archive-2023/",
+    "slideCueNote": "Timestamps and slide matches are approximate, based on captions and deck text.",
     "language": "en"
   },
   {
-    "id": "qYXoA2gOXzU",
-    "title": "Five-minute talks · Cfgmgmtcamp 2020",
-    "topic": "Open source and practice",
-    "event": "Cfgmgmtcamp 2020 · Ghent",
-    "videoStart": 1020,
-    "date": "2020-02-04",
-    "dateDisplay": "Feb 4, 2020",
+    "title": "Cloud Native Bern 05.2023 — Zero Trust Visibility",
+    "topic": "Cloud native security",
+    "event": "Cloud Native Bern 2023",
+    "deck": "decks/cloud-native-bern-2023-zero-trust-visibility.pdf",
+    "pageCount": 40,
+    "date": "2023-05",
+    "dateDisplay": "May 2023",
+    "conferenceUrl": "https://www.meetup.com/cloudnativebern/",
+    "dateBasis": "The deck title identifies May 2023; the exact day is not confirmed."
+  },
+  {
+    "id": "kTGU-Nc2Db0",
+    "title": "Tutorial: Getting Familiar with Security Observability Using eBPF & Cilium Tetragon",
+    "topic": "Cloud native security",
+    "event": "KubeCon + CloudNativeCon Europe 2023",
+    "date": "2023-04-18",
+    "dateDisplay": "Apr 18–21, 2023",
+    "conferenceUrl": "https://events.linuxfoundation.org/archive/2023/kubecon-cloudnativecon-europe/",
+    "programUrl": "https://tetragon.io/docs/resources/",
     "language": "en",
-    "programUrl": "https://cfp.cfgmgmtcamp.org/2020/schedule/",
-    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2020/"
+    "dateBasis": "The KubeCon Europe 2023 event ran Apr 18–21; the exact tutorial day was not listed in the sources found. YouTube published the recording on May 1, 2023."
+  },
+  {
+    "id": "BO4MWeFkvRM",
+    "title": "Révolution eBPF : un noyau Linux dynamique · KCD Paris 2023",
+    "topic": "eBPF and Linux",
+    "event": "Kubernetes Community Days Paris 2023",
+    "deck": "decks/kcd-paris-2023-ebpf.pdf",
+    "pageCount": 71,
+    "date": "2023-03-07",
+    "dateDisplay": "Mar 7, 2023",
+    "programUrl": "https://assets.website-files.com/633187a23a99dd18ff6fa77e/64009fab60e140a5d661d3e0_programmation_kcd_07_03.pdf",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 201,
+        "page": 16
+      },
+      {
+        "time": 536,
+        "page": 61
+      },
+      {
+        "time": 714,
+        "page": 27
+      },
+      {
+        "time": 799,
+        "page": 36
+      },
+      {
+        "time": 946,
+        "page": 40
+      },
+      {
+        "time": 1008,
+        "page": 44
+      },
+      {
+        "time": 1606,
+        "page": 52
+      },
+      {
+        "time": 2117,
+        "page": 61
+      },
+      {
+        "time": 2245,
+        "page": 66
+      },
+      {
+        "time": 2326,
+        "page": 71
+      }
+    ],
+    "slideCueNote": "Chapter times are exact; slide pages are approximate.",
+    "language": "en"
+  },
+  {
+    "id": "hzMif_cytLs",
+    "title": "eBPF superpowers a dynamic kernel",
+    "topic": "eBPF and Linux",
+    "event": "Cfgmgmtcamp 2023",
+    "deck": "decks/cfgmgmtcamp-2023-ebpf.pdf",
+    "pageCount": 76,
+    "date": "2023-02-08",
+    "dateDisplay": "Feb 8, 2023",
+    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2023/",
+    "programUrl": "https://cfp.cfgmgmtcamp.org/2023/talk/SNY9ZV/",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 28,
+        "page": 2
+      },
+      {
+        "time": 44,
+        "page": 9
+      },
+      {
+        "time": 153,
+        "page": 10
+      },
+      {
+        "time": 203,
+        "page": 11
+      },
+      {
+        "time": 231,
+        "page": 12
+      },
+      {
+        "time": 292,
+        "page": 13
+      },
+      {
+        "time": 319,
+        "page": 14
+      },
+      {
+        "time": 321,
+        "page": 15
+      },
+      {
+        "time": 323,
+        "page": 16
+      },
+      {
+        "time": 465,
+        "page": 18
+      },
+      {
+        "time": 480,
+        "page": 19
+      },
+      {
+        "time": 639,
+        "page": 27
+      },
+      {
+        "time": 675,
+        "page": 29
+      },
+      {
+        "time": 788,
+        "page": 30
+      },
+      {
+        "time": 856,
+        "page": 31
+      },
+      {
+        "time": 907,
+        "page": 36
+      },
+      {
+        "time": 927,
+        "page": 37
+      },
+      {
+        "time": 998,
+        "page": 39
+      },
+      {
+        "time": 1142,
+        "page": 44
+      },
+      {
+        "time": 1291,
+        "page": 47
+      },
+      {
+        "time": 1446,
+        "page": 49
+      },
+      {
+        "time": 1531,
+        "page": 52
+      },
+      {
+        "time": 1565,
+        "page": 53
+      },
+      {
+        "time": 1580,
+        "page": 54
+      },
+      {
+        "time": 2092,
+        "page": 60
+      },
+      {
+        "time": 2228,
+        "page": 62
+      },
+      {
+        "time": 2510,
+        "page": 68
+      },
+      {
+        "time": 2710,
+        "page": 72
+      },
+      {
+        "time": 2792,
+        "page": 76
+      }
+    ],
+    "slideCueNote": "Approximate cue times are first spoken matches between auto-generated captions and PDF text; slide changes may happen before or after the narration. Some animated builds are left uncued.",
+    "language": "en"
+  },
+  {
+    "id": "HqQlLtsZEp4",
+    "title": "Avoiding technical debt in a cloud-native world",
+    "topic": "Open source and practice",
+    "event": "DevOpsDays Tel Aviv 2022",
+    "deck": "decks/devopsdays-tel-aviv-hare-tortoise-en.pdf",
+    "pageCount": 50,
+    "date": "2022-12-14",
+    "dateDisplay": "Dec 14–15, 2022",
+    "conferenceUrl": "https://devopsdays.org/events/2022-tel-aviv/",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 84,
+        "page": 2
+      },
+      {
+        "time": 118,
+        "page": 10
+      },
+      {
+        "time": 192,
+        "page": 12
+      },
+      {
+        "time": 517,
+        "page": 16
+      },
+      {
+        "time": 903,
+        "page": 23
+      },
+      {
+        "time": 1106,
+        "page": 25
+      },
+      {
+        "time": 1197,
+        "page": 29
+      },
+      {
+        "time": 1462,
+        "page": 33
+      },
+      {
+        "time": 1539,
+        "page": 34
+      },
+      {
+        "time": 1681,
+        "page": 38
+      },
+      {
+        "time": 1718,
+        "page": 39
+      },
+      {
+        "time": 1789,
+        "page": 40
+      },
+      {
+        "time": 2075,
+        "page": 44
+      },
+      {
+        "time": 2177,
+        "page": 48
+      }
+    ],
+    "slideCueNote": "Times follow the chapter markers; page mapping is approximate for this 50-slide edition.",
+    "language": "en"
+  },
+  {
+    "id": "ge-iruUlYYs",
+    "title": "Révolution eBPF : un noyau Linux dynamique · DevOps D-Day",
+    "topic": "eBPF and Linux",
+    "event": "DevOps D-Day 2022 · Marseille",
+    "deck": "decks/devops-dday-marseille-ebpf.pdf",
+    "pageCount": 40,
+    "date": "2022-12-01",
+    "dateDisplay": "Dec 1, 2022",
+    "programUrl": "https://www.devopsdday.com/copy-of-conferences/r%C3%A9volution-ebpf%3A-un-noyau-linux-dynamique",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 250,
+        "page": 3
+      },
+      {
+        "time": 502,
+        "page": 8
+      },
+      {
+        "time": 796,
+        "page": 14
+      },
+      {
+        "time": 1072,
+        "page": 20
+      },
+      {
+        "time": 1263,
+        "page": 24
+      },
+      {
+        "time": 1616,
+        "page": 32
+      },
+      {
+        "time": 2035,
+        "page": 35
+      },
+      {
+        "time": 2245,
+        "page": 37
+      },
+      {
+        "time": 2417,
+        "page": 40
+      }
+    ],
+    "slideCueNote": "Chapter times are exact; slide pages are approximate.",
+    "language": "fr"
   },
   {
     "id": "JJ1bFnJenms",
-    "title": "Cloud Native Networking & Security with Cilium & eBPF",
-    "topic": "Cloud native security",
+    "title": "Cloud-Native Application Security via Networking with Cilium & eBPF",
+    "topic": "Interviews and podcasts",
     "event": "Les Compagnons du DevOps",
     "deck": "decks/cloud-native-networking-security-cilium-ebpf.pdf",
     "pageCount": 49,
@@ -1427,310 +1485,93 @@
     ],
     "slideCueNote": "Page 1 at 143s, page 2 at 203s, page 4 at 215s, pages 5 and 8 at 235s and 370s were visually checked; remaining points are approximate French-transcript topic anchors. Page 3/4 alignment is ambiguous, and exact transition times are not verified.",
     "dateBasis": "The deck file timestamp is Oct 6, 2022. The presentation date is estimated as the previous day; the exact date is unverified.",
-    "conferenceUrl": "https://www.compagnons-devops.fr/"
+    "conferenceUrl": "https://www.compagnons-devops.fr/",
+    "sessionType": "Community livestream / podcast interview"
   },
   {
-    "id": "n_g60hLXZOk",
-    "title": "100,000 sessions de labs réseau et sécurité cloud-native",
-    "topic": "Technical education",
-    "deck": "decks/cloud-native-days-france-labs.pdf",
-    "pageCount": 84,
-    "event": "Cloud Native Days France 2026",
-    "date": "2026-02-03",
-    "dateDisplay": "Feb 3, 2026",
-    "programUrl": "https://cloudnativedays.fr/programme/2026",
+    "id": "wBrlhctsmYs",
+    "title": "Cilium and eBPF · CNCF Research End User Group",
+    "topic": "Cloud native networking",
+    "date": "2022-09-21",
+    "dateDisplay": "Sep 21, 2022",
+    "event": "CNCF Research End User Group",
+    "conferenceUrl": "https://community.cncf.io/research-end-user-group/",
+    "language": "en"
+  },
+  {
+    "id": "nmJYlh-Vr0c",
+    "title": "The Hare and the Tortoise: Open Source, Standards & Technical Debt",
+    "topic": "Open source and practice",
+    "event": "DevOpsDays Geneva 2022",
+    "deck": "decks/devopsdays-geneva-2022-hare-tortoise.pdf",
+    "pageCount": 22,
+    "date": "2022-05-12",
+    "dateDisplay": "May 12–13, 2022",
+    "programUrl": "https://devopsdays.org/events/2022-geneva/program/raphael-pinson",
     "slideCues": [
       {
         "time": 0,
         "page": 1
       },
       {
-        "time": 149,
-        "page": 11
+        "time": 84,
+        "page": 3
       },
       {
-        "time": 158,
-        "page": 12
+        "time": 118,
+        "page": 4
       },
       {
-        "time": 186,
-        "page": 13
+        "time": 192,
+        "page": 5
       },
       {
-        "time": 195,
-        "page": 14
-      },
-      {
-        "time": 212,
-        "page": 16
-      },
-      {
-        "time": 224,
-        "page": 18
-      },
-      {
-        "time": 250,
-        "page": 19
-      },
-      {
-        "time": 306,
-        "page": 20
-      },
-      {
-        "time": 321,
-        "page": 21
-      },
-      {
-        "time": 352,
-        "page": 23
-      },
-      {
-        "time": 358,
-        "page": 24
-      },
-      {
-        "time": 463,
-        "page": 25
-      },
-      {
-        "time": 565,
-        "page": 26
-      },
-      {
-        "time": 638,
-        "page": 27
-      },
-      {
-        "time": 680,
-        "page": 28
-      },
-      {
-        "time": 857,
-        "page": 30
-      },
-      {
-        "time": 900,
-        "page": 32
-      },
-      {
-        "time": 940,
-        "page": 33
-      },
-      {
-        "time": 1044,
-        "page": 34
-      },
-      {
-        "time": 1087,
-        "page": 35
-      },
-      {
-        "time": 1218,
-        "page": 36
-      },
-      {
-        "time": 1294,
-        "page": 38
-      },
-      {
-        "time": 1358,
-        "page": 41
-      },
-      {
-        "time": 1375,
-        "page": 43
-      },
-      {
-        "time": 1472,
-        "page": 44
-      },
-      {
-        "time": 1528,
-        "page": 46
-      },
-      {
-        "time": 1610,
-        "page": 47
-      },
-      {
-        "time": 1710,
-        "page": 48
-      },
-      {
-        "time": 1778,
-        "page": 49
-      },
-      {
-        "time": 1800,
-        "page": 50
-      },
-      {
-        "time": 1822,
-        "page": 56
-      },
-      {
-        "time": 2146,
-        "page": 64
-      },
-      {
-        "time": 2173,
-        "page": 65
-      },
-      {
-        "time": 2419,
-        "page": 75
-      },
-      {
-        "time": 2436,
-        "page": 76
-      },
-      {
-        "time": 2487,
-        "page": 77
-      },
-      {
-        "time": 2568,
-        "page": 79
-      },
-      {
-        "time": 2577,
-        "page": 80
-      },
-      {
-        "time": 2583,
-        "page": 81
-      },
-      {
-        "time": 2584,
-        "page": 82
-      }
-    ],
-    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition. Some slide builds lack a text match.",
-    "language": "fr"
-  },
-  {
-    "id": "onzP72ZMXcw",
-    "title": "Running the Puppet Stack in Containers",
-    "topic": "DevOps and automation",
-    "deck": "decks/puppet-stack-in-containers.pdf",
-    "pageCount": 28,
-    "date": "2020-11-19",
-    "dateDisplay": "Nov 19, 2020",
-    "conferenceUrl": "https://www.perforce.com/resources/video/running-puppet-kubernetes",
-    "dateBasis": "The conference took place Nov 19, 2020; the recording was published the following day.",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 2
-      },
-      {
-        "time": 120,
-        "page": 6
-      },
-      {
-        "time": 147,
+        "time": 517,
         "page": 7
       },
       {
-        "time": 176,
-        "page": 8
-      },
-      {
-        "time": 288,
+        "time": 903,
         "page": 9
       },
       {
-        "time": 389,
+        "time": 1106,
         "page": 10
+      },
+      {
+        "time": 1197,
+        "page": 11
+      },
+      {
+        "time": 1462,
+        "page": 12
+      },
+      {
+        "time": 1539,
+        "page": 13
+      },
+      {
+        "time": 1681,
+        "page": 14
+      },
+      {
+        "time": 1718,
+        "page": 15
+      },
+      {
+        "time": 1789,
+        "page": 16
+      },
+      {
+        "time": 2075,
+        "page": 18
+      },
+      {
+        "time": 2177,
+        "page": 20
       }
     ],
-    "slideCueNote": "Approximate points sampled from the recording. The video starts on PDF page 2; intermediate transitions were not all sampled.",
     "language": "en",
-    "event": "Puppetize Digital 2020"
-  },
-  {
-    "id": "j_0KwA72ZPo",
-    "title": "The platform engineer’s survival guide to Kubernetes networking",
-    "topic": "Cloud native networking",
-    "event": "Humanitec Webinar",
-    "deck": "decks/platform-engineer-survival-guide-kubernetes-networking.pdf",
-    "pageCount": 56,
-    "date": "2024-07-09",
-    "dateDisplay": "Jul 9, 2024",
-    "programUrl": "https://humanitec.com/events/the-platform-engineers-survival-guide-to-kubernetes-networking-2024-07-09",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 691,
-        "page": 43
-      },
-      {
-        "time": 1037,
-        "page": 22
-      },
-      {
-        "time": 1382,
-        "page": 27
-      },
-      {
-        "time": 1728,
-        "page": 38
-      },
-      {
-        "time": 2074,
-        "page": 33
-      }
-    ],
-    "slideCueNote": "The video opens on PDF page 1. Remaining page matches are approximate sampled points; the recording revisits deck sections, so page numbers can move backward.",
-    "language": "en"
-  },
-  {
-    "id": "8yzDqDHGLGw",
-    "title": "Kubernetes networking foundations",
-    "topic": "Cloud native networking",
-    "event": "PlatformCon 2026",
-    "deck": "decks/platformcon-2026-kubernetes-networking-workshop.pdf",
-    "pageCount": 57,
-    "date": "2026",
-    "dateDisplay": "2026",
-    "conferenceUrl": "https://platformcon.com/",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 2661,
-        "page": 31
-      }
-    ],
-    "slideCueNote": "Topic-level approximate cues only. The recording mainly shows the Instruqt lab interface rather than the PDF, so these are not confirmed slide transitions.",
-    "language": "en"
-  },
-  {
-    "title": "Cilium Workshop: Kubernetes Networking with eBPF",
-    "slug": "cilium-workshop-kubernetes-networking-with-ebpf-260898829",
-    "topic": "Cloud native networking",
-    "event": "ContainerDays Hamburg 2023 · Workshop day",
-    "deck": "decks/containerdays-hamburg-cilium-workshop.pdf",
-    "pageCount": 66,
-    "date": "2023-09-13",
-    "dateDisplay": "Sep 13, 2023",
-    "conferenceUrl": "https://www.containerdays.io/containerdays-conference-2023/"
-  },
-  {
-    "title": "Cloud Native Bern 05.2023 — Zero Trust Visibility",
-    "topic": "Cloud native security",
-    "event": "Cloud Native Bern 2023",
-    "deck": "decks/cloud-native-bern-2023-zero-trust-visibility.pdf",
-    "pageCount": 40,
-    "date": "2023-05",
-    "dateDisplay": "May 2023",
-    "conferenceUrl": "https://www.meetup.com/cloudnativebern/",
-    "dateBasis": "The deck title identifies May 2023; the exact day is not confirmed."
+    "slideCueNote": "Approximate narration-based cue points; exact slide transition frames were not verified."
   },
   {
     "title": "SKS in GitOps mode",
@@ -1743,6 +1584,17 @@
     "dateBasis": "The event listing gives Nov 17, 2021; the deck cover says Nov 16, one day earlier. The event date is retained.",
     "programUrl": "https://cominmag.ch/conference-cloud-suisse-entre-reve-et-realite/",
     "conferenceUrl": "https://events.exoscale.com/the-future-of-swiss-cloud-geneva"
+  },
+  {
+    "title": "The Hare and the Tortoise: Open Source, Standards & Technological Debt",
+    "topic": "Open source and practice",
+    "deck": "decks/hare-and-tortoise-open-source-roundtables-bit-2021.pdf",
+    "pageCount": 15,
+    "event": "Open Source Roundtables beim BIT",
+    "date": "2021-11-04",
+    "dateDisplay": "Nov 4, 2021",
+    "dateBasis": "Title slide lists Open Source Roundtables beim BIT on 04.11.2021",
+    "conferenceUrl": "https://www.bit.admin.ch/"
   },
   {
     "title": "Devops stack",
@@ -1935,6 +1787,48 @@
     "language": "en"
   },
   {
+    "id": "onzP72ZMXcw",
+    "title": "Running Puppet on Kubernetes",
+    "topic": "DevOps and automation",
+    "deck": "decks/puppet-stack-in-containers.pdf",
+    "pageCount": 28,
+    "date": "2020-11-19",
+    "dateDisplay": "Nov 19, 2020",
+    "conferenceUrl": "https://www.perforce.com/resources/video/running-puppet-kubernetes",
+    "dateBasis": "The conference took place Nov 19, 2020; the recording was published the following day.",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 2
+      },
+      {
+        "time": 120,
+        "page": 6
+      },
+      {
+        "time": 147,
+        "page": 7
+      },
+      {
+        "time": 176,
+        "page": 8
+      },
+      {
+        "time": 288,
+        "page": 9
+      },
+      {
+        "time": 389,
+        "page": 10
+      }
+    ],
+    "slideCueNote": "Approximate points sampled from the recording. The video starts on PDF page 2; intermediate transitions were not all sampled.",
+    "language": "en",
+    "event": "Puppetize Digital 2020",
+    "alternateTitle": "Running the Puppet Stack in Containers",
+    "recordingPublishedAt": "2020-11-20"
+  },
+  {
     "title": "Argocd up and running",
     "topic": "DevOps and automation",
     "id": "UYxws9XhQ-Y",
@@ -2073,14 +1967,38 @@
     "language": "en"
   },
   {
-    "title": "Automating Puppet Certificates Renewal",
+    "id": "qYXoA2gOXzU",
+    "title": "Five-minute talks · Cfgmgmtcamp 2020",
+    "topic": "Open source and practice",
+    "event": "Cfgmgmtcamp 2020 · Ghent",
+    "videoStart": 1020,
+    "date": "2020-02-04",
+    "dateDisplay": "Feb 4, 2020",
+    "language": "en",
+    "programUrl": "https://cfp.cfgmgmtcamp.org/2020/schedule/",
+    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2020/"
+  },
+  {
+    "title": "Manage Configuration File Entries with Augeasproviders",
     "topic": "DevOps and automation",
-    "deck": "decks/puppet-certificate-renewal-2019.pdf",
-    "pageCount": 19,
-    "date": "2019-02-04",
-    "dateDisplay": "Feb 4, 2019",
-    "programUrl": "https://cfgmgmtcamp.org/ghent2019/schedule/monday/",
-    "event": "Cfgmgmtcamp 2019"
+    "event": "Cfgmgmtcamp 2020 · Ghent",
+    "date": "2020-02-03",
+    "dateDisplay": "Feb 3–5, 2020",
+    "programUrl": "https://cfp.cfgmgmtcamp.org/2020/talk/QRR73H/",
+    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2020/",
+    "dateBasis": "The official speaker listing confirms the engagement; the exact session day was not recovered."
+  },
+  {
+    "title": "Terraboard, a web interface to visualize and query Terraform states",
+    "topic": "DevOps and automation",
+    "event": "CfgMgmtCamp Ghent 2019",
+    "deck": "decks/terraboard-cfgmgmtcamp-2019.pdf",
+    "pageCount": 14,
+    "date": "2019-02-05",
+    "dateDisplay": "Feb 5, 2019",
+    "programUrl": "https://cfgmgmtcamp.org/ghent2019/schedule/tuesday/terraboard/",
+    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2019/speaker/raphaelpinson/",
+    "deckNote": "The published source repository README labels an earlier 2018 edition; the official 2019 schedule confirms this 2019 delivery."
   },
   {
     "title": "Narcissus — mapping configs in Go",
@@ -2090,6 +2008,16 @@
     "date": "2019-02-05",
     "dateDisplay": "Published Feb 5, 2019",
     "dateBasis": "Published Feb 5, 2019; no event has been verified, so this is an upload date rather than a confirmed delivery date."
+  },
+  {
+    "title": "Automating Puppet Certificates Renewal",
+    "topic": "DevOps and automation",
+    "deck": "decks/puppet-certificate-renewal-2019.pdf",
+    "pageCount": 19,
+    "date": "2019-02-04",
+    "dateDisplay": "Feb 4, 2019",
+    "programUrl": "https://cfgmgmtcamp.org/ghent2019/schedule/monday/",
+    "event": "Cfgmgmtcamp 2019"
   },
   {
     "title": "FTTH Factory — an illustration of the \"Everything as Code\" paradigm",
@@ -2113,6 +2041,161 @@
     "programUrl": "https://www.meetup.com/Zurich-Puppet-Meetup/events/225390962/"
   },
   {
+    "id": "goWY2S43cnE",
+    "title": "Orchestrated functional testing with Puppet",
+    "topic": "DevOps and automation",
+    "event": "PuppetConf 2014",
+    "deck": "decks/puppetconf-2014-functional-testing.pdf",
+    "pageCount": 35,
+    "conferenceUrl": "https://2014.puppetconf.com/",
+    "date": "2014",
+    "dateDisplay": "2014",
+    "slideCues": [
+      {
+        "time": 0,
+        "page": 1
+      },
+      {
+        "time": 65,
+        "page": 2
+      },
+      {
+        "time": 158,
+        "page": 3
+      },
+      {
+        "time": 290,
+        "page": 4
+      },
+      {
+        "time": 365,
+        "page": 5
+      },
+      {
+        "time": 445,
+        "page": 6
+      },
+      {
+        "time": 505,
+        "page": 7
+      },
+      {
+        "time": 569,
+        "page": 8
+      },
+      {
+        "time": 614,
+        "page": 9
+      },
+      {
+        "time": 645,
+        "page": 10
+      },
+      {
+        "time": 688,
+        "page": 11
+      },
+      {
+        "time": 703,
+        "page": 12
+      },
+      {
+        "time": 854,
+        "page": 13
+      },
+      {
+        "time": 1027,
+        "page": 14
+      },
+      {
+        "time": 1080,
+        "page": 15
+      },
+      {
+        "time": 1156,
+        "page": 16
+      },
+      {
+        "time": 1328,
+        "page": 17
+      },
+      {
+        "time": 1416,
+        "page": 18
+      },
+      {
+        "time": 1512,
+        "page": 19
+      },
+      {
+        "time": 1554,
+        "page": 20
+      },
+      {
+        "time": 1581,
+        "page": 21
+      },
+      {
+        "time": 1638,
+        "page": 22
+      },
+      {
+        "time": 1674,
+        "page": 23
+      },
+      {
+        "time": 1728,
+        "page": 24
+      },
+      {
+        "time": 1794,
+        "page": 25
+      },
+      {
+        "time": 1833,
+        "page": 26
+      },
+      {
+        "time": 1930,
+        "page": 27
+      },
+      {
+        "time": 1968,
+        "page": 28
+      },
+      {
+        "time": 2010,
+        "page": 29
+      },
+      {
+        "time": 2142,
+        "page": 30
+      },
+      {
+        "time": 2188,
+        "page": 31
+      },
+      {
+        "time": 2198,
+        "page": 32
+      },
+      {
+        "time": 2260,
+        "page": 33
+      },
+      {
+        "time": 2673,
+        "page": 34
+      },
+      {
+        "time": 2686,
+        "page": 35
+      }
+    ],
+    "slideCueNote": "Approximate cue times use first spoken matches between auto-generated captions and PDF text; they do not mark every visual transition.",
+    "language": "en"
+  },
+  {
     "title": "Augeas @RMLL 2012",
     "topic": "DevOps and automation",
     "event": "RMLL 2012",
@@ -2124,48 +2207,38 @@
     "dateBasis": "PDF title slide lists LSM 2012, Geneva, 2012-07-11"
   },
   {
-    "title": "The Hare and the Tortoise: Open Source, Standards & Technological Debt",
+    "title": "Augeas — a configuration API",
     "topic": "Open source and practice",
-    "deck": "decks/hare-and-tortoise-open-source-roundtables-bit-2021.pdf",
+    "event": "RMLL 2009 · Nantes",
+    "deck": "decks/augeas-rmll-nantes-2009.pdf",
+    "pageCount": 61,
+    "date": "2009-07-07",
+    "dateDisplay": "Jul 7–11, 2009",
+    "conferenceUrl": "https://connect.ed-diamond.com/GNU-Linux-Magazine/glmf-120/rmll-09",
+    "dateBasis": "The event ran July 7–11; the session-specific day is not confirmed."
+  },
+  {
+    "title": "Augeas",
+    "topic": "Open source and practice",
+    "event": "FOSDEM 2009 · Fedora/CentOS devroom",
+    "date": "2009-02-07",
+    "dateDisplay": "Feb 7, 2009 · 18:00–19:00",
+    "programUrl": "https://archive.fosdem.org/2009/schedule/devrooms/fedoracentos.html",
+    "dateBasis": "Official FOSDEM schedule lists the session on Feb 7, 2009, 18:00–19:00."
+  },
+  {
+    "title": "Kubuntu",
+    "topic": "Open source and practice",
+    "event": "LinuxTag 2006 · Wiesbaden",
+    "deck": "decks/kubuntu-linuxtag-2006.pdf",
     "pageCount": 15,
-    "event": "Open Source Roundtables beim BIT",
-    "date": "2021-11-04",
-    "dateDisplay": "Nov 4, 2021",
-    "dateBasis": "Title slide lists Open Source Roundtables beim BIT on 04.11.2021",
-    "conferenceUrl": "https://www.bit.admin.ch/"
-  },
-  {
-    "title": "The Agentic Lab Factory",
-    "topic": "Technical education",
-    "event": "Agentic Engineering Days Zürich",
-    "date": "2026-11-20",
-    "deck": "decks/agentic-lab-factory-2026.pdf",
-    "pageCount": 24,
-    "dateDisplay": "Nov 20, 2026",
-    "programUrl": "https://www.agenticdays.com/schedule",
-    "conferenceUrl": "https://www.agenticdays.com/ai-conference-zurich"
-  },
-  {
-    "title": "Cilium Workshop: Kubernetes networking with eBPF",
-    "slug": "cilium-workshop-kubernetes-networking-with-ebpf-36",
-    "topic": "Cloud native networking",
-    "event": "KCD Munich 2024",
-    "deck": "decks/kcd-munich-2024-cilium-workshop.pdf",
-    "pageCount": 66,
-    "date": "2024-07-01",
-    "dateDisplay": "Jul 1–2, 2024",
-    "dateBasis": "The conference ran July 1–2; the specific workshop day was not available.",
-    "conferenceUrl": "https://community2.cncf.io/events/details/cncf-kcd-munich-presents-kcd-munich-2024/"
-  },
-  {
-    "title": "Exploring the World of Cilium: a hands-workshop on Cilium, Tetragon & eBPF",
-    "topic": "Cloud native networking",
-    "event": "DevOpsDays Geneva 2025",
-    "deck": "decks/devopsdays-geneva-2025-explore-cilium.pdf",
-    "pageCount": 92,
-    "date": "2025-05-20",
-    "dateDisplay": "May 20, 2025",
-    "programUrl": "https://devopsdays.org/events/2025-geneva/program/exploring-the-world-of-cilium",
-    "conferenceUrl": "https://devopsdays.org/events/2025-geneva/welcome/"
+    "recordingUrl": "https://ftp.fau.de/cdn.media.ccc.de/events/linuxtag/2006/webm-sd/linuxtag06-355-eng-Kubuntu_webm-sd.webm",
+    "recordingType": "video/webm",
+    "recordingPageUrl": "https://media.ccc.de/v/linuxtag06-355-kubuntu",
+    "date": "2006-05-06",
+    "dateDisplay": "May 6, 2006",
+    "conferenceUrl": "https://media.ccc.de/c/linuxtag06/linuxtag06",
+    "language": "en",
+    "dateBasis": "The LinuxTag event record lists Raphaël Pinson’s Kubuntu session on May 6, 2006."
   }
 ]
