@@ -53,7 +53,7 @@
       en: { name: 'English', flag: '🇬🇧', code: 'EN' },
       fr: { name: 'French', flag: '🇫🇷', code: 'FR' }
     };
-    return (talk.id || talk.recordingUrl) ? languages[talk.language] || null : null;
+    return (talk.id || talk.recordingUrl || talk.recordingPageUrl) ? languages[talk.language] || null : null;
   }
 
   function fallbackCover(talk) {
@@ -112,10 +112,10 @@
     var eventDeck = talk.event && talks.find(function (item) { return item.deck && item.event === talk.event; });
     var imageDeck = talk.deck ? talk : eventDeck;
     var thumbnail = imageDeck ? '<img src="' + escapeHtml(slideImagePath(imageDeck, 1)) + '" alt="" loading="lazy">' : (talk.id ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(talk.id) + '/hqdefault.jpg" alt="" loading="lazy">' : '<img src="' + fallbackCover(talk) + '" alt="" loading="lazy">');
-    if (talk.id || talk.recordingUrl) thumbnail += '<span class="play-mark" aria-hidden="true">▶</span>';
+    if (talk.id || talk.recordingUrl || talk.recordingPageUrl) thumbnail += '<span class="play-mark" aria-hidden="true">▶</span>';
     var thumbClass = imageDeck ? ' deck-cover' : '';
     var dateMarkup = talk.date ? '<time class="talk-card-date" datetime="' + escapeHtml(talk.date) + '">' + escapeHtml(talk.dateDisplay || formatDate(talk.date)) + '</time>' : '<span class="talk-card-date">' + escapeHtml(talk.dateDisplay || 'Date not listed') + '</span>';
-    var hasRecording = Boolean(talk.id || talk.recordingUrl);
+    var hasRecording = Boolean(talk.id || talk.recordingUrl || talk.recordingPageUrl);
     var language = talkLanguage(talk);
     var languageMarkup = language ? '<span class="talk-card-language" role="img" aria-label="Language: ' + language.name + '" title="Language: ' + language.name + '"><span aria-hidden="true">' + language.flag + '</span><span>' + language.code + '</span></span>' : '';
     var formatLabel = hasRecording ? (hasSlides ? 'Recording and slides' : 'Recording') : (hasSlides ? 'PDF slides' : 'Conference session');
@@ -210,8 +210,8 @@
     var mediaMarkup = hasVideo || hasDeck ? playerToolbar + '<div class="' + mediaClass + '" data-layout="' + (hasBoth ? 'split' : (hasDeck ? 'slides' : 'video')) + '" data-active="video">' + videoMarkup + localDeck + '</div>' : '';
     detail.innerHTML = '<a class="detail-back" href="./">← All talks</a>' +
       '<div class="detail-heading"><div><p class="eyebrow">' + escapeHtml(talk.topic) + (talk.event ? ' · ' + escapeHtml(talk.event) : '') + ' · ' + escapeHtml(talk.dateDisplay || formatDate(talk.date || '')) + '</p><h1 id="modal-title">' + escapeHtml(talk.title) + '</h1></div></div>' +
-      mediaMarkup + (talk.slideCueNote ? '<p class="slide-cue-note">' + escapeHtml(talk.slideCueNote) + '</p>' : '') +
-      '<div class="detail-actions">' + (talk.id ? '<a href="https://www.youtube.com/watch?v=' + encodeURIComponent(talk.id) + '" target="_blank" rel="noopener noreferrer">Open recording ↗</a>' : (talk.recordingPageUrl ? '<a href="' + escapeHtml(talk.recordingPageUrl) + '" target="_blank" rel="noopener noreferrer">Recording details ↗</a>' : (talk.recordingUrl ? '<a href="' + escapeHtml(talk.recordingUrl) + '" target="_blank" rel="noopener noreferrer">Open recording ↗</a>' : ''))) + (talk.alternateDeck ? '<a href="' + escapeHtml(talk.alternateDeck) + '" target="_blank" rel="noopener noreferrer">Open alternate PDF deck ↗</a>' : '') + (talk.programUrl ? '<a href="' + escapeHtml(talk.programUrl) + '" target="_blank" rel="noopener noreferrer">Conference program ↗</a>' : (talk.conferenceUrl ? '<a href="' + escapeHtml(talk.conferenceUrl) + '" target="_blank" rel="noopener noreferrer">Conference site ↗</a>' : '')) + '<button type="button" class="copy-permalink">Copy permalink</button></div>';
+      mediaMarkup + (hasBoth && talk.slideCueNote ? '<p class="slide-cue-note">' + escapeHtml(talk.slideCueNote) + '</p>' : '') +
+      '<div class="detail-actions">' + (talk.id ? '<a href="https://www.youtube.com/watch?v=' + encodeURIComponent(talk.id) + '" target="_blank" rel="noopener noreferrer">Open recording ↗</a>' : (talk.recordingPageUrl ? '<a href="' + escapeHtml(talk.recordingPageUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(talk.recordingLinkLabel || 'Recording details ↗') + '</a>' : (talk.recordingUrl ? '<a href="' + escapeHtml(talk.recordingUrl) + '" target="_blank" rel="noopener noreferrer">Open recording ↗</a>' : ''))) + (talk.alternateDeck ? '<a href="' + escapeHtml(talk.alternateDeck) + '" target="_blank" rel="noopener noreferrer">Open alternate PDF deck ↗</a>' : '') + (talk.programUrl ? '<a href="' + escapeHtml(talk.programUrl) + '" target="_blank" rel="noopener noreferrer">Conference program ↗</a>' : (talk.conferenceUrl ? '<a href="' + escapeHtml(talk.conferenceUrl) + '" target="_blank" rel="noopener noreferrer">Conference site ↗</a>' : '')) + '<button type="button" class="copy-permalink">Copy permalink</button></div>';
     detail.querySelectorAll('[data-slide-step]').forEach(function (button) {
       button.addEventListener('click', function () {
         setSlidePage(currentSlide + Number(button.dataset.slideStep), true);

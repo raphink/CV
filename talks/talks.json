@@ -11,6 +11,18 @@
     "conferenceUrl": "https://www.agenticdays.com/ai-conference-zurich"
   },
   {
+    "title": "Découvrez la plateforme Isovalent Enterprise : connectez et sécurisez Kubernetes",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Virtual webinar",
+    "date": "2026-11-19",
+    "dateDisplay": "Nov 19, 2026",
+    "recordingPageUrl": "https://labs.isovalent.com/#/resource/2026-isovalent-platform-french",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "fr",
+    "sessionType": "Webinar",
+    "dateBasis": "The Isovalent Universe resource lists the webinar as recorded on Nov 19, 2026."
+  },
+  {
     "title": "Day 90 vs. Year Five: The Lab-Led Growth Conversation",
     "topic": "Technical education",
     "event": "HANDS-ON 2026 · Fireside",
@@ -21,6 +33,18 @@
     "conferenceUrl": "https://instruqt.com/hands-on",
     "language": "en",
     "sessionType": "Fireside chat"
+  },
+  {
+    "title": "Multi-Cloud Service Mesh: Security and Scale Without the Complexity",
+    "topic": "Cloud native networking",
+    "event": "Isovalent · Virtual workshop",
+    "date": "2026-06-09",
+    "dateDisplay": "Jun 9, 2026",
+    "recordingPageUrl": "https://labs.isovalent.com/#/resource/2026-06-09-multi-cloud-workshop",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Jun 9, 2026."
   },
   {
     "id": "n_g60hLXZOk",
@@ -202,6 +226,18 @@
     "language": "fr"
   },
   {
+    "title": "Trust, but Verify: Making Network Segmentation Visible",
+    "topic": "Cloud native security",
+    "event": "Isovalent · Virtual workshop",
+    "date": "2026-01-29",
+    "dateDisplay": "Jan 29, 2026",
+    "recordingPageUrl": "https://labs.isovalent.com/#/resource/2026-01-29-connectivity-visibility-workshop",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Jan 29, 2026."
+  },
+  {
     "id": "8yzDqDHGLGw",
     "title": "Kubernetes networking foundations",
     "topic": "Cloud native networking",
@@ -223,6 +259,21 @@
     ],
     "slideCueNote": "Topic-level approximate cues only. The recording mainly shows the Instruqt lab interface rather than the PDF, so these are not confirmed slide transitions.",
     "language": "en"
+  },
+  {
+    "title": "Integrate Splunk with runtime security for kernel-level observability",
+    "topic": "Cloud native security",
+    "event": "Isovalent · Virtual workshop · with Jeremy Colvin",
+    "date": "2025-11-06",
+    "dateDisplay": "Nov 6, 2025",
+    "recordingPageUrl": "https://labs.isovalent.com/#/resource/2025-11-06-isovalent-splunk-integration-workshop",
+    "recordingLinkLabel": "Watch on Isovalent ↗",
+    "language": "en",
+    "sessionType": "Hands-on workshop",
+    "coPresenters": [
+      "Jeremy Colvin"
+    ],
+    "dateBasis": "The Isovalent Universe resource lists the recorded workshop on Nov 6, 2025."
   },
   {
     "id": "5dBbQlzUep8",
@@ -416,7 +467,6 @@
     "conferenceUrl": "https://devopsdays.org/events/2025-geneva/welcome/"
   },
   {
-    "id": "0c_uSDD9r8U",
     "title": "Hands-on labs with Instruqt, gamification, and AI",
     "topic": "Technical education",
     "event": "Isovalent & Instruqt Webinar · August 2024",
@@ -424,107 +474,10 @@
     "pageCount": 25,
     "date": "2024-08-20",
     "dateDisplay": "Aug 20, 2024",
-    "programUrl": "https://instruqt.com/blog/live-webinar-isovalents-the-world-of-cilium-mastering-the-art-of-hands-on-labs-with-instruqt-gamification-and-ai",
-    "slideCues": [
-      {
-        "time": 0,
-        "page": 1
-      },
-      {
-        "time": 52,
-        "page": 2
-      },
-      {
-        "time": 107,
-        "page": 3
-      },
-      {
-        "time": 111,
-        "page": 4
-      },
-      {
-        "time": 179,
-        "page": 5
-      },
-      {
-        "time": 248,
-        "page": 6
-      },
-      {
-        "time": 355,
-        "page": 7
-      },
-      {
-        "time": 421,
-        "page": 8
-      },
-      {
-        "time": 540,
-        "page": 9
-      },
-      {
-        "time": 647,
-        "page": 10
-      },
-      {
-        "time": 1074,
-        "page": 11
-      },
-      {
-        "time": 1080,
-        "page": 12
-      },
-      {
-        "time": 1123,
-        "page": 13
-      },
-      {
-        "time": 1186,
-        "page": 14
-      },
-      {
-        "time": 1250,
-        "page": 15
-      },
-      {
-        "time": 1751,
-        "page": 17
-      },
-      {
-        "time": 1863,
-        "page": 18
-      },
-      {
-        "time": 1876,
-        "page": 19
-      },
-      {
-        "time": 2193,
-        "page": 20
-      },
-      {
-        "time": 2215,
-        "page": 21
-      },
-      {
-        "time": 2399,
-        "page": 22
-      },
-      {
-        "time": 2600,
-        "page": 23
-      },
-      {
-        "time": 3354,
-        "page": 24
-      },
-      {
-        "time": 3409,
-        "page": 25
-      }
-    ],
-    "slideCueNote": "Approximate cue times use the first spoken matches for slide text in auto-generated captions. Slide changes may happen before or after the narrated mention; some animated builds are intentionally uncued.",
-    "language": "en"
+    "language": "en",
+    "recordingPageUrl": "https://instruqt.com/blog/recap-key-insights-from-our-webinar-mastering-the-art-of-hands-on-labs-with-instruqt-gamification-and-ai",
+    "recordingLinkLabel": "Watch webinar replay ↗",
+    "dateBasis": "Webinar held Aug 20, 2024; replay is linked from the official Instruqt recap."
   },
   {
     "id": "j_0KwA72ZPo",
@@ -2006,8 +1959,14 @@
     "deck": "decks/narcissus-mapping-configs-go.pdf",
     "pageCount": 18,
     "date": "2019-02-05",
-    "dateDisplay": "Published Feb 5, 2019",
-    "dateBasis": "Published Feb 5, 2019; no event has been verified, so this is an upload date rather than a confirmed delivery date."
+    "dateDisplay": "Feb 5, 2019",
+    "dateBasis": "A contemporaneous CfgMgmtCamp 2019 trip report says the event ran Feb 4–6 and places Ignite Talks before lunch on day two, indicating Feb 5. The supplied video starts at 1365 seconds; the exact segment start is not listed in the program.",
+    "id": "umzKixBP4c0",
+    "videoStart": 1365,
+    "event": "CfgMgmtCamp Ghent 2019 · Ignite Talks",
+    "conferenceUrl": "https://cfgmgmtcamp.org/ghent2019/schedule/tuesday/",
+    "language": "en",
+    "sessionType": "Ignite talk"
   },
   {
     "title": "Automating Puppet Certificates Renewal",
