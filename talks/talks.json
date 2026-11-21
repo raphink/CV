@@ -1680,7 +1680,42 @@
     "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
     "event": "Cloud Native Meetup Romandie",
     "videoStart": 4330,
-    "dateBasis": "Date supplied by user."
+    "dateBasis": "Date supplied by user.",
+    "slideCues": [
+      {
+        "time": 4330,
+        "page": 1
+      },
+      {
+        "time": 4399,
+        "page": 2
+      },
+      {
+        "time": 4454,
+        "page": 4
+      },
+      {
+        "time": 4513,
+        "page": 9
+      },
+      {
+        "time": 4721,
+        "page": 11
+      },
+      {
+        "time": 4774,
+        "page": 12
+      },
+      {
+        "time": 4860,
+        "page": 13
+      },
+      {
+        "time": 5290,
+        "page": 16
+      }
+    ],
+    "slideCueNote": "Approximate narration-based cues from auto-generated captions; transition frames were not verified. Later Q&A and closing slides are omitted."
   },
   {
     "title": "YAML Engineering: why we need a new paradigm",
@@ -1726,7 +1761,110 @@
     "dateDisplay": "Nov 26, 2020",
     "videoStart": 3832,
     "dateBasis": "Date supplied by user; meetup series inferred from adjacent recordings.",
-    "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/"
+    "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
+    "slideCues": [
+      {
+        "time": 3832,
+        "page": 1
+      },
+      {
+        "time": 3891,
+        "page": 2
+      },
+      {
+        "time": 3937,
+        "page": 5
+      },
+      {
+        "time": 3949,
+        "page": 6
+      },
+      {
+        "time": 3980,
+        "page": 7
+      },
+      {
+        "time": 3987,
+        "page": 8
+      },
+      {
+        "time": 4040,
+        "page": 9
+      },
+      {
+        "time": 4080,
+        "page": 10
+      },
+      {
+        "time": 4131,
+        "page": 11
+      },
+      {
+        "time": 4184,
+        "page": 12
+      },
+      {
+        "time": 4230,
+        "page": 13
+      },
+      {
+        "time": 4258,
+        "page": 14
+      },
+      {
+        "time": 4383,
+        "page": 15
+      },
+      {
+        "time": 4460,
+        "page": 16
+      },
+      {
+        "time": 4611,
+        "page": 17
+      },
+      {
+        "time": 4678,
+        "page": 18
+      },
+      {
+        "time": 4714,
+        "page": 20
+      },
+      {
+        "time": 4754,
+        "page": 21
+      },
+      {
+        "time": 4790,
+        "page": 22
+      },
+      {
+        "time": 4842,
+        "page": 23
+      },
+      {
+        "time": 4892,
+        "page": 24
+      },
+      {
+        "time": 4915,
+        "page": 25
+      },
+      {
+        "time": 4968,
+        "page": 26
+      },
+      {
+        "time": 5020,
+        "page": 27
+      },
+      {
+        "time": 5037,
+        "page": 28
+      }
+    ],
+    "slideCueNote": "Approximate cue anchors from auto-generated narration; pages 1, 5, 9 and 10 were directly observed in playback. Other transition frames were not verified. The page-29 end card and image-only/blank pages are omitted."
   },
   {
     "title": "Argocd up and running",
@@ -1742,7 +1880,58 @@
     "dateDisplay": "Sep 24, 2020",
     "videoStart": 4951,
     "dateBasis": "Date supplied by user; recording URL starts at 49:51.",
-    "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/"
+    "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
+    "slideCues": [
+      {
+        "time": 4956,
+        "page": 1
+      },
+      {
+        "time": 4979,
+        "page": 2
+      },
+      {
+        "time": 5001,
+        "page": 3
+      },
+      {
+        "time": 5068,
+        "page": 6
+      },
+      {
+        "time": 5123,
+        "page": 8
+      },
+      {
+        "time": 5156,
+        "page": 9
+      },
+      {
+        "time": 5243,
+        "page": 10
+      },
+      {
+        "time": 5425,
+        "page": 11
+      },
+      {
+        "time": 5484,
+        "page": 14
+      },
+      {
+        "time": 5567,
+        "page": 15
+      },
+      {
+        "time": 6424,
+        "page": 18
+      },
+      {
+        "time": 6532,
+        "page": 19
+      }
+    ],
+    "slideCueNote": "Page 1 is visually confirmed around 4956s; remaining cues are approximate transcript and topic alignments. Exact transition frames are not verified."
   },
   {
     "title": "Bivac - Container Volumes Backup",
@@ -1758,7 +1947,66 @@
     "event": "Cloud Native Meetup Romandie",
     "dateBasis": "Date supplied by user; Lausanne is probable.",
     "conferenceUrl": "https://www.meetup.com/cloud-native-romandie/",
-    "videoStart": 295
+    "videoStart": 295,
+    "slideCues": [
+      {
+        "time": 295,
+        "page": 2
+      },
+      {
+        "time": 350,
+        "page": 3
+      },
+      {
+        "time": 390,
+        "page": 4
+      },
+      {
+        "time": 485,
+        "page": 5
+      },
+      {
+        "time": 665,
+        "page": 6
+      },
+      {
+        "time": 700,
+        "page": 7
+      },
+      {
+        "time": 803,
+        "page": 8
+      },
+      {
+        "time": 870,
+        "page": 9
+      },
+      {
+        "time": 986,
+        "page": 10
+      },
+      {
+        "time": 1024,
+        "page": 11
+      },
+      {
+        "time": 1109,
+        "page": 12
+      },
+      {
+        "time": 1120,
+        "page": 13
+      },
+      {
+        "time": 1200,
+        "page": 14
+      },
+      {
+        "time": 1233,
+        "page": 15
+      }
+    ],
+    "slideCueNote": "Approximate points sampled from the recording; each timestamp identifies a page visible at that time, not an exact transition. Page 2 is visible at the supplied start time; Q&A and the final page are not mapped."
   },
   {
     "title": "Automating Puppet Certificates Renewal",
