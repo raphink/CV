@@ -25,6 +25,28 @@
     "dateBasis": "The Isovalent Universe resource lists the webinar as recorded on Nov 19, 2026."
   },
   {
+    "title": "The eBPF revolution for networking, observability & security",
+    "topic": "Cloud native security",
+    "event": "Cisco Connect Switzerland 2026",
+    "date": "2026-11-17",
+    "dateDisplay": "Nov 17, 2026",
+    "language": "en",
+    "sessionType": "Talk",
+    "deck": "decks/cisco-connect-2026-ebpf-revolution-network-observability-security.pdf",
+    "pageCount": 57
+  },
+  {
+    "title": "Live Protect",
+    "topic": "Cloud native security",
+    "event": "Cisco Connect Switzerland 2026",
+    "date": "2026-11-17",
+    "dateDisplay": "Nov 17, 2026",
+    "language": "en",
+    "sessionType": "Talk",
+    "deck": "decks/cisco-connect-2026-live-protect.pdf",
+    "pageCount": 38
+  },
+  {
     "title": "Day 90 vs. Year Five: The Lab-Led Growth Conversation",
     "topic": "Technical education",
     "event": "HANDS-ON 2026 · Fireside",
