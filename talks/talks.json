@@ -349,6 +349,21 @@
     "conferenceUrl": "https://devopsdays.org/events/2025-geneva/welcome/"
   },
   {
+    "slug": "cloud-native-bern-kubernetes-networking-2025",
+    "title": "The Platform Engineer’s Survival Guide to Kubernetes Networking",
+    "topic": "Cloud native networking",
+    "event": "Cloud Native Bern Meetup",
+    "date": "2025-05-05",
+    "dateDisplay": "May 5, 2025 · 18:10",
+    "programUrl": "https://www.meetup.com/cloudnativebern/events/305208538/",
+    "language": "en",
+    "sessionType": "Conference talk",
+    "summary": "Presented as Kubernetes Networking 101: There and back again, with a live demo of the Foundations Networking lab alongside the slides.",
+    "deck": "decks/cloud-native-bern-kubernetes-networking-2025.pdf",
+    "pageCount": 12,
+    "dateBasis": "The Cloud Native Bern event listing gives the talk slot as May 5, 2025 at 18:10."
+  },
+  {
     "title": "Meet the Isovalent Platform: Connect, Secure, and Scale Kubernetes",
     "topic": "Cloud native networking",
     "event": "Isovalent · Webinar",
