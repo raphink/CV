@@ -1,48 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Raphaël Pinson — Technical Archive</title>
-  <meta property="og:title" content="Raphaël Pinson — Technical Archive" />
-  <meta name="description" content="Infrastructure builder who spots gaps and builds systems that enable others at scale. 20+ years across cloud-native stack." />
-  <meta property="og:description" content="Infrastructure builder who spots gaps and builds systems that enable others at scale. 20+ years across cloud-native stack." />
-  <meta property="og:image" content="https://raphink.info/img/og_img.jpg" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+---
+layout: default
+title: "Technical archive — Raphaël Pinson"
+description: "Explore Raphaël Pinson’s technical experience, tools, and open-source contributions over time."
+og_description: "A detailed technical record across infrastructure, systems, and open source."
+canonical: https://raphink.info/archive.html
+og_image: /img/og_img.jpg
+nav_section: archive
+body_class: archive-page
+stylesheets:
+  - url: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+    integrity: sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u
+  - url: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css
+    integrity: sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp
+  - url: https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.css
+    integrity: sha384-u716h6lCH9r+vMunuNOBPDPKgZnK4k+PvzzRvtzbspOEjfdY4uUvDU3wDi6BWe3S
+  - https://use.fontawesome.com/releases/v5.13.0/css/all.css
+  - https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css
+  - /css/archive.css
+scripts:
+  - url: https://code.jquery.com/jquery-2.2.4.min.js
+    integrity: sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB
+  - url: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
+    integrity: sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa
+  - url: https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.js
+    integrity: sha384-M+SxeH/xY48fto4LZCrQuZ4v9X1OLttWV+kDLN2g0otGp5P3JCUeIFL6M9m8/jOT
+  - /js/archive.js
+  - /js/commonmark.js
+---
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.css" integrity="sha384-u716h6lCH9r+vMunuNOBPDPKgZnK4k+PvzzRvtzbspOEjfdY4uUvDU3wDi6BWe3S" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
-
-  <link href="css/archive.css" rel="stylesheet" type="text/css" />
-
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.0/vis.min.js" integrity="sha384-M+SxeH/xY48fto4LZCrQuZ4v9X1OLttWV+kDLN2g0otGp5P3JCUeIFL6M9m8/jOT" crossorigin="anonymous"></script>
-
-  <script src="js/archive.js"></script>
-  <script src="js/commonmark.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1DK6MCNH6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-F1DK6MCNH6');
-  </script>
-</head>
-
-<body>
-  <a class="archive-return" href="index.html">← Back to the portfolio</a>
-  <a class="archive-work-link" href="creative/">Creative work ↗</a>
+<main id="top">
   <div class="navbar navbar-default navbar-fixed-top" aria-label="Archive controls">
     <div class="container">
       <ul class="nav navbar-nav navbar-right">
@@ -134,5 +120,4 @@
     <div id="visualization" role="region" aria-label="Interactive technical experience timeline"></div>
   </div>
 </div>
-</body>
-</html>
+</main>

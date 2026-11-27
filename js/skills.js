@@ -26,7 +26,7 @@
       summary: 'A platform is an interface between infrastructure and the people who depend on it. Its value is not hidden capability, but confident, shared operation.',
       tools: 'OpenStack · Rancher · Kubernetes · OpenShift · Argo CD · Cilium · Hubble · Tetragon',
       link: 'https://www.youtube.com/watch?v=yf_exP0ohOU',
-      linkText: 'Watch here: Bridging Dev and Ops ↓',
+      linkText: 'Play talk ▶',
       cases: [
         ['Infrastructure made inspectable', 'Terraboard', 'Built a web interface for Terraform state so teams could understand shared infrastructure without reading raw state files.', 'https://terraboard.io/', 'Explore Terraboard ↗'],
         ['A reusable path to operation', 'DevOps Stack', 'Helped shape a shared Kubernetes platform around declarative delivery, reusable components, and an operable path for teams.', 'https://devops-stack.io/', 'Explore DevOps Stack ↗']
@@ -44,7 +44,7 @@
       summary: 'Education is an interface between knowing and doing. The learning environment must let people form a mental model, act on a real system, and learn from feedback.',
       tools: 'Debian packaging · Puppet · Docker · Terraform · Kubernetes · Cilium · Tetragon',
       link: 'https://isovalent.com/blog/post/cilium-lab-champion/',
-      linkText: 'Read here: Lab Champion programme ↓',
+      linkText: 'Open article ↗',
       cases: [
         ['Learning environment as product', 'Isovalent labs', 'Built a guided cloud-native practice environment with immediate feedback, clear progress, and more than 100k lab sessions supported.', 'https://labs.isovalent.com/', 'Enter the labs ↗'],
         ['Mental model, then real system', 'Public workshops and talks', 'Made complex infrastructure approachable through explanations, live systems, and reusable hands-on workshops delivered to public audiences.', 'https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe', 'Browse recordings ↗']

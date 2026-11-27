@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en">
+{% include site-head.html %}
+<body class="{{ page.body_class | default: 'portfolio-page' }}">
+  {% include site-header.html %}
+  {{ content }}
+  {% include site-footer.html %}
+</body>
+</html>

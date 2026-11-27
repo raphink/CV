@@ -1,3 +1,6 @@
+url: https://raphink.info
+baseurl: ""
+
 exclude:
   - talks/cue-editor.html
   - talks/cue-editor.css

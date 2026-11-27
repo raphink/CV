@@ -13,13 +13,12 @@
     })
     .then(function (talks) {
       if (!Array.isArray(talks)) throw new Error('Talk archive has an unexpected format');
-      var recordings = talks.filter(function (talk) {
-        return Boolean(talk.id || talk.recordingUrl || talk.recordingPageUrl);
-      }).length;
+      var recordings = talks.filter(function (talk) { return Boolean(talk.id || talk.recordingUrl); }).length;
+      var decks = talks.filter(function (talk) { return Boolean(talk.deck); }).length;
       countLink.textContent = talks.length + ' ↗';
       countLink.setAttribute('aria-label', 'Browse all ' + talks.length + ' public talks and workshops');
-      summary.textContent = talks.length + ' talks and workshops in the archive · ' + recordings + ' with recordings.';
-      archiveCount.textContent = talks.length + ' sessions · ' + recordings + ' with recordings';
+      summary.textContent = talks.length + ' talks and workshops · ' + recordings + ' recordings · ' + decks + ' slide decks.';
+      archiveCount.textContent = talks.length + ' sessions · ' + recordings + ' recordings · ' + decks + ' slide decks';
     })
     .catch(function () {
       countLink.textContent = 'Browse ↗';

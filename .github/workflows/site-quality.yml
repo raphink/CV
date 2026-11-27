@@ -1,0 +1,30 @@
+name: Site quality
+
+on:
+  pull_request:
+    branches: [gh-pages]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check portfolio quality gates
+        run: node scripts/quality-gates.mjs
+      - name: Check JavaScript syntax
+        run: |
+          node --check js/skills.js
+          node --check talks/talks.js
+          node --check js/home-stats.js
+          node --check certifications/certifications.js
+      - name: Build with GitHub Pages Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site

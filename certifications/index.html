@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Credentials — Raphaël Pinson"
+description: "Professional certifications and credentials held by Raphaël Pinson."
+canonical: https://raphink.info/certifications/
+nav_section: credentials
+body_class: credentials-page
+stylesheets:
+  - /certifications/certifications.css
+scripts:
+  - /certifications/certifications.js
+---
+
+<main>
+    <section class="credentials-hero" aria-labelledby="page-title">
+      <div class="credentials-heading">
+        <div>
+          <p class="eyebrow">Professional credentials</p>
+          <h1 id="page-title">Knowledge, <em>verified.</em></h1>
+        </div>
+        <p class="credentials-intro">A living record of certifications, community contributions, and learning milestones across cloud native networking, security, and infrastructure.</p>
+      </div>
+      <div class="credentials-summary" aria-live="polite">
+        <strong id="credential-count">—</strong>
+        <span id="credential-count-label">credentials</span>
+        <span class="summary-divider" aria-hidden="true">·</span>
+        <span id="credential-source-status">Loading verified credentials</span>
+      </div>
+    </section>
+
+    <section class="credentials-content" aria-label="Credentials">
+      <div class="credentials-toolbar">
+        <div class="filter-group" role="group" aria-label="Filter credentials" hidden>
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="active" aria-pressed="false">Current</button>
+          <button class="filter-button" type="button" data-filter="expired" aria-pressed="false">Expired</button>
+        </div>
+        <a class="profile-link" href="https://certdirectory.io/profile/raphink" target="_blank" rel="noopener noreferrer">Open verified profile ↗</a>
+      </div>
+
+      <p class="credentials-message" id="credentials-message" role="status">Loading credentials…</p>
+      <div class="credential-grid" id="credential-grid"></div>
+    </section>
+  </main>

@@ -1,48 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Creative Work — Raphaël Pinson</title>
-  <meta name="description" content="Visual design, illustration, comics, typography, and print projects by Raphaël Pinson.">
-  <meta name="author" content="Raphaël Pinson">
-  <meta name="theme-color" content="#061820">
-  <link rel="canonical" href="https://raphink.info/creative/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://raphink.info/creative/">
-  <meta property="og:site_name" content="Raphaël Pinson">
-  <meta property="og:title" content="Creative Work — Raphaël Pinson">
-  <meta property="og:description" content="Learning worlds, technical stories, and visual ideas made tangible.">
-  <meta property="og:image" content="https://raphink.info/creative/assets/learning-universe.webp">
-  <link rel="icon" href="../favicon.ico">
-  <link rel="stylesheet" href="../css/overrides.css">
-  <link rel="stylesheet" href="../css/mobile.css">
-  <link rel="stylesheet" href="work.css?v=2">
-  <!-- Google tag (gtag.js) - shared GA4 property -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1DK6MCNH6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F1DK6MCNH6');
-  </script>
-  <script src="work.js" defer></script>
-  <script src="../js/mobile-nav.js" defer></script>
-</head>
-<body class="work-page">
-  <header class="site-header work-header">
-    <a class="wordmark" href="../">Raphaël Pinson</a>
-    <nav aria-label="Primary">
-      <a href="../#map">Explore</a>
-      <a class="work-link" href="./" aria-current="page">Creative</a>
-      <a href="../#record">Record</a>
-      <a class="mobile-access-link" href="../talks/">Talks</a>
-      <a class="mobile-access-link" href="../certifications/">Credentials</a>
-    </nav>
-    <a class="resume-link" href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a>
-  </header>
+---
+layout: default
+title: "Creative — Raphaël Pinson"
+description: "Visual design, illustration, comics, typography, and print projects by Raphaël Pinson."
+og_description: "Learning worlds, technical stories, and visual ideas made tangible."
+canonical: https://raphink.info/creative/
+og_image: /creative/assets/learning-universe.webp
+og_alt: An illustrated learning universe built for cloud native education
+nav_section: creative
+body_class: work-page
+stylesheets:
+  - /creative/work.css?v=2
+scripts:
+  - /creative/work.js
+---
 
-  <main>
+<main>
     <section class="work-hero" aria-labelledby="work-title">
       <div class="work-hero-copy">
         <p class="work-eyebrow"><span>Creative work</span><span>Visual design · illustration · editorial</span></p>
@@ -312,7 +284,3 @@
       <p class="reader-description" id="reader-description" hidden></p>
     </div>
   </dialog>
-
-  <footer class="work-footer"><span>Raphaël Pinson · Lausanne</span><a href="../">Portfolio ↗</a><a href="../talks/">Talks ↗</a><a href="../timeline/">Career timeline ↗</a><a href="../certifications/">Credentials ↗</a><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a></footer>
-</body>
-</html>

@@ -1,37 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Talks — Raphaël Pinson</title>
-  <meta name="description" content="Browse Raphaël Pinson’s public technical talks and presentations on cloud-native infrastructure, eBPF, DevOps, and technical education.">
-  <link rel="canonical" href="https://raphink.info/talks/">
-  <meta property="og:title" content="Talks — Raphaël Pinson">
-  <meta property="og:description" content="Public technical talks and presentations on cloud-native infrastructure, eBPF, DevOps, and technical education.">
-  <meta property="og:image" content="https://raphink.info/img/social-card.png">
-  <link rel="icon" href="../favicon.ico">
-  <link rel="stylesheet" href="../css/overrides.css">
-  <link rel="stylesheet" href="talks.css">
-  <!-- Google tag (gtag.js) - shared GA4 property -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1DK6MCNH6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F1DK6MCNH6');
-  </script>
-  <script src="talks.js" defer></script>
-  <script src="../js/mobile-nav.js" defer></script>
-</head>
-<body class="talk-archive">
-  <header class="site-header">
-    <a class="wordmark" href="../">Raphaël Pinson</a>
-    <nav aria-label="Primary"><a href="../#map">Explore</a><a class="mobile-access-link work-link" href="../creative/">Creative</a><a href="../#record">Record</a><a class="mobile-access-link" href="./" aria-current="page">Talks</a></nav>
-    <a class="resume-link" href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a>
-  </header>
-  <main>
+---
+layout: default
+title: "Talks — Raphaël Pinson"
+description: "Browse Raphaël Pinson’s public technical talks and presentations on cloud-native infrastructure, eBPF, DevOps, and technical education."
+og_description: "Public technical talks and presentations on cloud-native infrastructure, eBPF, DevOps, and technical education."
+canonical: https://raphink.info/talks/
+nav_section: talks
+body_class: talk-archive
+stylesheets:
+  - /talks/talks.css
+scripts:
+  - /talks/talks.js
+---
+
+<main>
     <section class="talk-hero">
-      <a class="back-link" href="../">← Back to portfolio</a>
       <p class="eyebrow">Public thinking · Talk archive</p>
       <h1>Ideas, shared <em>out loud.</em></h1>
       <p class="talk-intro">Conference talks, workshops, and short sessions on making cloud-native systems easier to understand and operate.</p>
@@ -44,7 +26,7 @@
         <label class="talk-search"><span class="visually-hidden">Search talks</span><input id="talk-search" type="search" placeholder="Search talks, topics, events…" autocomplete="off"><span aria-hidden="true">⌕</span></label>
         <div class="browser-filter-side">
           <div class="topic-filters" id="topic-filters" aria-label="Filter by topic"></div>
-          <div class="language-filter"><span class="language-filter-label">Language</span><div class="language-filter-options" id="language-filters" role="group" aria-label="Filter by language"><button type="button" data-language="" aria-label="All languages" aria-pressed="true">All</button><button type="button" data-language="en" aria-label="English" title="English" aria-pressed="false"><span aria-hidden="true">🇬🇧</span><span>EN</span></button><button type="button" data-language="fr" aria-label="French" title="French" aria-pressed="false"><span aria-hidden="true">🇫🇷</span><span>FR</span></button></div></div>
+          <div class="language-filter"><span class="language-filter-label">Language</span><div class="language-filter-options" id="language-filters" role="group" aria-label="Filter by language"><button type="button" data-language="" aria-pressed="true">All</button><button type="button" data-language="en" aria-label="English" aria-pressed="false">English</button><button type="button" data-language="fr" aria-label="French" aria-pressed="false">French</button></div></div>
         </div>
       </div>
       <p class="results-label" id="results-label" aria-live="polite"></p>
@@ -59,6 +41,3 @@
       <div class="talk-detail" id="talk-detail"></div>
     </dialog>
   </main>
-  <footer><span>Raphaël Pinson · Lausanne</span><a href="../">Portfolio ↗</a><a href="https://github.com/raphink/CV">GitHub ↗</a></footer>
-</body>
-</html>

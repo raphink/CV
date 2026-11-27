@@ -1,53 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Raphaël Pinson — Interfaces for people and systems</title>
-  <meta name="description" content="Explore how Raphaël Pinson has turned constraints across infrastructure, platforms, and education into interfaces that enable people.">
-  <meta name="author" content="Raphaël Pinson">
-  <meta name="theme-color" content="#061820">
-  <link rel="canonical" href="https://raphink.info/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://raphink.info/">
-  <meta property="og:site_name" content="Raphaël Pinson">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Raphaël Pinson — Interfaces for people and systems">
-  <meta property="og:description" content="Twenty years of tracking constraints and building interfaces that enable people.">
-  <meta property="og:image" content="https://raphink.info/img/social-card.png">
-  <meta property="og:image:secure_url" content="https://raphink.info/img/social-card.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Raphaël Pinson — Making infrastructure work better for people">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Raphaël Pinson — Interfaces for people and systems">
-  <meta name="twitter:description" content="Twenty years of tracking constraints and building interfaces that enable people.">
-  <meta name="twitter:image" content="https://raphink.info/img/social-card.png">
-  <meta name="twitter:image:alt" content="Raphaël Pinson — Making infrastructure work better for people">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="css/overrides.css">
-  <link rel="stylesheet" href="css/mobile.css">
-  <script src="js/skills.js" defer></script>
-  <!-- Google tag (gtag.js) - shared GA4 property -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1DK6MCNH6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F1DK6MCNH6');
-  </script>
-  <script src="js/home-stats.js" defer></script>
-  <script src="js/mobile-nav.js" defer></script>
-</head>
-<body>
-  <header class="site-header">
-    <a class="wordmark" href="#top">Raphaël Pinson</a>
-    <nav aria-label="Primary"><a href="#map">Explore</a><a href="creative/" class="mobile-access-link work-link">Creative</a><a href="#record">Record</a><a class="mobile-access-link" href="talks/">Talks</a><a class="mobile-access-link" href="certifications/">Credentials</a></nav>
-    <a class="resume-link" href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a>
-  </header>
+---
+layout: default
+title: "Raphaël Pinson — Interfaces for people and systems"
+description: "Explore how Raphaël Pinson has turned constraints across infrastructure, platforms, and education into interfaces that enable people."
+og_description: "Twenty years of tracking constraints and building interfaces that enable people."
+canonical: https://raphink.info/
+nav_section: home
+scripts:
+  - /js/skills.js
+  - /js/home-stats.js
+---
 
-  <main id="top">
+<main id="top">
     <section class="hero" aria-labelledby="page-title">
       <div class="identity"><img src="img/raphael-pinson-2025.webp" alt="Raphaël Pinson"><p>Technical Marketing Engineer<br>Isovalent at Cisco · Lausanne</p></div>
       <div class="hero-copy">
@@ -71,7 +34,7 @@
 
     <section class="map" id="map" aria-labelledby="map-title">
       <div class="map-heading">
-        <div><p class="eyebrow">An interface to the work</p><h2 id="map-title">Follow the constraint.</h2></div>
+        <div><p class="eyebrow">An interface to the work</p><h2 id="map-title">The same practice, three ways.</h2></div>
         <p>Each route below shows the same practice applied to a different system: find what blocks people, design the interface, make capability shareable.</p>
       </div>
 
@@ -131,16 +94,28 @@
     <section class="record" id="record" aria-labelledby="record-title">
       <div><p class="eyebrow">Public record</p><h2 id="record-title">The work leaves traces.</h2></div>
       <dl><div><dt><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">20+ ↗</a></dt><dd>years across infrastructure and enablement</dd></div><div><dt><a href="talks/" id="record-talk-count">—</a></dt><dd>public talks and workshops in the archive</dd></div><div><dt><a href="https://labs.isovalent.com/">100k+ ↗</a></dt><dd>cloud-native lab sessions supported</dd></div><div><dt><a href="https://github.com/raphink">2005 ↗</a></dt><dd>contributing to open source since</dd></div></dl>
-      <a class="archive-bridge" href="archive.html" target="_blank" rel="noopener noreferrer"><span><small>Technical archive</small><strong>Explore the full working history.</strong></span><em>Timeline, filters, and detailed notes ↗</em></a>
+      <a class="archive-bridge" href="archive.html"><span><small>Technical archive</small><strong>Explore the full working history.</strong></span><em>Timeline, filters, and detailed notes ↗</em></a>
+    </section>
+
+    <section class="creative-teaser" aria-labelledby="creative-teaser-title">
+      <a class="creative-teaser-art" href="creative/" aria-label="Explore the creative portfolio">
+        <img src="creative/assets/learning-universe.webp" alt="Illustrated learning worlds connected around a central hub" loading="lazy">
+      </a>
+      <div class="creative-teaser-copy">
+        <p class="eyebrow">A visual practice</p>
+        <h2 id="creative-teaser-title">Technical ideas can be things people want to explore.</h2>
+        <p>Illustrated learning worlds, comics, explainers, typography, and print—made to help complex systems feel approachable.</p>
+        <a href="creative/">Explore the creative portfolio <span aria-hidden="true">↗</span></a>
+      </div>
     </section>
 
     <section class="talks" id="talks" aria-labelledby="talks-title">
       <div class="talks-heading"><p class="eyebrow">Public thinking</p><h2 id="talks-title">Teaching is part of the engineering.</h2><p id="talks-summary" aria-live="polite">Talks, workshops, and recordings from across my career.</p></div>
       <div class="talk-list">
-        <a href="https://www.youtube.com/watch?v=j8nT0eZcj54"><small>PlatformCon · 2024</small><strong>Exploring Cilium, Tetragon &amp; eBPF</strong><span>Watch here ↓</span></a>
-        <a href="https://www.youtube.com/watch?v=HqQlLtsZEp4"><small>DevOpsDays Tel Aviv</small><strong>Avoiding technical debt in a cloud-native world</strong><span>Watch here ↓</span></a>
-        <a href="https://www.youtube.com/watch?v=8yzDqDHGLGw"><small>PlatformCon</small><strong>Kubernetes networking foundations</strong><span>Watch here ↓</span></a>
-        <a href="talks/"><small id="talks-archive-count">Browse the archive</small><strong>Browse the talks archive</strong><span>Open archive ↓</span></a>
+        <a href="https://www.youtube.com/watch?v=j8nT0eZcj54" target="_blank" rel="noopener noreferrer"><small>PlatformCon · 2024</small><strong>Exploring Cilium, Tetragon &amp; eBPF</strong><span>Play talk ↗</span></a>
+        <a href="https://www.youtube.com/watch?v=HqQlLtsZEp4" target="_blank" rel="noopener noreferrer"><small>DevOpsDays Tel Aviv</small><strong>Avoiding technical debt in a cloud-native world</strong><span>Play talk ↗</span></a>
+        <a href="https://www.youtube.com/watch?v=8yzDqDHGLGw" target="_blank" rel="noopener noreferrer"><small>PlatformCon</small><strong>Kubernetes networking foundations</strong><span>Play talk ↗</span></a>
+        <a href="talks/"><small id="talks-archive-count">Browse the archive</small><strong>Browse the talks archive</strong><span>Browse talks ↗</span></a>
       </div>
     </section>
   </main>
@@ -151,6 +126,3 @@
       <div class="viewer-footer"><p>Stay in the portfolio or continue with the original source.</p><a id="viewer-source" href="#" target="_blank" rel="noopener noreferrer">Open original ↗</a></div>
     </div>
   </dialog>
-  <footer><span>Raphaël Pinson · Lausanne</span><a href="creative/">Creative work ↗</a><a href="archive.html" target="_blank" rel="noopener noreferrer">Technical archive ↗</a><a href="https://github.com/raphink">GitHub ↗</a><a href="https://www.linkedin.com/in/raphink">LinkedIn ↗</a><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a></footer>
-</body>
-</html>
