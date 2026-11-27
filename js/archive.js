@@ -43,6 +43,8 @@ function skills() {
 
       if (item.type === 'background') {
         return title;
+      } else if (item.details === false) {
+        return title;
       } else {
         var html = '<span class="zoom" vis-item-id="'+item.id+'" title="Zoom on item and display details"><i class="glyphicon glyphicon-zoom-in"></i></span> ';
         html += '<a class="details-toggle" data-toggle="collapse" href="#details-'+item.id+'" title="Toggle details">'+title+'</a>';
@@ -194,9 +196,8 @@ function loadItems(timeline, group_name_to_id_map) {
 function loadDetails(items) {
   for (var i in items._data) {
     var ii = items._data[i];
-    if ((typeof ii.details === 'boolean' && ii.details === false) || typeof ii.name === 'undefined') {
-      $('#details-'+ii.id).html('No details');
-    } else {
+    if ((typeof ii.details === 'boolean' && ii.details === false) || typeof ii.name === 'undefined') continue;
+    else {
       $.ajax({
           url: './skills/'+ii.name+'/details.md',
           id: i,

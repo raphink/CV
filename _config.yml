@@ -1,5 +1,6 @@
 url: https://raphink.info
 baseurl: ""
+data_dir: talks
 
 exclude:
   - talks/cue-editor.html
@@ -7,3 +8,4 @@ exclude:
   - talks/cue-editor.js
   - talks/README.md
   - talks/archive-import-notes.md
+  - timeline/

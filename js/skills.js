@@ -74,7 +74,6 @@
   var viewerSource = document.getElementById('viewer-source');
   var viewerClose = viewer.querySelector('.viewer-close');
   var viewerTrigger = null;
-  var routeStops = Array.prototype.slice.call(document.querySelectorAll('[data-scroll-route]'));
   var routesControl = document.querySelector('.routes');
   var mobileRouteSequence = document.getElementById('mobile-route-sequence');
   var mobileRouteMedia = window.matchMedia('(max-width: 900px)');
@@ -202,16 +201,6 @@
 
   function prepareRouteNarrative() {
     if (!('IntersectionObserver' in window)) return;
-    var routeObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) render(entry.target.dataset.scrollRoute, false);
-      });
-    }, {
-      rootMargin: '-47% 0px -47% 0px',
-      threshold: 0
-    });
-    routeStops.forEach(function (stop) { routeObserver.observe(stop); });
-
     var mobileRouteObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting && mobileRouteMedia.matches) render(entry.target.dataset.mobileRoute, false);
@@ -222,15 +211,6 @@
     });
     Array.prototype.forEach.call(document.querySelectorAll('[data-mobile-route]'), function (panel) {
       mobileRouteObserver.observe(panel);
-    });
-  }
-
-  function scrollToRoute(key) {
-    var stop = routeStops.find(function (candidate) { return candidate.dataset.scrollRoute === key; });
-    if (!stop) return;
-    stop.scrollIntoView({
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-      block: 'center'
     });
   }
 
@@ -410,7 +390,7 @@
         window.requestAnimationFrame(function () {
           scrollToMobileRoute(button.dataset.route);
         });
-      } else scrollToRoute(button.dataset.route);
+      }
     });
     button.addEventListener('keydown', function (event) {
       if (!['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
@@ -423,7 +403,6 @@
       buttons[next].focus();
       render(buttons[next].dataset.route, false);
       if (mobileRouteMedia.matches) scrollToMobileRoute(buttons[next].dataset.route);
-      else scrollToRoute(buttons[next].dataset.route);
     });
   });
 

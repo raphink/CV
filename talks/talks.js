@@ -102,6 +102,11 @@
     return base + '-' + (talk.id || talks.indexOf(talk));
   }
 
+  function deckThumbnailPath(talk) {
+    var deckName = talk.deck.replace(/^decks\//, '').replace(/\.pdf$/i, '');
+    return 'decks/thumbnails/' + deckName + '.webp';
+  }
+
   function topicList() {
     return ['All topics'].concat(Array.from(new Set(talks.map(function (talk) { return talk.topic; }))));
   }
@@ -126,7 +131,7 @@
     // reads as one visual set even when an event has several recordings.
     var eventDeck = talk.event && talks.find(function (item) { return item.deck && item.event === talk.event; });
     var imageDeck = talk.deck ? talk : eventDeck;
-    var thumbnail = imageDeck ? '<img src="' + escapeHtml(slideImagePath(imageDeck, 1)) + '" alt="" loading="lazy">' : (talk.id ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(talk.id) + '/hqdefault.jpg" alt="" loading="lazy">' : '<img src="' + fallbackCover(talk) + '" alt="" loading="lazy">');
+    var thumbnail = imageDeck ? '<img src="' + escapeHtml(deckThumbnailPath(imageDeck)) + '" alt="" width="640" height="360" loading="lazy" decoding="async">' : (talk.id ? '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(talk.id) + '/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">' : '<img src="' + fallbackCover(talk) + '" alt="" loading="lazy">');
     if (talk.id || talk.recordingUrl || talk.recordingPageUrl) thumbnail += '<span class="play-mark" aria-hidden="true">▶</span>';
     var thumbClass = imageDeck ? ' deck-cover' : '';
     var dateMarkup = talk.date ? '<time class="talk-card-date" datetime="' + escapeHtml(talk.date) + '">' + escapeHtml(talk.dateDisplay || formatDate(talk.date)) + '</time>' : '<span class="talk-card-date">' + escapeHtml(talk.dateDisplay || 'Date not listed') + '</span>';
@@ -216,7 +221,7 @@
     var hasDeck = Boolean(talk.deck);
     var hasBoth = hasVideo && hasDeck;
     var videoStart = Number(talk.videoStart) || 0;
-    var localDeck = hasDeck ? '<section class="media-pane slides-pane" aria-label="Slides"><div class="slide-toolbar"><div class="slide-toolbar-title"><span class="eyebrow">Slides</span><span class="slide-page-status" aria-live="polite">Slide <b id="slide-current">' + currentSlide + '</b> of ' + pageCount + '</span></div><div class="slide-controls"><button type="button" data-slide-step="-1" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button type="button" data-slide-step="1" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div><a class="open-pdf" href="' + escapeHtml(talk.deck) + '" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></div><div class="slide-canvas"><img id="slide-image" src="' + escapeHtml(slideImagePath(talk, currentSlide)) + '" alt="Slide ' + currentSlide + ' of ' + escapeHtml(talk.title) + '" decoding="async"></div></section>' : '';
+    var localDeck = hasDeck ? '<section class="media-pane slides-pane" aria-label="Slides"><div class="slide-toolbar"><div class="slide-toolbar-title"><span class="eyebrow">Slides</span><span class="slide-page-status" aria-live="polite">Slide <b id="slide-current">' + currentSlide + '</b> of ' + pageCount + '</span></div><div class="slide-controls"><button type="button" data-slide-step="-1" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button type="button" data-slide-step="1" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div><a class="open-pdf" href="/talks/' + escapeHtml(talk.deck) + '" target="_blank" rel="noopener noreferrer">Open PDF ↗</a></div><div class="slide-canvas"><img id="slide-image" src="' + escapeHtml(slideImagePath(talk, currentSlide)) + '" alt="Slide ' + currentSlide + ' of ' + escapeHtml(talk.title) + '" decoding="async"></div></section>' : '';
     var cuesAvailable = hasBoth && Array.isArray(talk.slideCues) && talk.slideCues.length;
     var syncControl = cuesAvailable ? '<div class="sync-control-wrap"><label class="sync-control"><input type="checkbox" id="sync-slides" checked> <span>Slides follow video</span></label><span class="sync-status" id="sync-status" aria-live="polite">Waiting for video</span></div>' : '';
     var videoMarkup = hasVideo ? '<section class="media-pane video-pane" aria-label="Recording"><div class="detail-video">' + (talk.id ? '<iframe id="talk-video-frame" src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(talk.id) + '?autoplay=1&rel=0&enablejsapi=1&origin=' + encodeURIComponent(window.location.origin) + (videoStart > 0 ? '&start=' + Math.floor(videoStart) : '') + '" title="' + escapeHtml(talk.title) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' : '<video id="talk-video-frame" controls playsinline preload="metadata"' + (videoStart > 0 ? ' data-start="' + Math.floor(videoStart) + '"' : '') + '><source src="' + escapeHtml(talk.recordingUrl) + '" type="' + escapeHtml(talk.recordingType || 'video/webm') + '"></video>') + '</div></section>' : '';
@@ -224,7 +229,7 @@
     var mobileTabs = hasBoth ? '<div class="mobile-media-tabs" role="group" aria-label="Choose media"><button type="button" data-media="video" aria-pressed="true">Video</button><button type="button" data-media="slides" aria-pressed="false">Slides</button><button type="button" data-media="both" aria-label="Show video and slides together" aria-pressed="false">Both</button></div>' : '';
     var playerToolbar = hasBoth ? '<div class="player-toolbar"><div class="layout-controls" role="group" aria-label="Player layout"><button type="button" data-layout="split" aria-pressed="true">Side by side</button><button type="button" data-layout="video" aria-pressed="false">Focus video</button><button type="button" data-layout="slides" aria-pressed="false">Focus slides</button></div><div class="player-toolbar-right">' + syncControl + mobileTabs + '<button class="expand-player" type="button" data-expand-player aria-label="Expand side-by-side view" title="Expand side-by-side view" aria-pressed="false"><svg data-expand-icon viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3M21 16v3a2 2 0 0 1-2 2h-3"/></svg><span class="visually-hidden">Expand side-by-side view</span></button></div></div>' : '';
     var mediaMarkup = hasVideo || hasDeck ? playerToolbar + '<div class="' + mediaClass + '" data-layout="' + (hasBoth ? 'split' : (hasDeck ? 'slides' : 'video')) + '" data-active="video">' + videoMarkup + localDeck + '</div>' : '';
-    detail.innerHTML = '<a class="detail-back" href="./">← All talks</a>' +
+    detail.innerHTML = '<a class="detail-back" href="/talks/">← All talks</a>' +
       '<div class="detail-heading"><div><p class="eyebrow">' + escapeHtml(talk.topic) + (talk.event ? ' · ' + escapeHtml(talk.event) : '') + ' · ' + escapeHtml(talk.dateDisplay || formatDate(talk.date || '')) + '</p><h1 id="modal-title">' + escapeHtml(talk.title) + '</h1>' + (talk.summary ? '<p class="detail-summary">' + escapeHtml(talk.summary) + '</p>' : '') + '</div></div>' +
       mediaMarkup + (hasBoth && talk.slideCueNote ? '<p class="slide-cue-note">' + escapeHtml(talk.slideCueNote) + '</p>' : '') +
       '<div class="detail-actions">' + (talk.id ? '<a href="https://www.youtube.com/watch?v=' + encodeURIComponent(talk.id) + '" target="_blank" rel="noopener noreferrer">Open recording ↗</a>' : (talk.recordingPageUrl ? '<a href="' + escapeHtml(talk.recordingPageUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(talk.recordingLinkLabel || 'Recording details ↗') + '</a>' : (talk.recordingUrl ? '<a href="' + escapeHtml(talk.recordingUrl) + '" target="_blank" rel="noopener noreferrer">Open recording ↗</a>' : ''))) + (talk.alternateDeck ? '<a href="' + escapeHtml(talk.alternateDeck) + '" target="_blank" rel="noopener noreferrer">Open alternate PDF deck ↗</a>' : '') + (talk.programUrl ? '<a href="' + escapeHtml(talk.programUrl) + '" target="_blank" rel="noopener noreferrer">Conference program ↗</a>' : (talk.conferenceUrl ? '<a href="' + escapeHtml(talk.conferenceUrl) + '" target="_blank" rel="noopener noreferrer">Conference site ↗</a>' : '')) + '<button type="button" class="copy-permalink">Copy permalink</button></div>';
@@ -390,7 +395,7 @@
 
   function slideImagePath(talk, page) {
     var deckName = talk.deck.replace(/^decks\//, '').replace(/\.pdf$/i, '');
-    return 'decks/rendered/' + deckName + '/slide-' + String(page).padStart(3, '0') + '.jpg';
+    return '/talks/decks/rendered/' + deckName + '/slide-' + String(page).padStart(3, '0') + '.jpg';
   }
 
   function stopSlideSync() {
@@ -407,7 +412,9 @@
   }
 
   function applyUrl() {
-    var slug = new URLSearchParams(window.location.search).get('talk');
+    var path = window.location.pathname.replace(/\/+$/, '');
+    var slugFromPath = path.indexOf('/talks/') === 0 && path !== '/talks' ? decodeURIComponent(path.slice('/talks/'.length)) : '';
+    var slug = slugFromPath || new URLSearchParams(window.location.search).get('talk');
     if (!slug) {
       showArchive();
       return;
@@ -536,9 +543,9 @@
     detail.innerHTML = '';
     document.title = 'Talks — Raphaël Pinson';
     var current = new URL(window.location.href);
-    if (current.searchParams.has('talk')) {
+    if (current.searchParams.has('talk') || (/^\/talks\/.+\/$/.test(current.pathname))) {
       if (history.state && history.state.talkArchive) history.back();
-      else history.replaceState({}, '', current.pathname);
+      else history.replaceState({}, '', '/talks/');
     }
   });
 

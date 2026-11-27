@@ -1,0 +1,9 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for item in site.pages %}{% if item.noindex != true and item.sitemap != false and item.url != '/sitemap.xml' and item.url != '/404.html' %}
+  <url><loc>{{ item.canonical | default: item.url | absolute_url | escape }}</loc></url>
+{% endif %}{% endfor %}
+</urlset>

@@ -906,6 +906,53 @@
   }
 }
 
+/* The route explorer is selected by click; scrolling the page never pins the viewport. */
+@media (min-width: 901px) {
+  .route-stage { position: relative; top: auto; }
+}
+
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 22px;
+  color: #afc6cd;
+  font: 700 9px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.hero-proof strong {
+  margin-right: 5px;
+  color: var(--yellow);
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.talk-sync-feature {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) minmax(240px, .7fr);
+  align-items: center;
+  gap: 18px;
+  margin: 28px 0 12px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--teal);
+  background: linear-gradient(110deg, rgba(16, 129, 145, .09), rgba(255,255,255,.55));
+  color: var(--deep);
+  text-decoration: none;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.talk-sync-feature span,
+.talk-sync-feature em { font: 700 10px/1.5 ui-monospace,monospace; letter-spacing: .06em; text-transform: uppercase; }
+.talk-sync-feature span { color: var(--teal); }
+.talk-sync-feature strong { font-size: clamp(17px, 2vw, 23px); line-height: 1.15; }
+.talk-sync-feature em { color: var(--muted); font-style: normal; text-transform: none; letter-spacing: 0; }
+.talk-sync-feature:hover { border-color: var(--teal); transform: translateY(-2px); }
+@media (max-width: 700px) {
+  .talk-sync-feature { grid-template-columns: 1fr; gap: 7px; margin-top: 20px; }
+}
+
 /* On phones, keep the header compact and expose every destination in a menu. */
 .site-header.has-mobile-menu .mobile-nav-toggle { display: none; }
 @media (max-width: 900px) {

@@ -1,4 +1,5 @@
-const grid = document.querySelector("#credential-grid");
+const certificationGrid = document.querySelector("#certification-grid");
+const communityGrid = document.querySelector("#community-grid");
 const message = document.querySelector("#credentials-message");
 const count = document.querySelector("#credential-count");
 const countLabel = document.querySelector("#credential-count-label");
@@ -11,6 +12,7 @@ let updatedAt = null;
 
 function dateLabel(value) {
   if (!value) return "";
+  if (/^\d{4}$/.test(String(value))) return String(value);
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return String(value);
   return new Intl.DateTimeFormat("en", { month: "short", year: "numeric", timeZone: "UTC" }).format(date);
@@ -25,14 +27,41 @@ function isExpired(item) {
   return /expired/i.test(status);
 }
 
+function groupedCredentials() {
+  const ambassadors = credentials.filter((item) => /cncf ambassador/i.test(item.name || ""));
+  const others = credentials.filter((item) => !/cncf ambassador/i.test(item.name || ""));
+  if (ambassadors.length) {
+    const current = ambassadors.filter((item) => !isExpired(item)).sort((a, b) => (b.expires || "").localeCompare(a.expires || ""));
+    const latest = current[0] || ambassadors.sort((a, b) => (b.issued || "").localeCompare(a.issued || ""))[0];
+    const earliest = ambassadors.map((item) => item.issued).filter(Boolean).sort()[0];
+    others.push({ ...latest, name: "CNCF Ambassador", issued: earliest, status: current.length ? "Current" : "Historical" });
+  }
+  others.push({
+    name: "Extraordinary Puppeteer Champion",
+    issuer: "Puppet Community",
+    issued: "2020",
+    url: "https://puppet-champions.github.io/puppeteers/raphink.html",
+    status: "Community recognition"
+  });
+  return others;
+}
+
+function isCommunity(item) {
+  return /ambassador|organizer|speaker|advisory council|champion/i.test(item.name || "");
+}
+
 function render() {
-  const visible = credentials.filter((item) => {
+  const visible = groupedCredentials().filter((item) => {
     if (activeFilter === "active") return !isExpired(item);
     if (activeFilter === "expired") return isExpired(item);
     return true;
   });
 
-  grid.replaceChildren(...visible.map((item) => {
+  const community = visible.filter(isCommunity);
+  const certifications = visible.filter((item) => !isCommunity(item));
+
+  function renderGrid(grid, items) {
+    grid.replaceChildren(...items.map((item) => {
     const card = document.createElement("article");
     card.className = "credential-card";
 
@@ -47,8 +76,8 @@ function render() {
       const expired = isExpired(item);
       state.className = `credential-state ${expired ? "is-expired" : "is-current"}`;
       state.textContent = expired
-        ? (/revoked|superseded/i.test(item.status) ? item.status : "Expired")
-        : "Current";
+        ? (/revoked|superseded/i.test(item.status) ? item.status : "Historical")
+        : (/^(valid|current)$/i.test(item.status) ? "Current" : item.status);
       top.append(state);
     }
 
@@ -83,11 +112,17 @@ function render() {
     expires.textContent = item.expires ? `Expires ${dateLabel(item.expires)}` : "";
     meta.append(issued, expires);
     card.append(top, heading, meta);
-    return card;
-  }));
+      return card;
+    }));
+  }
 
-  count.textContent = updatedAt ? String(credentials.length) : "—";
-  countLabel.textContent = credentials.length === 1 ? "credential" : "credentials";
+  renderGrid(certificationGrid, certifications);
+  renderGrid(communityGrid, community);
+  certificationGrid.closest(".credential-section").hidden = certifications.length === 0;
+  communityGrid.closest(".credential-section").hidden = community.length === 0;
+
+  count.textContent = updatedAt ? String(groupedCredentials().length) : "—";
+  countLabel.textContent = groupedCredentials().length === 1 ? "item" : "items";
   sourceStatus.textContent = updatedAt ? `Updated ${dateLabel(updatedAt)}` : "Public profile";
   filterGroup.hidden = !updatedAt;
   message.hidden = visible.length > 0;

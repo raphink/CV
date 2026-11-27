@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Page not found — Raphaël Pinson"
+description: "This page is unavailable. Explore the portfolio, talks, or technical archive."
+canonical: https://raphink.info/404.html
+noindex: true
+stylesheets:
+  - /css/error.css
+---
+<main class="site-error">
+  <p class="eyebrow">404 · Page not found</p>
+  <h1>This path has changed.</h1>
+  <p>Try one of the current paths below.</p>
+  <nav aria-label="Suggested pages">
+    <a href="{{ '/' | relative_url }}">Explore</a>
+    <a href="{{ '/creative/' | relative_url }}">Creative</a>
+    <a href="{{ '/talks/' | relative_url }}">Talks</a>
+    <a href="{{ '/archive.html' | relative_url }}">Technical archive</a>
+  </nav>
+</main>
+<script>
+  if (/^\/timeline\/?$/.test(window.location.pathname)) window.location.replace('/archive.html');
+</script>

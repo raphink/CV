@@ -1,0 +1,6 @@
+.site-error { min-height: calc(100vh - 120px); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 90px clamp(24px, 10vw, 150px); }
+.site-error h1 { max-width: 760px; margin-top: 17px; font-size: clamp(48px, 9vw, 112px); line-height: .96; letter-spacing: -.045em; }
+.site-error > p:not(.eyebrow) { margin-top: 18px; color: var(--muted); font-size: 18px; }
+.site-error nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.site-error nav a { padding: 12px 16px; border: 1px solid var(--line); border-radius: 4px; color: var(--deep); font: 700 10px/1.4 ui-monospace,monospace; letter-spacing: .07em; text-decoration: none; text-transform: uppercase; }
+.site-error nav a:hover { border-color: var(--deep); background: var(--deep); color: #f6fbfc; }
