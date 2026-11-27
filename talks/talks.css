@@ -90,3 +90,4 @@
   .player-toolbar-right{flex-wrap:wrap;row-gap:8px}
   .slide-controls button{width:36px;height:36px}
 }
+.detail-summary{max-width:780px;margin-top:12px;color:#c6d8dc;font-size:14px;line-height:1.55}

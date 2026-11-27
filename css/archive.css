@@ -99,6 +99,26 @@ button:focus-visible {
   text-decoration: none;
 }
 
+.archive-work-link {
+  position: fixed;
+  top: 19px;
+  left: max(150px, calc((100vw - 1320px) / 2 + 128px));
+  z-index: 1040;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(97, 224, 231, .55);
+  color: #afc6cd;
+  font: 700 9px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .07em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.archive-work-link:hover,
+.archive-work-link:focus {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
 .dropdown-menu {
   padding: 8px;
   border: 1px solid rgba(16, 36, 45, .15);
@@ -556,6 +576,11 @@ img.logo.small {
   .archive-return {
     top: 17px;
     left: 14px;
+  }
+
+  .archive-work-link {
+    top: 17px;
+    left: 156px;
   }
 
   .navbar-nav .open .dropdown-menu {
