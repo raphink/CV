@@ -65,10 +65,10 @@
 
   function talkLanguage(talk) {
     var languages = {
-      en: { name: 'English', flag: '🇬🇧', code: 'EN' },
-      fr: { name: 'French', flag: '🇫🇷', code: 'FR' }
+      en: { name: 'English', code: 'EN' },
+      fr: { name: 'French', code: 'FR' }
     };
-    return (talk.id || talk.recordingUrl || talk.recordingPageUrl) ? languages[talk.language] || null : null;
+    return languages[talk.language] || null;
   }
 
   function fallbackCover(talk) {
@@ -132,12 +132,12 @@
     var dateMarkup = talk.date ? '<time class="talk-card-date" datetime="' + escapeHtml(talk.date) + '">' + escapeHtml(talk.dateDisplay || formatDate(talk.date)) + '</time>' : '<span class="talk-card-date">' + escapeHtml(talk.dateDisplay || 'Date not listed') + '</span>';
     var hasRecording = Boolean(talk.id || talk.recordingUrl || talk.recordingPageUrl);
     var language = talkLanguage(talk);
-    var languageMarkup = language ? '<span class="talk-card-language" role="img" aria-label="Language: ' + language.name + '" title="Language: ' + language.name + '"><span aria-hidden="true">' + language.flag + '</span><span>' + language.code + '</span></span>' : '';
+    var languageMarkup = language ? '<span class="talk-card-language" role="img" aria-label="Language: ' + language.name + '" title="Language: ' + language.name + '">' + language.code + '</span>' : '';
     var formatLabel = hasRecording ? (hasSlides ? 'Recording and slides' : 'Recording') : (hasSlides ? 'PDF slides' : 'Conference session');
     var formatIcons = (hasRecording ? '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="12" height="12" rx="1.5"/><path d="m15 10 6-3v10l-6-3z"/></svg>' : '') + (hasSlides ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h5M9 12h7M9 16h7"/></svg>' : '');
     var thumbFormat = formatIcons ? '<span class="talk-thumb-kind" role="img" aria-label="' + formatLabel + '" title="' + formatLabel + '">' + formatIcons + '</span>' : '';
     var year = talk.date && talk.date.match(/^\d{4}/) ? talk.date.slice(0, 4) : '';
-    return '<a class="talk-card" href="?talk=' + encodeURIComponent(slug) + '" data-talk="' + escapeHtml(slug) + '" data-year="' + year + '">' +
+    return '<a class="talk-card" href="?talk=' + encodeURIComponent(slug) + '" aria-label="Open ' + escapeHtml(talk.title) + (talk.event ? ' at ' + escapeHtml(talk.event) : '') + (talk.dateDisplay ? ', ' + escapeHtml(talk.dateDisplay) : '') + '" data-talk="' + escapeHtml(slug) + '" data-year="' + year + '">' +
       '<span class="talk-thumb' + thumbClass + '">' + thumbnail + thumbFormat + '</span>' +
       '<span class="talk-card-copy"><span class="talk-card-meta"><span>' + escapeHtml(talk.topic) + '</span><span class="talk-card-meta-right">' + dateMarkup + languageMarkup + (formatIcons ? '<span class="talk-card-formats" role="img" aria-label="' + formatLabel + '" title="' + formatLabel + '">' + formatIcons + '</span>' : '') + '</span></span>' +
       '<h3>' + escapeHtml(talk.title) + '</h3>' + event + '</span></a>';

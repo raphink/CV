@@ -1,5 +1,18 @@
 import { readFileSync, existsSync } from 'node:fs';
-const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+const home = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+const siteHead = readFileSync(new URL('../_includes/site-head.html', import.meta.url), 'utf8');
+const siteHeader = readFileSync(new URL('../_includes/site-header.html', import.meta.url), 'utf8');
+const siteFooter = readFileSync(new URL('../_includes/site-footer.html', import.meta.url), 'utf8');
+const layout = readFileSync(new URL('../_layouts/default.html', import.meta.url), 'utf8');
+const talks = JSON.parse(readFileSync(new URL('../talks/talks.json', import.meta.url), 'utf8'));
+const credentialsPage = readFileSync(new URL('../certifications/index.html', import.meta.url), 'utf8');
+const credentialsJs = readFileSync(new URL('../certifications/certifications.js', import.meta.url), 'utf8');
+const credentials = JSON.parse(readFileSync(new URL('../certifications/credentials.json', import.meta.url), 'utf8'));
+const homeStats = readFileSync(new URL('../js/home-stats.js', import.meta.url), 'utf8');
+const talkCards = readFileSync(new URL('../talks/talks.js', import.meta.url), 'utf8');
+const credentialSync = readFileSync(new URL('../scripts/sync-public-credentials.py', import.meta.url), 'utf8');
+const credentialWorkflow = readFileSync(new URL('../.github/workflows/sync-public-credentials.yml', import.meta.url), 'utf8');
+const html = [home, siteHead, siteHeader, siteFooter, layout].join('\n');
 const css = readFileSync(new URL('../css/overrides.css', import.meta.url), 'utf8');
 const mobileCss = readFileSync(new URL('../css/mobile.css', import.meta.url), 'utf8');
 const js = readFileSync(new URL('../js/skills.js', import.meta.url), 'utf8');
@@ -17,12 +30,12 @@ gate('C3 three impact routes replace tool inventory', (html.match(/class="route(
 gate('C4 repeated constraint-interface-capability grammar', all(html, ['Constraint</span>', 'Interface</span>', 'Shared capability</span>']));
 gate('C5 histories are accurate and contextualised', all(html, ['2005—now', '2012—now', '2008—now']) && all(js, ['Ubuntu Developer', 'Systems Engineer · Orange', 'Infrastructure Developer · Camptocamp', 'Solutions Architect · Isovalent']));
 gate('C6 evidence is specific, attributable, and reachable', all(js, ['hercules-team/augeas', 'puppet-champions.github.io', 'terraboard.io', 'devops-stack.io', 'labs.isovalent.com', 'PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe']) && all(html, ['https://labs.isovalent.com/', '100k+ ↗', '20+ ↗']));
-gate('C7 public-speaking record is accurate', all(html, ['More than 20 talks delivered; 19 recorded.', 'PlatformCon', '19 recordings']));
+gate('C7 public-speaking totals are derived from the archive', talks.length > 0 && all(homeStats, ['talks.length', 'recordings', 'decks']) && home.includes('id="record-talk-count"'));
 gate('C8 route introduction is direct', html.includes('Each route below shows the same practice') && !html.includes('Select a route.'));
 gate('C9 original technical depth remains available', all(html, ['href="archive.html"', 'Explore the full working history.', 'Technical archive ↗']) && existsSync(new URL('../archive.html', import.meta.url)) && existsSync(new URL('../js/archive.js', import.meta.url)) && existsSync(new URL('../css/archive.css', import.meta.url)));
-gate('C10 recordings and writing can be experienced in-page', all(html, ['id="content-viewer"', 'Watch here ↓', 'Open viewer ↓']) && all(js, ['youtube-nocookie.com/embed/', "'lab-champion'", 'Introducing the Isovalent Lab Champion Program', 'article-reader', 'playlist-browser', 'playlistRecordings']));
-gate('P1 semantic landmarks and one H1', all(html, ['<header class="site-header">', '<main id="top">', '<footer>', 'role="tablist"', 'role="tabpanel"']) && (html.match(/<h1[ >]/g) ?? []).length === 1);
-gate('P2 interaction works without rendering dependency', all(html, ['<script src="js/skills.js" defer></script>', '<link rel="stylesheet" href="css/overrides.css">', '<link rel="stylesheet" href="css/mobile.css">']) && !/<script[^>]+src=["']https?:|<link[^>]+rel=["']stylesheet["'][^>]+href=["']https?:/i.test(html));
+gate('C10 recordings and writing can be experienced in-page', all(html, ['id="content-viewer"', 'Open original ↗']) && all(js, ['youtube-nocookie.com/embed/', "'lab-champion'", 'Introducing the Isovalent Lab Champion Program', 'article-reader', 'playlist-browser', 'playlistRecordings', 'Play talk ▶', 'Open article ↗']));
+gate('P1 semantic landmarks and one H1', all(html, ['<header class="site-header">', '<main id="top">', '<footer class="site-footer">', 'role="tablist"', 'role="tabpanel"']) && (html.match(/<h1[ >]/g) ?? []).length === 1);
+gate('P2 shared templates keep core assets local', all(layout, ['include site-head.html', 'include site-header.html', 'include site-footer.html']) && all(siteHead, ["'/css/overrides.css' | relative_url", "'/css/mobile.css' | relative_url"]) && !/<link[^>]+rel=["']stylesheet["'][^>]+href=["']https?:/i.test(siteHead));
 gate('P3 keyboard route navigation', all(js, ['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft', 'Home', 'End', "setAttribute('aria-selected'"]));
 gate('P4 current portrait is local', html.includes('img/raphael-pinson-2025.webp') && existsSync(new URL('../img/raphael-pinson-2025.webp', import.meta.url)));
 gate('P5 hero principle is a clear orbit-anchored callout', all(html, ['class="orbit-label"', '<circle cx="150" cy="40"', 'IT is about people', 'on both sides of the interface.']) && all(mobileCss, ['.orbit-label text', 'ui-sans-serif', '.orbit-label tspan + tspan', '@media (min-width: 901px) and (max-width: 1050px)', 'right: -11vw', '.hero-principle']) && !html.includes('textPath'));
@@ -37,7 +50,10 @@ gate('P13 restrained scroll motion with a static fallback', all(js, ['Intersecti
 gate('P14 accessible focus and reduced motion', all(css, ['a:focus-visible,button:focus-visible', '@media(prefers-reduced-motion:reduce)']));
 gate('P15 no product funnel language', !/see the interfaces in action|work-card|system-map|hero-cta/i.test(html));
 gate('P16 technical archive is a polished, usable companion', all(archiveHtml, ['archive-kicker', 'timeline-shell', 'Interactive timeline', 'role="button" tabindex="0"']) && all(archiveCss, ['--night: #061820', '.timeline-shell', '.vis-item.vis-selected', '#legend li.is-active', '@media (prefers-reduced-motion: reduce)']) && all(archiveJs, ['new vis.Timeline', "target: '_blank'", "e.key === 'Enter' || e.key === ' '"]));
-gate('P17 social sharing metadata and card are complete', all(html, ['rel="canonical" href="https://raphink.info/"', 'property="og:type" content="website"', 'property="og:image" content="https://raphink.info/img/social-card.png"', 'property="og:image:width" content="1200"', 'property="og:image:height" content="630"', 'name="twitter:card" content="summary_large_image"', 'name="twitter:image" content="https://raphink.info/img/social-card.png"']) && socialCard.readUInt32BE(16) === 1200 && socialCard.readUInt32BE(20) === 630 && existsSync(new URL('../img/social-card.svg', import.meta.url)));
+gate('P17 social sharing metadata and card are complete', all(home, ['canonical: https://raphink.info/']) && all(siteHead, ['rel="canonical"', 'property="og:type" content="website"', 'property="og:image:width" content="1200"', 'property="og:image:height" content="630"', 'name="twitter:card" content="summary_large_image"']) && socialCard.readUInt32BE(16) === 1200 && socialCard.readUInt32BE(20) === 630 && existsSync(new URL('../img/social-card.svg', import.meta.url)));
+gate('P18 published pages share navigation, Analytics, and responsive styles', all(['index.html', 'creative/index.html', 'talks/index.html', 'certifications/index.html', 'archive.html'].map((path) => readFileSync(new URL('../' + path, import.meta.url), 'utf8')).join('\n'), ['layout: default']) && all(siteHead, ['G-F1DK6MCNH6']) && all(siteHeader, ['Explore', "page.nav_section == 'home'", 'Creative', 'Archive', 'Talks', 'Credentials', "'/archive.html' | relative_url"]) && all(mobileCss, ['.site-header.has-mobile-menu .mobile-nav-toggle', '.site-header.has-mobile-menu nav.is-open']));
+gate('P19 credentials are live-fed, pictured, verifiable, and exclude self-issued badges', credentials.credentials.length > 0 && credentials.credentials.every((item) => !/isovalent/i.test(item.issuer || '') && /credly\.com\/badges\/.+\/public_url$/.test(item.url || '') && /^https:\/\/images\.credly\.com\//.test(item.image || '') && (!item.issued || /^\d{4}-\d{2}-\d{2}$/.test(item.issued))) && credentialsPage.includes('certdirectory.io/profile/raphink') && credentialsJs.includes('credentials.json') && credentialsJs.includes('item.expires < new Date().toISOString().slice(0, 10)') && credentialsJs.includes('link.textContent = item.name') && all(credentialSync, ['isovalent', 'badges.json', 'public_url', 'BADGE_ARTWORK']) && all(credentialWorkflow, ['schedule:', 'workflow_dispatch:']));
+gate('P20 unpublished timeline work stays out of public navigation', !/href=["'][^"']*timeline\//i.test([home, siteHeader, siteFooter].join('\n')));
 
 if (failed) { console.error(`\n${failed} quality gate(s) failed.`); process.exitCode = 1; }
 else console.log('\nAll conceptual portfolio gates passed.');

@@ -50,8 +50,7 @@
 .browser-tools{margin-top:0}
 .talk-card-meta{align-items:center}
 .talk-card-meta-right{display:inline-flex;align-items:center;gap:8px;color:#75848a}
-.talk-card-language{display:inline-flex;align-items:center;gap:3px;color:#61747a;font:700 8px ui-monospace,monospace;letter-spacing:.04em;white-space:nowrap}
-.talk-card-language span:first-child{font:10px system-ui,sans-serif;line-height:1}
+.talk-card-language{display:inline-flex;align-items:center;justify-content:center;min-width:25px;padding:3px 5px;border:1px solid rgba(16,36,45,.16);border-radius:3px;color:#52636a;font:700 8px ui-monospace,monospace;letter-spacing:.04em;white-space:nowrap}
 .talk-card-date{display:inline;margin:0;color:inherit;font:inherit;letter-spacing:inherit;white-space:nowrap}
 .talk-card-formats{display:inline-flex;align-items:center;gap:3px;color:#087c8d}
 .talk-card-formats svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}
@@ -59,8 +58,7 @@
 .language-filter{display:inline-flex;min-height:42px;flex:none;align-items:center;gap:10px;color:#52636a}
 .language-filter-label{font:600 12px/1.2 ui-sans-serif,system-ui,sans-serif;letter-spacing:0;text-transform:none}
 .language-filter-options{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid rgba(16,36,45,.17);border-radius:7px;background:#fff;box-shadow:0 1px 2px rgba(6,24,32,.04)}
-.language-filter-options button{display:inline-flex;min-width:54px;height:36px;align-items:center;justify-content:center;gap:5px;padding:0 10px;border:0;border-radius:4px;background:transparent;color:#52636a;font:650 11px ui-sans-serif,system-ui,sans-serif;letter-spacing:0;cursor:pointer}
-.language-filter-options button span:first-child{font:14px system-ui,sans-serif;line-height:1}
+.language-filter-options button{display:inline-flex;min-width:64px;height:36px;align-items:center;justify-content:center;padding:0 10px;border:0;border-radius:4px;background:transparent;color:#52636a;font:650 11px ui-sans-serif,system-ui,sans-serif;letter-spacing:0;cursor:pointer}
 .language-filter-options button:hover{color:#087c8d}
 .language-filter-options button[aria-pressed=true]{background:#0b303c;color:#f5fafb}
 .language-filter-options button:focus-visible{outline:2px solid #087c8d;outline-offset:2px}

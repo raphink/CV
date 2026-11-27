@@ -1,0 +1,47 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }}</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <meta name="author" content="Raphaël Pinson">
+  <meta name="theme-color" content="#061820">
+  <link rel="canonical" href="{{ page.canonical | default: page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Raphaël Pinson">
+  <meta property="og:url" content="{{ page.canonical | default: page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.og_description | default: page.description | escape }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/img/social-card.png' | absolute_url }}">
+  {% if page.og_image == nil or page.og_image == '/img/social-card.png' %}
+  <meta property="og:image:secure_url" content="{{ '/img/social-card.png' | absolute_url }}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Raphaël Pinson — Making infrastructure work better for people">
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:description" content="{{ page.og_description | default: page.description | escape }}">
+  <meta name="twitter:image" content="{{ page.og_image | default: '/img/social-card.png' | absolute_url }}">
+  <meta name="twitter:image:alt" content="{{ page.og_alt | default: 'Raphaël Pinson — Making infrastructure work better for people' | escape }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/overrides.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/mobile.css' | relative_url }}">
+  {% for stylesheet in page.stylesheets %}{% assign asset_url = stylesheet.url | default: stylesheet %}{% assign asset_scheme = asset_url | slice: 0, 4 %}{% if asset_scheme == 'http' %}<link rel="stylesheet" href="{{ asset_url }}"{% if stylesheet.integrity %} integrity="{{ stylesheet.integrity }}" crossorigin="{{ stylesheet.crossorigin | default: 'anonymous' }}"{% endif %}>
+  {% else %}<link rel="stylesheet" href="{{ asset_url | relative_url }}">
+  {% endif %}
+  {% endfor %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1DK6MCNH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F1DK6MCNH6');
+  </script>
+  {% for script in page.scripts %}{% assign asset_url = script.url | default: script %}{% assign asset_scheme = asset_url | slice: 0, 4 %}{% if asset_scheme == 'http' %}<script src="{{ asset_url }}"{% if script.integrity %} integrity="{{ script.integrity }}" crossorigin="{{ script.crossorigin | default: 'anonymous' }}"{% endif %} defer></script>
+  {% else %}<script src="{{ asset_url | relative_url }}" defer></script>
+  {% endif %}
+  {% endfor %}
+  <script src="{{ '/js/mobile-nav.js' | relative_url }}" defer></script>
+</head>
