@@ -44,9 +44,9 @@
   <main>
     <section class="work-hero" aria-labelledby="work-title">
       <div class="work-hero-copy">
-        <p class="work-eyebrow"><span>Selected work</span><span>Experiences · stories · artifacts</span></p>
+        <p class="work-eyebrow"><span>Selected work</span><span>Visual design · illustration · editorial</span></p>
         <h1 id="work-title">Things to<br><em>explore,</em> read,<br>and carry home.</h1>
-        <p class="work-lede">I turn technical ideas into worlds people can explore, stories they can follow, and images they can carry with them.</p>
+        <p class="work-lede">A visual portfolio of illustrated worlds, editorial storytelling, typography, and print—creative work shaped by a technical life.</p>
         <a class="work-start" href="#worlds">Take a look <span aria-hidden="true">↓</span></a>
       </div>
       <div class="work-hero-art" aria-label="A glimpse of the work">
@@ -63,7 +63,8 @@
       <a href="#comics"><span>02</span> Technical stories</a>
       <a href="#stickers"><span>03</span> Sticker collection</a>
       <a href="#illustration"><span>04</span> Visual explainers</a>
-      <a href="#independent"><span>05</span> Independent work</a>
+      <a href="#typography"><span>05</span> Typography</a>
+      <a href="#independent"><span>06</span> Independent work</a>
     </nav>
 
     <section class="work-chapter world-chapter" id="worlds" aria-labelledby="worlds-title">
@@ -194,9 +195,67 @@
       </div>
     </section>
 
+    <section class="work-chapter typography-chapter" id="typography" aria-labelledby="typography-title">
+      <div class="chapter-heading">
+        <p class="chapter-number">05 <span>Type · page · print</span></p>
+        <h2 id="typography-title">Typography that earns a second look.</h2>
+        <p class="chapter-deck">A selection of page work made with TeX: historical reconstruction, book design, digital reading, and expressive initials.</p>
+      </div>
+      <div class="type-feature">
+        <div class="type-feature-art" aria-label="A reconstructed page from a sixteenth-century French Bible, its next page, and a printed proof">
+          <button class="type-image type-image-main" type="button" data-reader-kind="image" data-reader-image="assets/typography/french-bible-page.webp" data-reader-title="A page from the Geneva Bible, 1564" data-reader-label="XeTeX · EB Garamond" data-reader-description="An ongoing facsimile study of a page from the 1564 French Bible printed in Geneva.">
+            <img src="assets/typography/french-bible-page.webp" alt="Reconstructed page from the 1564 Geneva French Bible, with engraved ornament, marginal notes, and a decorated initial" loading="lazy">
+          </button>
+          <button class="type-image type-image-secondary" type="button" data-reader-kind="image" data-reader-image="assets/typography/french-bible-second-page.webp" data-reader-title="A second reconstructed Bible page" data-reader-label="XeTeX · EB Garamond Initials">
+            <img src="assets/typography/french-bible-second-page.webp" alt="Second page of the French Bible reconstruction, with marginalia and period lettering" loading="lazy">
+          </button>
+          <button class="type-image type-image-print" type="button" data-reader-kind="image" data-reader-image="assets/typography/french-bible-print.webp" data-reader-title="The reconstruction in print" data-reader-label="Printed proof">
+            <img src="assets/typography/french-bible-print.webp" alt="Printed proof of the recreated Bible page" loading="lazy">
+          </button>
+          <span class="type-art-note">Digital reconstruction → printed proof</span>
+        </div>
+        <div class="type-feature-copy">
+          <p class="eyebrow">Geneva · 1564 · XeTeX</p>
+          <h3>Give a page its history back.</h3>
+          <p>An ongoing reconstruction of a page from the 1564 French Bible printed in Geneva. XeTeX and EB Garamond bring together the period lettering, image initials, and dense marginal notes; the page also made it to print.</p>
+          <div class="type-link-row">
+            <a href="https://github.com/raphink/geneve_1564" target="_blank" rel="noopener noreferrer">Project source ↗</a>
+            <a href="https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends/24719#24719" target="_blank" rel="noopener noreferrer">The reconstruction ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-specimen-grid" aria-label="More TeX typography projects">
+        <article class="type-specimen">
+          <div class="type-specimen-images type-specimen-pair">
+            <button class="type-image" type="button" data-reader-kind="image" data-reader-image="assets/typography/book-typesetting-page.webp" data-reader-title="French book typography · opening page" data-reader-label="Editorial design · print">
+              <img src="assets/typography/book-typesetting-page.webp" alt="Opening page of a French book, with a restrained serif title and a carefully set text column" loading="lazy">
+            </button>
+            <button class="type-image" type="button" data-reader-kind="image" data-reader-image="assets/typography/book-typesetting-page-21.webp" data-reader-title="French book typography · interior page" data-reader-label="Editorial design · print">
+              <img src="assets/typography/book-typesetting-page-21.webp" alt="Interior page from a French book with an ornamental initial and italic subheading" loading="lazy">
+            </button>
+          </div>
+          <div class="type-specimen-copy"><p class="eyebrow">Editorial design</p><h3>Books made for reading.</h3><p>French typography and page design across several edited books, balancing voice, hierarchy, and long-form readability.</p><a href="https://tex.stackexchange.com/a/69270/951" target="_blank" rel="noopener noreferrer">See the book examples ↗</a></div>
+        </article>
+        <article class="type-specimen">
+          <button class="type-image type-specimen-single" type="button" data-reader-kind="image" data-reader-image="assets/typography/epub-reader.webp" data-reader-title="French typography on an e-reader" data-reader-label="LaTeX · TeX4ht · EPUB" data-reader-description="The same LaTeX source adapted for EPUB, with TeX4ht and attention to how the typography holds up on a small screen.">
+            <img src="assets/typography/epub-reader.webp" alt="A French book page displayed in an ebook reader, preserving its type hierarchy on screen" loading="lazy">
+          </button>
+          <div class="type-specimen-copy"><p class="eyebrow">Print → screen</p><h3>Keep the page readable on screen.</h3><p>Taking the same LaTeX source into EPUB with TeX4ht, then refining the result for e-readers.</p><a href="https://tex.stackexchange.com/a/69270/951" target="_blank" rel="noopener noreferrer">See the EPUB examples ↗</a></div>
+        </article>
+        <article class="type-specimen">
+          <button class="type-image type-specimen-single" type="button" data-reader-kind="image" data-reader-image="assets/typography/colored-lettrine.webp" data-reader-title="Colored initials in EB Garamond" data-reader-label="coloredlettrine · LaTeX">
+            <img src="assets/typography/colored-lettrine.webp" alt="Three large illustrated colored drop caps in blue and red, set with French Bible text" loading="lazy">
+          </button>
+          <div class="type-specimen-copy"><p class="eyebrow">A little ornament, built in</p><h3>Initial letters with presence.</h3><p>A small LaTeX package for colored drop caps, pairing EB Garamond initials with the page around them.</p><a href="https://tex.stackexchange.com/a/69271/951" target="_blank" rel="noopener noreferrer">See the example ↗</a><a href="https://github.com/raphink/coloredlettrine" target="_blank" rel="noopener noreferrer">View the package ↗</a></div>
+        </article>
+      </div>
+      <p class="type-profile"><span>More about my TeX work</span><a href="https://tex.stackexchange.com/users/raphink" target="_blank" rel="noopener noreferrer">Visit my TeX Stack Exchange profile ↗</a><small>Image excerpts are from my answers, shared under CC BY-SA.</small></p>
+    </section>
+
     <section class="work-chapter independent-chapter" id="independent" aria-labelledby="independent-title">
       <div class="independent-copy">
-        <p class="chapter-number">05 <span>Independent editorial work</span></p>
+        <p class="chapter-number">06 <span>Independent editorial work</span></p>
         <h2 id="independent-title">A different kind of explanation.</h2>
         <p class="chapter-deck">Nine illustrated explainers and two companion comic strips explore autistic perception, social processing, attention, sensory experience, and how people interpret one another. Open any story to read it page by page.</p>
         <a class="text-link" href="https://blog.raphink.info/series/autism-awareness/" target="_blank" rel="noopener noreferrer">Read the series ↗</a>
