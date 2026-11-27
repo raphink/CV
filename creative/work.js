@@ -149,8 +149,8 @@
 
   function openReader(trigger) {
     var kind = trigger.getAttribute('data-reader-kind');
-    readerTitle.textContent = trigger.getAttribute('data-reader-title') || 'Selected work';
-    readerKind.textContent = trigger.getAttribute('data-reader-label') || 'Selected work';
+    readerTitle.textContent = trigger.getAttribute('data-reader-title') || 'Creative work';
+    readerKind.textContent = trigger.getAttribute('data-reader-label') || 'Creative work';
     trackWorkEvent('view_work_item', { item_category: kind || 'work', item_name: readerTitle.textContent });
     activeReader = null;
     readerDescription.hidden = true;

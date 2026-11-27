@@ -29,11 +29,21 @@
   <link rel="stylesheet" href="css/overrides.css">
   <link rel="stylesheet" href="css/mobile.css">
   <script src="js/skills.js" defer></script>
+  <!-- Google tag (gtag.js) - shared GA4 property -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1DK6MCNH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F1DK6MCNH6');
+  </script>
+  <script src="js/home-stats.js" defer></script>
+  <script src="js/mobile-nav.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a class="wordmark" href="#top">Raphaël Pinson</a>
-    <nav aria-label="Primary"><a href="#map">Explore</a><a href="work/" class="mobile-access-link work-link">Work</a><a href="#record">Record</a><a class="mobile-access-link" href="talks/">Talks</a><a class="mobile-access-link" href="certifications/">Credentials</a></nav>
+    <nav aria-label="Primary"><a href="#map">Explore</a><a href="creative/" class="mobile-access-link work-link">Creative</a><a href="#record">Record</a><a class="mobile-access-link" href="talks/">Talks</a><a class="mobile-access-link" href="certifications/">Credentials</a></nav>
     <a class="resume-link" href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a>
   </header>
 
@@ -120,17 +130,17 @@
 
     <section class="record" id="record" aria-labelledby="record-title">
       <div><p class="eyebrow">Public record</p><h2 id="record-title">The work leaves traces.</h2></div>
-      <dl><div><dt><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">20+ ↗</a></dt><dd>years across infrastructure and enablement</dd></div><div><dt><a href="https://www.youtube.com/playlist?list=PLP1tb3WVc_wjlegrHszh0BdnBNn2NqNQe">20+ ↗</a></dt><dd>public technical talks delivered</dd></div><div><dt><a href="https://labs.isovalent.com/">100k+ ↗</a></dt><dd>cloud-native lab sessions supported</dd></div><div><dt><a href="https://github.com/raphink">2005 ↗</a></dt><dd>contributing to open source since</dd></div></dl>
+      <dl><div><dt><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">20+ ↗</a></dt><dd>years across infrastructure and enablement</dd></div><div><dt><a href="talks/" id="record-talk-count">—</a></dt><dd>public talks and workshops in the archive</dd></div><div><dt><a href="https://labs.isovalent.com/">100k+ ↗</a></dt><dd>cloud-native lab sessions supported</dd></div><div><dt><a href="https://github.com/raphink">2005 ↗</a></dt><dd>contributing to open source since</dd></div></dl>
       <a class="archive-bridge" href="archive.html" target="_blank" rel="noopener noreferrer"><span><small>Technical archive</small><strong>Explore the full working history.</strong></span><em>Timeline, filters, and detailed notes ↗</em></a>
     </section>
 
     <section class="talks" id="talks" aria-labelledby="talks-title">
-      <div class="talks-heading"><p class="eyebrow">Public thinking</p><h2 id="talks-title">Teaching is part of the engineering.</h2><p>More than 20 talks delivered; 19 recorded.</p></div>
+      <div class="talks-heading"><p class="eyebrow">Public thinking</p><h2 id="talks-title">Teaching is part of the engineering.</h2><p id="talks-summary" aria-live="polite">Talks, workshops, and recordings from across my career.</p></div>
       <div class="talk-list">
         <a href="https://www.youtube.com/watch?v=j8nT0eZcj54"><small>PlatformCon · 2024</small><strong>Exploring Cilium, Tetragon &amp; eBPF</strong><span>Watch here ↓</span></a>
         <a href="https://www.youtube.com/watch?v=HqQlLtsZEp4"><small>DevOpsDays Tel Aviv</small><strong>Avoiding technical debt in a cloud-native world</strong><span>Watch here ↓</span></a>
         <a href="https://www.youtube.com/watch?v=8yzDqDHGLGw"><small>PlatformCon</small><strong>Kubernetes networking foundations</strong><span>Watch here ↓</span></a>
-        <a href="talks/"><small>23 recordings · 36 slide decks</small><strong>Browse the talks archive</strong><span>Open archive ↓</span></a>
+        <a href="talks/"><small id="talks-archive-count">Browse the archive</small><strong>Browse the talks archive</strong><span>Open archive ↓</span></a>
       </div>
     </section>
   </main>
@@ -141,6 +151,6 @@
       <div class="viewer-footer"><p>Stay in the portfolio or continue with the original source.</p><a id="viewer-source" href="#" target="_blank" rel="noopener noreferrer">Open original ↗</a></div>
     </div>
   </dialog>
-  <footer><span>Raphaël Pinson · Lausanne</span><a href="archive.html" target="_blank" rel="noopener noreferrer">Technical archive ↗</a><a href="https://github.com/raphink">GitHub ↗</a><a href="https://www.linkedin.com/in/raphink">LinkedIn ↗</a><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a></footer>
+  <footer><span>Raphaël Pinson · Lausanne</span><a href="creative/">Creative work ↗</a><a href="archive.html" target="_blank" rel="noopener noreferrer">Technical archive ↗</a><a href="https://github.com/raphink">GitHub ↗</a><a href="https://www.linkedin.com/in/raphink">LinkedIn ↗</a><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a></footer>
 </body>
 </html>

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creative Work — Raphaël Pinson</title>
+  <meta name="description" content="Visual design, illustration, comics, typography, and print projects by Raphaël Pinson.">
+  <meta name="author" content="Raphaël Pinson">
+  <meta name="theme-color" content="#061820">
+  <link rel="canonical" href="https://raphink.info/creative/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://raphink.info/creative/">
+  <meta property="og:site_name" content="Raphaël Pinson">
+  <meta property="og:title" content="Creative Work — Raphaël Pinson">
+  <meta property="og:description" content="Learning worlds, technical stories, and visual ideas made tangible.">
+  <meta property="og:image" content="https://raphink.info/creative/assets/learning-universe.webp">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/overrides.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+  <link rel="stylesheet" href="work.css?v=2">
+  <!-- Google tag (gtag.js) - shared GA4 property -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1DK6MCNH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F1DK6MCNH6');
+  </script>
+  <script src="work.js" defer></script>
+  <script src="../js/mobile-nav.js" defer></script>
+</head>
+<body class="work-page">
+  <header class="site-header work-header">
+    <a class="wordmark" href="../">Raphaël Pinson</a>
+    <nav aria-label="Primary">
+      <a href="../#map">Explore</a>
+      <a class="work-link" href="./" aria-current="page">Creative</a>
+      <a href="../#record">Record</a>
+      <a class="mobile-access-link" href="../talks/">Talks</a>
+      <a class="mobile-access-link" href="../certifications/">Credentials</a>
+    </nav>
+    <a class="resume-link" href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a>
+  </header>
+
+  <main>
+    <section class="work-hero" aria-labelledby="work-title">
+      <div class="work-hero-copy">
+        <p class="work-eyebrow"><span>Creative work</span><span>Visual design · illustration · editorial</span></p>
+        <h1 id="work-title">Things to<br><em>explore,</em> read,<br>and carry home.</h1>
+        <p class="work-lede">A visual portfolio of illustrated worlds, editorial storytelling, typography, and print—creative work shaped by a technical life.</p>
+        <a class="work-start" href="#worlds">Take a look <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="work-hero-art" aria-label="A glimpse of the work">
+        <figure class="hero-world"><img src="assets/learning-universe.webp" alt="Seven illustrated learning zones arranged around a central hub"></figure>
+        <figure class="hero-sticker"><img src="assets/stickers/you-shall-not-pass.png" alt="eBee dressed as a wizard, holding a You Shall Not Pass banner"></figure>
+        <span class="hero-orbit hero-orbit-one" aria-hidden="true"></span>
+        <span class="hero-orbit hero-orbit-two" aria-hidden="true"></span>
+        <span class="hero-stamp">Made to<br>be explored</span>
+      </div>
+    </section>
+
+    <nav class="chapter-index" aria-label="Creative work chapters">
+      <a href="#worlds" aria-current="location"><span>01</span> Learning worlds</a>
+      <a href="#comics"><span>02</span> Technical stories</a>
+      <a href="#stickers"><span>03</span> Sticker collection</a>
+      <a href="#illustration"><span>04</span> Visual explainers</a>
+      <a href="#typography"><span>05</span> Typography</a>
+      <a href="#independent"><span>06</span> Independent work</a>
+    </nav>
+
+    <section class="work-chapter world-chapter" id="worlds" aria-labelledby="worlds-title">
+      <div class="chapter-heading">
+        <p class="chapter-number">01 <span>Interactive experience</span></p>
+        <h2 id="worlds-title">A universe built for learning by doing.</h2>
+        <p class="chapter-deck">The lab map grew into a living learning world: explore by topic, follow a journey, launch a real environment, and see progress take shape.</p>
+      </div>
+      <div class="world-showcase">
+        <div class="universe-tour" data-carousel aria-label="Visual tour of Isovalent Labs">
+          <div class="tour-viewport" aria-live="polite">
+            <figure class="tour-slide is-active" data-tour-slide>
+              <img src="assets/learning-map.jpg" alt="Illustrated map artwork from an earlier version of the Isovalent learning experience">
+              <figcaption><span>01 / The map</span><strong>A world for hands-on labs.</strong></figcaption>
+            </figure>
+            <figure class="tour-slide" data-tour-slide hidden>
+              <img src="assets/learning-universe.webp" alt="Seven illustrated learning worlds arranged around the Cilium mark">
+              <figcaption><span>02 / The Universe</span><strong>Seven worlds. One learning journey.</strong></figcaption>
+            </figure>
+            <figure class="tour-slide" data-tour-slide hidden>
+              <img src="assets/advent-calendar.webp" alt="The Season of Cilium Advent Calendar, with 25 numbered doors">
+              <figcaption><span>03 / A seasonal experience</span><strong>One surprise to explore each day.</strong></figcaption>
+            </figure>
+          </div>
+          <div class="tour-controls">
+            <span class="tour-count" data-tour-count>01 <i>/ 03</i></span>
+            <div class="tour-buttons">
+              <button type="button" data-tour-prev aria-label="Previous image">←</button>
+              <button type="button" data-tour-next aria-label="Next image">→</button>
+            </div>
+          </div>
+          <div class="tour-dots" role="group" aria-label="Choose a visual tour image">
+            <button type="button" class="is-active" data-tour-dot="0" aria-label="Show the original learning map" aria-pressed="true"></button>
+            <button type="button" data-tour-dot="1" aria-label="Show the learning Universe" aria-pressed="false"></button>
+            <button type="button" data-tour-dot="2" aria-label="Show the Advent Calendar" aria-pressed="false"></button>
+          </div>
+        </div>
+        <div class="world-notes">
+          <p class="eyebrow">Map → seasonal campaign → Universe</p>
+          <h3>Turn a catalog into a place to go.</h3>
+          <p>Seven topic worlds give learners a way in. Journeys connect labs with books, videos, and events; quests and seasonal experiences give people a reason to return.</p>
+          <div class="world-stats"><span><strong>7</strong> learning worlds</span><span><strong>25</strong> Advent Calendar doors</span><span><strong>100k+</strong> lab sessions supported</span></div>
+          <a class="text-link" href="https://labs.isovalent.com/" target="_blank" rel="noopener noreferrer">Explore the live Universe ↗</a>
+        </div>
+      </div>
+      <p class="universe-caption">A visual history of the experience, from illustrated learning map to seasonal campaign and the live Universe.</p>
+    </section>
+
+    <section class="work-chapter comic-chapter" id="comics" aria-labelledby="comics-title">
+      <div class="chapter-heading">
+        <p class="chapter-number">02 <span>Technical storytelling</span></p>
+        <h2 id="comics-title">Infrastructure, with a plot.</h2>
+        <p class="chapter-deck">Cloud-native ideas become serial adventures. Open a cover to read each comic page by page, from the first encounter to the final episode.</p>
+      </div>
+      <div class="comic-rail" aria-label="Platform Wars comics in series order">
+        <button class="comic-cover comic-cover-featured" type="button" data-reader-kind="pages" data-reader-title="Pod Menace · Cilium Network Policy" data-reader-prefix="assets/readers/platform-wars/pod-menace/page-" data-reader-count="14" data-reader-label="Platform Wars · Opening story">
+          <img src="assets/cnp-cover.webp" alt="Cover of Pod Menace, the Cilium Network Policy comic" loading="lazy"><span class="comic-caption"><span>Opening story</span><strong>Pod Menace · CNP</strong><small>Network policy through a galactic security story</small><em>Read the comic ↗</em></span>
+        </button>
+        <button class="comic-cover" type="button" data-reader-kind="pages" data-reader-title="BGP Awakens" data-reader-prefix="assets/readers/platform-wars/bgp-awakens/page-" data-reader-count="11" data-reader-label="Platform Wars · BGP">
+          <img src="assets/bgp-awakens.webp" alt="Cover of BGP Awakens" loading="lazy"><span class="comic-caption"><span>Platform Wars</span><strong>BGP Awakens</strong><small>Routing into the cluster</small><em>Read the comic ↗</em></span>
+        </button>
+        <button class="comic-cover" type="button" data-reader-kind="pages" data-reader-title="The Service Strikes Back · Part I: Kubernetes Services" data-reader-prefix="assets/readers/platform-wars/service-strikes-back-i/page-" data-reader-count="28" data-reader-label="Platform Wars · Part I">
+          <img src="assets/readers/platform-wars/service-strikes-back-i/page-001.webp" alt="Cover of The Service Strikes Back, Part I: Kubernetes Services" loading="lazy"><span class="comic-caption"><span>Part I</span><strong>Kubernetes Services</strong><small>ClusterIP, NodePort, and LoadBalancer</small><em>Read the comic ↗</em></span>
+        </button>
+        <button class="comic-cover" type="button" data-reader-kind="pages" data-reader-title="The Service Strikes Back · Part II: External Access" data-reader-prefix="assets/readers/platform-wars/service-strikes-back-ii/page-" data-reader-count="16" data-reader-label="Platform Wars · Part II">
+          <img src="assets/external-access.webp" alt="Cover of The Service Strikes Back, Part II: External Access" loading="lazy"><span class="comic-caption"><span>Part II</span><strong>External Access</strong><small>Load balancing with Cilium</small><em>Read the comic ↗</em></span>
+        </button>
+        <button class="comic-cover" type="button" data-reader-kind="pages" data-reader-title="The Service Strikes Back · Part III: Gateway API" data-reader-prefix="assets/readers/platform-wars/service-strikes-back-iii/page-" data-reader-count="20" data-reader-label="Platform Wars · Part III">
+          <img src="assets/gateway-api.webp" alt="Cover of The Service Strikes Back, Part III: Gateway API" loading="lazy"><span class="comic-caption"><span>Part III</span><strong>Gateway API</strong><small>Routing traffic through the galaxy</small><em>Read the comic ↗</em></span>
+        </button>
+        <button class="comic-cover" type="button" data-reader-kind="pages" data-reader-title="The Service Strikes Back · Part IV: TLS" data-reader-prefix="assets/readers/platform-wars/service-strikes-back-iv/page-" data-reader-count="13" data-reader-label="Platform Wars · Part IV">
+          <img src="assets/tls.webp" alt="Cover of The Service Strikes Back, Part IV: TLS" loading="lazy"><span class="comic-caption"><span>Part IV</span><strong>TLS</strong><small>Securing the route</small><em>Read the comic ↗</em></span>
+        </button>
+        <button class="comic-cover comic-cover-finale" type="button" data-reader-kind="pages" data-reader-title="Episode LB · Internal Load Balancing" data-reader-prefix="assets/readers/platform-wars/episode-ilb/page-" data-reader-count="10" data-reader-label="Platform Wars · Finale">
+          <img src="assets/readers/platform-wars/episode-ilb/page-001.webp" alt="Cover of Platform Wars: Episode LB, about internal load balancing" loading="lazy"><span class="comic-caption"><span>End of the saga · Episode LB</span><strong>Internal Load Balancing</strong><small>The service saga reaches inside the cluster</small><em>Read the comic ↗</em></span>
+        </button>
+        <button class="comic-cover comic-cover-shirudo" type="button" data-reader-kind="pages" data-reader-title="Three Generations of eBPF Security" data-reader-prefix="assets/readers/technical-comics/shirudo-evolution/page-" data-reader-count="9" data-reader-label="Shirudo · Standalone security comic">
+          <img src="assets/readers/technical-comics/shirudo-evolution/page-001.webp" alt="Cover of Three Generations of eBPF Security: Observe, Enforce, Deploy" loading="lazy"><span class="comic-caption"><span>Standalone · Shirudo</span><strong>Three Generations of eBPF Security</strong><small>Observe. Enforce. Deploy signed kernel changes.</small><em>Read the comic ↗</em></span>
+        </button>
+      </div>
+      <p class="panelgen-note"><span>Behind the panels</span> These comics are made with <a href="https://github.com/raphink/panelgen" target="_blank" rel="noopener noreferrer">Panelgen ↗</a>, an open-source tool for generating consistent illustrated series. <a href="https://blog.raphink.info/posts/20260623-four-years-chasing-a-consistent-ebee-and-what-i-built-when-i-finally-caught-one-/" target="_blank" rel="noopener noreferrer">Read how it came together ↗</a></p>
+      <p class="series-note"><span class="series-star" aria-hidden="true">✳</span><span><strong>More than a comic.</strong> Each story is a teaching tool: familiar characters, a clear technical problem, and a path to hands-on labs.</span></p>
+      <aside class="booth-feature" aria-labelledby="booth-feature-title">
+        <div><p class="eyebrow">KubeCon booth · print edition</p><h3 id="booth-feature-title">Platform Wars, in print.</h3><p>Pod Menace brought the Platform Wars from screen to paper—a playful way to start conversations about Kubernetes networking at the booth.</p></div>
+        <figure><img src="assets/booth/pod-menace-booklet.webp?v=2" alt="Printed Platform Wars: Pod Menace booklet cover"><figcaption>Pod Menace · the cover</figcaption></figure>
+        <figure><img src="assets/booth/pod-menace-booklet-open.webp" alt="Open Platform Wars comic booklet showing an illustrated networking scene"><figcaption>Inside the booklet</figcaption></figure>
+      </aside>
+    </section>
+
+    <section class="work-chapter sticker-chapter" id="stickers" aria-labelledby="stickers-title">
+      <div class="sticker-copy">
+        <p class="chapter-number">03 <span>Visual identity · in the wild</span></p>
+        <h2 id="stickers-title">Small ideas, ready to travel.</h2>
+        <p class="chapter-deck">An illustrated visual language that moved from digital designs to laptop covers, conference badges, and hands-on learning rewards.</p>
+        <p class="sticker-proof"><span class="proof-mark">✳</span><span>Sticker designs made for the people learning, building, and sharing cloud-native tech.</span></p>
+      </div>
+      <div class="sticker-carousel" data-sticker-carousel aria-label="Sticker illustrations and printed examples">
+        <div class="sticker-carousel-stage" aria-live="polite">
+          <figure class="sticker-slide is-active" data-sticker-slide><img src="assets/stickers/laptop-sticker-world.webp" alt="Laptop covered with cloud-native and eBee stickers, including hexagonal lab badges" loading="lazy"><figcaption><span>01 · In the wild</span><strong>A laptop becomes a sticker wall</strong></figcaption></figure>
+          <figure class="sticker-slide" data-sticker-slide hidden><img src="assets/stickers/printed-ebee-stickers.webp" alt="Printed eBee stickers, including Sidecars, Micro-segmentation, DevNetSecOps, One Small Step, and You Shall Not Pass" loading="lazy"><figcaption><span>02 · From illustration to print</span><strong>Characters, jokes, and technical ideas</strong></figcaption></figure>
+          <figure class="sticker-slide" data-sticker-slide hidden><img src="assets/stickers/lab-credential-stickers.webp" alt="Stacks of holographic hexagonal stickers representing lab learning badges" loading="lazy"><figcaption><span>03 · For lab learners</span><strong>Physical badge stickers</strong><a href="https://www.credly.com/organizations/isovalent/badges" target="_blank" rel="noopener noreferrer">See the digital badges ↗</a></figcaption></figure>
+          <figure class="sticker-slide" data-sticker-slide hidden><img src="assets/stickers/cisco-live-badge.webp" alt="Cisco Live exhibitor badge decorated with DevNetSecOps and Micro-segmentation stickers" loading="lazy"><figcaption><span>04 · At Cisco Live</span><strong>Stickers travel with their people</strong></figcaption></figure>
+          <figure class="sticker-slide" data-sticker-slide hidden><img src="assets/stickers/gateway-api-sticker.webp" alt="Printed holographic eBee sticker holding an Ingress is Dead, Long Live Gateway API banner" loading="lazy"><figcaption><span>05 · Gateway API</span><strong>A sticker with a migration message</strong></figcaption></figure>
+          <figure class="sticker-slide" data-sticker-slide hidden><img src="assets/stickers/micro-segmentation-sticker.webp" alt="Close-up of the printed Micro-segmentation, Macro-satisfaction eBee sticker" loading="lazy"><figcaption><span>06 · Security, with a smile</span><strong>Micro-segmentation · Macro-satisfaction</strong></figcaption></figure>
+          <figure class="sticker-slide" data-sticker-slide hidden><img src="assets/stickers/badge-collector-booklet.webp" alt="Open badge collector booklet with Cilium and eBPF lab achievement stickers organized by learning path" loading="lazy"><figcaption><span>07 · Collect as you learn</span><strong>The badge collector booklet</strong></figcaption></figure>
+          <figure class="sticker-slide" data-sticker-slide hidden><img src="assets/stickers/badge-sticker-organizer.webp" alt="Organizer filled with stacks of hexagonal lab achievement stickers ready for learners" loading="lazy"><figcaption><span>08 · Ready for learners</span><strong>A whole cabinet of achievements</strong></figcaption></figure>
+          <figure class="sticker-slide" data-sticker-slide hidden><img src="assets/stickers/kubecon-postcard.webp" alt="KubeCon Chicago postcard showing an eBee saying it missed the visitor" loading="lazy"><figcaption><span>09 · KubeCon Chicago</span><strong>A postcard from the Universe</strong></figcaption></figure>
+        </div>
+        <div class="sticker-carousel-controls"><span class="sticker-carousel-count" data-sticker-count>01 <i>/ 9</i></span><div><button type="button" data-sticker-prev aria-label="Previous sticker image">←</button><button type="button" data-sticker-next aria-label="Next sticker image">→</button></div></div>
+        <div class="sticker-carousel-dots" role="group" aria-label="Choose a sticker image">
+          <button class="is-active" type="button" data-sticker-dot="0" aria-label="Show the laptop sticker wall" aria-pressed="true"></button><button type="button" data-sticker-dot="1" aria-label="Show printed eBee stickers" aria-pressed="false"></button><button type="button" data-sticker-dot="2" aria-label="Show lab achievement stickers" aria-pressed="false"></button><button type="button" data-sticker-dot="3" aria-label="Show the Cisco Live badge" aria-pressed="false"></button><button type="button" data-sticker-dot="4" aria-label="Show the Gateway API sticker" aria-pressed="false"></button><button type="button" data-sticker-dot="5" aria-label="Show the Micro-segmentation sticker" aria-pressed="false"></button><button type="button" data-sticker-dot="6" aria-label="Show the badge collector booklet" aria-pressed="false"></button><button type="button" data-sticker-dot="7" aria-label="Show the sticker organizer" aria-pressed="false"></button><button type="button" data-sticker-dot="8" aria-label="Show the KubeCon postcard" aria-pressed="false"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-chapter visual-chapter" id="illustration" aria-labelledby="illustration-title">
+      <div class="chapter-heading">
+        <p class="chapter-number">04 <span>Visual explainers</span></p>
+        <h2 id="illustration-title">Make the invisible easier to see.</h2>
+        <p class="chapter-deck">Editorial illustration can make kernel behavior, packet paths, and security models feel concrete before the reader opens a terminal.</p>
+      </div>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <img src="assets/k8s-networking.webp" alt="Fantasy-themed illustration explaining network policies in Kubernetes">
+          <div><span class="eyebrow">Cloud Native Bern · May 5, 2025</span><h3>There and back again.</h3><p>Scene-by-scene illustrations trace a packet through Kubernetes networking, paired with a live demo of the Foundations Networking lab.</p><a class="visual-event-link" href="https://www.meetup.com/cloudnativebern/events/305208538/" target="_blank" rel="noopener noreferrer">Conference program ↗</a></div>
+          <button class="visual-card-trigger" type="button" data-reader-kind="pages" data-reader-title="There and back again" data-reader-prefix="assets/readers/there-and-back/scene-" data-reader-count="7" data-reader-step-label="Scene" data-reader-captions="The journey begins|CNI carries the packet|Services choose a route · animated|Network policy guards the path|Layer 7 routing directs traffic|Observability follows the journey · animated|The complete picture" data-reader-videos="3:assets/readers/there-and-back/scene-003.mp4|6:assets/readers/there-and-back/scene-006.mp4" data-reader-label="Kubernetes networking · scene carousel" data-reader-description="These scenes were shown as part of Kubernetes Networking 101: There and back again at Cloud Native Bern on May 5, 2025, alongside a live demo of the Foundations Networking lab. Step through the illustrated journey, then see the complete picture."><span class="visually-hidden">Explore the Kubernetes networking illustrations</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="work-chapter typography-chapter" id="typography" aria-labelledby="typography-title">
+      <div class="chapter-heading">
+        <p class="chapter-number">05 <span>Type · page · print</span></p>
+        <h2 id="typography-title">Typography that earns a second look.</h2>
+        <p class="chapter-deck">A selection of page work made with TeX: historical reconstruction, book design, digital reading, and expressive initials.</p>
+      </div>
+      <div class="type-feature">
+        <div class="type-feature-art" aria-label="A reconstructed page from a sixteenth-century French Bible, its next page, and a printed proof">
+          <button class="type-image type-image-main" type="button" data-reader-kind="image" data-reader-image="assets/typography/french-bible-page.webp" data-reader-title="A page from the Geneva Bible, 1564" data-reader-label="XeTeX · EB Garamond" data-reader-description="An ongoing facsimile study of a page from the 1564 French Bible printed in Geneva.">
+            <img src="assets/typography/french-bible-page.webp" alt="Reconstructed page from the 1564 Geneva French Bible, with engraved ornament, marginal notes, and a decorated initial" loading="lazy">
+          </button>
+          <button class="type-image type-image-secondary" type="button" data-reader-kind="image" data-reader-image="assets/typography/french-bible-second-page.webp" data-reader-title="A second reconstructed Bible page" data-reader-label="XeTeX · EB Garamond Initials">
+            <img src="assets/typography/french-bible-second-page.webp" alt="Second page of the French Bible reconstruction, with marginalia and period lettering" loading="lazy">
+          </button>
+          <button class="type-image type-image-print" type="button" data-reader-kind="image" data-reader-image="assets/typography/french-bible-print.webp" data-reader-title="The reconstruction in print" data-reader-label="Printed proof">
+            <img src="assets/typography/french-bible-print.webp" alt="Printed proof of the recreated Bible page" loading="lazy">
+          </button>
+          <span class="type-art-note">Digital reconstruction → printed proof</span>
+        </div>
+        <div class="type-feature-copy">
+          <p class="eyebrow">Geneva · 1564 · XeTeX</p>
+          <h3>Give a page its history back.</h3>
+          <p>An ongoing reconstruction of a page from the 1564 French Bible printed in Geneva. XeTeX and EB Garamond bring together the period lettering, image initials, and dense marginal notes; the page also made it to print.</p>
+          <div class="type-link-row">
+            <a href="https://github.com/raphink/geneve_1564" target="_blank" rel="noopener noreferrer">Project source ↗</a>
+            <a href="https://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends/24719#24719" target="_blank" rel="noopener noreferrer">The reconstruction ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="type-specimen-grid" aria-label="More TeX typography projects">
+        <article class="type-specimen">
+          <div class="type-specimen-images type-specimen-pair">
+            <button class="type-image" type="button" data-reader-kind="image" data-reader-image="assets/typography/book-typesetting-page.webp" data-reader-title="French book typography · opening page" data-reader-label="Editorial design · print">
+              <img src="assets/typography/book-typesetting-page.webp" alt="Opening page of a French book, with a restrained serif title and a carefully set text column" loading="lazy">
+            </button>
+            <button class="type-image" type="button" data-reader-kind="image" data-reader-image="assets/typography/book-typesetting-page-21.webp" data-reader-title="French book typography · interior page" data-reader-label="Editorial design · print">
+              <img src="assets/typography/book-typesetting-page-21.webp" alt="Interior page from a French book with an ornamental initial and italic subheading" loading="lazy">
+            </button>
+          </div>
+          <div class="type-specimen-copy"><p class="eyebrow">Editorial design</p><h3>Books made for reading.</h3><p>French typography and page design across several edited books, balancing voice, hierarchy, and long-form readability.</p><a href="https://tex.stackexchange.com/a/69270/951" target="_blank" rel="noopener noreferrer">See the book examples ↗</a></div>
+        </article>
+        <article class="type-specimen">
+          <button class="type-image type-specimen-single" type="button" data-reader-kind="image" data-reader-image="assets/typography/epub-reader.webp" data-reader-title="French typography on an e-reader" data-reader-label="LaTeX · TeX4ht · EPUB" data-reader-description="The same LaTeX source adapted for EPUB, with TeX4ht and attention to how the typography holds up on a small screen.">
+            <img src="assets/typography/epub-reader.webp" alt="A French book page displayed in an ebook reader, preserving its type hierarchy on screen" loading="lazy">
+          </button>
+          <div class="type-specimen-copy"><p class="eyebrow">Print → screen</p><h3>Keep the page readable on screen.</h3><p>Taking the same LaTeX source into EPUB with TeX4ht, then refining the result for e-readers.</p><a href="https://tex.stackexchange.com/a/69270/951" target="_blank" rel="noopener noreferrer">See the EPUB examples ↗</a></div>
+        </article>
+        <article class="type-specimen">
+          <button class="type-image type-specimen-single" type="button" data-reader-kind="image" data-reader-image="assets/typography/colored-lettrine.webp" data-reader-title="Colored initials in EB Garamond" data-reader-label="coloredlettrine · LaTeX">
+            <img src="assets/typography/colored-lettrine.webp" alt="Three large illustrated colored drop caps in blue and red, set with French Bible text" loading="lazy">
+          </button>
+          <div class="type-specimen-copy"><p class="eyebrow">A little ornament, built in</p><h3>Initial letters with presence.</h3><p>A small LaTeX package for colored drop caps, pairing EB Garamond initials with the page around them.</p><a href="https://tex.stackexchange.com/a/69271/951" target="_blank" rel="noopener noreferrer">See the example ↗</a><a href="https://github.com/raphink/coloredlettrine" target="_blank" rel="noopener noreferrer">View the package ↗</a></div>
+        </article>
+      </div>
+      <p class="type-profile"><span>More about my TeX work</span><a href="https://tex.stackexchange.com/users/raphink" target="_blank" rel="noopener noreferrer">Visit my TeX Stack Exchange profile ↗</a><small>Image excerpts are from my answers, shared under CC BY-SA.</small></p>
+    </section>
+
+    <section class="work-chapter independent-chapter" id="independent" aria-labelledby="independent-title">
+      <div class="independent-copy">
+        <p class="chapter-number">06 <span>Independent editorial work</span></p>
+        <h2 id="independent-title">A different kind of explanation.</h2>
+        <p class="chapter-deck">Nine illustrated explainers and two companion comic strips explore autistic perception, social processing, attention, sensory experience, and how people interpret one another. Open any story to read it page by page.</p>
+        <a class="text-link" href="https://blog.raphink.info/series/autism-awareness/" target="_blank" rel="noopener noreferrer">Read the series ↗</a>
+      </div>
+      <div class="autism-series" aria-label="Autism Awareness illustrated series">
+        <div class="autism-featured-stories" aria-label="Autism comic strips">
+          <button class="autism-featured-story" type="button" data-reader-kind="pages" data-reader-title="Improvisation on the Spectrum" data-reader-prefix="assets/readers/autism-awareness/improvisation/page-" data-reader-count="10" data-reader-label="Autism comic strip">
+            <img src="assets/readers/autism-awareness/improvisation/page-001.webp" alt="Cover of Improvisation on the Spectrum" loading="lazy"><span><i>Comic strip</i><strong>Improvisation on the Spectrum</strong><small>Living in a world that expects you to improvise.</small><em>Read the strip ↗</em></span>
+          </button>
+          <button class="autism-featured-story" type="button" data-reader-kind="pages" data-reader-title="Appearances and Mechanisms" data-reader-prefix="assets/readers/autism-awareness/appearances-mechanisms/page-" data-reader-count="9" data-reader-label="Autism comic strip">
+            <img src="assets/readers/autism-awareness/appearances-mechanisms/page-001.webp" alt="Cover of Appearances and Mechanisms" loading="lazy"><span><i>Comic strip</i><strong>Appearances and Mechanisms</strong><small>What you see, and the invisible work beneath it.</small><em>Read the strip ↗</em></span>
+          </button>
+        </div>
+        <div class="autism-issue-grid" aria-label="Nine illustrated explainers">
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="The Spectrum Isn't a Line" data-reader-prefix="assets/readers/autism-awareness/spectrum/page-" data-reader-count="7" data-reader-label="Autism Awareness · Issue 01">
+          <img src="assets/readers/autism-awareness/spectrum/page-001.webp" alt="Cover of The Spectrum Isn't a Line" loading="lazy"><span><i>01 · What is the spectrum?</i><strong>The Spectrum Isn't a Line</strong><small>A different configuration, not a dial.</small><em>Read issue ↗</em></span>
+        </button>
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="Autism & the Neurotypical Brain" data-reader-prefix="assets/readers/autism-awareness/neurotypical-brain/page-" data-reader-count="7" data-reader-label="Autism Awareness · Issue 02">
+          <img src="assets/readers/autism-awareness/neurotypical-brain/page-001.webp" alt="Cover of Autism and the Neurotypical Brain" loading="lazy"><span><i>02 · Social processing</i><strong>Autism &amp; the Neurotypical Brain</strong><small>A different architecture, not a deficit.</small><em>Read issue ↗</em></span>
+        </button>
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="The Constant Background Hum" data-reader-prefix="assets/readers/autism-awareness/background-hum/page-" data-reader-count="7" data-reader-label="Autism Awareness · Issue 03">
+          <img src="assets/readers/autism-awareness/background-hum/page-001.webp" alt="Cover of The Constant Background Hum" loading="lazy"><span><i>03 · Hypervigilance</i><strong>The Constant Background Hum</strong><small>Why the autistic brain never quite stops.</small><em>Read issue ↗</em></span>
+        </button>
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="Two Kinds of Empathy" data-reader-prefix="assets/readers/autism-awareness/two-empathies/page-" data-reader-count="7" data-reader-label="Autism Awareness · Issue 04">
+          <img src="assets/readers/autism-awareness/two-empathies/page-001.webp" alt="Cover of Two Kinds of Empathy" loading="lazy"><span><i>04 · Double empathy</i><strong>Two Kinds of Empathy</strong><small>Two survival systems, not a deficit.</small><em>Read issue ↗</em></span>
+        </button>
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="Authority Doesn't Compute" data-reader-prefix="assets/readers/autism-awareness/authority/page-" data-reader-count="7" data-reader-label="Autism Awareness · Issue 05">
+          <img src="assets/readers/autism-awareness/authority/page-001.webp" alt="Cover of Authority Doesn't Compute" loading="lazy"><span><i>05 · Authority &amp; compliance</i><strong>Authority Doesn't Compute</strong><small>Not defiance. A different logic gate.</small><em>Read issue ↗</em></span>
+        </button>
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="Rest Is Not What You Think" data-reader-prefix="assets/readers/autism-awareness/rest/page-" data-reader-count="7" data-reader-label="Autism Awareness · Issue 06">
+          <img src="assets/readers/autism-awareness/rest/page-001.webp" alt="Cover of Rest Is Not What You Think" loading="lazy"><span><i>06 · Rest &amp; recovery</i><strong>Rest Is Not What You Think</strong><small>It's not about quiet. It's about novelty.</small><em>Read issue ↗</em></span>
+        </button>
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="Monotropism: One Thing at Full Depth" data-reader-prefix="assets/readers/autism-awareness/monotropism/page-" data-reader-count="7" data-reader-label="Autism Awareness · Issue 07">
+          <img src="assets/readers/autism-awareness/monotropism/page-001.webp" alt="Cover of Monotropism: One Thing at Full Depth" loading="lazy"><span><i>07 · Attention &amp; focus</i><strong>Monotropism: One Thing at Full Depth</strong><small>Not distraction. A different attention architecture.</small><em>Read issue ↗</em></span>
+        </button>
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="The Engine and the Exhaust" data-reader-prefix="assets/readers/autism-awareness/variance/page-" data-reader-count="7" data-reader-label="Autism Awareness · Issue 08">
+          <img src="assets/readers/autism-awareness/variance/page-001.webp" alt="Cover of The Engine and the Exhaust" loading="lazy"><span><i>08 · Processing variance</i><strong>The Engine and the Exhaust</strong><small>Same underlying causes, different presentations.</small><em>Read issue ↗</em></span>
+        </button>
+        <button class="autism-issue" type="button" data-reader-kind="pages" data-reader-title="Not a Filter. A Door." data-reader-prefix="assets/readers/autism-awareness/filter-door/page-" data-reader-count="9" data-reader-label="Autism Awareness · Issue 09">
+          <img src="assets/readers/autism-awareness/filter-door/page-001.webp" alt="Cover of Not a Filter. A Door." loading="lazy"><span><i>09 · The unifying frame</i><strong>Not a Filter. A Door.</strong><small>Why the same brain can let in everything and shut out the world.</small><em>Read issue ↗</em></span>
+        </button>
+        </div>
+      </div>
+      <p class="panelgen-note autism-panelgen-note"><span>Behind the panels</span> The comics and explainers are made with <a href="https://github.com/raphink/panelgen" target="_blank" rel="noopener noreferrer">Panelgen ↗</a>. <a href="https://blog.raphink.info/posts/20260623-four-years-chasing-a-consistent-ebee-and-what-i-built-when-i-finally-caught-one-/" target="_blank" rel="noopener noreferrer">Read about the project ↗</a></p>
+    </section>
+  </main>
+
+  <dialog class="work-reader" id="work-reader" aria-labelledby="reader-title">
+    <div class="reader-shell">
+      <header class="reader-header"><div><p class="eyebrow" id="reader-kind">Creative work</p><h2 id="reader-title">Reader</h2></div><button class="reader-close" type="button" aria-label="Close reader">Close ×</button></header>
+      <div class="reader-toolbar"><span id="reader-status" aria-live="polite">Page 1 of 1</span><div><button type="button" id="reader-prev" aria-label="Previous page">←</button><button type="button" id="reader-next" aria-label="Next page">→</button></div></div>
+      <div class="reader-image-wrap"><img id="reader-image" alt=""><video id="reader-video" loop muted playsinline preload="none" hidden></video></div>
+      <p class="reader-description" id="reader-description" hidden></p>
+    </div>
+  </dialog>
+
+  <footer class="work-footer"><span>Raphaël Pinson · Lausanne</span><a href="../">Portfolio ↗</a><a href="../talks/">Talks ↗</a><a href="../timeline/">Career timeline ↗</a><a href="../certifications/">Credentials ↗</a><a href="https://github.com/raphink/CV/blob/master/RaphaelPinson_en.pdf?raw=true">Résumé ↗</a></footer>
+</body>
+</html>
