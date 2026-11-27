@@ -1,7 +1,7 @@
 <header class="site-header">
   <a class="wordmark" href="{{ '/' | relative_url }}">Raphaël Pinson</a>
   <nav aria-label="Primary">
-    <a href="{{ '/#map' | relative_url }}">Explore</a>
+    <a href="{{ '/#map' | relative_url }}"{% if page.nav_section == 'home' %} aria-current="page"{% endif %}>Explore</a>
     <a class="mobile-access-link work-link" href="{{ '/creative/' | relative_url }}"{% if page.nav_section == 'creative' %} aria-current="page"{% endif %}>Creative</a>
     <a class="mobile-access-link" href="{{ '/talks/' | relative_url }}"{% if page.nav_section == 'talks' %} aria-current="page"{% endif %}>Talks</a>
     <a class="mobile-access-link" href="{{ '/certifications/' | relative_url }}"{% if page.nav_section == 'credentials' %} aria-current="page"{% endif %}>Credentials</a>
