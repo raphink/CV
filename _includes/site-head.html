@@ -4,6 +4,7 @@
   <title>{{ page.title | escape }}</title>
   <meta name="description" content="{{ page.description | escape }}">
   <meta name="author" content="Raphaël Pinson">
+  {% if page.noindex %}<meta name="robots" content="noindex,follow">{% endif %}
   <meta name="theme-color" content="#061820">
   <link rel="canonical" href="{{ page.canonical | default: page.url | absolute_url }}">
   <meta property="og:type" content="website">

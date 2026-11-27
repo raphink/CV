@@ -8,6 +8,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
+from io import BytesIO
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -23,6 +24,7 @@ BADGE_ARTWORK = {
     "fundamentals-for-envoy-by-solo-io": "https://images.credly.com/images/735f0832-b12e-4692-b41f-54c8c3729eda/image.png",
     "cks-certified-kubernetes-security-specialist": "https://images.credly.com/images/9945dfcb-1cca-4529-85e6-db1be3782210/kubernetes-security-specialist-logo2.png",
 }
+BADGE_DIR = ROOT / "certifications" / "badges"
 
 
 def image_key(value: str) -> str:
@@ -90,6 +92,36 @@ def normalized(record: dict[str, Any]) -> dict[str, str]:
     return result
 
 
+def download_badge_artwork(image_url: str, badge_url: str) -> str | None:
+    """Store a small local copy of Credly artwork for reliable, fast page loads."""
+    if not image_url.startswith("https://images.credly.com/"):
+        return None
+    match = re.search(r"/badges/([0-9a-f-]+)/public_url", badge_url)
+    if not match:
+        return None
+    badge_id = match.group(1)
+    destination = BADGE_DIR / f"{badge_id}.webp"
+    if destination.is_file():
+        return "/certifications/badges/" + destination.name
+    try:
+        request = urllib.request.Request(image_url, headers={"User-Agent": "raphink.info credential artwork sync"})
+        with urllib.request.urlopen(request, timeout=30) as response:
+            payload = response.read(8 * 1024 * 1024 + 1)
+        if len(payload) > 8 * 1024 * 1024:
+            raise ValueError("badge image exceeds 8 MB")
+        from PIL import Image
+        with Image.open(BytesIO(payload)) as image:
+            image.thumbnail((128, 128), Image.Resampling.LANCZOS)
+            if image.mode not in ("RGB", "RGBA"):
+                image = image.convert("RGBA" if "A" in image.getbands() else "RGB")
+            BADGE_DIR.mkdir(parents=True, exist_ok=True)
+            image.save(destination, "WEBP", quality=90, method=6)
+        return "/certifications/badges/" + destination.name
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError, ImportError) as error:
+        print(f"Badge artwork unavailable for {badge_id}: {error}", file=sys.stderr)
+        return None
+
+
 def main() -> int:
     try:
         first = fetch_page(page_url(1))
@@ -117,6 +149,12 @@ def main() -> int:
             filtered[key] = (issued, item)
 
     credentials = [item for _, item in filtered.values()]
+    for item in credentials:
+        if "Puppet Enterprise Professional" in item["name"] and item.get("issued", "") < "2022-01-01":
+            item["issuer"] = "Puppet"
+        image = item.get("image")
+        if image:
+            item["image"] = download_badge_artwork(image, item["url"]) or image
     credentials.sort(key=lambda item: (item.get("issued", ""), item["name"].casefold()), reverse=True)
     if not credentials:
         print("No eligible public credentials were returned; keeping the existing feed.", file=sys.stderr)

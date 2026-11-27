@@ -1,0 +1,19 @@
+.talk-detail-page { min-height: 100vh; }
+.talk-page { padding: clamp(48px, 7vw, 100px) clamp(22px, 7vw, 110px) 110px; }
+.talk-page-inner { width: min(1280px, 100%); margin: 0 auto; }
+.talk-page-back { display: inline-block; margin-bottom: 40px; color: #087c8d; font: 700 10px/1.4 ui-monospace,monospace; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+.talk-page h1 { max-width: 1000px; margin-top: 18px; font-size: clamp(42px, 7vw, 86px); line-height: .98; letter-spacing: -.04em; }
+.talk-page-summary { max-width: 760px; margin-top: 20px; color: var(--muted); font-size: 18px; line-height: 1.55; }
+.talk-page-media { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 18px; margin-top: 38px; align-items: start; }
+.talk-page-video,.talk-page-deck { overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: #071a22; }
+.talk-page-video { aspect-ratio: 16/9; }
+.talk-page-video iframe,.talk-page-video video { display: block; width: 100%; height: 100%; border: 0; object-fit: contain; }
+.talk-page-deck { margin: 0; background: #102e38; }
+.talk-page-deck-image { position: relative; aspect-ratio: 16/9; background: #071a22; }
+.talk-page-deck img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+.talk-page-deck figcaption { padding: 13px 16px; color: #d3e3e7; font: 700 9px/1.4 ui-monospace,monospace; letter-spacing: .08em; text-transform: uppercase; }
+.talk-page-deck a,.talk-page-links a { color: #087c8d; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.talk-page-links { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; margin-top: 28px; font: 700 10px/1.5 ui-monospace,monospace; letter-spacing: .06em; text-transform: uppercase; }
+.talk-page-links .talk-page-primary { padding: 13px 17px; border-radius: 4px; background: var(--deep); color: #f5fafb; }
+.talk-page-resource { align-self: start; padding: 20px; border: 1px solid var(--line); border-radius: 8px; color: var(--deep); font-weight: 700; text-decoration: none; }
+@media(max-width:700px) { .talk-page { padding: 38px 18px 72px; } .talk-page-back { margin-bottom: 30px; } .talk-page-summary { font-size: 16px; } .talk-page-media { gap: 12px; margin-top: 27px; } }

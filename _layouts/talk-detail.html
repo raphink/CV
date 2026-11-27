@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% assign talk = site.data.talks[page.talk_index] %}
+<main class="talk-page" id="talk-page">
+  <div class="talk-page-inner">
+    <a class="talk-page-back" href="{{ '/talks/' | relative_url }}">← All talks</a>
+    <p class="eyebrow">{{ talk.topic | escape }}{% if talk.event %} · {{ talk.event | escape }}{% endif %}{% if talk.dateDisplay %} · {{ talk.dateDisplay | escape }}{% endif %}</p>
+    <h1>{{ talk.title | escape }}</h1>
+    {% if talk.summary %}<p class="talk-page-summary">{{ talk.summary | escape }}</p>{% endif %}
+    <div class="talk-page-media{% if talk.id and talk.deck %} has-video-and-deck{% endif %}">
+      {% if talk.id %}
+        <div class="talk-page-video"><iframe src="https://www.youtube-nocookie.com/embed/{{ talk.id | url_encode }}?rel=0{% if talk.videoStart %}&amp;start={{ talk.videoStart | floor }}{% endif %}" title="{{ talk.title | escape }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      {% elsif talk.recordingUrl %}
+        <div class="talk-page-video"><video controls playsinline preload="metadata"><source src="{{ talk.recordingUrl | escape }}" type="{{ talk.recordingType | default: 'video/webm' | escape }}"></video></div>
+      {% elsif talk.recordingPageUrl %}
+        <a class="talk-page-resource" href="{{ talk.recordingPageUrl | escape }}" target="_blank" rel="noopener noreferrer">{{ talk.recordingLinkLabel | default: 'Open recording page ↗' | escape }}</a>
+      {% endif %}
+      {% if talk.deck %}
+        {% assign deck_name = talk.deck | remove_first: 'decks/' | remove: '.pdf' %}
+        <figure class="talk-page-deck">
+          <div class="talk-page-deck-image"><img src="{{ '/talks/decks/rendered/' | append: deck_name | append: '/slide-001.jpg' | relative_url }}" alt="Cover slide for {{ talk.title | escape }}" fetchpriority="high"></div>
+          <figcaption><a href="{{ '/talks/' | append: talk.deck | relative_url }}" target="_blank" rel="noopener noreferrer">Open presentation ↗</a></figcaption>
+        </figure>
+      {% endif %}
+    </div>
+    <nav class="talk-page-links" aria-label="Talk resources">
+      {% if page.has_sync %}<a class="talk-page-primary" href="{{ '/talks/' | relative_url }}?talk={{ page.talk_slug | url_encode }}">Open synchronized video and slides <span aria-hidden="true">▶</span></a>{% endif %}
+      {% if talk.programUrl %}<a href="{{ talk.programUrl | escape }}" target="_blank" rel="noopener noreferrer">Conference program ↗</a>{% elsif talk.conferenceUrl %}<a href="{{ talk.conferenceUrl | escape }}" target="_blank" rel="noopener noreferrer">Conference ↗</a>{% endif %}
+      {% if talk.recordingPageUrl and talk.id == nil and talk.recordingUrl == nil %}<a href="{{ talk.recordingPageUrl | escape }}" target="_blank" rel="noopener noreferrer">Watch recording ↗</a>{% endif %}
+      {% if talk.deck %}<a href="{{ '/talks/' | append: talk.deck | relative_url }}" target="_blank" rel="noopener noreferrer">Download slides ↗</a>{% endif %}
+    </nav>
+  </div>
+</main>
