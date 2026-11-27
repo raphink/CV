@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -15,6 +16,17 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "certifications" / "credentials.json"
 PROFILE = "https://www.credly.com/users/raphink/badges.json"
+BADGE_ARTWORK = {
+    "organizer-2024-cloud-native-community-group": "https://images.credly.com/images/ea61e2b7-e182-4fee-88d7-acfd1c5a1259/blob",
+    "lfc102-inclusive-open-source-community-orientation": "https://images.credly.com/images/4c923ac7-3490-4198-8ee6-fa9d3eb99b0d/blob",
+    "speaker-kcd-munich-2024": "https://images.credly.com/images/a8555fcf-f3f2-4eef-a31f-4d20bd73d4e6/image.png",
+    "fundamentals-for-envoy-by-solo-io": "https://images.credly.com/images/735f0832-b12e-4692-b41f-54c8c3729eda/image.png",
+    "cks-certified-kubernetes-security-specialist": "https://images.credly.com/images/9945dfcb-1cca-4529-85e6-db1be3782210/kubernetes-security-specialist-logo2.png",
+}
+
+
+def image_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.casefold()).strip("-")
 
 
 def fetch_page(url: str) -> dict[str, Any]:
@@ -62,11 +74,12 @@ def normalized(record: dict[str, Any]) -> dict[str, str]:
 
     template_image = template.get("image") or {}
     image = record.get("image_url") or (template_image.get("url") if isinstance(template_image, dict) else None)
+    image = image or BADGE_ARTWORK.get(image_key(str(name)))
     result = {
         "name": str(name),
         "issuer": issuer_name,
         "status": status,
-        "url": f"https://www.credly.com/badges/{badge_id}",
+        "url": f"https://www.credly.com/badges/{badge_id}/public_url",
     }
     if issued:
         result["issued"] = str(issued)

@@ -28,6 +28,7 @@ body {
 }
 
 .archive-page .site-header { z-index: 1050; }
+.archive-page .site-header a { color: #f6fbfc; }
 
 a:focus-visible,
 button:focus-visible {
