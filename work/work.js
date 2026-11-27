@@ -120,6 +120,10 @@
     var caption = activeReader.captions && activeReader.captions[activePage - 1];
     var stepLabel = activeReader.stepLabel || 'Page';
     var videoSource = activeReader.videos && activeReader.videos[activePage];
+    if (readerVideo) {
+      readerVideo.pause();
+      try { readerVideo.currentTime = 0; } catch (error) {}
+    }
     readerImage.alt = (caption || stepLabel + ' ' + activePage) + ' · ' + activeReader.title;
     readerStatus.textContent = stepLabel + ' ' + activePage + ' of ' + activeReader.count + (caption ? ' · ' + caption : '');
     if (videoSource && readerVideo) {

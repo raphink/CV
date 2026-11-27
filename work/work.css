@@ -179,6 +179,7 @@ html{scroll-padding-top:130px}
 .reader-toolbar button:disabled{opacity:.3;cursor:default}
 .reader-image-wrap{display:grid;min-height:0;flex:1;place-items:center;overflow:auto;padding:8px 24px 22px}
 .reader-image-wrap img{display:block;max-width:100%;max-height:calc(100dvh - 155px);object-fit:contain;box-shadow:0 12px 40px rgba(0,0,0,.32)}
+.reader-image-wrap img[hidden]{display:none}
 .reader-image-wrap img.is-detail-image{max-height:calc(100dvh - 225px)}
 .reader-description{max-width:760px;margin:0 auto;padding:0 24px 24px;color:#c1d4d8;font-size:14px;line-height:1.65}
 .reader-description[hidden]{display:none}
@@ -250,3 +251,15 @@ html{scroll-padding-top:130px}
 @media(max-width:1000px){.independent-copy{grid-template-columns:minmax(120px,.45fr) minmax(0,1fr) minmax(0,1.1fr);gap:18px}.independent-copy .text-link{grid-column:2/-1;justify-self:start}.autism-series{grid-template-columns:1fr}.autism-featured-stories{grid-template-columns:repeat(2,minmax(0,1fr))}.autism-featured-story{grid-template-columns:110px minmax(0,1fr)}}
 @media(max-width:720px){.sticker-copy{margin-bottom:25px}.sticker-carousel-stage{height:clamp(320px,85vw,540px)}.sticker-slide img{height:calc(100% - 68px);padding:7px}.sticker-slide figcaption{min-height:68px;align-items:flex-start;flex-direction:column;gap:5px;padding:9px 12px}.sticker-slide figcaption a{margin-left:0}.sticker-carousel-controls{padding:10px 13px}.sticker-carousel-dots{gap:6px;padding:0 13px 13px}.sticker-carousel-dots button{width:12px}.sticker-carousel-dots button.is-active{width:25px}.independent-copy{display:flex;flex-direction:column;align-items:flex-start;gap:17px;margin-bottom:25px}.independent-copy h2{font-size:clamp(36px,9.5vw,54px)}.independent-copy .chapter-deck{font-size:14px}.autism-featured-stories{gap:9px}.autism-featured-story{grid-template-columns:minmax(90px,.8fr) minmax(0,1fr);min-height:150px}.autism-featured-story img{min-height:150px}.autism-featured-story>span{gap:5px;padding:10px 8px}.autism-featured-story strong{font-size:12px}.autism-featured-story small{font-size:9px}.autism-issue-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}}
 @media(max-width:420px){.autism-featured-stories{grid-template-columns:1fr}.autism-featured-story{grid-template-columns:115px minmax(0,1fr)}.sticker-slide figcaption strong{font-size:12px}.sticker-slide figcaption span{font-size:7px}}
+
+.booth-feature{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:38px;padding:clamp(18px,3vw,34px);border-color:rgba(16,36,45,.1);background:#e7eeec}
+.booth-feature>div{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(22px,5vw,70px);align-items:end;padding:4px 4px 13px}
+.booth-feature>div .eyebrow{grid-column:1/-1;margin-bottom:12px}
+.booth-feature h3{grid-column:1;max-width:480px;font-size:clamp(30px,4vw,48px);line-height:.98;letter-spacing:-.045em}
+.booth-feature p:not(.eyebrow){grid-column:2;grid-row:2;max-width:420px;margin:0 0 2px;color:#52636a;font-size:14px;line-height:1.6}
+.booth-feature figure{gap:10px;padding:10px;border:1px solid rgba(16,36,45,.11);border-radius:9px;background:#f8faf7;box-shadow:0 10px 25px rgba(16,36,45,.06)}
+.booth-feature img{height:clamp(210px,27vw,340px);border-radius:4px;object-fit:contain;background:#132c35}
+.booth-feature figcaption{padding:0 3px 2px;color:#68777b}
+.hero-sticker img{object-position:center}
+@media(max-width:720px){.booth-feature{grid-template-columns:1fr 1fr;gap:10px;padding:13px}.booth-feature>div{grid-column:1/-1;grid-template-columns:1fr;gap:12px;padding:5px 4px 14px}.booth-feature>div .eyebrow{grid-column:1;margin:0}.booth-feature h3{grid-column:1;font-size:clamp(28px,7vw,38px)}.booth-feature p:not(.eyebrow){grid-column:1;grid-row:auto;font-size:13px}.booth-feature img{height:clamp(160px,43vw,245px)}}
+@media(max-width:430px){.booth-feature{grid-template-columns:1fr}.booth-feature img{height:auto;aspect-ratio:4/3}}
